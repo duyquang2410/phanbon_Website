@@ -1,0 +1,214 @@
+/*
+Template Name: Plants Bazar
+File: Layout CSS
+Author: TemplatesOnWeb
+Author URI: https://www.templateonweb.com/
+Licence: <a href="https://www.templateonweb.com/license">Website Template Licence</a>
+*/
+
+
+/*********************cart****************/
+
+.cart_1 img {
+    width: 90px;
+    height: 90px;
+}
+
+.btn_cross a {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+}
+
+
+/* Cart Summary styles */
+
+.cart-summary {
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid #dee2e6;
+    background-color: #f8f9fa;
+}
+
+
+/* Cart Item styles */
+
+.cart-item {
+    padding: 15px 0;
+    border-bottom: 1px solid #dee2e6;
+}
+
+
+/* Styles for the quantity controls */
+
+.quantity .btn {
+    padding: 5px 10px;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+}
+
+.quantity .form-control {
+    text-align: center;
+    min-width: 50px;
+}
+
+
+/*********************cart_end****************/
+
+@media screen and (max-width: 767px) {
+    .cart_2ril {
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    .cart_2rir {
+        text-align: center!important;
+    }
+}
+
+@media (min-width:576px) and (max-width:767px) {}
+
+@media (min-width:768px) and (max-width:991px) {}
+
+@media (min-width:992px) and (max-width:1200px) {}
+
+
+/* CSS for Cart Page */
+
+.cart_page {
+    min-height: 500px;
+}
+
+.cart_1 {
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.cart_1 th,
+.cart_1 td {
+    vertical-align: middle;
+}
+
+.cart_1 thead {
+    background-color: #f8f9fa;
+}
+
+.cart_1i1l {
+    width: 80px;
+    height: 80px;
+    min-width: 80px;
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cart_1i1l img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.cart_1i1r h5 {
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+.cart_1i1r h5 a {
+    color: #333;
+    text-decoration: none;
+}
+
+.cart_1i1r h5 a:hover {
+    color: #4CAF50;
+}
+
+.cart_1i1r h6 {
+    color: #777;
+    font-size: 13px;
+}
+
+.price,
+.subtotal {
+    font-weight: 500;
+}
+
+.quantity .form-control {
+    text-align: center;
+    max-width: 60px;
+}
+
+.button,
+.button_1 {
+    display: inline-block;
+    font-size: 14px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+}
+
+.button:hover {
+    background-color: #45a049;
+    color: white;
+}
+
+.button_1 {
+    background-color: transparent;
+    color: #333;
+    border: 1px solid #ddd;
+}
+
+.button_1:hover {
+    background-color: #f8f9fa;
+    color: #333;
+    border-color: #ccc;
+}
+
+.cart_r {
+    margin-top: 15px;
+}
+
+.cart_r h4 {
+    margin-bottom: 20px;
+}
+
+.cart_r1 {
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.cart_r1i {
+    margin-bottom: 10px;
+}
+
+@media (max-width: 767px) {
+    .cart_1i1l {
+        width: 60px;
+        height: 60px;
+        min-width: 60px;
+    }
+    .cart_1i1r h5 {
+        font-size: 14px;
+    }
+    .cart_1i1r h6 {
+        font-size: 12px;
+    }
+    .quantity .form-control {
+        width: 40px;
+        padding: 5px;
+    }
+    .button,
+    .button_1 {
+        padding: 8px 15px;
+        font-size: 13px;
+    }
+}

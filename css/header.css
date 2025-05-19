@@ -1,0 +1,195 @@
+/* 
+ * header.css - Stylesheet cho header của Cây Trồng Shop
+ * Version: 1.0
+ */
+
+/* Header styles */
+#header {
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+
+
+/* Navigation Link Hover Effect */
+.navbar-nav .nav-link {
+    color: #333;
+    position: relative;
+    font-weight: 600;
+    padding: 0.5rem 0;
+    transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-link:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: #4CAF50;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.navbar-nav .nav-link:hover:after,
+.navbar-nav .nav-link.active:after {
+    width: 80%;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: #4CAF50;
+}
+
+/* Search Box Animation */
+.input-group {
+    transition: all 0.3s ease;
+}
+
+.input-group:focus-within {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.form-control:focus {
+    border-color: #4CAF50;
+    box-shadow: 0 0 0 0.25rem rgba(76, 175, 80, 0.25);
+}
+
+/* Cart and User styles */
+.cart-icon, .login-link, .logout-link, .user-greeting {
+    color: #333;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.cart-icon:hover, .login-link:hover, .logout-link:hover {
+    color: #4CAF50;
+    transform: translateY(-2px);
+}
+
+/* Cart icon animation */
+.cart-icon {
+    position: relative;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.cart-icon:hover {
+    animation: shake 0.5s ease;
+}
+
+@keyframes shake {
+    0%, 100% { transform: rotate(0); }
+    20%, 60% { transform: rotate(8deg); }
+    40%, 80% { transform: rotate(-8deg); }
+}
+
+/* Dark mode toggle button */
+.dark-mode-toggle {
+    width: 50px;
+    height: 25px;
+    background-color: #ccc;
+    border-radius: 25px;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dark-mode-toggle:before {
+    content: "";
+    position: absolute;
+    width: 21px;
+    height: 21px;
+    background-color: white;
+    border-radius: 50%;
+    top: 2px;
+    left: 2px;
+    transition: all 0.3s ease;
+}
+
+.dark-mode .dark-mode-toggle {
+    background-color: #4CAF50;
+}
+
+.dark-mode .dark-mode-toggle:before {
+    left: calc(100% - 23px);
+}
+
+/* Dark mode styles */
+.dark-mode #header {
+    background-color: #222;
+    border-bottom: 1px solid #444;
+}
+
+.dark-mode .navbar-nav .nav-link,
+.dark-mode .logo a,
+.dark-mode .cart-icon,
+.dark-mode .login-link,
+.dark-mode .logout-link,
+.dark-mode .user-greeting {
+    color: #eee;
+}
+
+.dark-mode .form-control {
+    background-color: #333;
+    border-color: #444;
+    color: #eee;
+}
+
+.dark-mode .form-control::placeholder {
+    color: #aaa;
+}
+
+/* Sticky header animation */
+.sticky-slide-down {
+    animation: slideDown 0.5s ease forwards;
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+}
+
+@keyframes slideDown {
+    from { transform: translateY(-100%); }
+    to { transform: translateY(0); }
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 767px) {
+    .navbar-collapse {
+        background-color: white;
+        padding: 1rem;
+        margin-top: 1rem;
+        border-radius: 8px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    .dark-mode .navbar-collapse {
+        background-color: #333;
+    }
+    
+    .navbar-nav {
+        margin-bottom: 1rem;
+    }
+    
+    .navbar-nav .nav-link {
+        padding: 0.5rem 0;
+    }
+    
+    .navbar-toggler {
+        background: transparent;
+        transition: all 0.3s ease;
+    }
+    
+    .navbar-toggler:focus {
+        box-shadow: none;
+    }
+    
+    .navbar-toggler:hover {
+        transform: scale(1.1);
+    }
+}

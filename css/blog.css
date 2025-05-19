@@ -1,0 +1,170 @@
+/*
+Template Name: Plants Bazar
+File: Layout CSS
+Author: TemplatesOnWeb
+Author URI: https://www.templateonweb.com/
+Licence: <a href="https://www.templateonweb.com/license">Website Template Licence</a>
+*/
+/*********************blog****************/
+.center_blog_1li1 ul li a{
+background: rgba(255, 255, 255, 0.2);
+color:#fff; 
+ }
+.center_blog_1li1 {
+padding-top:330px;
+ }
+.tags li a {
+margin: 0 10px 15px 0;
+}
+.blog_pg1r4i2{
+padding-top:45px; 
+ }
+/*********************blog_end****************/
+
+
+@media screen and (max-width : 767px){
+.center_blog_1li1 {
+padding-top:5%;
+}
+.center_blog_1li1 {
+padding-left:10px!important; 
+padding-right:10px!important; 
+ }
+.center_blog_1li1 h3{
+font-size:16px;
+ }
+.center_blog_1r{
+margin-top:15px; 
+ }
+.center_blog_1rir{
+margin-top:15px; 
+ }
+.blog_pg1lir{
+margin-top:15px;  
+ }
+.blog_pg1r{
+margin-top:15px;   
+ }
+.blog_pg1r1 {
+padding:15px!important; 
+ }
+.blog_pg1r2 h5{
+text-align:center; 
+ }
+.blog_pg1r3 h5{
+text-align:center; 
+ }
+.blog_pg1r3i  .pe-0{
+padding-right:12px!important; 
+ }
+.blog_pg1r3ir {
+margin-top:15px; 
+ }
+.blog_pg1r3ir h5{
+text-align:left; 
+ }
+.blog_pg1r4i2 {
+padding:15px!important; 
+ }
+.blog_pg1r4i1 img {
+min-height:220px;
+ }
+.blog_dt h3{
+text-align:center; 
+ }
+.blog_1dt1i1 {
+text-align:center; 
+ }
+.blog_1dt1i1r {
+text-align:center!important; 
+ }
+.blog_1dt2ir{
+margin-top:15px;
+text-align:center; 
+ }
+.blog_1dt2ir p{
+text-align:left; 
+ }
+.blog_dt3 {
+text-align:center; 
+ }
+.blog_dt3il{
+margin-top:10px; 
+ }
+.blog_dt3 p{
+text-align:left; 
+ }
+ }
+
+
+@media (min-width:576px) and (max-width:767px) {
+.center_blog_1li1 {
+padding-top:40%;
+}
+.blog_pg1r4i2 {
+padding-top: 20%!important;
+}
+.blog_1dt2ir{
+margin-top:0;
+text-align:left; 
+ }
+
+ }
+ 
+@media (min-width:768px) and (max-width:991px) {
+.center_blog_1li img{
+min-height:535px; 
+ }
+.center_blog_1ril h5{
+font-size:14px; 
+ }
+.center_blog_1ril ul li a{
+margin-top:3px;
+margin-bottom:3px;
+font-size:12px; 
+ }
+.blog_pg1lir h6{
+font-size:13px;  
+ }
+.blog_pg1lir h4{
+font-size:18px;  
+ }
+.blog_pg1lir p{
+font-size:13px!important;  
+ }
+.blog_pg1r1  {
+padding-left:15px!important; 
+padding-right:15px!important; 
+ }
+.blog_pg1r1 p {
+font-size:14px!important;
+ }
+.blog_pg1r4i1 img{
+min-height:270px; 
+ }
+.blog_pg1r4i2 {
+padding-left:10px!important; 
+padding-right:10px!important;
+ }
+.blog_1dt1i1r  .social_tag li a {
+width: 40px;
+height: 40px;
+line-height: 40px;
+font-size: 16px;
+}
+ }
+
+@media (min-width:992px) and (max-width:1200px) {
+.center_blog_1li img{
+min-height:535px; 
+ }
+.blog_pg1r4i1 img{
+min-height:270px; 
+ }
+ }
+@media (min-width:1201px) and (max-width:1310px) {
+
+ }
+
+
+

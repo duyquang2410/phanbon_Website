@@ -1,0 +1,297 @@
+/*
+Template Name: Plants Bazar
+File: Layout CSS
+Author: TemplatesOnWeb
+Author URI: https://www.templateonweb.com/
+Licence: <a href="https://www.templateonweb.com/license">Website Template Licence</a>
+*/
+
+
+/*********************shop****************/
+
+.accordion-button {
+    font-weight: bold;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+    border: none;
+}
+
+.accordion-button:not(.collapsed) {
+    background: #f8f8f8;
+    color: #000;
+}
+
+.accordion-body {
+    padding: 15px;
+}
+
+.testim_1i1 {
+    top: -35px;
+}
+
+.shop_dt1r img {
+    width: 90%!important;
+}
+
+.shop_dt1r .list_h2i {
+    text-align: center;
+}
+
+.homei ul {
+    margin-left: 10px;
+}
+
+.profilei ul {
+    margin-left: 10px;
+}
+
+
+/*********************shop_end****************/
+
+.list_h2i {
+    text-align: center;
+    margin-bottom: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    transition: all 0.3s;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding-bottom: 80px;
+    background-color: #e8f5e9;
+    /* Light green background */
+}
+
+.list_h2i:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.list_h2i1i {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    padding: 15px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border-radius: 10px 10px 0 0;
+}
+
+.list_h2i1i img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 180px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+    transition: all 0.3s;
+}
+
+.list_h2i1i img:hover {
+    transform: scale(1.05);
+}
+
+.list_h2i2 {
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 0 0 10px 10px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.list_h2i2 h6 {
+    margin-bottom: 8px;
+    height: auto;
+    min-height: 42px;
+    max-height: 63px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    color: #000000;
+}
+
+.list_h2i2 h6 a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.list_h2i2 h6 a:hover {
+    color: #28a745;
+}
+
+.list_h2i2 .button-container {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    width: 100%;
+}
+
+.list_h2i2 .button {
+    background-color: #28a745 !important;
+    color: #ffffff !important;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    display: inline-block;
+    width: 80%;
+    max-width: 200px;
+    margin: 0 auto;
+}
+
+.list_h2i2 .button:hover {
+    background-color: #218838 !important;
+    transform: translateY(-2px);
+}
+
+
+/* Dark mode styles */
+
+@media (prefers-color-scheme: dark) {
+    .list_h2i {
+        background-color: #e8f5e9;
+        /* Keep the same light green background */
+        border-color: #404040;
+    }
+    .list_h2i1i {
+        background-color: #ffffff;
+    }
+    .list_h2i2 {
+        background-color: #ffffff;
+    }
+    .list_h2i2 h6,
+    .list_h2i2 h6 a {
+        color: #000000 !important;
+    }
+    .list_h2i2 h6 a:hover {
+        color: #28a745 !important;
+    }
+    .list_h2i:hover {
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .shop_dt1r {
+        margin-top: 15px;
+    }
+    .shop_dt1ri .button {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .shop_dt3 h5 {
+        text-align: center;
+    }
+    .shop_dt5 h3 {
+        text-align: center;
+    }
+    .shop_dt6 h3 {
+        text-align: center;
+    }
+    .testim_1i1 {
+        position: static!important;
+        margin-top: 15px;
+    }
+    .testim_1 {
+        margin-top: 20px!important;
+    }
+    .testim_11 {
+        margin-top: 8px;
+        margin-bottom: 8px;
+        text-align: center;
+    }
+    .testim_11 p {
+        text-align: left;
+    }
+    .blog_dt3 {
+        text-align: center;
+    }
+    .blog_dt3 p {
+        text-align: left;
+    }
+    .blog_dt3il {
+        margin-top: 10px;
+    }
+    .quote_2l {
+        margin-top: 10px;
+        text-align: center;
+    }
+    .contact_2r {
+        margin-top: 15px;
+        text-align: center;
+    }
+    .contact_2rr {
+        margin-top: 10px;
+    }
+    .list_h2i {
+        padding-bottom: 70px;
+    }
+    .list_h2i1i {
+        height: 180px;
+    }
+    .list_h2i1i img {
+        max-height: 160px;
+    }
+    .list_h2i2 h6 {
+        font-size: 13px;
+        min-height: 38px;
+        max-height: 57px;
+    }
+    .list_h2i2 .button-container {
+        bottom: 15px;
+    }
+    .list_h2i2 .button {
+        padding: 6px 12px;
+        font-size: 13px;
+    }
+}
+
+@media (min-width:576px) and (max-width:767px) {}
+
+@media (min-width:768px) and (max-width:991px) {
+    .contact_2rl .font_60 {
+        font-size: 36px!important;
+    }
+    .list_h2i2 h6 {
+        font-size: 13px;
+    }
+    .list_h2i2 .button {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+}
+
+@media (min-width:992px) and (max-width:1200px) {
+    .contact_2rl .font_60 {
+        font-size: 45px!important;
+    }
+}
+
+@media (min-width:1201px) and (max-width:1310px) {}
+
+
+/* Nhãn sản phẩm mới */
+
+.list_h2i1i1 {
+    z-index: 1;
+}
+
+.list_h2i1i1 h6 {
+    font-size: 11px;
+    background: #f4ca35;
+    color: #000;
+    padding: 3px 8px;
+    border-radius: 20px;
+    display: inline-block;
+    margin: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
