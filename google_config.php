@@ -1,11 +1,8 @@
 <?php
-require_once __DIR__ . '/vendor/autoload.php';
-
-$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
-$dotenv->load();
-
-define('GOOGLE_CLIENT_ID', $_ENV['GOOGLE_CLIENT_ID']);
-define('GOOGLE_CLIENT_SECRET', $_ENV['GOOGLE_CLIENT_SECRET']);
+// Cấu hình Google OAuth
+$google_client_id = '618832015091-jj92aq3b02j048e0ete0sufih0krq8ft.apps.googleusercontent.com'; // Client ID từ Google Cloud Console
+$google_client_secret = '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'; // Client Secret từ Google Cloud Console
+$google_redirect_url = 'http://localhost/LVTN_PhanBon/google_callback.php'; // URL callback
 
 /*
 Hướng dẫn lấy Client ID và Client Secret:

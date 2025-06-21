@@ -201,7 +201,7 @@ Licence: <a href="https://www.templateonweb.com/license">Website Template Licenc
 /* Back to Top Button */
 
 .back-to-top {
-    position: fixed;
+    position: relative;
     right: 30px;
     bottom: -60px;
     width: 50px;
@@ -1160,36 +1160,6 @@ h6 {
     text-decoration: none;
     color: inherit;
     display: block;
-}
-
-
-/* Dark mode styles */
-
-@media (prefers-color-scheme: dark) {
-    .category-section {
-        background-color: #1a1a1a;
-    }
-    .category-card {
-        background: #2d2d2d;
-    }
-    .category-title {
-        color: #000000 !important;
-    }
-    .category-card:hover .category-title {
-        color: #28a745 !important;
-    }
-    /* Ensure all text in category section is black */
-    .category-section .section-title h2,
-    .category-section .section-title p,
-    .category-section .category-card h3,
-    .category-section .category-card p,
-    .category-section * {
-        color: #000000 !important;
-    }
-    /* Keep the green color for the specific span */
-    .category-section .section-title h2 .col_green {
-        color: #149253 !important;
-    }
 }
 
 

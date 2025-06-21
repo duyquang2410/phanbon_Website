@@ -43,16 +43,12 @@ if(isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
 <!-- jQuery UI - bắt buộc cho chức năng tự động gợi ý -->
 <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
 <link rel="stylesheet" href="css/autocomplete.css">
-<!-- Dark Mode CSS -->
-<link rel="stylesheet" href="css/dark-mode.css">
 <!-- Header CSS -->
 <link rel="stylesheet" href="css/header.css">
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
 <script src="js/search.js"></script>
-<!-- Dark Mode JavaScript -->
-<script src="js/dark-mode.js"></script>
 <!-- Header JavaScript -->
 <script src="js/header.js"></script>
 
@@ -110,7 +106,7 @@ if(isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
 </style>
 
 <!-- Main Header -->
-<header id="header" class="sticky-top py-2">
+<header id="header">
     <div class="container">
         <div class="row align-items-center">
             <!-- Logo -->
@@ -176,9 +172,6 @@ if(isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
             <!-- User Menu and Cart -->
             <div class="col-md-2 d-none d-md-block">
                 <div class="d-flex align-items-center justify-content-end">
-                    <!-- Dark Mode Toggle -->
-                    <div class="dark-mode-toggle me-3" id="darkModeButton" title="Chuyển chế độ sáng/tối"></div>
-
                     <!-- Login/User Account -->
                     <?php if(isset($_SESSION['user_id'])): ?>
                     <div class="dropdown me-3">
@@ -189,7 +182,7 @@ if(isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
                             <li><a class="dropdown-item" href="profile.php">Tài khoản</a></li>
-                            <li><a class="dropdown-item" href="cart.php">Đơn hàng</a></li>
+                            <li><a class="dropdown-item" href="my_orders.php">Theo Dõi Đơn Hàng </a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
@@ -260,9 +253,6 @@ if(isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
 
                         <!-- Mobile User Menu and Cart (Reordered) -->
                         <div class="d-flex justify-content-between align-items-center">
-                            <!-- Mobile Dark Mode Toggle -->
-                            <div class="dark-mode-toggle" id="mobileDarkModeButton"></div>
-
                             <?php if(isset($_SESSION['user_id'])): ?>
                             <div class="dropdown">
                                 <button class="btn btn-outline-success dropdown-toggle" type="button"

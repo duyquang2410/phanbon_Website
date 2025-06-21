@@ -62,7 +62,7 @@ session_start();
 </section>
 
  <section id="header">
-<nav class="navbar navbar-expand-md navbar-light pt-2 pb-2 bg_lighto" id="navbar_sticky">
+<nav class="navbar navbar-expand-md navbar-light pt-2 pb-2 bg_lighto">
   <div class="container-fluid">
     <a class="text-black p-0 navbar-brand fw-bold" href="index.html">Plants <i class="fa fa-leaf col_green me-1 align-middle"></i> <span style="color:#e3ae03">Shop</span></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -560,19 +560,10 @@ session_start();
 <?php include 'footer.php'; ?>
 
 <script>
-window.onscroll = function() {myFunction()};
-var navbar_sticky = document.getElementById("navbar_sticky");
-var sticky = navbar_sticky.offsetTop;
-var navbar_height = document.querySelector('.navbar').offsetHeight;
-function myFunction() {
-  if (window.pageYOffset >= sticky + navbar_height) {
-    navbar_sticky.classList.add("sticky")
-	document.body.style.paddingTop = navbar_height + 'px';
-  } else {
-    navbar_sticky.classList.remove("sticky");
-	document.body.style.paddingTop = '0'
-  }
-}
+// Xóa toàn bộ code liên quan đến scroll
+document.addEventListener('DOMContentLoaded', function() {
+    // Chỉ giữ lại các chức năng cần thiết khác nếu có
+});
 </script>
 
 </body>

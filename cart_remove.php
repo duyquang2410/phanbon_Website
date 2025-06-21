@@ -4,7 +4,7 @@ session_start();
 
 // Check if user is logged in
 if (!isset($_SESSION['user_id'])) {
-    $_SESSION['login_required_message'] = "Vui lòng đăng nhập để thực hiện chức năng này.";
+    $_SESSION['error_message'] = "Vui lòng đăng nhập để thực hiện chức năng này.";
     header("Location: login.php");
     exit();
 }
@@ -12,44 +12,50 @@ if (!isset($_SESSION['user_id'])) {
 // Include database connection and cart functions
 include 'connect.php';
 include 'cart_functions.php';
+include 'cart_selection.php';
 
-// Get the user ID and cart ID
+// Get the user ID and product ID
 $user_id = $_SESSION['user_id'];
-$cart_id = getCurrentCart($conn, $user_id);
+$product_id = isset($_GET['id']) ? (int)$_GET['id'] : 0;
 
-// Check if product ID is provided
-if (isset($_GET['id']) && is_numeric($_GET['id'])) {
-    $product_id = intval($_GET['id']);
+if (!$product_id) {
+    $_SESSION['error_message'] = "Không tìm thấy sản phẩm cần xóa.";
+    header("Location: cart.php");
+    exit();
+}
+
+try {
+    $conn->begin_transaction();
+
+    // Get the current cart ID
+    $cart_id = getCurrentCart($conn, $user_id);
+
+    // Remove product from selected_cart_items table
+    $delete_selection_sql = "DELETE FROM selected_cart_items WHERE GH_MA = ? AND SP_MA = ?";
+    $delete_selection_stmt = $conn->prepare($delete_selection_sql);
+    $delete_selection_stmt->bind_param("ii", $cart_id, $product_id);
+    $delete_selection_stmt->execute();
+    $delete_selection_stmt->close();
+
+    // Remove product from cart
+    $delete_cart_sql = "DELETE FROM chitiet_gh WHERE GH_MA = ? AND SP_MA = ?";
+    $delete_cart_stmt = $conn->prepare($delete_cart_sql);
+    $delete_cart_stmt->bind_param("ii", $cart_id, $product_id);
     
-    // Check if product exists in cart
-    if (isProductInCart($conn, $cart_id, $product_id)) {
-        // Get product name for the message
-        $product_sql = "SELECT SP_TEN FROM san_pham WHERE SP_MA = ?";
-        $product_stmt = $conn->prepare($product_sql);
-        $product_stmt->bind_param("i", $product_id);
-        $product_stmt->execute();
-        $product_result = $product_stmt->get_result();
-        
-        if ($product_result->num_rows > 0) {
-            $product = $product_result->fetch_assoc();
-            $product_name = $product['SP_TEN'];
-        } else {
-            $product_name = "Sản phẩm";
-        }
-        
-        $product_stmt->close();
-        
-        // Remove product from cart
-        if (removeCartItem($conn, $cart_id, $product_id)) {
-            $_SESSION['cart_success'] = "Đã xóa " . $product_name . " khỏi giỏ hàng.";
-        } else {
-            $_SESSION['cart_error'] = "Có lỗi xảy ra khi xóa sản phẩm khỏi giỏ hàng.";
-        }
+    if ($delete_cart_stmt->execute()) {
+        $conn->commit();
+        $_SESSION['success_message'] = "Đã xóa sản phẩm khỏi giỏ hàng.";
     } else {
-        $_SESSION['cart_error'] = "Sản phẩm không tồn tại trong giỏ hàng.";
+        throw new Exception("Không thể xóa sản phẩm khỏi giỏ hàng.");
     }
-} else {
-    $_SESSION['cart_error'] = "Thông tin sản phẩm không hợp lệ.";
+    
+    $delete_cart_stmt->close();
+
+} catch (Exception $e) {
+    $conn->rollback();
+    $_SESSION['error_message'] = $e->getMessage();
+} finally {
+    $conn->close();
 }
 
 // Redirect back to cart page

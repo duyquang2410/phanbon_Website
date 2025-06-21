@@ -1,0 +1,1101 @@
+[2025-06-18 11:01:47] Starting order process
+Data: Array
+(
+    [user_id] => 4
+    [payment_method] => 1
+    [shipping_id] => 
+    [cart_items] => 
+    [total_amount] => 
+)
+
+--------------------------------------------------------------------------------
+[2025-06-18 11:01:47] Error processing order
+Data: Array
+(
+    [error_message] => Duplicate entry '0' for key 'PRIMARY'
+    [trace] => #0 C:\xampp\htdocs\LVTN_PhanBon\process_order.php(91): mysqli_stmt->execute()
+#1 {main}
+)
+
+--------------------------------------------------------------------------------
+[2025-06-18 11:08:20] Starting order process
+Data: Array
+(
+    [user_id] => 4
+    [payment_method] => 1
+    [shipping_id] => 
+    [cart_items] => 
+    [total_amount] => 
+)
+
+--------------------------------------------------------------------------------
+[2025-06-18 11:08:20] Processing cart item
+Data: Array
+(
+    [id] => 8
+    [name] => COC85 (20g) - Ngừa bệnh rỉ sắt, đốm đen cho cây trồng, đặc hiệu cho hoa kiểng
+    [image] => coc85.jpg
+    [price] => 220000
+    [quantity] => 3
+    [unit] => cái
+    [subtotal] => 660000
+    [is_selected] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-06-18 11:08:20] Error processing order
+Data: Array
+(
+    [error_message] => Unknown column 'SP_SOLUONG' in 'field list'
+    [trace] => #0 C:\xampp\htdocs\LVTN_PhanBon\process_order.php(125): mysqli->prepare('SELECT SP_SOLUO...')
+#1 {main}
+)
+
+--------------------------------------------------------------------------------
+[2025-06-18 11:11:04] Starting order process
+Data: Array
+(
+    [user_id] => 4
+    [payment_method] => 1
+    [shipping_id] => 
+    [cart_items] => 
+    [total_amount] => 
+)
+
+--------------------------------------------------------------------------------
+[2025-06-18 11:11:04] Processing cart item
+Data: Array
+(
+    [id] => 8
+    [name] => COC85 (20g) - Ngừa bệnh rỉ sắt, đốm đen cho cây trồng, đặc hiệu cho hoa kiểng
+    [image] => coc85.jpg
+    [price] => 220000
+    [quantity] => 2
+    [unit] => cái
+    [subtotal] => 440000
+    [is_selected] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-06-18 11:11:08] Starting order process
+Data: Array
+(
+    [user_id] => 4
+    [payment_method] => 1
+    [shipping_id] => 
+    [cart_items] => 
+    [total_amount] => 
+)
+
+--------------------------------------------------------------------------------
+[2025-06-18 11:11:08] Processing cart item
+Data: Array
+(
+    [id] => 8
+    [name] => COC85 (20g) - Ngừa bệnh rỉ sắt, đốm đen cho cây trồng, đặc hiệu cho hoa kiểng
+    [image] => coc85.jpg
+    [price] => 220000
+    [quantity] => 2
+    [unit] => cái
+    [subtotal] => 440000
+    [is_selected] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-06-18 11:11:19] Starting order process
+Data: Array
+(
+    [user_id] => 4
+    [payment_method] => 1
+    [shipping_id] => 
+    [cart_items] => 
+    [total_amount] => 
+)
+
+--------------------------------------------------------------------------------
+[2025-06-18 11:11:19] Processing cart item
+Data: Array
+(
+    [id] => 8
+    [name] => COC85 (20g) - Ngừa bệnh rỉ sắt, đốm đen cho cây trồng, đặc hiệu cho hoa kiểng
+    [image] => coc85.jpg
+    [price] => 220000
+    [quantity] => 2
+    [unit] => cái
+    [subtotal] => 440000
+    [is_selected] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-06-18 11:13:56] Starting order process
+Data: Array
+(
+    [user_id] => 4
+    [payment_method] => 1
+    [shipping_id] => 
+    [cart_items] => Array
+        (
+        )
+
+    [total_amount] => 0
+)
+
+--------------------------------------------------------------------------------
+[2025-06-18 11:13:56] Processing cart item
+Data: Array
+(
+    [id] => 8
+    [name] => COC85 (20g) - Ngừa bệnh rỉ sắt, đốm đen cho cây trồng, đặc hiệu cho hoa kiểng
+    [image] => coc85.jpg
+    [price] => 220000
+    [quantity] => 2
+    [unit] => cái
+    [subtotal] => 440000
+    [is_selected] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-06-18 11:13:56] Current stock check
+Data: Array
+(
+    [product_id] => 8
+    [current_stock] => 13000
+    [requested_quantity] => 2
+)
+
+--------------------------------------------------------------------------------
+[2025-06-18 11:13:56] Error processing order
+Data: Array
+(
+    [error_message] => Unknown column 'HD_MA' in 'field list'
+    [trace] => #0 C:\xampp\htdocs\LVTN_PhanBon\process_order.php(149): mysqli->prepare('INSERT INTO chi...')
+#1 {main}
+)
+
+--------------------------------------------------------------------------------
+[2025-06-18 11:14:21] Starting order process
+Data: Array
+(
+    [user_id] => 4
+    [payment_method] => 1
+    [shipping_id] => 
+    [cart_items] => Array
+        (
+        )
+
+    [total_amount] => 0
+)
+
+--------------------------------------------------------------------------------
+[2025-06-18 11:14:21] Processing cart item
+Data: Array
+(
+    [id] => 5
+    [name] => Axit humic dạng lỏng 322 Growmore (235ml) - Kích rễ và chống ngộ độc hữu cơ cho cây
+    [image] => humic.jpg
+    [price] => 45000
+    [quantity] => 3
+    [unit] => cái
+    [subtotal] => 135000
+    [is_selected] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-06-18 11:14:21] Current stock check
+Data: Array
+(
+    [product_id] => 5
+    [current_stock] => 400
+    [requested_quantity] => 3
+)
+
+--------------------------------------------------------------------------------
+[2025-06-18 11:14:21] Error processing order
+Data: Array
+(
+    [error_message] => Unknown column 'HD_MA' in 'field list'
+    [trace] => #0 C:\xampp\htdocs\LVTN_PhanBon\process_order.php(149): mysqli->prepare('INSERT INTO chi...')
+#1 {main}
+)
+
+--------------------------------------------------------------------------------
+[2025-06-18 11:20:46] Starting order process
+Data: Array
+(
+    [user_id] => 4
+    [payment_method] => 1
+    [shipping_id] => 
+    [cart_items] => Array
+        (
+        )
+
+    [total_amount] => 0
+)
+
+--------------------------------------------------------------------------------
+[2025-06-18 11:20:46] Processing cart item
+Data: Array
+(
+    [id] => 3
+    [name] => Phân dê qua xử lý hàng chuẩn ( chuyên cho lan và hoa hồng ) - 1 túi
+    [image] => phande.jpg
+    [price] => 22000
+    [quantity] => 2
+    [unit] => cái
+    [subtotal] => 44000
+    [is_selected] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-06-18 11:20:46] Current stock check
+Data: Array
+(
+    [product_id] => 3
+    [current_stock] => 797
+    [requested_quantity] => 2
+)
+
+--------------------------------------------------------------------------------
+[2025-06-18 11:20:46] Error processing order
+Data: Array
+(
+    [error_message] => Column 'HD_STT' cannot be null
+    [trace] => #0 C:\xampp\htdocs\LVTN_PhanBon\process_order.php(150): mysqli_stmt->execute(Array)
+#1 {main}
+)
+
+--------------------------------------------------------------------------------
+[2025-06-18 11:43:24] Starting order process
+Data: Array
+(
+    [user_id] => 4
+    [payment_method] => 1
+    [shipping_id] => 
+    [cart_items] => Array
+        (
+        )
+
+    [total_amount] => 0
+)
+
+--------------------------------------------------------------------------------
+[2025-06-18 11:43:24] Processing cart item
+Data: Array
+(
+    [id] => 12
+    [name] => NeemNim Ấn Độ (100ml) – Phòng ngừa sâu bệnh, rệp sáp, sâu xanh, bọ cánh tơ, sâu tơ
+    [image] => neemim.jpg
+    [price] => 160000
+    [quantity] => 4
+    [unit] => cái
+    [subtotal] => 640000
+    [is_selected] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-06-18 11:43:24] Current stock check
+Data: Array
+(
+    [product_id] => 
+    [current_stock] => 
+    [requested_quantity] => 4
+)
+
+--------------------------------------------------------------------------------
+[2025-06-18 11:43:24] Error processing order
+Data: Array
+(
+    [error_message] => Insufficient stock for product ID 
+    [trace] => #0 {main}
+)
+
+--------------------------------------------------------------------------------
+[2025-06-18 11:47:56] Starting order process
+Data: Array
+(
+    [user_id] => 4
+    [payment_method] => 1
+    [shipping_id] => 
+    [cart_items] => Array
+        (
+        )
+
+    [total_amount] => 0
+)
+
+--------------------------------------------------------------------------------
+[2025-06-18 11:47:56] Processing cart item
+Data: Array
+(
+    [id] => 12
+    [name] => NeemNim Ấn Độ (100ml) – Phòng ngừa sâu bệnh, rệp sáp, sâu xanh, bọ cánh tơ, sâu tơ
+    [image] => neemim.jpg
+    [price] => 160000
+    [quantity] => 4
+    [unit] => cái
+    [subtotal] => 640000
+    [is_selected] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-06-18 11:47:56] Current stock check
+Data: Array
+(
+    [product_id] => 12
+    [current_stock] => 900
+    [requested_quantity] => 4
+)
+
+--------------------------------------------------------------------------------
+[2025-06-18 11:47:56] Inserted order detail
+Data: Array
+(
+    [order_id] => 6
+    [product_id] => 12
+    [quantity] => 4
+    [price] => 160000
+)
+
+--------------------------------------------------------------------------------
+[2025-06-18 11:47:56] Updated stock
+Data: Array
+(
+    [product_id] => 12
+    [quantity_reduced] => 4
+)
+
+--------------------------------------------------------------------------------
+[2025-06-18 11:47:56] Order completed successfully
+Data: Array
+(
+    [order_id] => 6
+)
+
+--------------------------------------------------------------------------------
+[2025-06-18 11:48:33] Starting order process
+Data: Array
+(
+    [user_id] => 4
+    [payment_method] => 1
+    [shipping_id] => 
+    [cart_items] => Array
+        (
+        )
+
+    [total_amount] => 0
+)
+
+--------------------------------------------------------------------------------
+[2025-06-18 11:48:33] Processing cart item
+Data: Array
+(
+    [id] => 6
+    [name] => Phân bón kiểng lá viên nén hữu cơ 100% SFARM - Túi 500 gram
+    [image] => sfram.jpg
+    [price] => 19000
+    [quantity] => 3
+    [unit] => cái
+    [subtotal] => 57000
+    [is_selected] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-06-18 11:48:33] Current stock check
+Data: Array
+(
+    [product_id] => 6
+    [current_stock] => 2000
+    [requested_quantity] => 3
+)
+
+--------------------------------------------------------------------------------
+[2025-06-18 11:48:33] Inserted order detail
+Data: Array
+(
+    [order_id] => 7
+    [product_id] => 6
+    [quantity] => 3
+    [price] => 19000
+)
+
+--------------------------------------------------------------------------------
+[2025-06-18 11:48:33] Updated stock
+Data: Array
+(
+    [product_id] => 6
+    [quantity_reduced] => 3
+)
+
+--------------------------------------------------------------------------------
+[2025-06-18 11:48:33] Order completed successfully
+Data: Array
+(
+    [order_id] => 7
+)
+
+--------------------------------------------------------------------------------
+[2025-06-18 11:49:59] Starting order process
+Data: Array
+(
+    [user_id] => 4
+    [payment_method] => 1
+    [shipping_id] => 
+    [cart_items] => Array
+        (
+        )
+
+    [total_amount] => 0
+)
+
+--------------------------------------------------------------------------------
+[2025-06-18 11:49:59] Processing cart item
+Data: Array
+(
+    [id] => 4
+    [name] => Bimix Super Root (20ml)  –  Phát triển mạnh bộ rễ, kích thích cành chiết, cành giâm
+    [image] => bemix.jpg
+    [price] => 6000
+    [quantity] => 4
+    [unit] => cái
+    [subtotal] => 24000
+    [is_selected] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-06-18 11:49:59] Current stock check
+Data: Array
+(
+    [product_id] => 4
+    [current_stock] => 600
+    [requested_quantity] => 4
+)
+
+--------------------------------------------------------------------------------
+[2025-06-18 11:49:59] Inserted order detail
+Data: Array
+(
+    [order_id] => 8
+    [product_id] => 4
+    [quantity] => 4
+    [price] => 6000
+)
+
+--------------------------------------------------------------------------------
+[2025-06-18 11:49:59] Updated stock
+Data: Array
+(
+    [product_id] => 4
+    [quantity_reduced] => 4
+)
+
+--------------------------------------------------------------------------------
+[2025-06-18 11:49:59] Order completed successfully
+Data: Array
+(
+    [order_id] => 8
+)
+
+--------------------------------------------------------------------------------
+[2025-06-19 04:43:24] Starting order process
+Data: Array
+(
+    [user_id] => 2
+    [payment_method] => 1
+    [shipping_id] => 
+    [cart_items] => Array
+        (
+        )
+
+    [total_amount] => 0
+)
+
+--------------------------------------------------------------------------------
+[2025-06-19 04:43:24] Processing cart item
+Data: Array
+(
+    [id] => 4
+    [name] => Bimix Super Root (20ml)  –  Phát triển mạnh bộ rễ, kích thích cành chiết, cành giâm
+    [image] => bemix.jpg
+    [price] => 6000
+    [quantity] => 6
+    [unit] => cái
+    [subtotal] => 36000
+    [is_selected] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-06-19 04:43:24] Current stock check
+Data: Array
+(
+    [product_id] => 4
+    [current_stock] => 596
+    [requested_quantity] => 6
+)
+
+--------------------------------------------------------------------------------
+[2025-06-19 04:43:24] Inserted order detail
+Data: Array
+(
+    [order_id] => 9
+    [product_id] => 4
+    [quantity] => 6
+    [price] => 6000
+)
+
+--------------------------------------------------------------------------------
+[2025-06-19 04:43:24] Updated stock
+Data: Array
+(
+    [product_id] => 4
+    [quantity_reduced] => 6
+)
+
+--------------------------------------------------------------------------------
+[2025-06-19 04:43:24] Order completed successfully
+Data: Array
+(
+    [order_id] => 9
+)
+
+--------------------------------------------------------------------------------
+[2025-06-19 05:09:36] Starting order process
+Data: Array
+(
+    [user_id] => 2
+    [payment_method] => 1
+    [shipping_id] => 
+    [cart_items] => Array
+        (
+        )
+
+    [total_amount] => 0
+)
+
+--------------------------------------------------------------------------------
+[2025-06-19 05:09:36] Processing cart item
+Data: Array
+(
+    [id] => 1
+    [name] => N3M kích rễ – Kích rễ cực mạnh cho cây ăn trái, kiểng, công nghiệp
+    [image] => kich_re.jpg
+    [price] => 26000
+    [quantity] => 4
+    [unit] => cái
+    [subtotal] => 104000
+    [is_selected] => 1
+    [discount] => 0
+    [final_subtotal] => 104000
+)
+
+--------------------------------------------------------------------------------
+[2025-06-19 05:09:36] Current stock check
+Data: Array
+(
+    [product_id] => 1
+    [current_stock] => 1000
+    [requested_quantity] => 4
+)
+
+--------------------------------------------------------------------------------
+[2025-06-19 05:09:36] Inserted order detail
+Data: Array
+(
+    [order_id] => 10
+    [product_id] => 1
+    [quantity] => 4
+    [price] => 26000
+)
+
+--------------------------------------------------------------------------------
+[2025-06-19 05:09:36] Updated stock
+Data: Array
+(
+    [product_id] => 1
+    [quantity_reduced] => 4
+)
+
+--------------------------------------------------------------------------------
+[2025-06-19 05:09:36] Order completed successfully
+Data: Array
+(
+    [order_id] => 10
+)
+
+--------------------------------------------------------------------------------
+[2025-06-19 05:43:08] Starting order process
+Data: Array
+(
+    [user_id] => 2
+    [payment_method] => 1
+    [shipping_id] => 
+    [cart_items] => Array
+        (
+        )
+
+    [total_amount] => 0
+)
+
+--------------------------------------------------------------------------------
+[2025-06-19 05:43:08] Processing cart item
+Data: Array
+(
+    [id] => 8
+    [name] => COC85 (20g) - Ngừa bệnh rỉ sắt, đốm đen cho cây trồng, đặc hiệu cho hoa kiểng
+    [image] => coc85.jpg
+    [price] => 220000
+    [quantity] => 2
+    [unit] => cái
+    [subtotal] => 440000
+    [is_selected] => 1
+    [discount] => 0
+    [final_subtotal] => 440000
+)
+
+--------------------------------------------------------------------------------
+[2025-06-19 05:43:08] Current stock check
+Data: Array
+(
+    [product_id] => 8
+    [current_stock] => 13000
+    [requested_quantity] => 2
+)
+
+--------------------------------------------------------------------------------
+[2025-06-19 05:43:08] Inserted order detail
+Data: Array
+(
+    [order_id] => 11
+    [product_id] => 8
+    [quantity] => 2
+    [price] => 220000
+)
+
+--------------------------------------------------------------------------------
+[2025-06-19 05:43:08] Updated stock
+Data: Array
+(
+    [product_id] => 8
+    [quantity_reduced] => 2
+)
+
+--------------------------------------------------------------------------------
+[2025-06-19 05:43:08] Order completed successfully
+Data: Array
+(
+    [order_id] => 11
+)
+
+--------------------------------------------------------------------------------
+[2025-06-19 05:47:03] Starting order process
+Data: Array
+(
+    [user_id] => 2
+    [payment_method] => 1
+    [shipping_id] => 
+    [cart_items] => Array
+        (
+        )
+
+    [total_amount] => 0
+)
+
+--------------------------------------------------------------------------------
+[2025-06-19 05:47:03] Processing cart item
+Data: Array
+(
+    [id] => 1
+    [name] => N3M kích rễ – Kích rễ cực mạnh cho cây ăn trái, kiểng, công nghiệp
+    [image] => kich_re.jpg
+    [price] => 26000
+    [quantity] => 1
+    [unit] => cái
+    [subtotal] => 26000
+    [is_selected] => 1
+    [discount] => 0
+    [final_subtotal] => 26000
+)
+
+--------------------------------------------------------------------------------
+[2025-06-19 05:47:03] Current stock check
+Data: Array
+(
+    [product_id] => 1
+    [current_stock] => 996
+    [requested_quantity] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-06-19 05:47:03] Inserted order detail
+Data: Array
+(
+    [order_id] => 12
+    [product_id] => 1
+    [quantity] => 1
+    [price] => 26000
+)
+
+--------------------------------------------------------------------------------
+[2025-06-19 05:47:03] Updated stock
+Data: Array
+(
+    [product_id] => 1
+    [quantity_reduced] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-06-19 05:47:03] Order completed successfully
+Data: Array
+(
+    [order_id] => 12
+)
+
+--------------------------------------------------------------------------------
+[2025-06-19 06:06:36] Starting order process
+Data: Array
+(
+    [user_id] => 2
+    [payment_method] => 1
+    [shipping_id] => 
+    [cart_items] => Array
+        (
+        )
+
+    [total_amount] => 0
+)
+
+--------------------------------------------------------------------------------
+[2025-06-19 06:06:36] Processing cart item
+Data: Array
+(
+    [id] => 2
+    [name] => Chế phẩm EMUNIV (200g) – Ủ phân và rác hữu cơ hiệu quả, nhanh hoai mục
+    [image] => emu.jpg
+    [price] => 35000
+    [quantity] => 1
+    [unit] => cái
+    [subtotal] => 35000
+    [is_selected] => 1
+    [discount] => 0
+    [final_subtotal] => 35000
+)
+
+--------------------------------------------------------------------------------
+[2025-06-19 06:06:36] Current stock check
+Data: Array
+(
+    [product_id] => 2
+    [current_stock] => 495
+    [requested_quantity] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-06-19 06:06:36] Inserted order detail
+Data: Array
+(
+    [order_id] => 13
+    [product_id] => 2
+    [quantity] => 1
+    [price] => 35000
+)
+
+--------------------------------------------------------------------------------
+[2025-06-19 06:06:36] Updated stock
+Data: Array
+(
+    [product_id] => 2
+    [quantity_reduced] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-06-19 06:06:36] Order completed successfully
+Data: Array
+(
+    [order_id] => 13
+)
+
+--------------------------------------------------------------------------------
+[2025-06-19 06:21:31] Starting order process
+Data: Array
+(
+    [user_id] => 2
+    [payment_method] => 1
+    [shipping_id] => 
+    [cart_items] => Array
+        (
+        )
+
+    [total_amount] => 0
+)
+
+--------------------------------------------------------------------------------
+[2025-06-19 06:21:31] Applied product promotion
+Data: Array
+(
+    [product_id] => 2
+    [promo_code] => PHANBON10
+    [discount_amount] => 10500
+)
+
+--------------------------------------------------------------------------------
+[2025-06-19 06:21:31] Processing cart item
+Data: Array
+(
+    [id] => 2
+    [name] => Chế phẩm EMUNIV (200g) – Ủ phân và rác hữu cơ hiệu quả, nhanh hoai mục
+    [image] => emu.jpg
+    [price] => 35000
+    [quantity] => 3
+    [unit] => cái
+    [subtotal] => 105000
+    [is_selected] => 1
+    [discount] => 10500
+    [final_subtotal] => 94500
+)
+
+--------------------------------------------------------------------------------
+[2025-06-19 06:21:31] Current stock check
+Data: Array
+(
+    [product_id] => 2
+    [current_stock] => 494
+    [requested_quantity] => 3
+)
+
+--------------------------------------------------------------------------------
+[2025-06-19 06:21:31] Inserted order detail
+Data: Array
+(
+    [order_id] => 14
+    [product_id] => 2
+    [quantity] => 3
+    [price] => 35000
+)
+
+--------------------------------------------------------------------------------
+[2025-06-19 06:21:31] Updated stock
+Data: Array
+(
+    [product_id] => 2
+    [quantity_reduced] => 3
+)
+
+--------------------------------------------------------------------------------
+[2025-06-19 06:21:31] Order completed successfully
+Data: Array
+(
+    [order_id] => 14
+)
+
+--------------------------------------------------------------------------------
+[2025-06-19 06:41:08] Starting order process
+Data: Array
+(
+    [user_id] => 2
+    [payment_method] => 1
+    [shipping_id] => 
+    [cart_items] => Array
+        (
+        )
+
+    [total_amount] => 0
+)
+
+--------------------------------------------------------------------------------
+[2025-06-19 06:41:08] Applied product promotion
+Data: Array
+(
+    [product_id] => 4
+    [promo_code] => MUA2TANG1
+    [discount_amount] => 0
+)
+
+--------------------------------------------------------------------------------
+[2025-06-19 06:41:08] Processing cart item
+Data: Array
+(
+    [id] => 4
+    [name] => Bimix Super Root (20ml)  –  Phát triển mạnh bộ rễ, kích thích cành chiết, cành giâm
+    [image] => bemix.jpg
+    [price] => 6000
+    [quantity] => 3
+    [unit] => cái
+    [subtotal] => 18000
+    [is_selected] => 1
+    [discount] => 0
+    [final_subtotal] => 18000
+)
+
+--------------------------------------------------------------------------------
+[2025-06-19 06:41:08] Current stock check
+Data: Array
+(
+    [product_id] => 4
+    [current_stock] => 590
+    [requested_quantity] => 3
+)
+
+--------------------------------------------------------------------------------
+[2025-06-19 06:41:08] Inserted order detail
+Data: Array
+(
+    [order_id] => 15
+    [product_id] => 4
+    [quantity] => 3
+    [price] => 6000
+)
+
+--------------------------------------------------------------------------------
+[2025-06-19 06:41:08] Updated stock
+Data: Array
+(
+    [product_id] => 4
+    [quantity_reduced] => 3
+)
+
+--------------------------------------------------------------------------------
+[2025-06-19 06:41:08] Processing cart item
+Data: Array
+(
+    [id] => 5
+    [name] => Axit humic dạng lỏng 322 Growmore (235ml) - Kích rễ và chống ngộ độc hữu cơ cho cây
+    [image] => humic.jpg
+    [price] => 45000
+    [quantity] => 3
+    [unit] => cái
+    [subtotal] => 135000
+    [is_selected] => 1
+    [discount] => 0
+    [final_subtotal] => 135000
+)
+
+--------------------------------------------------------------------------------
+[2025-06-19 06:41:08] Current stock check
+Data: Array
+(
+    [product_id] => 5
+    [current_stock] => 400
+    [requested_quantity] => 3
+)
+
+--------------------------------------------------------------------------------
+[2025-06-19 06:41:08] Inserted order detail
+Data: Array
+(
+    [order_id] => 15
+    [product_id] => 5
+    [quantity] => 3
+    [price] => 45000
+)
+
+--------------------------------------------------------------------------------
+[2025-06-19 06:41:08] Updated stock
+Data: Array
+(
+    [product_id] => 5
+    [quantity_reduced] => 3
+)
+
+--------------------------------------------------------------------------------
+[2025-06-19 06:41:08] Order completed successfully
+Data: Array
+(
+    [order_id] => 15
+)
+
+--------------------------------------------------------------------------------
+[2025-06-19 06:45:56] Starting order process
+Data: Array
+(
+    [user_id] => 2
+    [payment_method] => 1
+    [shipping_id] => 
+    [cart_items] => Array
+        (
+        )
+
+    [total_amount] => 0
+)
+
+--------------------------------------------------------------------------------
+[2025-06-19 06:45:56] Applied product promotion
+Data: Array
+(
+    [product_id] => 12
+    [promo_code] => PHANBON10
+    [discount_amount] => 80000
+)
+
+--------------------------------------------------------------------------------
+[2025-06-19 06:45:56] Processing cart item
+Data: Array
+(
+    [id] => 12
+    [name] => NeemNim Ấn Độ (100ml) – Phòng ngừa sâu bệnh, rệp sáp, sâu xanh, bọ cánh tơ, sâu tơ
+    [image] => neemim.jpg
+    [price] => 160000
+    [quantity] => 5
+    [unit] => cái
+    [subtotal] => 800000
+    [is_selected] => 1
+    [discount] => 80000
+    [final_subtotal] => 720000
+)
+
+--------------------------------------------------------------------------------
+[2025-06-19 06:45:56] Current stock check
+Data: Array
+(
+    [product_id] => 12
+    [current_stock] => 896
+    [requested_quantity] => 5
+)
+
+--------------------------------------------------------------------------------
+[2025-06-19 06:45:56] Inserted order detail
+Data: Array
+(
+    [order_id] => 16
+    [product_id] => 12
+    [quantity] => 5
+    [price] => 160000
+)
+
+--------------------------------------------------------------------------------
+[2025-06-19 06:45:56] Updated stock
+Data: Array
+(
+    [product_id] => 12
+    [quantity_reduced] => 5
+)
+
+--------------------------------------------------------------------------------
+[2025-06-19 06:45:56] Order completed successfully
+Data: Array
+(
+    [order_id] => 16
+)
+
+--------------------------------------------------------------------------------
+[2025-06-21 07:47:24] Starting order process
+Data: Array
+(
+    [user_id] => 2
+    [payment_method] => 1
+    [shipping_id] => 
+    [cart_items] => Array
+        (
+        )
+
+    [total_amount] => 660000
+)
+
+--------------------------------------------------------------------------------
+[2025-06-21 07:47:24] Error processing order
+Data: Array
+(
+    [error_message] => Unknown column 'HD_PHISHIP' in 'field list'
+    [trace] => #0 C:\xampp\htdocs\LVTN_PhanBon\process_order.php(202): mysqli->prepare('INSERT INTO hoa...')
+#1 {main}
+)
+
+--------------------------------------------------------------------------------

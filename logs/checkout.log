@@ -1,0 +1,38 @@
+[2025-06-21 11:58:10] [EXCEPTION] Undefined constant "DEFAULT_WEIGHT_PER_ITEM" {"file":"C:\\xampp\\htdocs\\LVTN_PhanBon\\checkout.php","line":78,"trace":"#0 {main}"}
+[2025-06-21 11:58:15] [EXCEPTION] Undefined constant "DEFAULT_WEIGHT_PER_ITEM" {"file":"C:\\xampp\\htdocs\\LVTN_PhanBon\\checkout.php","line":78,"trace":"#0 {main}"}
+[2025-06-21 11:59:49] [EXCEPTION] Undefined constant "DEFAULT_WEIGHT_PER_ITEM" {"file":"C:\\xampp\\htdocs\\LVTN_PhanBon\\checkout.php","line":78,"trace":"#0 {main}"}
+[2025-06-21 12:00:09] [EXCEPTION] Undefined constant "DEFAULT_WEIGHT_PER_ITEM" {"file":"C:\\xampp\\htdocs\\LVTN_PhanBon\\checkout.php","line":78,"trace":"#0 {main}"}
+[2025-06-21 12:02:26] [EXCEPTION] Undefined constant "DEFAULT_WEIGHT_PER_ITEM" {"file":"C:\\xampp\\htdocs\\LVTN_PhanBon\\checkout.php","line":78,"trace":"#0 {main}"}
+[2025-06-21 12:02:31] [EXCEPTION] Undefined constant "DEFAULT_WEIGHT_PER_ITEM" {"file":"C:\\xampp\\htdocs\\LVTN_PhanBon\\checkout.php","line":78,"trace":"#0 {main}"}
+[2025-06-21 12:42:18] [ERROR] Undefined variable $promo_details {"file":"C:\\xampp\\htdocs\\LVTN_PhanBon\\checkout.php","line":285,"type":2}
+[2025-06-21 12:42:18] [ERROR] foreach() argument must be of type array|object, null given {"file":"C:\\xampp\\htdocs\\LVTN_PhanBon\\checkout.php","line":285,"type":2}
+[2025-06-21 12:42:18] [ERROR] Undefined variable $promo_details {"file":"C:\\xampp\\htdocs\\LVTN_PhanBon\\checkout.php","line":298,"type":2}
+[2025-06-21 12:42:18] [EXCEPTION] count(): Argument #1 ($value) must be of type Countable|array, null given {"file":"C:\\xampp\\htdocs\\LVTN_PhanBon\\checkout.php","line":298,"trace":"#0 {main}"}
+[2025-06-21 12:44:16] [ERROR] Undefined variable $promo_details {"file":"C:\\xampp\\htdocs\\LVTN_PhanBon\\checkout.php","line":285,"type":2}
+[2025-06-21 12:44:16] [ERROR] foreach() argument must be of type array|object, null given {"file":"C:\\xampp\\htdocs\\LVTN_PhanBon\\checkout.php","line":285,"type":2}
+[2025-06-21 12:44:16] [ERROR] Undefined variable $promo_details {"file":"C:\\xampp\\htdocs\\LVTN_PhanBon\\checkout.php","line":298,"type":2}
+[2025-06-21 12:44:16] [EXCEPTION] count(): Argument #1 ($value) must be of type Countable|array, null given {"file":"C:\\xampp\\htdocs\\LVTN_PhanBon\\checkout.php","line":298,"trace":"#0 {main}"}
+[2025-06-21 12:44:19] [ERROR] Undefined variable $promo_details {"file":"C:\\xampp\\htdocs\\LVTN_PhanBon\\checkout.php","line":285,"type":2}
+[2025-06-21 12:44:19] [ERROR] foreach() argument must be of type array|object, null given {"file":"C:\\xampp\\htdocs\\LVTN_PhanBon\\checkout.php","line":285,"type":2}
+[2025-06-21 12:44:19] [ERROR] Undefined variable $promo_details {"file":"C:\\xampp\\htdocs\\LVTN_PhanBon\\checkout.php","line":298,"type":2}
+[2025-06-21 12:44:19] [EXCEPTION] count(): Argument #1 ($value) must be of type Countable|array, null given {"file":"C:\\xampp\\htdocs\\LVTN_PhanBon\\checkout.php","line":298,"trace":"#0 {main}"}
+[2025-06-21 12:44:22] [ERROR] Undefined variable $promo_details {"file":"C:\\xampp\\htdocs\\LVTN_PhanBon\\checkout.php","line":285,"type":2}
+[2025-06-21 12:44:22] [ERROR] foreach() argument must be of type array|object, null given {"file":"C:\\xampp\\htdocs\\LVTN_PhanBon\\checkout.php","line":285,"type":2}
+[2025-06-21 12:44:22] [ERROR] Undefined variable $promo_details {"file":"C:\\xampp\\htdocs\\LVTN_PhanBon\\checkout.php","line":298,"type":2}
+[2025-06-21 12:44:22] [EXCEPTION] count(): Argument #1 ($value) must be of type Countable|array, null given {"file":"C:\\xampp\\htdocs\\LVTN_PhanBon\\checkout.php","line":298,"trace":"#0 {main}"}
+[2025-06-21 12:46:14] [ERROR] Undefined variable $promo_details {"file":"C:\\xampp\\htdocs\\LVTN_PhanBon\\checkout.php","line":287,"type":2}
+[2025-06-21 12:46:14] [ERROR] foreach() argument must be of type array|object, null given {"file":"C:\\xampp\\htdocs\\LVTN_PhanBon\\checkout.php","line":287,"type":2}
+[2025-06-21 12:46:14] [ERROR] Undefined variable $promo_details {"file":"C:\\xampp\\htdocs\\LVTN_PhanBon\\checkout.php","line":300,"type":2}
+[2025-06-21 12:46:14] [EXCEPTION] count(): Argument #1 ($value) must be of type Countable|array, null given {"file":"C:\\xampp\\htdocs\\LVTN_PhanBon\\checkout.php","line":300,"trace":"#0 {main}"}
+[2025-06-21 12:47:24] [ERROR] Undefined array key "selected_items" {"file":"C:\\xampp\\htdocs\\LVTN_PhanBon\\checkout.php","line":226,"type":2}
+[2025-06-21 12:47:24] [ERROR] foreach() argument must be of type array|object, null given {"file":"C:\\xampp\\htdocs\\LVTN_PhanBon\\checkout.php","line":226,"type":2}
+[2025-06-21 12:47:24] [ERROR] Undefined array key "selected_items" {"file":"C:\\xampp\\htdocs\\LVTN_PhanBon\\checkout.php","line":254,"type":2}
+[2025-06-21 12:47:24] [ERROR] foreach() argument must be of type array|object, null given {"file":"C:\\xampp\\htdocs\\LVTN_PhanBon\\checkout.php","line":254,"type":2}
+[2025-06-21 12:47:34] [ERROR] Undefined array key "selected_items" {"file":"C:\\xampp\\htdocs\\LVTN_PhanBon\\checkout.php","line":226,"type":2}
+[2025-06-21 12:47:34] [ERROR] foreach() argument must be of type array|object, null given {"file":"C:\\xampp\\htdocs\\LVTN_PhanBon\\checkout.php","line":226,"type":2}
+[2025-06-21 12:47:34] [ERROR] Undefined array key "selected_items" {"file":"C:\\xampp\\htdocs\\LVTN_PhanBon\\checkout.php","line":254,"type":2}
+[2025-06-21 12:47:34] [ERROR] foreach() argument must be of type array|object, null given {"file":"C:\\xampp\\htdocs\\LVTN_PhanBon\\checkout.php","line":254,"type":2}
+[2025-06-21 12:47:35] [ERROR] Undefined array key "selected_items" {"file":"C:\\xampp\\htdocs\\LVTN_PhanBon\\checkout.php","line":226,"type":2}
+[2025-06-21 12:47:35] [ERROR] foreach() argument must be of type array|object, null given {"file":"C:\\xampp\\htdocs\\LVTN_PhanBon\\checkout.php","line":226,"type":2}
+[2025-06-21 12:47:35] [ERROR] Undefined array key "selected_items" {"file":"C:\\xampp\\htdocs\\LVTN_PhanBon\\checkout.php","line":254,"type":2}
+[2025-06-21 12:47:35] [ERROR] foreach() argument must be of type array|object, null given {"file":"C:\\xampp\\htdocs\\LVTN_PhanBon\\checkout.php","line":254,"type":2}

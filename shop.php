@@ -181,6 +181,12 @@ include 'connect.php';
     <!-- Footer -->
     <?php include 'footer.php'; ?>
 
+    <script>
+    // Xóa toàn bộ code liên quan đến scroll
+    document.addEventListener('DOMContentLoaded', function() {
+        // Chỉ giữ lại các chức năng cần thiết khác nếu có
+    });
+    </script>
 </body>
 
 </html>

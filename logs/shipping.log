@@ -1,0 +1,950 @@
+{
+    "timestamp": "2025-06-19 17:47:55",
+    "type": "SHIPPING_REQUEST",
+    "message": "Error: Calculating shipping fee",
+    "data": {
+        "SENDER_PROVINCE": 92,
+        "SENDER_DISTRICT": 916,
+        "SENDER_WARD": 31153,
+        "RECEIVER_PROVINCE": 5,
+        "RECEIVER_DISTRICT": 80,
+        "RECEIVER_WARD": 1256,
+        "PRODUCT_TYPE": "HH",
+        "PRODUCT_WEIGHT": 1000,
+        "PRODUCT_PRICE": 46000,
+        "MONEY_COLLECTION": 46000,
+        "TYPE": 1,
+        "NATIONAL_TYPE": 1,
+        "SERVICE_ADD_ON": "",
+        "PRODUCT_LENGTH": 15,
+        "PRODUCT_WIDTH": 15,
+        "PRODUCT_HEIGHT": 15,
+        "PRODUCT_QUANTITY": 1
+    }
+}
+---
+{
+    "timestamp": "2025-06-19 17:47:56",
+    "type": "SHIPPING_RESPONSE",
+    "message": "Error: Shipping fee calculation response",
+    "data": {
+        "status": 204,
+        "error": true,
+        "message": "Price does not apply to this itinerary!",
+        "data": null
+    }
+}
+---
+{
+    "timestamp": "2025-06-19 17:47:56",
+    "type": "SHIPPING_RESPONSE",
+    "message": "Error: Shipping fee calculation response",
+    "data": {
+        "status": 204,
+        "error": true,
+        "message": "Price does not apply to this itinerary!",
+        "data": null
+    }
+}
+---
+{
+    "timestamp": "2025-06-19 17:47:56",
+    "type": "SHIPPING_ERROR",
+    "message": "Error: Price does not apply to this itinerary!",
+    "data": {
+        "error": "Error: Price does not apply to this itinerary!",
+        "stack": "Error: Price does not apply to this itinerary!\n    at AddressManager.calculateShippingFee (http:\/\/localhost\/LVTN_PhanBon\/js\/address.js:306:23)"
+    }
+}
+---
+{
+    "timestamp": "2025-06-19 17:47:56",
+    "type": "SHIPPING_ERROR",
+    "message": "Error: Price does not apply to this itinerary!",
+    "data": {
+        "error": "Error: Price does not apply to this itinerary!",
+        "stack": "Error: Price does not apply to this itinerary!\n    at AddressManager.calculateShippingFee (http:\/\/localhost\/LVTN_PhanBon\/js\/address.js:306:23)"
+    }
+}
+---
+{
+    "timestamp": "2025-06-19 17:50:09",
+    "type": "SHIPPING_REQUEST",
+    "message": "Error: Calculating shipping fee",
+    "data": {
+        "SENDER_PROVINCE": 92,
+        "SENDER_DISTRICT": 916,
+        "SENDER_WARD": 31153,
+        "RECEIVER_PROVINCE": 5,
+        "RECEIVER_DISTRICT": 89,
+        "RECEIVER_WARD": 1319,
+        "PRODUCT_TYPE": "HH",
+        "PRODUCT_WEIGHT": 1000,
+        "PRODUCT_PRICE": 46000,
+        "MONEY_COLLECTION": 46000,
+        "TYPE": 1,
+        "NATIONAL_TYPE": 1,
+        "SERVICE_ADD_ON": "",
+        "PRODUCT_LENGTH": 15,
+        "PRODUCT_WIDTH": 15,
+        "PRODUCT_HEIGHT": 15,
+        "PRODUCT_QUANTITY": 1
+    }
+}
+---
+{
+    "timestamp": "2025-06-19 17:50:09",
+    "type": "SHIPPING_RESPONSE",
+    "message": "Error: Shipping fee calculation response",
+    "data": {
+        "status": 204,
+        "error": true,
+        "message": "Price does not apply to this itinerary!",
+        "data": null
+    }
+}
+---
+{
+    "timestamp": "2025-06-19 17:50:09",
+    "type": "SHIPPING_RESPONSE",
+    "message": "Error: Shipping fee calculation response",
+    "data": {
+        "status": 204,
+        "error": true,
+        "message": "Price does not apply to this itinerary!",
+        "data": null
+    }
+}
+---
+{
+    "timestamp": "2025-06-19 17:50:09",
+    "type": "SHIPPING_ERROR",
+    "message": "Error: Price does not apply to this itinerary!",
+    "data": {
+        "error": "Error: Price does not apply to this itinerary!",
+        "stack": "Error: Price does not apply to this itinerary!\n    at AddressManager.calculateShippingFee (http:\/\/localhost\/LVTN_PhanBon\/js\/address.js:306:23)"
+    }
+}
+---
+{
+    "timestamp": "2025-06-19 17:50:09",
+    "type": "SHIPPING_ERROR",
+    "message": "Error: Price does not apply to this itinerary!",
+    "data": {
+        "error": "Error: Price does not apply to this itinerary!",
+        "stack": "Error: Price does not apply to this itinerary!\n    at AddressManager.calculateShippingFee (http:\/\/localhost\/LVTN_PhanBon\/js\/address.js:306:23)"
+    }
+}
+---
+{
+    "timestamp": "2025-06-19 17:53:15",
+    "type": "SHIPPING_REQUEST",
+    "message": "Error: Calculating shipping fee",
+    "data": {
+        "SENDER_PROVINCE": 92,
+        "SENDER_DISTRICT": 916,
+        "SENDER_WARD": 31153,
+        "RECEIVER_PROVINCE": 5,
+        "RECEIVER_DISTRICT": 85,
+        "RECEIVER_WARD": 1299,
+        "PRODUCT_TYPE": "HH",
+        "PRODUCT_WEIGHT": 1000,
+        "PRODUCT_PRICE": 46000,
+        "MONEY_COLLECTION": 46000,
+        "TYPE": 1,
+        "NATIONAL_TYPE": 2,
+        "SERVICE_TYPE": 2,
+        "SERVICE_ADD_ON": "",
+        "PRODUCT_LENGTH": 15,
+        "PRODUCT_WIDTH": 15,
+        "PRODUCT_HEIGHT": 15,
+        "PRODUCT_QUANTITY": 1
+    }
+}
+---
+{
+    "timestamp": "2025-06-19 17:53:15",
+    "type": "SHIPPING_REQUEST",
+    "message": "Error: Calculating shipping fee",
+    "data": {
+        "SENDER_PROVINCE": 92,
+        "SENDER_DISTRICT": 916,
+        "SENDER_WARD": 31153,
+        "RECEIVER_PROVINCE": 5,
+        "RECEIVER_DISTRICT": 85,
+        "RECEIVER_WARD": 1299,
+        "PRODUCT_TYPE": "HH",
+        "PRODUCT_WEIGHT": 1000,
+        "PRODUCT_PRICE": 46000,
+        "MONEY_COLLECTION": 46000,
+        "TYPE": 1,
+        "NATIONAL_TYPE": 2,
+        "SERVICE_TYPE": 2,
+        "SERVICE_ADD_ON": "",
+        "PRODUCT_LENGTH": 15,
+        "PRODUCT_WIDTH": 15,
+        "PRODUCT_HEIGHT": 15,
+        "PRODUCT_QUANTITY": 1
+    }
+}
+---
+{
+    "timestamp": "2025-06-19 17:53:15",
+    "type": "SHIPPING_RESPONSE",
+    "message": "Error: Shipping fee calculation response",
+    "data": {
+        "status": 204,
+        "error": true,
+        "message": "Price does not apply to this itinerary!",
+        "data": null
+    }
+}
+---
+{
+    "timestamp": "2025-06-19 17:53:15",
+    "type": "SHIPPING_ERROR",
+    "message": "Error: Price does not apply to this itinerary!",
+    "data": {
+        "error": "Error: Price does not apply to this itinerary!",
+        "stack": "Error: Price does not apply to this itinerary!\n    at AddressManager.calculateShippingFee (http:\/\/localhost\/LVTN_PhanBon\/js\/address.js:310:23)"
+    }
+}
+---
+{
+    "timestamp": "2025-06-19 17:53:16",
+    "type": "SHIPPING_RESPONSE",
+    "message": "Error: Shipping fee calculation response",
+    "data": {
+        "status": 204,
+        "error": true,
+        "message": "Price does not apply to this itinerary!",
+        "data": null
+    }
+}
+---
+{
+    "timestamp": "2025-06-19 17:53:16",
+    "type": "SHIPPING_ERROR",
+    "message": "Error: Price does not apply to this itinerary!",
+    "data": {
+        "error": "Error: Price does not apply to this itinerary!",
+        "stack": "Error: Price does not apply to this itinerary!\n    at AddressManager.calculateShippingFee (http:\/\/localhost\/LVTN_PhanBon\/js\/address.js:310:23)"
+    }
+}
+---
+{
+    "timestamp": "2025-06-19 17:56:45",
+    "type": "SHIPPING_REQUEST",
+    "message": "Error: Calculating shipping fee",
+    "data": {
+        "SENDER_PROVINCE": 92,
+        "SENDER_DISTRICT": 916,
+        "SENDER_WARD": 31153,
+        "RECEIVER_PROVINCE": 5,
+        "RECEIVER_DISTRICT": 82,
+        "RECEIVER_WARD": 1279,
+        "PRODUCT_TYPE": "HH",
+        "PRODUCT_WEIGHT": 1000,
+        "PRODUCT_PRICE": 46000,
+        "MONEY_COLLECTION": 46000,
+        "TYPE": 2,
+        "NATIONAL_TYPE": 2,
+        "SERVICE_ID": "VTP",
+        "SERVICE_TYPE": 2,
+        "SERVICE_ADD_ON": "",
+        "PRODUCT_LENGTH": 15,
+        "PRODUCT_WIDTH": 15,
+        "PRODUCT_HEIGHT": 15,
+        "PRODUCT_QUANTITY": 1,
+        "ORDER_SERVICE_ADD": "",
+        "ORDER_SERVICE": "VCN",
+        "COUPON": ""
+    }
+}
+---
+{
+    "timestamp": "2025-06-19 17:56:45",
+    "type": "SHIPPING_RESPONSE",
+    "message": "Error: Shipping fee calculation response",
+    "data": {
+        "status": 204,
+        "error": true,
+        "message": "Price does not apply to this itinerary!",
+        "data": null
+    }
+}
+---
+{
+    "timestamp": "2025-06-19 17:56:45",
+    "type": "SHIPPING_RESPONSE",
+    "message": "Error: Shipping fee calculation response",
+    "data": {
+        "status": 204,
+        "error": true,
+        "message": "Price does not apply to this itinerary!",
+        "data": null
+    }
+}
+---
+{
+    "timestamp": "2025-06-19 18:03:59",
+    "type": "SHIPPING_REQUEST",
+    "message": "Error: Calculating shipping fee",
+    "data": {
+        "SENDER_PROVINCE": 92,
+        "SENDER_DISTRICT": 916,
+        "SENDER_WARD": 31153,
+        "RECEIVER_PROVINCE": 11,
+        "RECEIVER_DISTRICT": 132,
+        "RECEIVER_WARD": 1908,
+        "PRODUCT_TYPE": "HH",
+        "PRODUCT_WEIGHT": 1000,
+        "PRODUCT_PRICE": 440000,
+        "MONEY_COLLECTION": 440000,
+        "TYPE": 2,
+        "NATIONAL_TYPE": 2,
+        "SERVICE_ID": "VTP",
+        "SERVICE_TYPE": 2,
+        "SERVICE_ADD_ON": "",
+        "PRODUCT_LENGTH": 15,
+        "PRODUCT_WIDTH": 15,
+        "PRODUCT_HEIGHT": 15,
+        "PRODUCT_QUANTITY": 1,
+        "ORDER_SERVICE_ADD": "",
+        "ORDER_SERVICE": "VCN",
+        "COUPON": ""
+    }
+}
+---
+{
+    "timestamp": "2025-06-19 18:04:00",
+    "type": "SHIPPING_RESPONSE",
+    "message": "Error: Shipping fee calculation response",
+    "data": {
+        "status": 204,
+        "error": true,
+        "message": "Price does not apply to this itinerary!",
+        "data": null
+    }
+}
+---
+{
+    "timestamp": "2025-06-19 18:04:00",
+    "type": "SHIPPING_RESPONSE",
+    "message": "Error: Shipping fee calculation response",
+    "data": {
+        "status": 204,
+        "error": true,
+        "message": "Price does not apply to this itinerary!",
+        "data": null
+    }
+}
+---
+{
+    "timestamp": "2025-06-19 18:09:44",
+    "type": "SHIPPING_REQUEST",
+    "message": "Error: Calculating shipping fee",
+    "data": {
+        "SENDER_PROVINCE": 92,
+        "SENDER_DISTRICT": 916,
+        "SENDER_WARD": 31153,
+        "RECEIVER_PROVINCE": 8,
+        "RECEIVER_DISTRICT": 109,
+        "RECEIVER_WARD": 1596,
+        "PRODUCT_TYPE": "HH",
+        "PRODUCT_WEIGHT": 1000,
+        "PRODUCT_PRICE": 440000,
+        "MONEY_COLLECTION": 440000,
+        "TYPE": 2,
+        "NATIONAL_TYPE": 2,
+        "SERVICE_ID": "VTP",
+        "SERVICE_TYPE": 2,
+        "SERVICE_ADD_ON": "",
+        "PRODUCT_LENGTH": 15,
+        "PRODUCT_WIDTH": 15,
+        "PRODUCT_HEIGHT": 15,
+        "PRODUCT_QUANTITY": 1,
+        "ORDER_SERVICE_ADD": "",
+        "ORDER_SERVICE": "VCN",
+        "COUPON": ""
+    }
+}
+---
+{
+    "timestamp": "2025-06-19 18:09:44",
+    "type": "SHIPPING_REQUEST",
+    "message": "Error: Calculating shipping fee",
+    "data": {
+        "SENDER_PROVINCE": 92,
+        "SENDER_DISTRICT": 916,
+        "SENDER_WARD": 31153,
+        "RECEIVER_PROVINCE": 8,
+        "RECEIVER_DISTRICT": 109,
+        "RECEIVER_WARD": 1596,
+        "PRODUCT_TYPE": "HH",
+        "PRODUCT_WEIGHT": 1000,
+        "PRODUCT_PRICE": 440000,
+        "MONEY_COLLECTION": 440000,
+        "TYPE": 2,
+        "NATIONAL_TYPE": 2,
+        "SERVICE_ID": "VTP",
+        "SERVICE_TYPE": 2,
+        "SERVICE_ADD_ON": "",
+        "PRODUCT_LENGTH": 15,
+        "PRODUCT_WIDTH": 15,
+        "PRODUCT_HEIGHT": 15,
+        "PRODUCT_QUANTITY": 1,
+        "ORDER_SERVICE_ADD": "",
+        "ORDER_SERVICE": "VCN",
+        "COUPON": ""
+    }
+}
+---
+{
+    "timestamp": "2025-06-19 18:09:45",
+    "type": "SHIPPING_RESPONSE",
+    "message": "Error: Shipping fee calculation response",
+    "data": {
+        "status": 204,
+        "error": true,
+        "message": "Price does not apply to this itinerary!",
+        "data": null
+    }
+}
+---
+{
+    "timestamp": "2025-06-19 18:09:45",
+    "type": "SHIPPING_RESPONSE",
+    "message": "Error: Shipping fee calculation response",
+    "data": {
+        "status": 204,
+        "error": true,
+        "message": "Price does not apply to this itinerary!",
+        "data": null
+    }
+}
+---
+{
+    "timestamp": "2025-06-19 18:12:29",
+    "type": "SHIPPING_REQUEST",
+    "message": "Error: Calculating shipping fee",
+    "data": {
+        "SENDER_PROVINCE": 92,
+        "SENDER_DISTRICT": 916,
+        "SENDER_WARD": 31153,
+        "RECEIVER_PROVINCE": 3,
+        "RECEIVER_DISTRICT": 66,
+        "RECEIVER_WARD": 1091,
+        "PRODUCT_TYPE": "HH",
+        "PRODUCT_WEIGHT": 1000,
+        "PRODUCT_PRICE": 0,
+        "MONEY_COLLECTION": 0,
+        "TYPE": 2,
+        "NATIONAL_TYPE": 2,
+        "SERVICE_ID": "VCN",
+        "SERVICE_TYPE": 2,
+        "SERVICE_ADD_ON": "",
+        "PRODUCT_LENGTH": 15,
+        "PRODUCT_WIDTH": 15,
+        "PRODUCT_HEIGHT": 15,
+        "PRODUCT_QUANTITY": 1,
+        "ORDER_SERVICE_ADD": "",
+        "ORDER_SERVICE": "VCN",
+        "COUPON": ""
+    }
+}
+---
+{
+    "timestamp": "2025-06-19 18:12:29",
+    "type": "SHIPPING_REQUEST",
+    "message": "Error: Calculating shipping fee",
+    "data": {
+        "SENDER_PROVINCE": 92,
+        "SENDER_DISTRICT": 916,
+        "SENDER_WARD": 31153,
+        "RECEIVER_PROVINCE": 3,
+        "RECEIVER_DISTRICT": 66,
+        "RECEIVER_WARD": 1091,
+        "PRODUCT_TYPE": "HH",
+        "PRODUCT_WEIGHT": 1000,
+        "PRODUCT_PRICE": 0,
+        "MONEY_COLLECTION": 0,
+        "TYPE": 2,
+        "NATIONAL_TYPE": 2,
+        "SERVICE_ID": "VCN",
+        "SERVICE_TYPE": 2,
+        "SERVICE_ADD_ON": "",
+        "PRODUCT_LENGTH": 15,
+        "PRODUCT_WIDTH": 15,
+        "PRODUCT_HEIGHT": 15,
+        "PRODUCT_QUANTITY": 1,
+        "ORDER_SERVICE_ADD": "",
+        "ORDER_SERVICE": "VCN",
+        "COUPON": ""
+    }
+}
+---
+{
+    "timestamp": "2025-06-19 18:12:30",
+    "type": "SHIPPING_RESPONSE",
+    "message": "Error: Shipping fee calculation response",
+    "data": {
+        "status": 204,
+        "error": true,
+        "message": "Price does not apply to this itinerary!",
+        "data": null
+    }
+}
+---
+{
+    "timestamp": "2025-06-19 18:12:30",
+    "type": "SHIPPING_RESPONSE",
+    "message": "Error: Shipping fee calculation response",
+    "data": {
+        "status": 204,
+        "error": true,
+        "message": "Price does not apply to this itinerary!",
+        "data": null
+    }
+}
+---
+{
+    "timestamp": "2025-06-19 18:12:30",
+    "type": "SHIPPING_ERROR",
+    "message": "Error: Price does not apply to this itinerary!",
+    "data": {
+        "error": "Error: Price does not apply to this itinerary!",
+        "stack": "Error: Price does not apply to this itinerary!\n    at AddressManager.calculateShippingFee (http:\/\/localhost\/LVTN_PhanBon\/js\/address.js:311:23)",
+        "provinceId": "3",
+        "districtId": "66",
+        "wardId": "1091",
+        "isIntraProvince": false
+    }
+}
+---
+{
+    "timestamp": "2025-06-19 18:12:30",
+    "type": "SHIPPING_ERROR",
+    "message": "Error: Price does not apply to this itinerary!",
+    "data": {
+        "error": "Error: Price does not apply to this itinerary!",
+        "stack": "Error: Price does not apply to this itinerary!\n    at AddressManager.calculateShippingFee (http:\/\/localhost\/LVTN_PhanBon\/js\/address.js:311:23)",
+        "provinceId": "3",
+        "districtId": "66",
+        "wardId": "1091",
+        "isIntraProvince": false
+    }
+}
+---
+{
+    "timestamp": "2025-06-19 18:14:47",
+    "type": "SHIPPING_ERROR",
+    "message": "Error: Could not calculate shipping fee with any service",
+    "data": {
+        "provinceId": "1",
+        "districtId": "6",
+        "wardId": "126",
+        "error": "Error: Could not calculate shipping fee with any service"
+    }
+}
+---
+{
+    "timestamp": "2025-06-19 18:14:47",
+    "type": "SHIPPING_ERROR",
+    "message": "Error: Could not calculate shipping fee with any service",
+    "data": {
+        "provinceId": "1",
+        "districtId": "6",
+        "wardId": "126",
+        "error": "Error: Could not calculate shipping fee with any service"
+    }
+}
+---
+{
+    "timestamp": "2025-06-19 18:17:25",
+    "type": "SHIPPING_ERROR",
+    "message": "Error: Could not calculate shipping fee with any service",
+    "data": {
+        "provinceId": "5",
+        "districtId": "82",
+        "wardId": "1276",
+        "error": "Error: Could not calculate shipping fee with any service"
+    }
+}
+---
+{
+    "timestamp": "2025-06-19 18:17:25",
+    "type": "SHIPPING_ERROR",
+    "message": "Error: Could not calculate shipping fee with any service",
+    "data": {
+        "provinceId": "5",
+        "districtId": "82",
+        "wardId": "1276",
+        "error": "Error: Could not calculate shipping fee with any service"
+    }
+}
+---
+{
+    "timestamp": "2025-06-19 18:20:43",
+    "type": "SHIPPING_ERROR",
+    "message": "Error: Could not calculate shipping fee with any service",
+    "data": {
+        "provinceId": "3",
+        "districtId": "67",
+        "wardId": "1096",
+        "error": "Error: Could not calculate shipping fee with any service"
+    }
+}
+---
+{
+    "timestamp": "2025-06-19 18:20:43",
+    "type": "SHIPPING_ERROR",
+    "message": "Error: Could not calculate shipping fee with any service",
+    "data": {
+        "provinceId": "3",
+        "districtId": "67",
+        "wardId": "1096",
+        "error": "Error: Could not calculate shipping fee with any service"
+    }
+}
+---
+{
+    "timestamp": "2025-06-19 18:22:28",
+    "type": "SHIPPING_ERROR",
+    "message": "Error: Could not calculate shipping fee with any service",
+    "data": {
+        "provinceId": "6",
+        "districtId": "94",
+        "wardId": "1367",
+        "error": "Error: Could not calculate shipping fee with any service"
+    }
+}
+---
+{
+    "timestamp": "2025-06-19 18:22:28",
+    "type": "SHIPPING_ERROR",
+    "message": "Error: Could not calculate shipping fee with any service",
+    "data": {
+        "provinceId": "6",
+        "districtId": "94",
+        "wardId": "1367",
+        "error": "Error: Could not calculate shipping fee with any service"
+    }
+}
+---
+{
+    "timestamp": "2025-06-19 18:29:32",
+    "type": "SHIPPING_ERROR",
+    "message": "Error: Could not calculate shipping fee with any service",
+    "data": {
+        "provinceId": "5",
+        "districtId": "82",
+        "wardId": "1276",
+        "error": "Error: Could not calculate shipping fee with any service"
+    }
+}
+---
+{
+    "timestamp": "2025-06-19 18:29:32",
+    "type": "SHIPPING_ERROR",
+    "message": "Error: Could not calculate shipping fee with any service",
+    "data": {
+        "provinceId": "5",
+        "districtId": "82",
+        "wardId": "1276",
+        "error": "Error: Could not calculate shipping fee with any service"
+    }
+}
+---
+{
+    "timestamp": "2025-06-19 18:31:51",
+    "type": "SHIPPING_ERROR",
+    "message": "Error: Could not calculate shipping fee with any service",
+    "data": {
+        "provinceId": "11",
+        "districtId": "130",
+        "wardId": "1869",
+        "error": "Error: Could not calculate shipping fee with any service"
+    }
+}
+---
+{
+    "timestamp": "2025-06-19 18:31:51",
+    "type": "SHIPPING_ERROR",
+    "message": "Error: Could not calculate shipping fee with any service",
+    "data": {
+        "provinceId": "11",
+        "districtId": "130",
+        "wardId": "1869",
+        "error": "Error: Could not calculate shipping fee with any service"
+    }
+}
+---
+{
+    "timestamp": "2025-06-19 18:40:55",
+    "type": "SHIPPING_ERROR",
+    "message": "Error: Could not calculate shipping fee with any service",
+    "data": {
+        "provinceId": "12",
+        "districtId": "141",
+        "wardId": "2106",
+        "error": "Error: Could not calculate shipping fee with any service"
+    }
+}
+---
+{
+    "timestamp": "2025-06-19 18:40:55",
+    "type": "SHIPPING_ERROR",
+    "message": "Error: Could not calculate shipping fee with any service",
+    "data": {
+        "provinceId": "12",
+        "districtId": "141",
+        "wardId": "2106",
+        "error": "Error: Could not calculate shipping fee with any service"
+    }
+}
+---
+{
+    "timestamp": "2025-06-19 18:41:06",
+    "type": "SHIPPING_ERROR",
+    "message": "Error: Could not calculate shipping fee with any service",
+    "data": {
+        "provinceId": "5",
+        "districtId": "83",
+        "wardId": "1291",
+        "error": "Error: Could not calculate shipping fee with any service"
+    }
+}
+---
+{
+    "timestamp": "2025-06-19 18:41:06",
+    "type": "SHIPPING_ERROR",
+    "message": "Error: Could not calculate shipping fee with any service",
+    "data": {
+        "provinceId": "5",
+        "districtId": "83",
+        "wardId": "1291",
+        "error": "Error: Could not calculate shipping fee with any service"
+    }
+}
+---
+{
+    "timestamp": "2025-06-19 18:41:23",
+    "type": "SHIPPING_ERROR",
+    "message": "Error: Could not calculate shipping fee with any service",
+    "data": {
+        "provinceId": "5",
+        "districtId": "82",
+        "wardId": "1276",
+        "error": "Error: Could not calculate shipping fee with any service"
+    }
+}
+---
+{
+    "timestamp": "2025-06-19 18:41:23",
+    "type": "SHIPPING_ERROR",
+    "message": "Error: Could not calculate shipping fee with any service",
+    "data": {
+        "provinceId": "5",
+        "districtId": "82",
+        "wardId": "1276",
+        "error": "Error: Could not calculate shipping fee with any service"
+    }
+}
+---
+{
+    "timestamp": "2025-06-19 18:52:05",
+    "type": "SHIPPING_ERROR",
+    "message": "Error: Could not calculate shipping fee with any service",
+    "data": {
+        "provinceId": "15",
+        "districtId": "165",
+        "wardId": "2581",
+        "error": "Error: Could not calculate shipping fee with any service"
+    }
+}
+---
+{
+    "timestamp": "2025-06-19 18:52:05",
+    "type": "SHIPPING_ERROR",
+    "message": "Error: Could not calculate shipping fee with any service",
+    "data": {
+        "provinceId": "15",
+        "districtId": "165",
+        "wardId": "2581",
+        "error": "Error: Could not calculate shipping fee with any service"
+    }
+}
+---
+{
+    "timestamp": "2025-06-20 07:19:18",
+    "type": "SHIPPING_ERROR",
+    "message": "Error: Could not calculate shipping fee with any service",
+    "data": {
+        "provinceId": "13",
+        "districtId": "149",
+        "wardId": "2278",
+        "error": "Error: Could not calculate shipping fee with any service"
+    }
+}
+---
+{
+    "timestamp": "2025-06-20 07:19:18",
+    "type": "SHIPPING_ERROR",
+    "message": "Error: Could not calculate shipping fee with any service",
+    "data": {
+        "provinceId": "13",
+        "districtId": "149",
+        "wardId": "2278",
+        "error": "Error: Could not calculate shipping fee with any service"
+    }
+}
+---
+{
+    "timestamp": "2025-06-20 07:23:31",
+    "type": "SHIPPING_ERROR",
+    "message": "Error: Không thể tính phí vận chuyển",
+    "data": {
+        "error": "Không thể tính phí vận chuyển",
+        "params": {
+            "provinceId": "5",
+            "districtId": "82",
+            "wardId": "1278"
+        }
+    }
+}
+---
+{
+    "timestamp": "2025-06-20 07:23:31",
+    "type": "SHIPPING_ERROR",
+    "message": "Error: Không thể tính phí vận chuyển",
+    "data": {
+        "error": "Không thể tính phí vận chuyển",
+        "params": {
+            "provinceId": "5",
+            "districtId": "82",
+            "wardId": "1278"
+        }
+    }
+}
+---
+{
+    "timestamp": "2025-06-20 07:52:53",
+    "type": "SHIPPING_ERROR",
+    "message": "Error: Giỏ hàng trống hoặc không có sản phẩm nào được chọn",
+    "data": {
+        "error": "Giỏ hàng trống hoặc không có sản phẩm nào được chọn",
+        "params": {
+            "provinceId": "15",
+            "districtId": "165",
+            "wardId": "2578"
+        }
+    }
+}
+---
+{
+    "timestamp": "2025-06-20 07:52:53",
+    "type": "SHIPPING_ERROR",
+    "message": "Error: Giỏ hàng trống hoặc không có sản phẩm nào được chọn",
+    "data": {
+        "error": "Giỏ hàng trống hoặc không có sản phẩm nào được chọn",
+        "params": {
+            "provinceId": "15",
+            "districtId": "165",
+            "wardId": "2578"
+        }
+    }
+}
+---
+{
+    "timestamp": "2025-06-20 07:53:19",
+    "type": "SHIPPING_ERROR",
+    "message": "Error: Không thể tính phí vận chuyển",
+    "data": {
+        "error": "Không thể tính phí vận chuyển",
+        "params": {
+            "provinceId": "11",
+            "districtId": "132",
+            "wardId": "1908"
+        }
+    }
+}
+---
+{
+    "timestamp": "2025-06-20 07:53:20",
+    "type": "SHIPPING_ERROR",
+    "message": "Error: Không thể tính phí vận chuyển",
+    "data": {
+        "error": "Không thể tính phí vận chuyển",
+        "params": {
+            "provinceId": "11",
+            "districtId": "132",
+            "wardId": "1908"
+        }
+    }
+}
+---
+{
+    "timestamp": "2025-06-20 08:13:21",
+    "type": "SHIPPING_ERROR",
+    "message": "Error: Unknown endpoint",
+    "data": {
+        "error": "Unknown endpoint",
+        "params": {
+            "provinceId": "5",
+            "districtId": "80",
+            "wardId": "1256"
+        }
+    }
+}
+---
+{
+    "timestamp": "2025-06-20 08:13:21",
+    "type": "SHIPPING_ERROR",
+    "message": "Error: Unknown endpoint",
+    "data": {
+        "error": "Unknown endpoint",
+        "params": {
+            "provinceId": "5",
+            "districtId": "80",
+            "wardId": "1256"
+        }
+    }
+}
+---
+{
+    "timestamp": "2025-06-20 08:24:12",
+    "type": "SHIPPING_ERROR",
+    "message": "Error: Invalid JSON response from API: <!doctype html><html lang=\"en\"><head><title>HTTP Status 405 – Method Not Allowed<\/title><style type=\"text\/css\">h1 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:22px;} h2 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:16px;} h3 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:14px;} body {font-family:Tahoma,Arial,sans-serif;color:black;background-color:white;} b {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;} p {font-family:Tahoma,Arial,sans-serif;background:white;color:black;font-size:12px;} a {color:black;} a.name {color:black;} .line {height:1px;background-color:#525D76;border:none;}<\/style><\/head><body><h1>HTTP Status 405 – Method Not Allowed<\/h1><hr class=\"line\" \/><p><b>Type<\/b> Status Report<\/p><p><b>Message<\/b> Request method &#39;GET&#39; not supported<\/p><p><b>Description<\/b> The method received in the request-line is known by the origin server but not supported by the target resource.<\/p><hr class=\"line\" \/><h3>Apache Tomcat\/8.5.31<\/h3><\/body><\/html>",
+    "data": {
+        "error": "Invalid JSON response from API: <!doctype html><html lang=\"en\"><head><title>HTTP Status 405 – Method Not Allowed<\/title><style type=\"text\/css\">h1 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:22px;} h2 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:16px;} h3 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:14px;} body {font-family:Tahoma,Arial,sans-serif;color:black;background-color:white;} b {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;} p {font-family:Tahoma,Arial,sans-serif;background:white;color:black;font-size:12px;} a {color:black;} a.name {color:black;} .line {height:1px;background-color:#525D76;border:none;}<\/style><\/head><body><h1>HTTP Status 405 – Method Not Allowed<\/h1><hr class=\"line\" \/><p><b>Type<\/b> Status Report<\/p><p><b>Message<\/b> Request method &#39;GET&#39; not supported<\/p><p><b>Description<\/b> The method received in the request-line is known by the origin server but not supported by the target resource.<\/p><hr class=\"line\" \/><h3>Apache Tomcat\/8.5.31<\/h3><\/body><\/html>"
+    }
+}
+---
+{
+    "timestamp": "2025-06-20 08:24:12",
+    "type": "SHIPPING_ERROR",
+    "message": "Error: Invalid JSON response from API: <!doctype html><html lang=\"en\"><head><title>HTTP Status 405 – Method Not Allowed<\/title><style type=\"text\/css\">h1 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:22px;} h2 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:16px;} h3 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:14px;} body {font-family:Tahoma,Arial,sans-serif;color:black;background-color:white;} b {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;} p {font-family:Tahoma,Arial,sans-serif;background:white;color:black;font-size:12px;} a {color:black;} a.name {color:black;} .line {height:1px;background-color:#525D76;border:none;}<\/style><\/head><body><h1>HTTP Status 405 – Method Not Allowed<\/h1><hr class=\"line\" \/><p><b>Type<\/b> Status Report<\/p><p><b>Message<\/b> Request method &#39;GET&#39; not supported<\/p><p><b>Description<\/b> The method received in the request-line is known by the origin server but not supported by the target resource.<\/p><hr class=\"line\" \/><h3>Apache Tomcat\/8.5.31<\/h3><\/body><\/html>",
+    "data": {
+        "error": "Invalid JSON response from API: <!doctype html><html lang=\"en\"><head><title>HTTP Status 405 – Method Not Allowed<\/title><style type=\"text\/css\">h1 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:22px;} h2 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:16px;} h3 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:14px;} body {font-family:Tahoma,Arial,sans-serif;color:black;background-color:white;} b {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;} p {font-family:Tahoma,Arial,sans-serif;background:white;color:black;font-size:12px;} a {color:black;} a.name {color:black;} .line {height:1px;background-color:#525D76;border:none;}<\/style><\/head><body><h1>HTTP Status 405 – Method Not Allowed<\/h1><hr class=\"line\" \/><p><b>Type<\/b> Status Report<\/p><p><b>Message<\/b> Request method &#39;GET&#39; not supported<\/p><p><b>Description<\/b> The method received in the request-line is known by the origin server but not supported by the target resource.<\/p><hr class=\"line\" \/><h3>Apache Tomcat\/8.5.31<\/h3><\/body><\/html>"
+    }
+}
+---
+{
+    "timestamp": "2025-06-20 08:27:14",
+    "type": "SHIPPING_ERROR",
+    "message": "Error: Price does not apply to this itinerary!",
+    "data": {
+        "error": "Price does not apply to this itinerary!"
+    }
+}
+---
+{
+    "timestamp": "2025-06-20 08:27:15",
+    "type": "SHIPPING_ERROR",
+    "message": "Error: Price does not apply to this itinerary!",
+    "data": {
+        "error": "Price does not apply to this itinerary!"
+    }
+}
+---

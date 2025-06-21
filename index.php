@@ -103,239 +103,97 @@ $result = $conn->query($sql);
     <section class="category-section">
         <div class="container">
             <div class="section-title">
-                <h2> <span class="col_green">Danh mục sản phẩm</span></h2>
+                <h2><span class="col_green">Danh mục sản phẩm</span></h2>
                 <p class="text-muted">Khám phá các danh mục sản phẩm đa dạng của chúng tôi</p>
             </div>
             <div class="category-grid">
                 <?php
-                if ($result->num_rows > 0) {
-                    $delay = 0;
-                    while ($row = $result->fetch_assoc()) {
-                        $category_id = $row['DM_MA'];
-                        $ten_danhmuc = htmlspecialchars($row['DM_TEN']);
-                        $hinh_anh = htmlspecialchars($row['DM_AVATAR']);
-                        echo '
-                        <div class="category-card animate-on-scroll" data-aos="fade-up" data-aos-delay="'.$delay.'">
-                            <a href="category.php?id='.$category_id.'" class="category-link">
-                                <div class="category-image">
-                                    <img src="img/'.$hinh_anh.'" alt="'.$ten_danhmuc.'">
-                                </div>
-                                <h3 class="category-title">'.$ten_danhmuc.'</h3>
-                            </a>
-                        </div>';
-                        $delay += 100;
-                    }
-                } else {
-                    echo '<div class="col-12"><p class="text-center">Không có danh mục nào.</p></div>';
+            if ($result->num_rows > 0) {
+                $delay = 0;
+                while ($row = $result->fetch_assoc()) {
+                    $category_id = $row['DM_MA'];
+                    $ten_danhmuc = htmlspecialchars($row['DM_TEN']);
+                    $hinh_anh = htmlspecialchars($row['DM_AVATAR']);
+                    echo '
+                    <div class="category-card animate-on-scroll" data-aos="fade-up" data-aos-delay="'.$delay.'">
+                        <a href="category.php?id='.$category_id.'" class="category-link">
+                            <div class="category-image">
+                                <img src="img/'.$hinh_anh.'" alt="'.$ten_danhmuc.'">
+                            </div>
+                            <h3 class="category-title">'.$ten_danhmuc.'</h3>
+                        </a>
+                    </div>';
+                    $delay += 100;
                 }
-                ?>
+            } else {
+                echo '<div class="col-12"><p class="text-center">Không có danh mục nào.</p></div>';
+            }
+            // Do NOT close the connection here
+            ?>
             </div>
         </div>
     </section>
-
-    <?php
-    // Đóng kết nối
-    $conn->close();
-    ?>
-
     <!-- Featured Products Section -->
     <section id="list_h" class="p_3">
         <div class="container-fluid">
             <div class="list_h1 text-center mb-4 row">
                 <div class="col-md-12 animate-on-scroll">
-                    <h2 class="mb-0"><span class="col_green">Sản phẩm Nổi bật</span> </h2>
+                    <h2 class="mb-0"><span class="col_green">Sản phẩm Nổi bật</span></h2>
                 </div>
             </div>
             <div class="list_h2 row">
-                <div class="col-md-2 col-sm-6">
-                    <div class="list_h2i">
-                        <div class="list_h2i1 position-relative">
-                            <div class="list_h2i1i">
-                                <div class="grid clearfix">
-                                    <figure class="effect-jazz mb-0">
-                                        <a href="#"><img src="img/7.jpg" class="w-100"
-                                                alt="Hạt giống rau củ quanh năm"></a>
-                                    </figure>
+                <?php
+            // Query to fetch featured products
+            $sql = "SELECT SP_MA, SP_TEN, SP_DONGIA, SP_HINHANH, SP_DONVITINH 
+                    FROM san_pham 
+                    ORDER BY SP_DONGIA DESC 
+                    LIMIT 6";
+            $result = $conn->query($sql);
+
+            if ($result->num_rows > 0) {
+                while ($row = $result->fetch_assoc()) {
+                    $product_id = $row['SP_MA'];
+                    $ten_sanpham = htmlspecialchars($row['SP_TEN']);
+                    $dongia = number_format($row['SP_DONGIA'], 0, ',', '.');
+                    $hinh_anh = htmlspecialchars($row['SP_HINHANH']);
+                    $discount = 20;
+                    $original_price = $row['SP_DONGIA'] / (1 - $discount / 100);
+                    $original_price = number_format($original_price, 0, ',', '.');
+
+                    echo '
+                    <div class="col-md-2 col-sm-6">
+                        <div class="list_h2i">
+                            <div class="list_h2i1 position-relative">
+                                <div class="list_h2i1i">
+                                    <div class="grid clearfix">
+                                        <figure class="effect-jazz mb-0">
+                                            <a href="product.php?id=' . $product_id . '"><img src="img/' . $hinh_anh . '" class="w-100" alt="' . $ten_sanpham . '"></a>
+                                        </figure>
+                                    </div>
+                                </div>
+                                <div class="list_h2i1i1 position-absolute top-0 p-1">
+                                    <h6 class="mb-0 font_12 fw-bold d-inline-block bg_yell col_black lh-1 rounded_30 p-1 px-2">-' . $discount . '%</h6>
                                 </div>
                             </div>
-                            <div class="list_h2i1i1 position-absolute top-0 p-1">
-                                <h6
-                                    class="mb-0 font_12 fw-bold d-inline-block bg_yell col_black lh-1 rounded_30 p-1 px-2">
-                                    -20%</h6>
+                            <div class="list_h2i2">
+                                <h6 class="fw-bold font_14"><a href="product.php?id=' . $product_id . '">' . $ten_sanpham . '</a></h6>
+                                <span class="col_yell">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star-half-o"></i>
+                                </span>
+                                <h6 class="mt-2 font_14"><span class="span_1 col_green fw-bold">' . $dongia . 'đ</span> <span class="span_2 ms-2 text-decoration-line-through">' . $original_price . 'đ</span></h6>
+                                <h6 class="mb-0 mt-4 text-center"><a class="button" href="add_to_cart.php?id=' . $product_id . '">Chọn mua</a></h6>
                             </div>
                         </div>
-                        <div class="list_h2i2">
-                            <h6 class="fw-bold font_14"><a href="#">Hạt giống rau củ quanh năm</a></h6>
-                            <span class="col_yell">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star-half-o"></i>
-                            </span>
-                            <h6 class="mt-2 font_14"><span class="span_1 col_green fw-bold">189.000đ</span> <span
-                                    class="span_2 ms-2 text-decoration-line-through">430.000đ</span></h6>
-                            <h6 class="mb-0 mt-4 text-center"><a class="button" href="#">Chọn mua</a></h6>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-2 col-sm-6">
-                    <div class="list_h2i">
-                        <div class="list_h2i1 position-relative">
-                            <div class="list_h2i1i">
-                                <div class="grid clearfix">
-                                    <figure class="effect-jazz mb-0">
-                                        <a href="#"><img src="img/8.jpg" class="w-100"
-                                                alt="Hạt giống cà chua F1 lai"></a>
-                                    </figure>
-                                </div>
-                            </div>
-                            <div class="list_h2i1i1 position-absolute top-0 p-1">
-                                <h6
-                                    class="mb-0 font_12 fw-bold d-inline-block bg_yell col_black lh-1 rounded_30 p-1 px-2">
-                                    -30%</h6>
-                            </div>
-                        </div>
-                        <div class="list_h2i2">
-                            <h6 class="fw-bold font_14"><a href="#">Hạt giống cà chua F1 lai</a></h6>
-                            <span class="col_yell">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star-half-o"></i>
-                            </span>
-                            <h6 class="mt-2 font_14"><span class="span_1 col_green fw-bold">489.000đ</span> <span
-                                    class="span_2 ms-2 text-decoration-line-through">990.000đ</span></h6>
-                            <h6 class="mb-0 mt-4 text-center"><a class="button" href="#">Chọn mua</a></h6>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-2 col-sm-6">
-                    <div class="list_h2i">
-                        <div class="list_h2i1 position-relative">
-                            <div class="list_h2i1i">
-                                <div class="grid clearfix">
-                                    <figure class="effect-jazz mb-0">
-                                        <a href="#"><img src="img/9.jpg" class="w-100" alt="Đậu bắp"></a>
-                                    </figure>
-                                </div>
-                            </div>
-                            <div class="list_h2i1i1 position-absolute top-0 p-1">
-                                <h6
-                                    class="mb-0 font_12 fw-bold d-inline-block bg_yell col_black lh-1 rounded_30 p-1 px-2">
-                                    -40%</h6>
-                            </div>
-                        </div>
-                        <div class="list_h2i2">
-                            <h6 class="fw-bold font_14"><a href="#">Đậu bắp</a></h6>
-                            <span class="col_yell">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star-half-o"></i>
-                            </span>
-                            <h6 class="mt-2 font_14"><span class="span_1 col_green fw-bold">389.000đ</span> <span
-                                    class="span_2 ms-2 text-decoration-line-through">680.000đ</span></h6>
-                            <h6 class="mb-0 mt-4 text-center"><a class="button" href="#">Chọn mua</a></h6>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-2 col-sm-6">
-                    <div class="list_h2i">
-                        <div class="list_h2i1 position-relative">
-                            <div class="list_h2i1i">
-                                <div class="grid clearfix">
-                                    <figure class="effect-jazz mb-0">
-                                        <a href="#"><img src="img/10.jpg" class="w-100" alt="Dưa leo"></a>
-                                    </figure>
-                                </div>
-                            </div>
-                            <div class="list_h2i1i1 position-absolute top-0 p-1">
-                                <h6
-                                    class="mb-0 font_12 fw-bold d-inline-block bg_yell col_black lh-1 rounded_30 p-1 px-2">
-                                    -25%</h6>
-                            </div>
-                        </div>
-                        <div class="list_h2i2">
-                            <h6 class="fw-bold font_14"><a href="#">Dưa leo</a></h6>
-                            <span class="col_yell">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star-half-o"></i>
-                            </span>
-                            <h6 class="mt-2 font_14"><span class="span_1 col_green fw-bold">289.000đ</span> <span
-                                    class="span_2 ms-2 text-decoration-line-through">699.000đ</span></h6>
-                            <h6 class="mb-0 mt-4 text-center"><a class="button" href="#">Chọn mua</a></h6>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-2 col-sm-6">
-                    <div class="list_h2i">
-                        <div class="list_h2i1 position-relative">
-                            <div class="list_h2i1i">
-                                <div class="grid clearfix">
-                                    <figure class="effect-jazz mb-0">
-                                        <a href="#"><img src="img/11.jpg" class="w-100" alt="Hạt giống rau mùa hè"></a>
-                                    </figure>
-                                </div>
-                            </div>
-                            <div class="list_h2i1i1 position-absolute top-0 p-1">
-                                <h6
-                                    class="mb-0 font_12 fw-bold d-inline-block bg_yell col_black lh-1 rounded_30 p-1 px-2">
-                                    -20%</h6>
-                            </div>
-                        </div>
-                        <div class="list_h2i2">
-                            <h6 class="fw-bold font_14"><a href="#">Hạt giống rau mùa hè</a></h6>
-                            <span class="col_yell">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star-half-o"></i>
-                            </span>
-                            <h6 class="mt-2 font_14"><span class="span_1 col_green fw-bold">269.000đ</span> <span
-                                    class="span_2 ms-2 text-decoration-line-through">799.000đ</span></h6>
-                            <h6 class="mb-0 mt-4 text-center"><a class="button" href="#">Chọn mua</a></h6>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-2 col-sm-6">
-                    <div class="list_h2i">
-                        <div class="list_h2i1 position-relative">
-                            <div class="list_h2i1i">
-                                <div class="grid clearfix">
-                                    <figure class="effect-jazz mb-0">
-                                        <a href="#"><img src="img/12.jpg" class="w-100"
-                                                alt="HDPE 12x12 Túi trồng cây"></a>
-                                    </figure>
-                                </div>
-                            </div>
-                            <div class="list_h2i1i1 position-absolute top-0 p-1">
-                                <h6
-                                    class="mb-0 font_12 fw-bold d-inline-block bg_yell col_black lh-1 rounded_30 p-1 px-2">
-                                    -15%</h6>
-                            </div>
-                        </div>
-                        <div class="list_h2i2">
-                            <h6 class="fw-bold font_14"><a href="#">HDPE 12x12 Túi trồng cây</a></h6>
-                            <span class="col_yell">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star-half-o"></i>
-                            </span>
-                            <h6 class="mt-2 font_14"><span class="span_1 col_green fw-bold">189.000đ</span> <span
-                                    class="span_2 ms-2 text-decoration-line-through">430.000đ</span></h6>
-                            <h6 class="mb-0 mt-4 text-center"><a class="button" href="#">Chọn mua</a></h6>
-                        </div>
-                    </div>
-                </div>
+                    </div>';
+                }
+            } else {
+                echo '<div class="col-12"><p class="text-center">Không có sản phẩm nổi bật nào.</p></div>';
+            }
+            ?>
             </div>
             <div class="list_h3 text-center mt-5 row">
                 <div class="col-md-12">
@@ -382,6 +240,7 @@ $result = $conn->query($sql);
     </section>
 
     <!-- Best Sellers Section -->
+    <!-- Best Sellers Section -->
     <section id="sale" class="p_3 bg_lighto">
         <div class="container-fluid">
             <div class="list_h1 text-center mb-4 row">
@@ -390,192 +249,57 @@ $result = $conn->query($sql);
                 </div>
             </div>
             <div class="list_h2 row">
-                <div class="col-md-2 col-sm-6">
-                    <div class="list_h2i">
-                        <div class="list_h2i1 position-relative">
-                            <div class="list_h2i1i">
-                                <div class="grid clearfix">
-                                    <figure class="effect-jazz mb-0">
-                                        <a href="#"><img src="img/13.jpg" class="w-100" alt="abc"></a>
-                                    </figure>
+                <?php
+                $sql = "SELECT sp.SP_MA, sp.SP_TEN, sp.SP_DONGIA, sp.SP_HINHANH, sp.SP_DONVITINH, COALESCE(SUM(cthd.CTHD_SOLUONG), 0) as total_sold FROM san_pham sp LEFT JOIN chi_tiet_hd cthd ON sp.SP_MA = cthd.SP_MA GROUP BY sp.SP_MA, sp.SP_TEN, sp.SP_DONGIA, sp.SP_HINHANH, sp.SP_DONVITINH ORDER BY total_sold DESC LIMIT 6;";
+                $result = $conn->query($sql);
+                if (!$result) {
+                    die("Truy vấn sản phẩm bán chạy thất bại: " . $conn->error);
+                }
+
+                if ($result->num_rows > 0) {
+                    while ($row = $result->fetch_assoc()) {
+                        $product_id = $row['SP_MA'];
+                        $ten_sanpham = htmlspecialchars($row['SP_TEN']);
+                        $dongia = number_format($row['SP_DONGIA'] ?? 0, 0, ',', '.');
+                        $hinh_anh = htmlspecialchars($row['SP_HINHANH'] ?? 'default.jpg'); // Fallback image if NULL
+                        $discount = 20;
+                        $original_price = ($row['SP_DONGIA'] ?? 0) / (1 - $discount / 100);
+                        $original_price = number_format($original_price, 0, ',', '.');
+
+                        echo '
+                        <div class="col-md-2 col-sm-6">
+                            <div class="list_h2i">
+                                <div class="list_h2i1 position-relative">
+                                    <div class="list_h2i1i">
+                                        <div class="grid clearfix">
+                                            <figure class="effect-jazz mb-0">
+                                                <a href="product.php?id=' . $product_id . '"><img src="img/' . $hinh_anh . '" class="w-100" alt="' . $ten_sanpham . '"></a>
+                                            </figure>
+                                        </div>
+                                    </div>
+                                    <div class="list_h2i1i1 position-absolute top-0 p-1">
+                                        <h6 class="mb-0 font_12 fw-bold d-inline-block bg_yell col_black lh-1 rounded_30 p-1 px-2">-' . $discount . '%</h6>
+                                    </div>
+                                </div>
+                                <div class="list_h2i2">
+                                    <h6 class="fw-bold font_14"><a href="product.php?id=' . $product_id . '">' . $ten_sanpham . '</a></h6>
+                                    <span class="col_yell">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star-half-o"></i>
+                                    </span>
+                                    <h6 class="mt-2 font_14"><span class="span_1 col_green fw-bold">' . $dongia . 'đ</span> <span class="span_2 ms-2 text-decoration-line-through">' . $original_price . 'đ</span></h6>
+                                    <h6 class="mb-0 mt-4 text-center"><a class="button" href="add_to_cart.php?id=' . $product_id . '">Chọn mua</a></h6>
                                 </div>
                             </div>
-                            <div class="list_h2i1i1 position-absolute top-0 p-1">
-                                <h6
-                                    class="mb-0 font_12 fw-bold d-inline-block bg_yell col_black lh-1 rounded_30 p-1 px-2">
-                                    -35%</h6>
-                            </div>
-                        </div>
-                        <div class="list_h2i2">
-                            <h6 class="fw-bold font_14"><a href="#">HDPE 12x12 Grow Bags for</a></h6>
-                            <span class="col_yell">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star-half-o"></i>
-                            </span>
-                            <h6 class="mt-2 font_14"><span class="span_1 col_green fw-bold">$ 189.00</span> <span
-                                    class="span_2 ms-2 text-decoration-line-through">$ 430.00</span></h6>
-                            <h6 class="mb-0 mt-4 text-center"><a class="button" href="#">Add to Cart</a></h6>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-2 col-sm-6">
-                    <div class="list_h2i">
-                        <div class="list_h2i1 position-relative">
-                            <div class="list_h2i1i">
-                                <div class="grid clearfix">
-                                    <figure class="effect-jazz mb-0">
-                                        <a href="#"><img src="img/14.jpg" class="w-100" alt="abc"></a>
-                                    </figure>
-                                </div>
-                            </div>
-                            <div class="list_h2i1i1 position-absolute top-0 p-1">
-                                <h6
-                                    class="mb-0 font_12 fw-bold d-inline-block bg_yell col_black lh-1 rounded_30 p-1 px-2">
-                                    -40%</h6>
-                            </div>
-                        </div>
-                        <div class="list_h2i2">
-                            <h6 class="fw-bold font_14"><a href="#">Tomato F1 Hybrid Seeds</a></h6>
-                            <span class="col_yell">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star-half-o"></i>
-                            </span>
-                            <h6 class="mt-2 font_14"><span class="span_1 col_green fw-bold">$ 489.00</span> <span
-                                    class="span_2 ms-2 text-decoration-line-through">$ 990.00</span></h6>
-                            <h6 class="mb-0 mt-4 text-center"><a class="button" href="#">Add to Cart</a></h6>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-2 col-sm-6">
-                    <div class="list_h2i">
-                        <div class="list_h2i1 position-relative">
-                            <div class="list_h2i1i">
-                                <div class="grid clearfix">
-                                    <figure class="effect-jazz mb-0">
-                                        <a href="#"><img src="img/15.jpg" class="w-100" alt="abc"></a>
-                                    </figure>
-                                </div>
-                            </div>
-                            <div class="list_h2i1i1 position-absolute top-0 p-1">
-                                <h6
-                                    class="mb-0 font_12 fw-bold d-inline-block bg_yell col_black lh-1 rounded_30 p-1 px-2">
-                                    -23%</h6>
-                            </div>
-                        </div>
-                        <div class="list_h2i2">
-                            <h6 class="fw-bold font_14"><a href="#">Okra or Lady Finger</a></h6>
-                            <span class="col_yell">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star-half-o"></i>
-                            </span>
-                            <h6 class="mt-2 font_14"><span class="span_1 col_green fw-bold">$ 389.00</span> <span
-                                    class="span_2 ms-2 text-decoration-line-through">$ 680.00</span></h6>
-                            <h6 class="mb-0 mt-4 text-center"><a class="button" href="#">Add to Cart</a></h6>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-2 col-sm-6">
-                    <div class="list_h2i">
-                        <div class="list_h2i1 position-relative">
-                            <div class="list_h2i1i">
-                                <div class="grid clearfix">
-                                    <figure class="effect-jazz mb-0">
-                                        <a href="#"><img src="img/16.jpg" class="w-100" alt="abc"></a>
-                                    </figure>
-                                </div>
-                            </div>
-                            <div class="list_h2i1i1 position-absolute top-0 p-1">
-                                <h6
-                                    class="mb-0 font_12 fw-bold d-inline-block bg_yell col_black lh-1 rounded_30 p-1 px-2">
-                                    -5%</h6>
-                            </div>
-                        </div>
-                        <div class="list_h2i2">
-                            <h6 class="fw-bold font_14"><a href="#">Cucumber (Kheera) </a></h6>
-                            <span class="col_yell">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star-half-o"></i>
-                            </span>
-                            <h6 class="mt-2 font_14"><span class="span_1 col_green fw-bold">$ 289.00</span> <span
-                                    class="span_2 ms-2 text-decoration-line-through">$ 699.00</span></h6>
-                            <h6 class="mb-0 mt-4 text-center"><a class="button" href="#">Add to Cart</a></h6>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-2 col-sm-6">
-                    <div class="list_h2i">
-                        <div class="list_h2i1 position-relative">
-                            <div class="list_h2i1i">
-                                <div class="grid clearfix">
-                                    <figure class="effect-jazz mb-0">
-                                        <a href="#"><img src="img/17.jpg" class="w-100" alt="abc"></a>
-                                    </figure>
-                                </div>
-                            </div>
-                            <div class="list_h2i1i1 position-absolute top-0 p-1">
-                                <h6
-                                    class="mb-0 font_12 fw-bold d-inline-block bg_yell col_black lh-1 rounded_30 p-1 px-2">
-                                    -20%</h6>
-                            </div>
-                        </div>
-                        <div class="list_h2i2">
-                            <h6 class="fw-bold font_14"><a href="#">Capsicum (Hari Shimla</a></h6>
-                            <span class="col_yell">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star-half-o"></i>
-                            </span>
-                            <h6 class="mt-2 font_14"><span class="span_1 col_green fw-bold">$ 269.00</span> <span
-                                    class="span_2 ms-2 text-decoration-line-through">$ 799.00</span></h6>
-                            <h6 class="mb-0 mt-4 text-center"><a class="button" href="#">Add to Cart</a></h6>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-2 col-sm-6">
-                    <div class="list_h2i">
-                        <div class="list_h2i1 position-relative">
-                            <div class="list_h2i1i">
-                                <div class="grid clearfix">
-                                    <figure class="effect-jazz mb-0">
-                                        <a href="#"><img src="img/18.jpg" class="w-100" alt="abc"></a>
-                                    </figure>
-                                </div>
-                            </div>
-                            <div class="list_h2i1i1 position-absolute top-0 p-1">
-                                <h6
-                                    class="mb-0 font_12 fw-bold d-inline-block bg_yell col_black lh-1 rounded_30 p-1 px-2">
-                                    -30%</h6>
-                            </div>
-                        </div>
-                        <div class="list_h2i2">
-                            <h6 class="fw-bold font_14"><a href="#">Brinjal Seeds Black Hybrid</a></h6>
-                            <span class="col_yell">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star-half-o"></i>
-                            </span>
-                            <h6 class="mt-2 font_14"><span class="span_1 col_green fw-bold">$ 1189.00</span> <span
-                                    class="span_2 ms-2 text-decoration-line-through">$ 1990.00</span></h6>
-                            <h6 class="mb-0 mt-4 text-center"><a class="button" href="#">Add to Cart</a></h6>
-                        </div>
-                    </div>
-                </div>
+                        </div>';
+                    }
+                } else {
+                    echo '<div class="col-12"><p class="text-center">Không có sản phẩm bán chạy nào.</p></div>';
+                }
+                ?>
             </div>
         </div>
     </section>
@@ -674,7 +398,9 @@ $result = $conn->query($sql);
             </div>
         </div>
     </section>
-
+    <?php
+$conn->close();
+?>
     <!-- Back to Top Button -->
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center">
         <i class="fa fa-arrow-up"></i>

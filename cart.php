@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Plants Shop - Giỏ Hàng</title>
-	<link href="css/bootstrap.min.css" rel="stylesheet" >
-	<link href="css/font-awesome.min.css" rel="stylesheet" >
-	<link href="css/global.css" rel="stylesheet">
-	<link href="css/cart.css" rel="stylesheet">
-	<link href="css/dark-mode.css" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-	<script src="js/bootstrap.bundle.min.js"></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Plants Shop - Giỏ Hàng</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/global.css" rel="stylesheet">
+    <link href="css/cart.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <script src="js/bootstrap.bundle.min.js"></script>
 </head>
+
 <body>
-<?php
+    <?php
 // Start the session
 session_start();
 
@@ -63,372 +64,600 @@ if (isset($_POST['apply_promo']) && isset($_POST['promo_code'])) {
 $final_total = $cart_total - $discount;
 ?>
 
-<!-- Header -->
-<?php include 'header.php'; ?>
+    <!-- Header -->
+    <?php include 'header.php'; ?>
 
-<section id="top" class="bg_black">
- <div class="container-fluid">
-  <div class="row top_1">
- <div class="col-md-4">
-   <div class="top_1l pt-1">
-      <ul class="mb-0">
-	   <li class="d-inline-block"><a class="text-white" href="#"><i class="fa fa-facebook"></i></a></li>
-	   <li class="d-inline-block ms-2"><a class="text-white" href="#"><i class="fa fa-instagram"></i></a></li>
-	   <li class="d-inline-block ms-2"><a class="text-white" href="#"><i class="fa fa-twitter"></i></a></li>
-	    <li class="d-inline-block ms-2"><a class="text-white" href="#"><i class="fa fa-linkedin-square"></i></a></li>
-	   <li class="d-inline-block ms-2"><a class="text-white" href="#"><i class="fa fa-youtube-play"></i></a></li>
-	    <li class="d-inline-block ms-2"><a class="text-white" href="#"><i class="fa fa-whatsapp"></i></a></li>
-	  </ul>
-   </div>
- </div>
- <div class="col-md-4">
-   <div class="top_1m text-center pt-1">
-      <p class="mb-0 text-light font_14">Free shipping on all orders above $490</p>
-   </div>
- </div>
- <div class="col-md-4">
-   <div class="top_1r float-end">
-      <ul class="mb-0">
-		<li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle font_14 text-white p-0" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Language
-          </a>
-          <ul class="dropdown-menu drop_1 rounded-3" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#"> French</a></li>
-            <li><a class="dropdown-item border-0" href="#"> Spanish</a></li>
-          </ul>
-        </li>
 
-      </ul>
-   </div>
- </div>
-</div>
- </div>
-</section>
 
- <section id="header">
-<nav class="navbar navbar-expand-md navbar-light pt-2 pb-2 bg_lighto" id="navbar_sticky">
-  <div class="container-fluid">
-    <a class="text-black p-0 navbar-brand fw-bold" href="index.html">Plants <i class="fa fa-leaf col_green me-1 align-middle"></i> <span style="color:#e3ae03">Shop</span></a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-	   <ul class="navbar-nav mb-0 ms-auto">
-        <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="index.html">Home</a>
-        </li>
-		
-		<li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Product
-          </a>
-          <ul class="dropdown-menu drop_1" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="shop.html"> Product</a></li>
-            <li><a class="dropdown-item border-0" href="detail.html"> Product Detail</a></li>
-          </ul>
-        </li>
-		
-		<li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Blog
-          </a>
-          <ul class="dropdown-menu drop_1" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="blog.html"> Blog</a></li>
-            <li><a class="dropdown-item border-0" href="blog_detail.html"> Blog Detail</a></li>
-          </ul>
-        </li>
-		
-		<li class="nav-item">
-          <a class="nav-link" href="faq.html">Faq </a>
-        </li>
-		
-		<li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Pages
-          </a>
-          <ul class="dropdown-menu drop_1" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="cart.html"> Shopping Cart</a></li>
-			<li><a class="dropdown-item border-0" href="checkout.html"> Checkout</a></li>
-          </ul>
-        </li>
-		
-		<li class="nav-item">
-          <a class="nav-link" href="contact.html">Contact </a>
-        </li>
-      </ul>
-	   <ul class="navbar-nav mb-0 ms-auto nav_1">
-	   <li class="nav-item me-3">
-          <div class="input-group border_1 bg-white mt-1">
-				<input type="text" class="form-control border-0 bg-transparent font_14" placeholder="Search Products">
-				<span class="input-group-btn">
-					<button class="btn btn-primary text-black fs-5 bg-transparent rounded-0 p-1 px-3 border-0" type="button">
-						<i class="fa fa-search"></i> </button>
-				</span>
-		</div>
-        </li>
-	   <li class="nav-item">
-          <a class="nav-link fs-5 lh-1" href="#"><i class="fa fa-user"></i> </a>
-        </li>
-     <li class="nav-item">
-          <a class="nav-link fs-5 lh-1" href="#"><i class="fa fa-star-o"></i> </a>
-        </li>
-		<li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle drop_togn nav_hide fs-5 lh-1" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <i class="fa fa-shopping-cart"></i>
-          </a>
-          <ul class="dropdown-menu drop_cart rounded-0 border-0" aria-labelledby="navbarDropdown" style="">
-						<li>
-						 <div class="drop_1i row">
-						  <div class="col-md-6 col-6">
-						   <div class="drop_1il"><h5 class="font_14">2 ITEMS</h5></div>
-						  </div>
-						  <div class="col-md-6 col-6">
-						   <div class="drop_1il text-end"><h5 class="font_14"><a href="cart.html">VIEW CART</a></h5></div>
-						  </div>
-						 </div>
-						 <div class="drop_1i1 row">
-						  <div class="col-md-6 col-6">
-						   <div class="drop_1i1l"><h6 class="font_14"><a href="#">Nulla Quis</a> <br> <span class="fw-normal d-inline-block mt-1 font_12">1x - $89.00</span></h6></div>
-						  </div>
-						  <div class="col-md-4 col-4">
-						   <div class="drop_1i1r"><a href="#"><img src="img/1.jpg" class="w-100" alt="abc"></a></div>
-						  </div>
-						  <div class="col-md-2 col-2">
-						   <div class="drop_1i1l text-end"><h6> <span><i class="fa fa-trash"></i></span></h6></div>
-						  </div>
-						 </div>
-						 <div class="drop_1i1 row">
-						  <div class="col-md-6 col-6">
-						   <div class="drop_1i1l"><h6 class="font_14"><a href="#">Eget Nulla</a> <br> <span class="fw-normal d-inline-block mt-1 font_12">1x - $49.00</span></h6></div>
-						  </div>
-						  <div class="col-md-4 col-4">
-						   <div class="drop_1i1r"><a href="#"><img src="img/2.jpg" class="w-100" alt="abc"></a></div>
-						  </div>
-						  <div class="col-md-2 col-2">
-						   <div class="drop_1i1l text-end"><h6> <span><i class="fa fa-trash"></i></span></h6></div>
-						  </div>
-						 </div>
-						 <div class="drop_1i2 row">
-						  <div class="col-md-6 col-6">
-						   <div class="drop_1il"><h5 class="font_14">TOTAL</h5></div>
-						  </div>
-						  <div class="col-md-6 col-6">
-						   <div class="drop_1il text-end"><h5 class="font_14">$142.00</h5></div>
-						  </div>
-						 </div>
-						 <div class="drop_1i3 text-center row">
-						  <div class="col-md-12 col-12">
-						    <ul class="mb-0">
-							 <li class="d-inline-block mx-1"><a class="button px-3 pt-2 pb-2 font_14" href="#">View Order</a></li>
-							 <li class="d-inline-block mx-1"><a class="button_1 px-3 pb-2 pt-2 font_14" href="#">Checkout</a></li>
-							</ul>
-						  </div>
-						 </div>
-						</li>
-					  </ul>
-        </li>
-      </ul>
+    <section id="center" class="center_o pt-5 pb-5">
+        <div class="container-fluid">
+            <div class="center_o1 row text-center">
+                <div class="col-md-12">
+                    <h1>Giỏ Hàng</h1>
+                    <h6 class="font_14 mb-0 mt-3"><a href="index.php">Trang Chủ </a> <span
+                            class="text-muted mx-1 font_10 align-middle"><i class="fa fa-chevron-right"></i></span> Giỏ
+                        Hàng</h6>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="cart" class="cart_page pt-4 pb-5 bg_light">
+        <div class="container">
+            <?php if (count($cart_items) > 0): ?>
+            <form id="checkoutForm" action="checkout.php" method="POST">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="cart_l bg-white p-4">
+                            <h2 class="mb-4">Giỏ Hàng Của Bạn</h2>
+                            <div class="table-responsive cart_1">
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th width="5%">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" id="checkAll">
+                                                </div>
+                                            </th>
+                                            <th>Sản Phẩm</th>
+                                            <th>Giá</th>
+                                            <th>Số Lượng</th>
+                                            <th>Đơn Vị</th>
+                                            <th>Tổng Tiền</th>
+                                            <th>Xóa</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <?php foreach ($cart_items as $item): ?>
+                                        <tr class="cart-item">
+                                            <td>
+                                                <div class="form-check">
+                                                    <input class="form-check-input item-checkbox" type="checkbox"
+                                                        name="selected_items[]" value="<?php echo $item['id']; ?>"
+                                                        data-price="<?php echo $item['price']; ?>"
+                                                        data-quantity="<?php echo $item['quantity']; ?>"
+                                                        <?php echo $item['is_selected'] == 1 ? 'checked' : ''; ?>>
+                                                    <input type="hidden"
+                                                        name="item_quantity[<?php echo $item['id']; ?>]"
+                                                        value="<?php echo $item['quantity']; ?>"
+                                                        class="hidden-quantity">
+                                                    <input type="hidden" name="item_price[<?php echo $item['id']; ?>]"
+                                                        value="<?php echo $item['price']; ?>">
+                                                    <input type="hidden" name="item_name[<?php echo $item['id']; ?>]"
+                                                        value="<?php echo htmlspecialchars($item['name']); ?>">
+                                                    <input type="hidden" name="item_unit[<?php echo $item['id']; ?>]"
+                                                        value="<?php echo htmlspecialchars($item['unit']); ?>">
+                                                    <input type="hidden" name="item_image[<?php echo $item['id']; ?>]"
+                                                        value="<?php echo htmlspecialchars($item['image']); ?>">
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="d-flex cart_1i1">
+                                                    <div class="cart_1i1l">
+                                                        <img src="img/<?php echo htmlspecialchars($item['image']); ?>"
+                                                            alt="<?php echo htmlspecialchars($item['name']); ?>"
+                                                            class="img-fluid">
+                                                    </div>
+                                                    <div class="cart_1i1r">
+                                                        <h5>
+                                                            <a href="detail.php?id=<?php echo $item['id']; ?>">
+                                                                <?php echo htmlspecialchars($item['name']); ?>
+                                                            </a>
+                                                        </h5>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="price" data-price="<?php echo $item['price']; ?>">
+                                                <?php echo number_format($item['price'], 0, ',', '.'); ?>đ
+                                            </td>
+                                            <td>
+                                                <div
+                                                    class="quantity-control d-flex align-items-center justify-content-center">
+                                                    <button type="button" class="btn btn-outline-secondary btn-decrease"
+                                                        data-product-id="<?php echo $item['id']; ?>"
+                                                        data-unit="<?php echo htmlspecialchars($item['unit']); ?>">
+                                                        <i class="fa fa-minus"></i>
+                                                    </button>
+                                                    <input type="number" class="form-control quantity-input mx-2"
+                                                        value="<?php echo (int)$item['quantity']; ?>"
+                                                        data-product-id="<?php echo $item['id']; ?>"
+                                                        data-price="<?php echo $item['price']; ?>"
+                                                        data-unit="<?php echo htmlspecialchars($item['unit']); ?>"
+                                                        min="1" step="1">
+                                                    <button type="button" class="btn btn-outline-secondary btn-increase"
+                                                        data-product-id="<?php echo $item['id']; ?>"
+                                                        data-unit="<?php echo htmlspecialchars($item['unit']); ?>">
+                                                        <i class="fa fa-plus"></i>
+                                                    </button>
+                                                </div>
+                                            </td>
+                                            <td class="text-center"><?php echo htmlspecialchars($item['unit']); ?></td>
+                                            <td class="subtotal" data-product-id="<?php echo $item['id']; ?>">
+                                                <?php echo number_format($item['subtotal'], 0, ',', '.'); ?>đ
+                                            </td>
+                                            <td class="text-center">
+                                                <button type="button" class="btn btn-danger btn-sm delete-item"
+                                                    data-product-id="<?php echo $item['id']; ?>">
+                                                    <i class="fa fa-trash"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <?php endforeach; ?>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="cart_1 mt-4">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <a href="shop.php" class="btn btn-outline-secondary">
+                                            <i class="fa fa-arrow-left me-2"></i>Tiếp tục mua sắm
+                                        </a>
+                                    </div>
+                                    <div class="col-md-6 text-end">
+                                        <a href="cart_clear.php" class="btn btn-danger"
+                                            onclick="return confirm('Bạn có chắc muốn xóa toàn bộ giỏ hàng?');">
+                                            <i class="fa fa-trash me-2"></i>Xóa giỏ hàng
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="cart_r bg-white p-4">
+                            <h4>Tổng Giỏ Hàng</h4>
+                            <div class="cart_r1 p-3">
+                                <div class="cart_r1i row">
+                                    <div class="col-6">
+                                        <h6>Số sản phẩm đã chọn:</h6>
+                                    </div>
+                                    <div class="col-6 text-end">
+                                        <h6 id="selectedCount">0</h6>
+                                    </div>
+                                </div>
+                                <div class="cart_r1i row">
+                                    <div class="col-6">
+                                        <h6>Tổng tiền hàng:</h6>
+                                    </div>
+                                    <div class="col-6 text-end">
+                                        <h6 id="selectedTotal">0đ</h6>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="cart_r1i row">
+                                    <div class="col-6">
+                                        <h5>Tổng thanh toán:</h5>
+                                    </div>
+                                    <div class="col-6 text-end">
+                                        <h5 class="col_green" id="finalTotal">0đ</h5>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="cart_r1i text-center">
+                                    <button type="submit" class="btn btn-success w-100" id="checkoutBtn" disabled>
+                                        <i class="fa fa-credit-card me-2"></i>Tiến hành thanh toán
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <input type="hidden" name="total_amount" id="totalAmountInput" value="0">
+                <input type="hidden" name="total_items" id="totalItemsInput" value="0">
+            </form>
+            <?php else: ?>
+            <div class="text-center py-4">
+                <p>Giỏ hàng của bạn đang trống.</p>
+                <a href="shop.php" class="btn btn-primary mt-3">
+                    <i class="fa fa-shopping-cart me-2"></i>Mua sắm ngay
+                </a>
+            </div>
+            <?php endif; ?>
+        </div>
+    </section>
+
+    <!-- CSS cho trang giỏ hàng -->
+    <style>
+    .cart_1i1l {
+        width: 80px;
+        height: 80px;
+        margin-right: 15px;
+    }
+
+    .cart_1i1l img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    .cart_1i1r {
+        flex: 1;
+    }
+
+    .cart_1i1r h5 {
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+
+    .cart_1i1r h6 {
+        font-size: 13px;
+        color: #777;
+    }
+
+    .cart_r1 {
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .notification {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        padding: 15px 25px;
+        background-color: #27ae60;
+        color: white;
+        border-radius: 4px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        display: none;
+        z-index: 1000;
+        animation: slideIn 0.3s ease-out;
+    }
+
+    @keyframes slideIn {
+        from { transform: translateX(100%); opacity: 0; }
+        to { transform: translateX(0); opacity: 1; }
+    }
+
+    .cart-summary {
+        position: relative;
+        top: 0;
+        right: 0;
+        width: 100%;
+        padding: 20px;
+        background-color: #f8f9fa;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    </style>
+
+    <!-- Notification element -->
+    <div id="notification" class="notification"></div>
+
+    <!-- Footer -->
+    <?php include 'footer.php'; ?>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const errorModal = new bootstrap.Modal(document.getElementById('errorModal'));
+        const errorMessage = document.getElementById('errorMessage');
+
+        function showError(message) {
+            errorMessage.textContent = message;
+            errorModal.show();
+            setTimeout(() => errorModal.hide(), 3000);
+        }
+
+        function formatCurrency(amount) {
+            if (isNaN(amount)) amount = 0;
+            return new Intl.NumberFormat('vi-VN', {
+                style: 'currency',
+                currency: 'VND'
+            }).format(amount);
+        }
+
+        function toggleHiddenInputs(checkbox) {
+            const row = checkbox.closest('tr');
+            const inputs = row.querySelectorAll('input[name^="item_"]');
+            inputs.forEach(input => {
+                if (input.type === 'hidden') {
+                    if (checkbox.checked) {
+                        input.removeAttribute('disabled');
+                    } else {
+                        input.setAttribute('disabled', 'disabled');
+                    }
+                }
+            });
+        }
+
+        function updateProductTotal(productId, quantity) {
+            const row = document.querySelector(`.quantity-input[data-product-id="${productId}"]`).closest('tr');
+            if (row) {
+                const priceCell = row.querySelector('.price');
+                const subtotalCell = row.querySelector(`.subtotal[data-product-id="${productId}"]`);
+                const price = parseFloat(priceCell.dataset.price) || 0;
+                const newSubtotal = price * quantity;
+
+                subtotalCell.textContent = formatCurrency(newSubtotal);
+                subtotalCell.dataset.subtotal = newSubtotal;
+                const checkbox = row.querySelector('.item-checkbox');
+                checkbox.dataset.quantity = quantity;
+                updateCartTotal();
+            }
+        }
+
+        function updateCartTotal() {
+            let total = 0;
+            let itemCount = 0;
+
+            document.querySelectorAll('.item-checkbox:checked').forEach(checkbox => {
+                const row = checkbox.closest('tr');
+                const subtotalCell = row.querySelector('.subtotal');
+                const subtotal = parseFloat(subtotalCell.dataset.subtotal || 0);
+                total += subtotal;
+                itemCount++;
+            });
+
+            document.getElementById('selectedCount').textContent = itemCount;
+            document.getElementById('selectedTotal').textContent = formatCurrency(total);
+            document.getElementById('finalTotal').textContent = formatCurrency(total);
+            document.getElementById('checkoutBtn').disabled = itemCount === 0;
+
+            document.getElementById('totalAmountInput').value = total;
+            document.getElementById('totalItemsInput').value = itemCount;
+        }
+
+        async function updateQuantity(productId, newQuantity) {
+            const row = document.querySelector(`.quantity-input[data-product-id="${productId}"]`).closest(
+                'tr');
+            const quantityInput = row.querySelector('.quantity-input');
+            const hiddenQuantityInput = row.querySelector(`input[name="item_quantity[${productId}]"]`);
+            const decreaseBtn = row.querySelector('.btn-decrease');
+            const increaseBtn = row.querySelector('.btn-increase');
+
+            newQuantity = Math.max(1, Math.round(newQuantity));
+            quantityInput.disabled = true;
+            decreaseBtn.disabled = true;
+            increaseBtn.disabled = true;
+
+            try {
+                const response = await fetch('cart_update.php', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded'
+                    },
+                    body: `product_id=${productId}&quantity=${newQuantity}`
+                });
+
+                const data = await response.json();
+                if (data.success) {
+                    quantityInput.value = newQuantity;
+                    quantityInput.dataset.lastValue = newQuantity;
+                    hiddenQuantityInput.value = newQuantity;
+                    updateProductTotal(productId, newQuantity);
+                } else {
+                    showError(data.message || 'Có lỗi xảy ra khi cập nhật số lượng.');
+                    quantityInput.value = quantityInput.dataset.lastValue;
+                    hiddenQuantityInput.value = quantityInput.dataset.lastValue;
+                    updateProductTotal(productId, parseInt(quantityInput.dataset.lastValue));
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                showError('Có lỗi xảy ra khi cập nhật số lượng.');
+                quantityInput.value = quantityInput.dataset.lastValue;
+                hiddenQuantityInput.value = quantityInput.dataset.lastValue;
+                updateProductTotal(productId, parseInt(quantityInput.dataset.lastValue));
+            } finally {
+                quantityInput.disabled = false;
+                decreaseBtn.disabled = false;
+                increaseBtn.disabled = false;
+            }
+        }
+
+        document.querySelectorAll('.btn-decrease').forEach(button => {
+            button.addEventListener('click', function() {
+                const productId = this.dataset.productId;
+                const row = this.closest('tr');
+                const input = row.querySelector('.quantity-input');
+                const currentValue = parseInt(input.value);
+
+                if (currentValue > 1) {
+                    updateQuantity(productId, currentValue - 1);
+                }
+            });
+        });
+
+        document.querySelectorAll('.btn-increase').forEach(button => {
+            button.addEventListener('click', function() {
+                const productId = this.dataset.productId;
+                const row = this.closest('tr');
+                const input = row.querySelector('.quantity-input');
+                const currentValue = parseInt(input.value);
+
+                updateQuantity(productId, currentValue + 1);
+            });
+        });
+
+        let debounceTimeout;
+        document.querySelectorAll('.quantity-input').forEach(input => {
+            input.dataset.lastValue = input.value;
+
+            input.addEventListener('input', function() {
+                clearTimeout(debounceTimeout);
+                const productId = this.dataset.productId;
+
+                debounceTimeout = setTimeout(() => {
+                    let newValue = parseInt(this.value);
+                    if (isNaN(newValue) || newValue < 1) newValue = 1;
+                    this.value = newValue;
+                    updateQuantity(productId, newValue);
+                }, 500);
+            });
+
+            input.addEventListener('keypress', function(e) {
+                if (!/[0-9]/.test(e.key)) e.preventDefault();
+            });
+        });
+
+        document.querySelectorAll('.item-checkbox').forEach(checkbox => {
+            checkbox.addEventListener('change', async function() {
+                const productId = this.value;
+                const isSelected = this.checked;
+                
+                try {
+                    const response = await fetch('update_cart_selection.php', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/x-www-form-urlencoded'
+                        },
+                        body: `product_id=${productId}&is_selected=${isSelected ? 1 : 0}`
+                    });
+
+                    const data = await response.json();
+                    if (data.success) {
+                        toggleHiddenInputs(this);
+                        updateCartTotal();
+                        showNotification(isSelected ? 'Đã chọn sản phẩm' : 'Đã bỏ chọn sản phẩm');
+                    } else {
+                        showError(data.message || 'Có lỗi xảy ra khi cập nhật trạng thái sản phẩm.');
+                        this.checked = !isSelected; // Revert checkbox state
+                    }
+                } catch (error) {
+                    console.error('Error:', error);
+                    showError('Có lỗi xảy ra khi cập nhật trạng thái sản phẩm.');
+                    this.checked = !isSelected; // Revert checkbox state
+                }
+            });
+        });
+
+        const checkAll = document.getElementById('checkAll');
+        if (checkAll) {
+            checkAll.addEventListener('change', async function() {
+                const checkboxes = document.querySelectorAll('.item-checkbox');
+                const isSelected = this.checked;
+                
+                for (const checkbox of checkboxes) {
+                    try {
+                        const response = await fetch('update_cart_selection.php', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/x-www-form-urlencoded'
+                            },
+                            body: `product_id=${checkbox.value}&is_selected=${isSelected ? 1 : 0}`
+                        });
+
+                        const data = await response.json();
+                        if (data.success) {
+                            checkbox.checked = isSelected;
+                            toggleHiddenInputs(checkbox);
+                        }
+                    } catch (error) {
+                        console.error('Error:', error);
+                    }
+                }
+                
+                updateCartTotal();
+                showNotification(isSelected ? 'Đã chọn tất cả sản phẩm' : 'Đã bỏ chọn tất cả sản phẩm');
+            });
+        }
+
+        const checkoutForm = document.getElementById('checkoutForm');
+        if (checkoutForm) {
+            checkoutForm.addEventListener('submit', function(e) {
+                const selectedItems = document.querySelectorAll('.item-checkbox:checked');
+                if (selectedItems.length === 0) {
+                    e.preventDefault();
+                    showError('Vui lòng chọn ít nhất một sản phẩm để thanh toán.');
+                } else {
+                    // Đảm bảo tất cả dữ liệu được đồng bộ trước khi gửi
+                    selectedItems.forEach(checkbox => {
+                        const row = checkbox.closest('tr');
+                        const quantityInput = row.querySelector('.quantity-input');
+                        const hiddenQuantityInput = row.querySelector(
+                            `input[name="item_quantity[${checkbox.value}]"]`);
+                        hiddenQuantityInput.value = quantityInput.value;
+                    });
+                }
+            });
+        }
+
+        updateCartTotal();
+    });
+
+    function showNotification(message, type = 'success') {
+        const notification = document.getElementById('notification');
+        notification.textContent = message;
+        notification.style.backgroundColor = type === 'success' ? '#27ae60' : '#e74c3c';
+        notification.style.display = 'block';
+        
+        setTimeout(() => {
+            notification.style.display = 'none';
+        }, 3000);
+    }
+
+    // Add notification for cart updates
+    document.querySelectorAll('.quantity-input').forEach(input => {
+        input.addEventListener('change', function() {
+            const productId = this.dataset.productId;
+            const newValue = parseInt(this.value);
+            if (!isNaN(newValue) && newValue > 0) {
+                showNotification('Giỏ hàng đã được cập nhật');
+            }
+        });
+    });
+
+    // Show notification when items are selected/deselected
+    document.querySelectorAll('.item-checkbox').forEach(checkbox => {
+        checkbox.addEventListener('change', function() {
+            const count = document.querySelectorAll('.item-checkbox:checked').length;
+            if (count > 0) {
+                showNotification(`Đã chọn ${count} sản phẩm để thanh toán`);
+            }
+        });
+    });
+
+    // Xử lý xóa sản phẩm
+    document.querySelectorAll('.delete-item').forEach(button => {
+        button.addEventListener('click', async function() {
+            if (confirm('Bạn có chắc muốn xóa sản phẩm này khỏi giỏ hàng?')) {
+                const productId = this.dataset.productId;
+                const row = this.closest('tr');
+                
+                try {
+                    const response = await fetch(`cart_remove.php?id=${productId}`, {
+                        method: 'GET'
+                    });
+                    
+                    if (response.ok) {
+                        row.remove();
+                        updateCartTotal();
+                        showNotification('Đã xóa sản phẩm khỏi giỏ hàng');
+                        
+                        // Kiểm tra nếu giỏ hàng trống
+                        if (document.querySelectorAll('.cart-item').length === 0) {
+                            location.reload(); // Tải lại trang để hiển thị thông báo giỏ hàng trống
+                        }
+                    } else {
+                        showNotification('Không thể xóa sản phẩm khỏi giỏ hàng', 'error');
+                    }
+                } catch (error) {
+                    console.error('Error:', error);
+                    showNotification('Có lỗi xảy ra khi xóa sản phẩm', 'error');
+                }
+            }
+        });
+    });
+    </script>
+
+    <!-- Thêm modal thông báo -->
+    <div class="modal fade" id="errorModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Thông Báo</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p id="errorMessage"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-</nav>
-</section>
-
-<section id="center" class="center_o pt-5 pb-5">
- <div class="container-fluid">
-   <div class="center_o1 row text-center">
-      <div class="col-md-12">
-	    <h1>Giỏ Hàng</h1>
-		<h6 class="font_14 mb-0 mt-3"><a href="index.php">Trang Chủ </a> <span class="text-muted mx-1 font_10 align-middle"><i class="fa fa-chevron-right"></i></span> Giỏ
-            Hàng</h6>
-	  </div>
-   </div>
- </div>
-</section>
-
-<section id="cart" class="cart_page pt-4 pb-5 bg_light">
- <div class="container">
-  <div class="row">
-   <div class="col-md-8">
-    <div class="cart_l bg-white p-4">
-     <h2 class="mb-4">Giỏ Hàng Của Bạn</h2>
-     <?php if (count($cart_items) > 0): ?>
-     <div class="table-responsive cart_1">
-      <table class="table table-bordered">
-       <thead>
-        <tr>
-         <th>Sản Phẩm</th>
-         <th>Giá</th>
-         <th>Số Lượng</th>
-         <th>Tổng Tiền</th>
-         <th>Xóa</th>
-        </tr>
-       </thead>
-       <tbody>
-        <?php foreach ($cart_items as $item): ?>
-        <tr class="cart-item">
-         <td>
-          <div class="d-flex cart_1i1">
-           <div class="cart_1i1l">
-            <img src="<?php echo $item['product_image']; ?>" alt="<?php echo $item['product_name']; ?>" class="img-fluid">
-           </div>
-           <div class="cart_1i1r">
-            <h5><a href="product_detail.php?id=<?php echo $item['product_id']; ?>"><?php echo $item['product_name']; ?></a></h5>
-            <h6><?php echo substr($item['product_description'], 0, 50) . '...'; ?></h6>
-           </div>
-          </div>
-         </td>
-         <td class="price"><?php echo number_format($item['price'], 0, ',', '.'); ?>đ</td>
-         <td>
-          <div class="quantity d-flex align-items-center justify-content-center">
-           <form action="update_cart.php" method="post" class="d-flex">
-            <input type="hidden" name="item_id" value="<?php echo $item['id']; ?>">
-            <input type="hidden" name="action" value="decrease">
-            <button type="submit" class="btn">-</button>
-            <input type="text" class="form-control mx-2" value="<?php echo $item['quantity']; ?>" readonly>
-            <input type="hidden" name="action" value="increase">
-            <button type="submit" class="btn" formaction="update_cart.php?item_id=<?php echo $item['id']; ?>&action=increase">+</button>
-           </form>
-          </div>
-         </td>
-         <td class="subtotal"><?php echo number_format($item['price'] * $item['quantity'], 0, ',', '.'); ?>đ</td>
-         <td class="text-center btn_cross">
-          <a href="remove_item.php?item_id=<?php echo $item['id']; ?>" class="btn btn-danger" onclick="return confirm('Bạn có chắc muốn xóa sản phẩm này?');">
-           <i class="fa fa-times"></i>
-          </a>
-         </td>
-        </tr>
-        <?php endforeach; ?>
-       </tbody>
-      </table>
-     </div>
-     <div class="cart_2 row mt-4">
-      <div class="col-md-6 cart_2ril">
-       <a href="index.php" class="button_1"><i class="fa fa-arrow-left me-2"></i>Tiếp Tục Mua Sắm</a>
-      </div>
-      <div class="col-md-6 text-end cart_2rir">
-       <a href="update_cart.php?action=clear" class="button_1" onclick="return confirm('Bạn có chắc muốn xóa toàn bộ giỏ hàng?');">Xóa Giỏ Hàng</a>
-      </div>
-     </div>
-     <?php else: ?>
-     <div class="text-center py-5">
-      <h4>Giỏ hàng của bạn đang trống</h4>
-      <p class="mt-3">Hãy thêm sản phẩm vào giỏ hàng để tiếp tục.</p>
-      <a href="index.php" class="button mt-3">Tiếp Tục Mua Sắm</a>
-     </div>
-     <?php endif; ?>
-    </div>
-   </div>
-   
-   <div class="col-md-4">
-    <div class="cart-summary p-4">
-     <h3 class="mb-4">Tổng Giỏ Hàng</h3>
-     <div class="cart_r1i row">
-      <div class="col-6">
-       <p><strong>Tổng đơn hàng</strong></p>
-      </div>
-      <div class="col-6 text-end">
-       <p><?php echo number_format($cart_total, 0, ',', '.'); ?>đ</p>
-      </div>
-     </div>
-     
-     <?php if ($discount > 0): ?>
-     <div class="cart_r1i row">
-      <div class="col-6">
-       <p><strong>Giảm giá</strong></p>
-      </div>
-      <div class="col-6 text-end">
-       <p>-<?php echo number_format($discount, 0, ',', '.'); ?>đ</p>
-      </div>
-     </div>
-     <?php endif; ?>
-     
-     <hr>
-     
-     <div class="cart_r1i row">
-      <div class="col-6">
-       <p><strong>Tổng cộng</strong></p>
-      </div>
-      <div class="col-6 text-end">
-       <p class="fw-bold"><?php echo number_format($final_total, 0, ',', '.'); ?>đ</p>
-      </div>
-     </div>
-     
-     <?php if ($promo_error): ?>
-     <div class="alert alert-danger mt-3"><?php echo $promo_error; ?></div>
-     <?php endif; ?>
-     
-     <?php if ($promo_success): ?>
-     <div class="alert alert-success mt-3"><?php echo $promo_success; ?></div>
-     <?php endif; ?>
-     
-     <form action="" method="post" class="mt-3">
-      <div class="input-group">
-       <input type="text" name="promo_code" class="form-control" placeholder="Mã giảm giá" value="<?php echo $promo_code; ?>">
-       <button type="submit" name="apply_promo" class="btn btn-light">Áp Dụng</button>
-      </div>
-     </form>
-     
-     <a href="checkout.php" class="button d-block text-center mt-4">Tiến Hành Thanh Toán</a>
-    </div>
-   </div>
-  </div>
- </div>
-</section>
-
-<!-- CSS cho trang giỏ hàng -->
-<style>
- .cart_1i1l {
-  width: 80px;
-  height: 80px;
-  margin-right: 15px;
- }
- 
- .cart_1i1l img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
- }
- 
- .cart_1i1r {
-  flex: 1;
- }
- 
- .cart_1i1r h5 {
-  font-size: 16px;
-  margin-bottom: 5px;
- }
- 
- .cart_1i1r h6 {
-  font-size: 13px;
-  color: #777;
- }
- 
- .cart_r1 {
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
- }
-</style>
-
-<!-- Footer -->
-<?php include 'footer.php'; ?>
-
-<script>
-window.onscroll = function() {myFunction()};
-var navbar_sticky = document.getElementById("navbar_sticky");
-var sticky = navbar_sticky.offsetTop;
-var navbar_height = document.querySelector('.navbar').offsetHeight;
-function myFunction() {
-  if (window.pageYOffset >= sticky + navbar_height) {
-    navbar_sticky.classList.add("sticky")
-	document.body.style.paddingTop = navbar_height + 'px';
-  } else {
-    navbar_sticky.classList.remove("sticky");
-	document.body.style.paddingTop = '0'
-  }
-}
-</script>
-
-<script src="js/dark-mode.js"></script>
 </body>
+
 </html>

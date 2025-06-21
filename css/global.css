@@ -330,21 +330,6 @@ hr {
     color: #333;
 }
 
-.sticky {
-    position: fixed;
-    top: 0;
-    width: 100%!important;
-    z-index: 3;
-    background-color: #f8f8f8;
-}
-
-.sticky {
-    top: -40px;
-    transform: translateY(40px);
-    transition: transform .3s;
-    border-bottom: 1px solid #c9fbe3;
-}
-
 #header .input-group {
     border-radius: 25px;
     box-shadow: bisque;
@@ -684,9 +669,6 @@ a.socialIcon:hover,
     .navbar {
         padding-top: 10px!important;
         padding-bottom: 10px!important;
-    }
-    .sticky .drop_1 {
-        margin-top: 0!important;
     }
     .line {
         margin-left: auto;

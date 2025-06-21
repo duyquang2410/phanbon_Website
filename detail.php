@@ -12,6 +12,11 @@
     <link href="css/detail.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- jQuery UI - bắt buộc cho chức năng tự động gợi ý -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="css/autocomplete.css">
+    <!-- Header CSS -->
+    <link rel="stylesheet" href="css/header.css">
     <style>
     /* Cải thiện độ tương phản cho phần mô tả sản phẩm */
     .description-content {
@@ -21,64 +26,6 @@
         line-height: 1.6;
         color: #000000;
         background-color: #ffffff;
-    }
-
-    /* Chế độ sáng (mặc định) */
-    @media (prefers-color-scheme: light) {
-        .description-content {
-            color: #333333;
-            background-color: #ffffff;
-        }
-
-        .tab-content {
-            background-color: #f8f9fa;
-        }
-
-        .tab-pane h5 {
-            color: #000000;
-        }
-
-        .product-details {
-            color: #333333;
-        }
-
-        .table {
-            color: #333333;
-        }
-
-        .bg-white {
-            background-color: #ffffff !important;
-            color: #333333;
-        }
-    }
-
-    /* Chế độ tối */
-    @media (prefers-color-scheme: dark) {
-        .description-content {
-            color: #e1e1e1;
-            background-color: #2d2d2d;
-        }
-
-        .tab-content {
-            background-color: #1a1a1a;
-        }
-
-        .tab-pane h5 {
-            color: #ffffff;
-        }
-
-        .product-details {
-            color: #e1e1e1;
-        }
-
-        .table {
-            color: #e1e1e1;
-        }
-
-        .bg-white {
-            background-color: #2d2d2d !important;
-            color: #e1e1e1;
-        }
     }
 
     .tab-content {
@@ -123,21 +70,6 @@
         border-color: #dee2e6 #dee2e6 #f8f9fa;
     }
 
-    .center_o h1,
-    .center_o h6,
-    .center_o h6 a {
-        color: #ffffff;
-    }
-
-    #shop_dt3 h3,
-    #shop_dt6 h3 {
-        color: #ffffff;
-    }
-
-    .tab-pane>h5 {
-        color: #333333;
-    }
-
     /* Đảm bảo tất cả tiêu đề tab luôn màu đen */
     #description h5,
     #details h5,
@@ -147,6 +79,38 @@
     .product-details h5,
     .product-description h5 {
         color: #000000 !important;
+    }
+
+    .button {
+        background-color: #28a745 !important;
+        color: #ffffff !important;
+        padding: 12px 25px !important;
+        border-radius: 5px !important;
+        font-weight: 600 !important;
+        font-size: 16px !important;
+        transition: all 0.3s ease !important;
+        text-decoration: none !important;
+        display: inline-block !important;
+        border: 2px solid #28a745 !important;
+    }
+
+    .button:hover {
+        background-color: #218838 !important;
+        border-color: #218838 !important;
+        transform: translateY(-2px) !important;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1) !important;
+    }
+
+    .button:disabled {
+        background-color: #6c757d !important;
+        border-color: #6c757d !important;
+        cursor: not-allowed !important;
+        transform: none !important;
+        box-shadow: none !important;
+    }
+
+    .button i {
+        margin-right: 8px !important;
     }
     </style>
 </head>

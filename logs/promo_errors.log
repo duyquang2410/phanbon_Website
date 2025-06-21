@@ -1,0 +1,1345 @@
+2025-06-19 05:40:24 - Checking promo code
+Data: Array
+(
+    [code] => PHANBON10
+)
+
+2025-06-19 05:40:24 - Promo code found
+Data: Array
+(
+    [KM_MA] => 1
+    [Code] => PHANBON10
+    [KM_TGBD] => 2025-06-01 00:00:00
+    [KM_TGKT] => 2025-06-30 23:59:59
+    [KM_GIATRI] => 10
+    [hinh_thuc_km] => Giảm phần trăm
+)
+
+2025-06-19 05:42:46 - Checking promo code
+Data: Array
+(
+    [code] => FARMER5
+)
+
+2025-06-19 05:42:46 - Promo code found
+Data: Array
+(
+    [KM_MA] => 4
+    [Code] => FARMER5
+    [KM_TGBD] => 2025-06-01 00:00:00
+    [KM_TGKT] => 2025-06-30 23:59:59
+    [KM_GIATRI] => 5
+    [hinh_thuc_km] => Giảm phần trăm
+)
+
+2025-06-19 05:46:49 - Checking promo code
+Data: Array
+(
+    [code] => THUOC20K
+)
+
+2025-06-19 05:46:49 - Promo code found
+Data: Array
+(
+    [KM_MA] => 2
+    [Code] => THUOC20K
+    [KM_TGBD] => 2025-06-15 00:00:00
+    [KM_TGKT] => 2025-07-15 23:59:59
+    [KM_GIATRI] => 20000
+    [hinh_thuc_km] => Giảm trực tiếp
+)
+
+2025-06-19 05:46:57 - Checking promo code
+Data: Array
+(
+    [code] => PHANBON10
+)
+
+2025-06-19 05:46:57 - Promo code found
+Data: Array
+(
+    [KM_MA] => 1
+    [Code] => PHANBON10
+    [KM_TGBD] => 2025-06-01 00:00:00
+    [KM_TGKT] => 2025-06-30 23:59:59
+    [KM_GIATRI] => 10
+    [hinh_thuc_km] => Giảm phần trăm
+)
+
+2025-06-19 05:52:50 - Checking promo code
+Data: Array
+(
+    [code] => MUA2TANG1
+)
+
+2025-06-19 05:52:50 - Promo code found
+Data: Array
+(
+    [KM_MA] => 3
+    [Code] => MUA2TANG1
+    [KM_TGBD] => 2025-06-10 00:00:00
+    [KM_TGKT] => 2025-06-25 23:59:59
+    [KM_GIATRI] => 0
+    [hinh_thuc_km] => Tặng sản phẩm
+)
+
+2025-06-19 05:52:54 - Checking promo code
+Data: Array
+(
+    [code] => PESTCONTROL
+)
+
+2025-06-19 06:14:29 - Checking promo code
+Data: Array
+(
+    [code] => PHANBON10
+    [product_id] => 2
+    [amount] => 105000
+)
+
+
+2025-06-19 06:14:29 - Promo code found
+Data: Array
+(
+    [KM_MA] => 1
+    [Code] => PHANBON10
+    [KM_TGBD] => 2025-06-01 00:00:00
+    [KM_TGKT] => 2025-06-30 23:59:59
+    [KM_GIATRI] => 10
+    [hinh_thuc_km] => Giảm phần trăm
+)
+
+
+2025-06-19 06:14:29 - Checking product-specific conditions
+Data: Array
+(
+    [product_id] => 2
+    [discount_amount] => 10500
+)
+
+
+2025-06-19 06:14:29 - Promo code applied successfully
+Data: Array
+(
+    [valid] => 1
+    [discount_percent] => 10
+    [discount_amount] => 10500
+    [message] => Áp dụng mã giảm giá thành công: 10% cho sản phẩm
+)
+
+
+2025-06-19 06:14:51 - Checking promo code
+Data: Array
+(
+    [code] => FARMER5
+    [product_id] => 2
+    [amount] => 105000
+)
+
+
+2025-06-19 06:14:51 - Promo code found
+Data: Array
+(
+    [KM_MA] => 4
+    [Code] => FARMER5
+    [KM_TGBD] => 2025-06-01 00:00:00
+    [KM_TGKT] => 2025-06-30 23:59:59
+    [KM_GIATRI] => 5
+    [hinh_thuc_km] => Giảm phần trăm
+)
+
+
+2025-06-19 06:14:51 - Checking product-specific conditions
+Data: Array
+(
+    [product_id] => 2
+    [discount_amount] => 5250
+)
+
+
+2025-06-19 06:14:51 - Promo code applied successfully
+Data: Array
+(
+    [valid] => 1
+    [discount_percent] => 5
+    [discount_amount] => 5250
+    [message] => Áp dụng mã giảm giá thành công: 5% cho sản phẩm
+)
+
+
+2025-06-19 06:21:21 - Checking promo code
+Data: Array
+(
+    [code] => PHANBON10
+    [product_id] => 2
+    [amount] => 105000
+)
+
+
+2025-06-19 06:21:21 - Promo code found
+Data: Array
+(
+    [KM_MA] => 1
+    [Code] => PHANBON10
+    [KM_TGBD] => 2025-06-01 00:00:00
+    [KM_TGKT] => 2025-06-30 23:59:59
+    [KM_GIATRI] => 10
+    [hinh_thuc_km] => Giảm phần trăm
+)
+
+
+2025-06-19 06:21:21 - Checking product-specific conditions
+Data: Array
+(
+    [product_id] => 2
+    [discount_amount] => 10500
+)
+
+
+2025-06-19 06:21:21 - Promo code applied successfully
+Data: Array
+(
+    [valid] => 1
+    [discount_percent] => 10
+    [discount_amount] => 10500
+    [message] => Áp dụng mã giảm giá thành công: 10% cho sản phẩm
+)
+
+
+2025-06-19 06:40:47 - Checking promo code
+Data: Array
+(
+    [code] => FARMER5
+    [product_id] => 4
+    [amount] => 18000
+)
+
+
+2025-06-19 06:40:47 - Promo code found
+Data: Array
+(
+    [KM_MA] => 4
+    [Code] => FARMER5
+    [KM_TGBD] => 2025-06-01 00:00:00
+    [KM_TGKT] => 2025-06-30 23:59:59
+    [KM_GIATRI] => 5
+    [hinh_thuc_km] => Giảm phần trăm
+)
+
+
+2025-06-19 06:40:47 - Checking product-specific conditions
+Data: Array
+(
+    [product_id] => 4
+    [discount_amount] => 900
+)
+
+
+2025-06-19 06:40:47 - Promo code applied successfully
+Data: Array
+(
+    [valid] => 1
+    [discount_percent] => 5
+    [discount_amount] => 900
+    [message] => Áp dụng mã giảm giá thành công: 5% cho sản phẩm
+)
+
+
+2025-06-19 06:41:03 - Checking promo code
+Data: Array
+(
+    [code] => MUA2TANG1
+    [product_id] => 4
+    [amount] => 18000
+)
+
+
+2025-06-19 06:41:03 - Promo code found
+Data: Array
+(
+    [KM_MA] => 3
+    [Code] => MUA2TANG1
+    [KM_TGBD] => 2025-06-10 00:00:00
+    [KM_TGKT] => 2025-06-25 23:59:59
+    [KM_GIATRI] => 0
+    [hinh_thuc_km] => Tặng sản phẩm
+)
+
+
+2025-06-19 06:41:03 - Checking product-specific conditions
+Data: Array
+(
+    [product_id] => 4
+    [discount_amount] => 0
+)
+
+
+2025-06-19 06:41:03 - Promo code applied successfully
+Data: Array
+(
+    [valid] => 1
+    [discount_percent] => 
+    [discount_amount] => 0
+    [message] => Áp dụng mã giảm giá thành công: 0đ cho sản phẩm
+)
+
+
+2025-06-19 06:45:47 - Checking promo code
+Data: Array
+(
+    [code] => PHANBON10
+    [product_id] => 12
+    [amount] => 800000
+)
+
+
+2025-06-19 06:45:47 - Promo code found
+Data: Array
+(
+    [KM_MA] => 1
+    [Code] => PHANBON10
+    [KM_TGBD] => 2025-06-01 00:00:00
+    [KM_TGKT] => 2025-06-30 23:59:59
+    [KM_GIATRI] => 10
+    [hinh_thuc_km] => Giảm phần trăm
+)
+
+
+2025-06-19 06:45:47 - Checking product-specific conditions
+Data: Array
+(
+    [product_id] => 12
+    [discount_amount] => 80000
+)
+
+
+2025-06-19 06:45:47 - Promo code applied successfully
+Data: Array
+(
+    [valid] => 1
+    [discount_percent] => 10
+    [discount_amount] => 80000
+    [message] => Áp dụng mã giảm giá thành công: 10% cho sản phẩm
+)
+
+
+2025-06-19 09:43:25 - Checking promo code
+Data: Array
+(
+    [code] => PHANBON10
+    [product_id] => 6
+    [amount] => 76000
+)
+
+
+2025-06-19 09:43:25 - Promo code found
+Data: Array
+(
+    [KM_MA] => 1
+    [Code] => PHANBON10
+    [KM_TGBD] => 2025-06-01 00:00:00
+    [KM_TGKT] => 2025-06-30 23:59:59
+    [KM_GIATRI] => 10
+    [hinh_thuc_km] => Giảm phần trăm
+)
+
+
+2025-06-19 09:43:25 - Checking product-specific conditions
+Data: Array
+(
+    [product_id] => 6
+    [discount_amount] => 7600
+)
+
+
+2025-06-19 09:43:25 - Promo code applied successfully
+Data: Array
+(
+    [valid] => 1
+    [discount_percent] => 10
+    [discount_amount] => 7600
+    [message] => Áp dụng mã giảm giá thành công: 10% cho sản phẩm
+)
+
+
+2025-06-19 09:43:25 - Checking promo code
+Data: Array
+(
+    [code] => PHANBON10
+    [product_id] => 6
+    [amount] => 76000
+)
+
+
+2025-06-19 09:43:25 - Promo code found
+Data: Array
+(
+    [KM_MA] => 1
+    [Code] => PHANBON10
+    [KM_TGBD] => 2025-06-01 00:00:00
+    [KM_TGKT] => 2025-06-30 23:59:59
+    [KM_GIATRI] => 10
+    [hinh_thuc_km] => Giảm phần trăm
+)
+
+
+2025-06-19 09:43:25 - Checking product-specific conditions
+Data: Array
+(
+    [product_id] => 6
+    [discount_amount] => 7600
+)
+
+
+2025-06-19 09:43:25 - Promo code applied successfully
+Data: Array
+(
+    [valid] => 1
+    [discount_percent] => 10
+    [discount_amount] => 7600
+    [message] => Áp dụng mã giảm giá thành công: 10% cho sản phẩm
+)
+
+
+2025-06-19 09:43:26 - Checking promo code
+Data: Array
+(
+    [code] => PHANBON10
+    [product_id] => 6
+    [amount] => 76000
+)
+
+
+2025-06-19 09:43:26 - Promo code found
+Data: Array
+(
+    [KM_MA] => 1
+    [Code] => PHANBON10
+    [KM_TGBD] => 2025-06-01 00:00:00
+    [KM_TGKT] => 2025-06-30 23:59:59
+    [KM_GIATRI] => 10
+    [hinh_thuc_km] => Giảm phần trăm
+)
+
+
+2025-06-19 09:43:26 - Checking product-specific conditions
+Data: Array
+(
+    [product_id] => 6
+    [discount_amount] => 7600
+)
+
+
+2025-06-19 09:43:26 - Promo code applied successfully
+Data: Array
+(
+    [valid] => 1
+    [discount_percent] => 10
+    [discount_amount] => 7600
+    [message] => Áp dụng mã giảm giá thành công: 10% cho sản phẩm
+)
+
+
+2025-06-19 09:43:26 - Checking promo code
+Data: Array
+(
+    [code] => PHANBON10
+    [product_id] => 6
+    [amount] => 76000
+)
+
+
+2025-06-19 09:43:26 - Promo code found
+Data: Array
+(
+    [KM_MA] => 1
+    [Code] => PHANBON10
+    [KM_TGBD] => 2025-06-01 00:00:00
+    [KM_TGKT] => 2025-06-30 23:59:59
+    [KM_GIATRI] => 10
+    [hinh_thuc_km] => Giảm phần trăm
+)
+
+
+2025-06-19 09:43:26 - Checking product-specific conditions
+Data: Array
+(
+    [product_id] => 6
+    [discount_amount] => 7600
+)
+
+
+2025-06-19 09:43:26 - Promo code applied successfully
+Data: Array
+(
+    [valid] => 1
+    [discount_percent] => 10
+    [discount_amount] => 7600
+    [message] => Áp dụng mã giảm giá thành công: 10% cho sản phẩm
+)
+
+
+2025-06-19 14:10:32 - Checking promo code
+Data: Array
+(
+    [code] => PHANBON10
+    [product_id] => 12
+    [amount] => 480000
+)
+
+
+2025-06-19 14:10:32 - Promo code found
+Data: Array
+(
+    [KM_MA] => 1
+    [Code] => PHANBON10
+    [KM_TGBD] => 2025-06-01 00:00:00
+    [KM_TGKT] => 2025-06-30 23:59:59
+    [KM_GIATRI] => 10
+    [hinh_thuc_km] => Giảm phần trăm
+)
+
+
+2025-06-19 14:10:32 - Checking product-specific conditions
+Data: Array
+(
+    [product_id] => 12
+    [discount_amount] => 48000
+)
+
+
+2025-06-19 14:10:32 - Promo code applied successfully
+Data: Array
+(
+    [valid] => 1
+    [discount_percent] => 10
+    [discount_amount] => 48000
+    [message] => Áp dụng mã giảm giá thành công: 10% cho sản phẩm
+)
+
+
+2025-06-19 14:10:32 - Checking promo code
+Data: Array
+(
+    [code] => PHANBON10
+    [product_id] => 12
+    [amount] => 480000
+)
+
+
+2025-06-19 14:10:32 - Promo code found
+Data: Array
+(
+    [KM_MA] => 1
+    [Code] => PHANBON10
+    [KM_TGBD] => 2025-06-01 00:00:00
+    [KM_TGKT] => 2025-06-30 23:59:59
+    [KM_GIATRI] => 10
+    [hinh_thuc_km] => Giảm phần trăm
+)
+
+
+2025-06-19 14:10:32 - Checking product-specific conditions
+Data: Array
+(
+    [product_id] => 12
+    [discount_amount] => 48000
+)
+
+
+2025-06-19 14:10:32 - Promo code applied successfully
+Data: Array
+(
+    [valid] => 1
+    [discount_percent] => 10
+    [discount_amount] => 48000
+    [message] => Áp dụng mã giảm giá thành công: 10% cho sản phẩm
+)
+
+
+2025-06-19 14:10:33 - Checking promo code
+Data: Array
+(
+    [code] => PHANBON10
+    [product_id] => 12
+    [amount] => 480000
+)
+
+
+2025-06-19 14:10:33 - Promo code found
+Data: Array
+(
+    [KM_MA] => 1
+    [Code] => PHANBON10
+    [KM_TGBD] => 2025-06-01 00:00:00
+    [KM_TGKT] => 2025-06-30 23:59:59
+    [KM_GIATRI] => 10
+    [hinh_thuc_km] => Giảm phần trăm
+)
+
+
+2025-06-19 14:10:33 - Checking product-specific conditions
+Data: Array
+(
+    [product_id] => 12
+    [discount_amount] => 48000
+)
+
+
+2025-06-19 14:10:33 - Promo code applied successfully
+Data: Array
+(
+    [valid] => 1
+    [discount_percent] => 10
+    [discount_amount] => 48000
+    [message] => Áp dụng mã giảm giá thành công: 10% cho sản phẩm
+)
+
+
+2025-06-19 14:10:33 - Checking promo code
+Data: Array
+(
+    [code] => PHANBON10
+    [product_id] => 12
+    [amount] => 480000
+)
+
+
+2025-06-19 14:10:33 - Promo code found
+Data: Array
+(
+    [KM_MA] => 1
+    [Code] => PHANBON10
+    [KM_TGBD] => 2025-06-01 00:00:00
+    [KM_TGKT] => 2025-06-30 23:59:59
+    [KM_GIATRI] => 10
+    [hinh_thuc_km] => Giảm phần trăm
+)
+
+
+2025-06-19 14:10:33 - Checking product-specific conditions
+Data: Array
+(
+    [product_id] => 12
+    [discount_amount] => 48000
+)
+
+
+2025-06-19 14:10:33 - Promo code applied successfully
+Data: Array
+(
+    [valid] => 1
+    [discount_percent] => 10
+    [discount_amount] => 48000
+    [message] => Áp dụng mã giảm giá thành công: 10% cho sản phẩm
+)
+
+
+2025-06-19 15:08:14 - Checking promo code
+Data: Array
+(
+    [code] => PESTCONTROL
+    [product_id] => 
+    [amount] => 800000
+)
+
+
+2025-06-19 15:08:14 - Invalid or expired promo code
+Data: Array
+(
+    [code] => PESTCONTROL
+)
+
+
+2025-06-19 15:08:20 - Checking promo code
+Data: Array
+(
+    [code] => THUOC20K
+    [product_id] => 4
+    [amount] => 48000
+)
+
+
+2025-06-19 15:08:20 - Promo code found
+Data: Array
+(
+    [KM_MA] => 2
+    [Code] => THUOC20K
+    [KM_TGBD] => 2025-06-15 00:00:00
+    [KM_TGKT] => 2025-07-15 23:59:59
+    [KM_GIATRI] => 20000
+    [hinh_thuc_km] => Giảm trực tiếp
+)
+
+
+2025-06-19 15:08:20 - Checking product-specific conditions
+Data: Array
+(
+    [product_id] => 4
+    [discount_amount] => 20000
+)
+
+
+2025-06-19 15:08:20 - Promo code applied successfully
+Data: Array
+(
+    [valid] => 1
+    [discount_percent] => 
+    [discount_amount] => 20000
+    [message] => Áp dụng mã giảm giá thành công: 20.000đ cho sản phẩm
+)
+
+
+2025-06-20 08:02:36 - Checking promo code
+Data: Array
+(
+    [code] => PHANBON10
+    [product_id] => 
+    [amount] => 480000
+)
+
+
+2025-06-20 08:02:36 - Promo code found
+Data: Array
+(
+    [KM_MA] => 1
+    [Code] => PHANBON10
+    [KM_TGBD] => 2025-06-01 00:00:00
+    [KM_TGKT] => 2025-06-30 23:59:59
+    [KM_GIATRI] => 10
+    [hinh_thuc_km] => Giảm phần trăm
+)
+
+
+2025-06-20 08:02:36 - Promo code applied successfully
+Data: Array
+(
+    [valid] => 1
+    [discount_percent] => 10
+    [discount_amount] => 48000
+    [message] => Áp dụng mã giảm giá thành công: 10% cho đơn hàng
+)
+
+
+2025-06-20 14:06:32 - Checking promo code
+Data: Array
+(
+    [code] => PHANBON10
+    [product_id] => 
+    [amount] => 440000
+)
+
+
+2025-06-20 14:06:32 - Promo code found
+Data: Array
+(
+    [KM_MA] => 1
+    [Code] => PHANBON10
+    [KM_TGBD] => 2025-06-01 00:00:00
+    [KM_TGKT] => 2025-06-30 23:59:59
+    [KM_GIATRI] => 10
+    [hinh_thuc_km] => Giảm phần trăm
+)
+
+
+2025-06-20 14:06:32 - Promo code applied successfully
+Data: Array
+(
+    [valid] => 1
+    [discount_percent] => 10
+    [discount_amount] => 44000
+    [message] => Áp dụng mã giảm giá thành công: 10% cho đơn hàng
+)
+
+
+2025-06-21 07:09:33 - Missing promo code in request
+Data: Array
+(
+)
+
+
+2025-06-21 07:09:38 - Missing promo code in request
+Data: Array
+(
+)
+
+
+2025-06-21 07:09:42 - Missing promo code in request
+Data: Array
+(
+)
+
+
+2025-06-21 07:09:44 - Missing promo code in request
+Data: Array
+(
+)
+
+
+2025-06-21 07:09:47 - Missing promo code in request
+Data: Array
+(
+)
+
+
+2025-06-21 07:09:57 - Missing promo code in request
+Data: Array
+(
+)
+
+
+2025-06-21 07:09:58 - Missing promo code in request
+Data: Array
+(
+)
+
+
+2025-06-21 07:13:45 - Missing promo code in request
+Data: Array
+(
+)
+
+
+2025-06-21 07:16:16 - Checking promo code
+Data: Array
+(
+    [code] => PHANBON10
+    [product_id] => 
+    [amount] => 660000
+)
+
+
+2025-06-21 07:16:16 - Promo code found
+Data: Array
+(
+    [KM_MA] => 1
+    [Code] => PHANBON10
+    [KM_TGBD] => 2025-06-01 00:00:00
+    [KM_TGKT] => 2025-06-30 23:59:59
+    [KM_GIATRI] => 10
+    [hinh_thuc_km] => Giảm phần trăm
+)
+
+
+2025-06-21 07:16:16 - Promo code applied successfully
+Data: Array
+(
+    [success] => 1
+    [discount_percent] => 10
+    [discount] => 66000
+    [message] => Áp dụng mã giảm giá thành công: 10% cho đơn hàng
+)
+
+
+2025-06-21 07:17:28 - Checking promo code
+Data: Array
+(
+    [code] => PHANBON10
+    [product_id] => 
+    [amount] => 660000
+)
+
+
+2025-06-21 07:17:28 - Promo code found
+Data: Array
+(
+    [KM_MA] => 1
+    [Code] => PHANBON10
+    [KM_TGBD] => 2025-06-01 00:00:00
+    [KM_TGKT] => 2025-06-30 23:59:59
+    [KM_GIATRI] => 10
+    [hinh_thuc_km] => Giảm phần trăm
+)
+
+
+2025-06-21 07:17:28 - Promo code applied successfully
+Data: Array
+(
+    [success] => 1
+    [discount_percent] => 10
+    [discount] => 66000
+    [message] => Áp dụng mã giảm giá thành công: 10% cho đơn hàng
+)
+
+
+2025-06-21 07:21:21 - Checking promo code
+Data: Array
+(
+    [code] => PHANBON10
+    [product_id] => 
+    [amount] => 660000
+)
+
+
+2025-06-21 07:21:21 - Promo code found
+Data: Array
+(
+    [KM_MA] => 1
+    [Code] => PHANBON10
+    [KM_TGBD] => 2025-06-01 00:00:00
+    [KM_TGKT] => 2025-06-30 23:59:59
+    [KM_GIATRI] => 10
+    [hinh_thuc_km] => Giảm phần trăm
+)
+
+
+2025-06-21 07:21:21 - Promo code applied successfully
+Data: Array
+(
+    [success] => 1
+    [discount_percent] => 10
+    [discount] => 66000
+    [message] => Áp dụng mã giảm giá thành công: 10% cho đơn hàng
+)
+
+
+2025-06-21 07:24:14 - Checking promo code
+Data: Array
+(
+    [code] => PHANBON10
+    [product_id] => 
+    [amount] => 660000
+)
+
+
+2025-06-21 07:24:14 - Promo code found
+Data: Array
+(
+    [KM_MA] => 1
+    [Code] => PHANBON10
+    [KM_TGBD] => 2025-06-01 00:00:00
+    [KM_TGKT] => 2025-06-30 23:59:59
+    [KM_GIATRI] => 10
+    [hinh_thuc_km] => Giảm phần trăm
+)
+
+
+2025-06-21 07:24:14 - Promo code applied successfully
+Data: Array
+(
+    [success] => 1
+    [discount_percent] => 10
+    [discount] => 66000
+    [message] => Áp dụng mã giảm giá thành công: 10% cho đơn hàng
+)
+
+
+2025-06-21 07:26:12 - Checking promo code
+Data: Array
+(
+    [code] => FARMER5
+    [product_id] => 
+    [amount] => 660000
+)
+
+
+2025-06-21 07:26:12 - Promo code found
+Data: Array
+(
+    [KM_MA] => 4
+    [Code] => FARMER5
+    [KM_TGBD] => 2025-06-01 00:00:00
+    [KM_TGKT] => 2025-06-30 23:59:59
+    [KM_GIATRI] => 5
+    [hinh_thuc_km] => Giảm phần trăm
+)
+
+
+2025-06-21 07:26:12 - Promo code applied successfully
+Data: Array
+(
+    [success] => 1
+    [discount_percent] => 5
+    [discount] => 33000
+    [message] => Áp dụng mã giảm giá thành công: 5% cho đơn hàng
+)
+
+
+2025-06-21 07:26:29 - Checking promo code
+Data: Array
+(
+    [code] => FARMER5
+    [product_id] => 
+    [amount] => 660000
+)
+
+
+2025-06-21 07:26:29 - Promo code found
+Data: Array
+(
+    [KM_MA] => 4
+    [Code] => FARMER5
+    [KM_TGBD] => 2025-06-01 00:00:00
+    [KM_TGKT] => 2025-06-30 23:59:59
+    [KM_GIATRI] => 5
+    [hinh_thuc_km] => Giảm phần trăm
+)
+
+
+2025-06-21 07:26:29 - Promo code applied successfully
+Data: Array
+(
+    [success] => 1
+    [discount_percent] => 5
+    [discount] => 33000
+    [message] => Áp dụng mã giảm giá thành công: 5% cho đơn hàng
+)
+
+
+2025-06-21 07:26:29 - Checking promo code
+Data: Array
+(
+    [code] => FARMER5
+    [product_id] => 
+    [amount] => 660000
+)
+
+
+2025-06-21 07:26:29 - Promo code found
+Data: Array
+(
+    [KM_MA] => 4
+    [Code] => FARMER5
+    [KM_TGBD] => 2025-06-01 00:00:00
+    [KM_TGKT] => 2025-06-30 23:59:59
+    [KM_GIATRI] => 5
+    [hinh_thuc_km] => Giảm phần trăm
+)
+
+
+2025-06-21 07:26:29 - Promo code applied successfully
+Data: Array
+(
+    [success] => 1
+    [discount_percent] => 5
+    [discount] => 33000
+    [message] => Áp dụng mã giảm giá thành công: 5% cho đơn hàng
+)
+
+
+2025-06-21 07:26:30 - Checking promo code
+Data: Array
+(
+    [code] => FARMER5
+    [product_id] => 
+    [amount] => 660000
+)
+
+
+2025-06-21 07:26:30 - Promo code found
+Data: Array
+(
+    [KM_MA] => 4
+    [Code] => FARMER5
+    [KM_TGBD] => 2025-06-01 00:00:00
+    [KM_TGKT] => 2025-06-30 23:59:59
+    [KM_GIATRI] => 5
+    [hinh_thuc_km] => Giảm phần trăm
+)
+
+
+2025-06-21 07:26:30 - Promo code applied successfully
+Data: Array
+(
+    [success] => 1
+    [discount_percent] => 5
+    [discount] => 33000
+    [message] => Áp dụng mã giảm giá thành công: 5% cho đơn hàng
+)
+
+
+2025-06-21 07:26:30 - Checking promo code
+Data: Array
+(
+    [code] => FARMER5
+    [product_id] => 
+    [amount] => 660000
+)
+
+
+2025-06-21 07:26:30 - Promo code found
+Data: Array
+(
+    [KM_MA] => 4
+    [Code] => FARMER5
+    [KM_TGBD] => 2025-06-01 00:00:00
+    [KM_TGKT] => 2025-06-30 23:59:59
+    [KM_GIATRI] => 5
+    [hinh_thuc_km] => Giảm phần trăm
+)
+
+
+2025-06-21 07:26:30 - Promo code applied successfully
+Data: Array
+(
+    [success] => 1
+    [discount_percent] => 5
+    [discount] => 33000
+    [message] => Áp dụng mã giảm giá thành công: 5% cho đơn hàng
+)
+
+
+2025-06-21 07:27:45 - Checking promo code
+Data: Array
+(
+    [code] => PHANBON10
+    [product_id] => 
+    [amount] => 660000
+)
+
+
+2025-06-21 07:27:45 - Promo code found
+Data: Array
+(
+    [KM_MA] => 1
+    [Code] => PHANBON10
+    [KM_TGBD] => 2025-06-01 00:00:00
+    [KM_TGKT] => 2025-06-30 23:59:59
+    [KM_GIATRI] => 10
+    [hinh_thuc_km] => Giảm phần trăm
+)
+
+
+2025-06-21 07:27:45 - Promo code applied successfully
+Data: Array
+(
+    [success] => 1
+    [discount_percent] => 10
+    [discount] => 66000
+    [message] => Áp dụng mã giảm giá thành công: 10% cho đơn hàng
+)
+
+
+2025-06-21 07:30:35 - Checking promo code
+Data: Array
+(
+    [code] => PHANBON10
+    [product_id] => 
+    [amount] => 660000
+)
+
+
+2025-06-21 07:30:35 - Promo code found
+Data: Array
+(
+    [KM_MA] => 1
+    [Code] => PHANBON10
+    [KM_TGBD] => 2025-06-01 00:00:00
+    [KM_TGKT] => 2025-06-30 23:59:59
+    [KM_GIATRI] => 10
+    [hinh_thuc_km] => Giảm phần trăm
+)
+
+
+2025-06-21 07:30:35 - Promo code applied successfully
+Data: Array
+(
+    [success] => 1
+    [discount_percent] => 10
+    [discount] => 66000
+    [message] => Áp dụng mã giảm giá thành công: 10% cho đơn hàng
+)
+
+
+2025-06-21 07:33:11 - Checking promo code
+Data: Array
+(
+    [code] => PHANBON10
+    [product_id] => 
+    [amount] => 660000
+)
+
+
+2025-06-21 07:33:11 - Promo code found
+Data: Array
+(
+    [KM_MA] => 1
+    [Code] => PHANBON10
+    [KM_TGBD] => 2025-06-01 00:00:00
+    [KM_TGKT] => 2025-06-30 23:59:59
+    [KM_GIATRI] => 10
+    [hinh_thuc_km] => Giảm phần trăm
+)
+
+
+2025-06-21 07:33:11 - Promo code applied successfully
+Data: Array
+(
+    [success] => 1
+    [discount_percent] => 10
+    [discount] => 66000
+    [message] => Áp dụng mã giảm giá thành công: 10% cho đơn hàng
+)
+
+
+2025-06-21 07:47:08 - Checking promo code
+Data: Array
+(
+    [code] => PHANBON10
+    [product_id] => 
+    [amount] => 660000
+)
+
+
+2025-06-21 07:47:08 - Promo code found
+Data: Array
+(
+    [KM_MA] => 1
+    [Code] => PHANBON10
+    [KM_TGBD] => 2025-06-01 00:00:00
+    [KM_TGKT] => 2025-06-30 23:59:59
+    [KM_GIATRI] => 10
+    [hinh_thuc_km] => Giảm phần trăm
+)
+
+
+2025-06-21 07:47:08 - Promo code applied successfully
+Data: Array
+(
+    [success] => 1
+    [discount_percent] => 10
+    [discount] => 66000
+    [message] => Áp dụng mã giảm giá thành công: 10% cho đơn hàng
+)
+
+
+2025-06-21 07:53:41 - Checking promo code
+Data: Array
+(
+    [code] => PHANBON10
+    [product_id] => 
+    [amount] => 880000
+)
+
+
+2025-06-21 07:53:41 - Promo code found
+Data: Array
+(
+    [KM_MA] => 1
+    [Code] => PHANBON10
+    [KM_TGBD] => 2025-06-01 00:00:00
+    [KM_TGKT] => 2025-06-30 23:59:59
+    [KM_GIATRI] => 10
+    [hinh_thuc_km] => Giảm phần trăm
+)
+
+
+2025-06-21 07:53:41 - Promo code applied successfully
+Data: Array
+(
+    [success] => 1
+    [discount_percent] => 10
+    [discount] => 88000
+    [message] => Áp dụng mã giảm giá thành công: 10% cho đơn hàng
+)
+
+
+2025-06-21 08:53:03 - Checking promo code
+Data: Array
+(
+    [code] => THUOC20K
+    [product_id] => 
+    [amount] => 880000
+)
+
+
+2025-06-21 08:53:03 - Promo code found
+Data: Array
+(
+    [KM_MA] => 2
+    [Code] => THUOC20K
+    [KM_TGBD] => 2025-06-15 00:00:00
+    [KM_TGKT] => 2025-07-15 23:59:59
+    [KM_GIATRI] => 20000
+    [hinh_thuc_km] => Giảm trực tiếp
+)
+
+
+2025-06-21 08:53:03 - Promo code applied successfully
+Data: Array
+(
+    [success] => 1
+    [discount_percent] => 0
+    [discount] => 20000
+    [message] => Áp dụng mã giảm giá thành công: 20.000đ cho đơn hàng
+)
+
+
+2025-06-21 08:53:20 - Checking promo code
+Data: Array
+(
+    [code] => PHANBON10
+    [product_id] => 8
+    [amount] => 880000
+)
+
+
+2025-06-21 08:53:20 - Promo code found
+Data: Array
+(
+    [KM_MA] => 1
+    [Code] => PHANBON10
+    [KM_TGBD] => 2025-06-01 00:00:00
+    [KM_TGKT] => 2025-06-30 23:59:59
+    [KM_GIATRI] => 10
+    [hinh_thuc_km] => Giảm phần trăm
+)
+
+
+2025-06-21 08:53:20 - Checking product-specific conditions
+Data: Array
+(
+    [product_id] => 8
+    [discount_amount] => 88000
+)
+
+
+2025-06-21 08:53:20 - Promo code applied successfully
+Data: Array
+(
+    [success] => 1
+    [discount_percent] => 10
+    [discount] => 88000
+    [message] => Áp dụng mã giảm giá thành công: 10% cho sản phẩm
+)
+
+
+2025-06-21 09:06:33 - Checking promo code
+Data: Array
+(
+    [code] => PHANBON10
+    [product_id] => 8
+    [amount] => 880000
+)
+
+
+2025-06-21 09:06:33 - Promo code found
+Data: Array
+(
+    [KM_MA] => 1
+    [Code] => PHANBON10
+    [KM_TGBD] => 2025-06-01 00:00:00
+    [KM_TGKT] => 2025-06-30 23:59:59
+    [KM_GIATRI] => 10
+    [hinh_thuc_km] => Giảm phần trăm
+)
+
+
+2025-06-21 09:06:33 - Checking product-specific conditions
+Data: Array
+(
+    [product_id] => 8
+    [discount_amount] => 88000
+)
+
+
+2025-06-21 09:06:33 - Promo code applied successfully
+Data: Array
+(
+    [success] => 1
+    [discount_percent] => 10
+    [discount] => 88000
+    [message] => Áp dụng mã giảm giá thành công: 10% cho sản phẩm
+)
+
+

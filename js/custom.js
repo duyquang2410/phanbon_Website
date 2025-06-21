@@ -5,47 +5,15 @@
 
 // Initialize when DOM is ready
 document.addEventListener('DOMContentLoaded', function() {
-
-    // Add scroll animation to elements
-    initScrollAnimations();
-
     // Initialize product hover effects
     initProductHoverEffects();
 
     // Initialize the category carousel
     initCategoryCarousel();
 
-    // Add parallax effect
-    initParallaxEffect();
-
     // Initialize counter animation
     initCounterAnimation();
-
-    // Add smooth scrolling
-    initSmoothScrolling();
 });
-
-/**
- * Initialize scroll-based animations
- */
-function initScrollAnimations() {
-    const animatedElements = document.querySelectorAll('.animate-on-scroll');
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('animated');
-                observer.unobserve(entry.target);
-            }
-        });
-    }, {
-        threshold: 0.1
-    });
-
-    animatedElements.forEach(element => {
-        observer.observe(element);
-    });
-}
 
 /**
  * Initialize product hover effects
@@ -133,22 +101,6 @@ function initCategoryCarousel() {
 }
 
 /**
- * Initialize parallax effect for banner images
- */
-function initParallaxEffect() {
-    const parallaxElements = document.querySelectorAll('.parallax-bg');
-
-    window.addEventListener('scroll', function() {
-        const scrollY = window.scrollY;
-
-        parallaxElements.forEach(element => {
-            const speed = element.dataset.speed || 0.5;
-            element.style.transform = `translateY(${scrollY * speed}px)`;
-        });
-    });
-}
-
-/**
  * Initialize counter animation for statistics
  */
 function initCounterAnimation() {
@@ -182,28 +134,6 @@ function initCounterAnimation() {
 
     counters.forEach(counter => {
         observer.observe(counter);
-    });
-}
-
-/**
- * Initialize smooth scrolling for anchor links
- */
-function initSmoothScrolling() {
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-
-            const targetId = this.getAttribute('href');
-            if (targetId === '#') return;
-
-            const targetElement = document.querySelector(targetId);
-            if (!targetElement) return;
-
-            window.scrollTo({
-                top: targetElement.offsetTop - 80, // Adjust for header
-                behavior: 'smooth'
-            });
-        });
     });
 }
 
