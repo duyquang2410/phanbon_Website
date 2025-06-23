@@ -212,3 +212,150 @@ Licence: <a href="https://www.templateonweb.com/license">Website Template Licenc
         font-size: 13px;
     }
 }
+
+
+/* Promotion Styles */
+
+.promo-section {
+    margin-top: 20px;
+}
+
+.promo-item {
+    transition: all 0.3s ease;
+    border: 1px solid #dee2e6;
+}
+
+.promo-item:hover {
+    background-color: #f8f9fa;
+    border-color: #28a745;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.promo-item .badge {
+    font-size: 0.9em;
+    padding: 6px 10px;
+}
+
+.promo-item small {
+    display: block;
+    margin-top: 4px;
+    color: #6c757d;
+}
+
+#promoMessage {
+    margin-top: 10px;
+}
+
+.alert {
+    padding: 8px 12px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 4px;
+}
+
+.alert-success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.alert-danger {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+
+/* Cart Summary Styles */
+
+.cart_r {
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.cart_r h5 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.cart_r h6 {
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.cart_r .text-success {
+    color: #28a745 !important;
+}
+
+.cart_r hr {
+    margin: 15px 0;
+    border-color: #eee;
+}
+
+.btn-success {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+    border-color: #1e7e34;
+}
+
+.btn-outline-primary {
+    color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-outline-primary:hover {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+
+/* Modal Styles */
+
+.modal-content {
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.modal-header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #eee;
+    border-radius: 8px 8px 0 0;
+}
+
+.modal-body {
+    padding: 20px;
+}
+
+.input-group {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.input-group .form-control {
+    border-right: none;
+}
+
+.input-group .btn {
+    border-left: none;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+/* Responsive Styles */
+
+@media (max-width: 768px) {
+    .cart_r {
+        margin-top: 20px;
+    }
+    .promo-item {
+        padding: 10px;
+    }
+    .modal-dialog {
+        margin: 10px;
+    }
+}

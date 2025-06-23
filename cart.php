@@ -36,32 +36,6 @@ $cart_data = getCartItems($conn, $cart_id);
 $cart_items = $cart_data['items'];
 $cart_total = $cart_data['total'];
 $cart_count = $cart_data['count'];
-
-// Xử lý áp dụng mã giảm giá
-$discount = 0;
-$promo_code = '';
-$promo_error = '';
-$promo_success = '';
-
-if (isset($_POST['apply_promo']) && isset($_POST['promo_code'])) {
-    $promo_code = trim($_POST['promo_code']);
-    $promo_result = applyPromoCode($conn, $promo_code);
-    
-    if ($promo_result['valid']) {
-        $discount = $cart_total * ($promo_result['value'] / 100);
-        $_SESSION['promo_code'] = $promo_code;
-        $_SESSION['promo_id'] = $promo_result['id'];
-        $_SESSION['promo_value'] = $promo_result['value'];
-        $promo_success = "Đã áp dụng mã giảm giá " . $promo_result['value'] . "%.";
-    } else {
-        $promo_error = "Mã giảm giá không hợp lệ hoặc đã hết hạn.";
-    }
-} elseif (isset($_SESSION['promo_code'])) {
-    $promo_code = $_SESSION['promo_code'];
-    $discount = $cart_total * ($_SESSION['promo_value'] / 100);
-}
-
-$final_total = $cart_total - $discount;
 ?>
 
     <!-- Header -->
@@ -345,23 +319,35 @@ $final_total = $cart_total - $discount;
             return new Intl.NumberFormat('vi-VN', {
                 style: 'currency',
                 currency: 'VND'
-            }).format(amount);
+            }).format(amount).replace('₫', 'đ');
         }
 
-        function toggleHiddenInputs(checkbox) {
-            const row = checkbox.closest('tr');
-            const inputs = row.querySelectorAll('input[name^="item_"]');
-            inputs.forEach(input => {
-                if (input.type === 'hidden') {
-                    if (checkbox.checked) {
-                        input.removeAttribute('disabled');
-                    } else {
-                        input.setAttribute('disabled', 'disabled');
-                    }
+        // Cập nhật tổng tiền khi chọn sản phẩm
+        function updateTotal() {
+            const checkboxes = document.querySelectorAll('.item-checkbox:checked');
+            let total = 0;
+            let count = 0;
+
+            checkboxes.forEach(checkbox => {
+                const row = checkbox.closest('tr');
+                const subtotalCell = row.querySelector('.subtotal');
+                const subtotal = parseFloat(subtotalCell.dataset.subtotal || 0);
+                if (!isNaN(subtotal)) {
+                    total += subtotal;
+                    count++;
                 }
             });
+
+            document.getElementById('selectedCount').textContent = count;
+            document.getElementById('selectedTotal').textContent = formatCurrency(total);
+            document.getElementById('finalTotal').textContent = formatCurrency(total);
+            
+            // Enable/disable checkout button
+            const checkoutBtn = document.getElementById('checkoutBtn');
+            checkoutBtn.disabled = checkboxes.length === 0;
         }
 
+        // Cập nhật tổng tiền cho một sản phẩm
         function updateProductTotal(productId, quantity) {
             const row = document.querySelector(`.quantity-input[data-product-id="${productId}"]`).closest('tr');
             if (row) {
@@ -372,45 +358,32 @@ $final_total = $cart_total - $discount;
 
                 subtotalCell.textContent = formatCurrency(newSubtotal);
                 subtotalCell.dataset.subtotal = newSubtotal;
+                
                 const checkbox = row.querySelector('.item-checkbox');
-                checkbox.dataset.quantity = quantity;
-                updateCartTotal();
+                if (checkbox) {
+                    checkbox.dataset.quantity = quantity;
+                }
+                
+                const hiddenQuantityInput = row.querySelector(`input[name="item_quantity[${productId}]"]`);
+                if (hiddenQuantityInput) {
+                    hiddenQuantityInput.value = quantity;
+                }
+                
+                updateTotal();
             }
         }
 
-        function updateCartTotal() {
-            let total = 0;
-            let itemCount = 0;
-
-            document.querySelectorAll('.item-checkbox:checked').forEach(checkbox => {
-                const row = checkbox.closest('tr');
-                const subtotalCell = row.querySelector('.subtotal');
-                const subtotal = parseFloat(subtotalCell.dataset.subtotal || 0);
-                total += subtotal;
-                itemCount++;
-            });
-
-            document.getElementById('selectedCount').textContent = itemCount;
-            document.getElementById('selectedTotal').textContent = formatCurrency(total);
-            document.getElementById('finalTotal').textContent = formatCurrency(total);
-            document.getElementById('checkoutBtn').disabled = itemCount === 0;
-
-            document.getElementById('totalAmountInput').value = total;
-            document.getElementById('totalItemsInput').value = itemCount;
-        }
-
-        async function updateQuantity(productId, newQuantity) {
-            const row = document.querySelector(`.quantity-input[data-product-id="${productId}"]`).closest(
-                'tr');
+        // Xử lý tăng giảm số lượng
+        async function updateQuantity(productId, newQuantity, button) {
+            const row = button.closest('tr');
             const quantityInput = row.querySelector('.quantity-input');
-            const hiddenQuantityInput = row.querySelector(`input[name="item_quantity[${productId}]"]`);
             const decreaseBtn = row.querySelector('.btn-decrease');
             const increaseBtn = row.querySelector('.btn-increase');
 
-            newQuantity = Math.max(1, Math.round(newQuantity));
-            quantityInput.disabled = true;
+            // Disable buttons while processing
             decreaseBtn.disabled = true;
             increaseBtn.disabled = true;
+            quantityInput.disabled = true;
 
             try {
                 const response = await fetch('cart_update.php', {
@@ -422,30 +395,28 @@ $final_total = $cart_total - $discount;
                 });
 
                 const data = await response.json();
+                
                 if (data.success) {
                     quantityInput.value = newQuantity;
-                    quantityInput.dataset.lastValue = newQuantity;
-                    hiddenQuantityInput.value = newQuantity;
                     updateProductTotal(productId, newQuantity);
                 } else {
                     showError(data.message || 'Có lỗi xảy ra khi cập nhật số lượng.');
+                    // Restore previous value
                     quantityInput.value = quantityInput.dataset.lastValue;
-                    hiddenQuantityInput.value = quantityInput.dataset.lastValue;
-                    updateProductTotal(productId, parseInt(quantityInput.dataset.lastValue));
                 }
             } catch (error) {
                 console.error('Error:', error);
                 showError('Có lỗi xảy ra khi cập nhật số lượng.');
                 quantityInput.value = quantityInput.dataset.lastValue;
-                hiddenQuantityInput.value = quantityInput.dataset.lastValue;
-                updateProductTotal(productId, parseInt(quantityInput.dataset.lastValue));
             } finally {
-                quantityInput.disabled = false;
+                // Re-enable buttons
                 decreaseBtn.disabled = false;
                 increaseBtn.disabled = false;
+                quantityInput.disabled = false;
             }
         }
 
+        // Xử lý nút giảm số lượng
         document.querySelectorAll('.btn-decrease').forEach(button => {
             button.addEventListener('click', function() {
                 const productId = this.dataset.productId;
@@ -454,11 +425,12 @@ $final_total = $cart_total - $discount;
                 const currentValue = parseInt(input.value);
 
                 if (currentValue > 1) {
-                    updateQuantity(productId, currentValue - 1);
+                    updateQuantity(productId, currentValue - 1, this);
                 }
             });
         });
 
+        // Xử lý nút tăng số lượng
         document.querySelectorAll('.btn-increase').forEach(button => {
             button.addEventListener('click', function() {
                 const productId = this.dataset.productId;
@@ -466,114 +438,92 @@ $final_total = $cart_total - $discount;
                 const input = row.querySelector('.quantity-input');
                 const currentValue = parseInt(input.value);
 
-                updateQuantity(productId, currentValue + 1);
+                updateQuantity(productId, currentValue + 1, this);
             });
         });
 
-        let debounceTimeout;
+        // Xử lý nhập số lượng trực tiếp
         document.querySelectorAll('.quantity-input').forEach(input => {
             input.dataset.lastValue = input.value;
 
-            input.addEventListener('input', function() {
-                clearTimeout(debounceTimeout);
+            input.addEventListener('change', function() {
                 const productId = this.dataset.productId;
-
-                debounceTimeout = setTimeout(() => {
-                    let newValue = parseInt(this.value);
-                    if (isNaN(newValue) || newValue < 1) newValue = 1;
-                    this.value = newValue;
-                    updateQuantity(productId, newValue);
-                }, 500);
-            });
-
-            input.addEventListener('keypress', function(e) {
-                if (!/[0-9]/.test(e.key)) e.preventDefault();
-            });
-        });
-
-        document.querySelectorAll('.item-checkbox').forEach(checkbox => {
-            checkbox.addEventListener('change', async function() {
-                const productId = this.value;
-                const isSelected = this.checked;
+                let newValue = parseInt(this.value);
                 
-                try {
-                    const response = await fetch('update_cart_selection.php', {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/x-www-form-urlencoded'
-                        },
-                        body: `product_id=${productId}&is_selected=${isSelected ? 1 : 0}`
-                    });
+                if (isNaN(newValue) || newValue < 1) {
+                    newValue = 1;
+                    this.value = newValue;
+                }
+                
+                updateQuantity(productId, newValue, this);
+            });
 
-                    const data = await response.json();
-                    if (data.success) {
-                        toggleHiddenInputs(this);
-                        updateCartTotal();
-                        showNotification(isSelected ? 'Đã chọn sản phẩm' : 'Đã bỏ chọn sản phẩm');
-                    } else {
-                        showError(data.message || 'Có lỗi xảy ra khi cập nhật trạng thái sản phẩm.');
-                        this.checked = !isSelected; // Revert checkbox state
-                    }
-                } catch (error) {
-                    console.error('Error:', error);
-                    showError('Có lỗi xảy ra khi cập nhật trạng thái sản phẩm.');
-                    this.checked = !isSelected; // Revert checkbox state
+            // Chỉ cho phép nhập số
+            input.addEventListener('keypress', function(e) {
+                if (!/[0-9]/.test(e.key)) {
+                    e.preventDefault();
                 }
             });
         });
 
-        const checkAll = document.getElementById('checkAll');
-        if (checkAll) {
-            checkAll.addEventListener('change', async function() {
+        // Xử lý chọn tất cả
+        const checkAllBox = document.getElementById('checkAll');
+        if (checkAllBox) {
+            checkAllBox.addEventListener('change', function() {
                 const checkboxes = document.querySelectorAll('.item-checkbox');
-                const isSelected = this.checked;
-                
-                for (const checkbox of checkboxes) {
-                    try {
-                        const response = await fetch('update_cart_selection.php', {
-                            method: 'POST',
-                            headers: {
-                                'Content-Type': 'application/x-www-form-urlencoded'
-                            },
-                            body: `product_id=${checkbox.value}&is_selected=${isSelected ? 1 : 0}`
-                        });
+                checkboxes.forEach(checkbox => {
+                    checkbox.checked = this.checked;
+                });
+                updateTotal();
+            });
+        }
 
-                        const data = await response.json();
-                        if (data.success) {
-                            checkbox.checked = isSelected;
-                            toggleHiddenInputs(checkbox);
+        // Xử lý chọn từng sản phẩm
+        document.querySelectorAll('.item-checkbox').forEach(checkbox => {
+            checkbox.addEventListener('change', function() {
+                updateTotal();
+                
+                // Kiểm tra nếu tất cả đều được chọn
+                const allChecked = Array.from(document.querySelectorAll('.item-checkbox')).every(cb => cb.checked);
+                if (checkAllBox) {
+                    checkAllBox.checked = allChecked;
+                }
+            });
+        });
+
+        // Xử lý xóa sản phẩm
+        document.querySelectorAll('.delete-item').forEach(button => {
+            button.addEventListener('click', async function() {
+                if (confirm('Bạn có chắc muốn xóa sản phẩm này khỏi giỏ hàng?')) {
+                    const productId = this.dataset.productId;
+                    const row = this.closest('tr');
+                    
+                    try {
+                        const response = await fetch(`cart_remove.php?id=${productId}`, {
+                            method: 'GET'
+                        });
+                        
+                        if (response.ok) {
+                            row.remove();
+                            updateTotal();
+                            
+                            // Kiểm tra nếu giỏ hàng trống
+                            if (document.querySelectorAll('.cart-item').length === 0) {
+                                location.reload();
+                            }
+                        } else {
+                            showError('Không thể xóa sản phẩm khỏi giỏ hàng');
                         }
                     } catch (error) {
                         console.error('Error:', error);
+                        showError('Có lỗi xảy ra khi xóa sản phẩm');
                     }
                 }
-                
-                updateCartTotal();
-                showNotification(isSelected ? 'Đã chọn tất cả sản phẩm' : 'Đã bỏ chọn tất cả sản phẩm');
             });
-        }
+        });
 
-        const checkoutForm = document.getElementById('checkoutForm');
-        if (checkoutForm) {
-            checkoutForm.addEventListener('submit', function(e) {
-                const selectedItems = document.querySelectorAll('.item-checkbox:checked');
-                if (selectedItems.length === 0) {
-                    e.preventDefault();
-                    showError('Vui lòng chọn ít nhất một sản phẩm để thanh toán.');
-                } else {
-                    // Đảm bảo tất cả dữ liệu được đồng bộ trước khi gửi
-                    selectedItems.forEach(checkbox => {
-                        const row = checkbox.closest('tr');
-                        const quantityInput = row.querySelector('.quantity-input');
-                        const hiddenQuantityInput = row.querySelector(
-                            `input[name="item_quantity[${checkbox.value}]"]`);
-                        hiddenQuantityInput.value = quantityInput.value;
-                    });
-                }
-            });
-        }
-
-        updateCartTotal();
+        // Khởi tạo tổng tiền ban đầu
+        updateTotal();
     });
 
     function showNotification(message, type = 'success') {
@@ -622,7 +572,7 @@ $final_total = $cart_total - $discount;
                     
                     if (response.ok) {
                         row.remove();
-                        updateCartTotal();
+                        updateTotal();
                         showNotification('Đã xóa sản phẩm khỏi giỏ hàng');
                         
                         // Kiểm tra nếu giỏ hàng trống
@@ -639,6 +589,11 @@ $final_total = $cart_total - $discount;
             }
         });
     });
+
+    function selectPromo(code) {
+        document.querySelector('input[name="promo_code"]').value = code;
+        document.querySelector('button[name="apply_promo"]').click();
+    }
     </script>
 
     <!-- Thêm modal thông báo -->

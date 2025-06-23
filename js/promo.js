@@ -64,7 +64,81 @@ class PromoManager {
             item.addEventListener('click', (e) => this.handlePromoItemClick(e));
         });
 
+        // Listen for shipping fee changes
+        document.addEventListener('shippingFeeChanged', (event) => {
+            console.log('PromoManager - Received shipping fee change:', event.detail);
+            const shippingFee = event.detail.shippingFee;
+            const currentDiscount = this.getCurrentDiscount();
+            const currentDiscountPercent = this.getCurrentDiscountPercent();
+
+            this.updateTotalPayment(currentDiscount, currentDiscountPercent, shippingFee);
+        });
+
         console.log('PromoManager event listeners set up');
+    }
+
+    getCurrentDiscount() {
+        if (!this.discountAmount) return 0;
+        const discountText = this.discountAmount.textContent.replace(/[^\d]/g, '');
+        return parseFloat(discountText) || 0;
+    }
+
+    getCurrentDiscountPercent() {
+        if (!this.discountPercent) return 0;
+        return parseFloat(this.discountPercent.textContent) || 0;
+    }
+
+    updateTotalPayment(discount = 0, discountPercent = 0, shippingFee = null) {
+        console.log('PromoManager - Updating total payment:', {
+            discount,
+            discountPercent,
+            shippingFee
+        });
+
+        if (!this.totalAmountInput || !this.totalPaymentSpan) return;
+
+        const totalAmount = parseFloat(this.totalAmountInput.value) || 0;
+        const currentShippingFee = shippingFee !== null ? shippingFee :
+            (parseFloat(this.shippingFeeInput ? this.shippingFeeInput.value : '0') || 0);
+
+        // Ẩn/hiện phần giảm giá
+        const serverDiscountSection = document.getElementById('server-discount-section');
+        if (serverDiscountSection) {
+            serverDiscountSection.style.display = discount > 0 ? 'none' : '';
+        }
+
+        // Hiển thị giảm giá động
+        if (this.discountRow && this.discountAmount && this.discountPercent && this.discountPercentText) {
+            if (discount > 0) {
+                this.discountAmount.textContent = new Intl.NumberFormat('vi-VN').format(discount);
+                if (discountPercent > 0) {
+                    this.discountPercent.textContent = discountPercent;
+                    this.discountPercentText.style.display = 'inline';
+                } else {
+                    this.discountPercentText.style.display = 'none';
+                }
+                this.discountRow.style.display = 'flex';
+                this.discountRow.classList.add('discount-animation');
+                setTimeout(() => {
+                    this.discountRow.classList.remove('discount-animation');
+                }, 500);
+            } else {
+                this.discountRow.style.display = 'none';
+            }
+        }
+
+        // Tính tổng tiền và cập nhật hiển thị
+        const total = totalAmount + currentShippingFee - discount;
+        const formattedTotal = new Intl.NumberFormat('vi-VN').format(total) + 'đ';
+        this.totalPaymentSpan.textContent = formattedTotal;
+
+        console.log('PromoManager - Updated total payment:', {
+            totalAmount,
+            currentShippingFee,
+            discount,
+            total,
+            formattedTotal
+        });
     }
 
     async applyPromo() {
@@ -84,6 +158,16 @@ class PromoManager {
         }
 
         try {
+            // Lấy giá trị sản phẩm nếu đang áp dụng cho sản phẩm cụ thể
+            let productAmount = 0;
+            if (promoType !== 'all') {
+                const productPrice = document.querySelector(`input[name="product_price[${promoType}]"]`);
+                const productQuantity = document.querySelector(`input[name="product_quantity[${promoType}]"]`);
+                if (productPrice && productQuantity) {
+                    productAmount = parseFloat(productPrice.value) * parseInt(productQuantity.value);
+                }
+            }
+
             const response = await fetch('check_promo.php', {
                 method: 'POST',
                 headers: {
@@ -92,7 +176,7 @@ class PromoManager {
                 body: JSON.stringify({
                     promo_code: promoCode,
                     type: promoType,
-                    total_amount: totalAmount,
+                    total_amount: promoType === 'all' ? totalAmount : productAmount,
                     product_id: promoType !== 'all' ? promoType : null
                 })
             });
@@ -105,40 +189,45 @@ class PromoManager {
             console.log('Promo response:', data);
 
             if (data.success) {
+                const checkoutForm = document.getElementById('checkoutForm');
+                if (!checkoutForm) {
+                    throw new Error('Checkout form not found');
+                }
+
                 if (promoType === 'all') {
                     // Áp dụng cho toàn bộ đơn hàng
                     if (this.promoCodeInput) {
                         this.promoCodeInput.value = promoCode;
-                    }
-                    if (this.promoCodeItemInputs) {
-                        this.promoCodeItemInputs.forEach(input => input.value = '');
+                        console.log('Updated promo code input:', this.promoCodeInput.value);
                     }
                 } else {
                     // Áp dụng cho sản phẩm cụ thể
-                    if (this.promoCodeInput) {
-                        this.promoCodeInput.value = '';
+                    let productPromoInput = document.querySelector(`input[name="promo_code_item[${promoType}]"]`);
+                    if (!productPromoInput) {
+                        productPromoInput = document.createElement('input');
+                        productPromoInput.type = 'hidden';
+                        productPromoInput.name = `promo_code_item[${promoType}]`;
+                        checkoutForm.appendChild(productPromoInput);
                     }
-                    if (this.promoCodeItemInputs) {
-                        this.promoCodeItemInputs.forEach(input => {
-                            if (input.name.includes(`[${promoType}]`)) {
-                                input.value = promoCode;
-                            }
-                        });
-                    }
+                    productPromoInput.value = promoCode;
+                    console.log('Updated product promo input:', productPromoInput.value);
                 }
 
-                this.updateTotalPayment(data.discount, data.discount_percent);
+                // Hiển thị thông báo thành công
                 this.showSuccess(data.message);
+
+                // Cập nhật hiển thị giảm giá
+                if (promoType === 'all') {
+                    this.updateTotalDiscount(data.discount, data.discount_percent);
+                } else {
+                    this.updateProductDiscount(promoType, data.discount, data.discount_percent);
+                }
             } else {
                 this.showError(data.message);
-                // Reset discount display when promo is invalid
-                this.updateTotalPayment(0, 0);
             }
         } catch (error) {
             console.error('Error applying promo:', error);
-            this.showError('Lỗi khi áp dụng mã khuyến mãi');
-            // Reset discount display on error
-            this.updateTotalPayment(0, 0);
+            this.showError('Có lỗi xảy ra khi áp dụng mã khuyến mãi');
         }
     }
 
@@ -164,68 +253,6 @@ class PromoManager {
         this.applyPromo();
     }
 
-    updateTotalPayment(discount, discountPercent) {
-        console.log('Updating total payment:', {
-            totalAmount: this.totalAmountInput ? this.totalAmountInput.value : 0,
-            shippingFee: this.shippingFeeInput ? this.shippingFeeInput.value : 0,
-            discount,
-            discountPercent
-        });
-
-        if (this.totalAmountInput && this.shippingFeeInput && this.totalPaymentSpan) {
-            const totalAmount = parseFloat(this.totalAmountInput.value) || 0;
-            const shippingFee = parseFloat(this.shippingFeeInput.value) || 0;
-            const discountValue = parseFloat(discount) || 0;
-
-            // Ẩn/hiện phần giảm giá
-            const serverDiscountSection = document.getElementById('server-discount-section');
-            if (serverDiscountSection) {
-                serverDiscountSection.style.display = discountValue > 0 ? 'none' : '';
-            }
-
-            // Hiển thị giảm giá động
-            if (this.discountRow && this.discountAmount && this.discountPercent && this.discountPercentText) {
-                if (discountValue > 0) {
-                    this.discountAmount.textContent = new Intl.NumberFormat('vi-VN').format(discountValue);
-                    if (discountPercent > 0) {
-                        this.discountPercent.textContent = discountPercent;
-                        this.discountPercentText.style.display = 'inline';
-                    } else {
-                        this.discountPercentText.style.display = 'none';
-                    }
-                    this.discountRow.style.display = 'flex';
-                    this.discountRow.classList.add('discount-animation');
-                    setTimeout(() => {
-                        this.discountRow.classList.remove('discount-animation');
-                    }, 500);
-                } else {
-                    this.discountRow.style.display = 'none';
-                }
-            }
-
-            // Tính tổng tiền và cập nhật hiển thị
-            const total = totalAmount + shippingFee - discountValue;
-            const formattedTotal = new Intl.NumberFormat('vi-VN').format(total) + 'đ';
-            this.totalPaymentSpan.textContent = formattedTotal;
-
-            // Dispatch event cho ShippingCalculator
-            document.dispatchEvent(new CustomEvent('promoApplied', {
-                detail: {
-                    discount: discountValue,
-                    total: total
-                }
-            }));
-
-            console.log('Updated total payment:', {
-                totalAmount,
-                shippingFee,
-                discount: discountValue,
-                total,
-                formattedTotal
-            });
-        }
-    }
-
     showError(message) {
         console.log('Showing error:', message);
         if (this.promoError) {
@@ -242,6 +269,34 @@ class PromoManager {
             this.promoError.classList.remove('text-danger', 'show');
             this.promoError.classList.add('text-success', 'show');
         }
+    }
+
+    updateTotalDiscount(discount, discountPercent) {
+        if (!this.totalAmountInput) return;
+
+        const totalAmount = parseFloat(this.totalAmountInput.value) || 0;
+        const shippingFee = parseFloat(this.shippingFeeInput ? this.shippingFeeInput.value : '0') || 0;
+
+        // Update total payment with new discount
+        this.updateTotalPayment(discount, discountPercent, shippingFee);
+
+        // Update hidden discount input if it exists
+        const discountInput = document.querySelector('input[name="total_discount"]');
+        if (discountInput) {
+            discountInput.value = discount;
+        }
+    }
+
+    updateProductDiscount(productId, discount, discountPercent) {
+        // Update product-specific discount display if needed
+        const productDiscountElement = document.querySelector(`#product-discount-${productId}`);
+        if (productDiscountElement) {
+            productDiscountElement.textContent = new Intl.NumberFormat('vi-VN').format(discount);
+            productDiscountElement.parentElement.style.display = discount > 0 ? 'block' : 'none';
+        }
+
+        // Update total payment
+        this.updateTotalPayment();
     }
 }
 

@@ -329,3 +329,429 @@ Licence: <a href="https://www.templateonweb.com/license">Website Template Licenc
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
     padding: 20px;
 }
+
+
+/* Shipping Options Styles */
+
+.shipping-options {
+    margin: 15px 0;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.shipping-option {
+    padding: 15px;
+    border-bottom: 1px solid #dee2e6;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.shipping-option:last-child {
+    border-bottom: none;
+}
+
+.shipping-option:hover {
+    background-color: #f8f9fa;
+}
+
+.shipping-option.selected {
+    background-color: #e8f5e9;
+    border-left: 3px solid #28a745;
+}
+
+.service-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex: 1;
+}
+
+.service-info i {
+    font-size: 24px;
+    color: #28a745;
+    width: 40px;
+    text-align: center;
+}
+
+.service-details {
+    flex: 1;
+}
+
+.service-details h4 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #212529;
+}
+
+.service-details p {
+    margin: 5px 0 0;
+    font-size: 14px;
+    color: #6c757d;
+}
+
+.service-details .delivery-time {
+    color: #28a745;
+    font-weight: 500;
+}
+
+.select-service {
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+}
+
+.select-service input[type="radio"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+
+/* Responsive styles */
+
+@media (max-width: 768px) {
+    .shipping-option {
+        padding: 10px;
+    }
+    .service-info {
+        gap: 10px;
+    }
+    .service-info i {
+        font-size: 20px;
+        width: 30px;
+    }
+    .service-details h4 {
+        font-size: 14px;
+    }
+    .service-details p {
+        font-size: 12px;
+    }
+}
+
+
+/* Form sections */
+
+.shipping-section {
+    position: relative;
+}
+
+.section-title {
+    font-size: 1.1rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #eee;
+}
+
+.section-title i {
+    color: #3498db;
+}
+
+
+/* Form controls */
+
+.form-floating {
+    margin-bottom: 0;
+}
+
+.form-floating>.form-control,
+.form-floating>.form-select {
+    border-radius: 8px;
+    border-color: #e0e0e0;
+    padding: 1rem;
+    height: calc(3.5rem + 2px);
+    line-height: 1.25;
+}
+
+.form-floating>label {
+    padding: 1rem;
+    color: #666;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 0 0.2rem rgba(52, 152, 219, 0.25);
+}
+
+
+/* Cards */
+
+.card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+
+/* Shipping methods */
+
+.shipping-methods {
+    padding: 0.5rem 0;
+}
+
+.shipping-methods .form-check {
+    padding: 1rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+}
+
+.shipping-methods .form-check:hover {
+    background-color: #f8f9fa;
+}
+
+.shipping-methods .form-check-input:checked~.form-check-label {
+    color: #2c3e50;
+}
+
+.shipping-methods .form-check:last-child {
+    margin-bottom: 0;
+}
+
+.shipping-icon {
+    font-size: 1.5rem;
+    width: 40px;
+    text-align: center;
+}
+
+.shipping-info {
+    margin-right: 1rem;
+}
+
+.shipping-fee {
+    font-weight: 600;
+}
+
+
+/* Payment methods */
+
+.form-check {
+    padding: 0.75rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.form-check:hover {
+    background-color: #f8f9fa;
+}
+
+.form-check-input {
+    margin-top: 0.3rem;
+}
+
+.form-check-label {
+    cursor: pointer;
+}
+
+
+/* Full address display */
+
+#full-address-display {
+    background-color: #f8f9fa;
+    border-color: #e0e0e0;
+    color: #2c3e50;
+    font-size: 0.95rem;
+}
+
+#full-address-display i {
+    color: #3498db;
+}
+
+
+/* Responsive adjustments */
+
+@media (max-width: 768px) {
+    .shipping-info {
+        margin-right: 0.5rem;
+    }
+    .shipping-icon {
+        font-size: 1.25rem;
+        width: 30px;
+    }
+    .form-floating>.form-control,
+    .form-floating>.form-select {
+        height: calc(3.25rem + 2px);
+        padding: 0.75rem;
+    }
+    .form-floating>label {
+        padding: 0.75rem;
+    }
+}
+
+
+/* Animations */
+
+.form-control:focus,
+.form-select:focus,
+.form-check:hover {
+    transform: translateY(-1px);
+    transition: all 0.3s ease;
+}
+
+.shipping-methods .form-check-input:checked~.form-check-label,
+.form-check-input:checked~.form-check-label {
+    transform: translateY(0);
+}
+
+
+/* Error states */
+
+.form-control.is-invalid,
+.form-select.is-invalid {
+    border-color: #dc3545;
+    background-image: none;
+}
+
+.form-control.is-invalid:focus,
+.form-select.is-invalid:focus {
+    border-color: #dc3545;
+    box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+}
+
+
+/* Success states */
+
+.form-control.is-valid,
+.form-select.is-valid {
+    border-color: #28a745;
+    background-image: none;
+}
+
+.form-control.is-valid:focus,
+.form-select.is-valid:focus {
+    border-color: #28a745;
+    box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
+}
+
+.product-promo-container {
+    margin: 10px 0;
+}
+
+.product-promo {
+    display: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    color: #28a745;
+    font-size: 0.9rem;
+}
+
+.product-promo:before {
+    content: '🏷️';
+    margin-right: 5px;
+}
+
+
+/* Animation cho khuyến mãi */
+
+@keyframes promoHighlight {
+    0% {
+        background-color: #28a745;
+        color: white;
+    }
+    100% {
+        background-color: #f8f9fa;
+        color: #28a745;
+    }
+}
+
+.product-promo.highlight {
+    animation: promoHighlight 0.5s ease-out;
+}
+
+
+/* Style cho modal khuyến mãi */
+
+.promo-item {
+    transition: all 0.3s ease;
+}
+
+.promo-item:hover {
+    background-color: #f8f9fa;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.promo-item .text-success {
+    font-weight: bold;
+}
+
+
+/* Style cho input khuyến mãi */
+
+.promo-code .input-group {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.promo-code .form-control {
+    border: none;
+    padding: 10px 15px;
+}
+
+.promo-code .btn {
+    padding: 10px 20px;
+}
+
+.promo-error {
+    padding: 8px;
+    border-radius: 4px;
+    margin-top: 5px;
+}
+
+.promo-error.text-danger {
+    background-color: #fff5f5;
+    border: 1px solid #feb2b2;
+}
+
+.promo-error.text-success {
+    background-color: #f0fff4;
+    border: 1px solid #9ae6b4;
+}
+
+#promoMessage {
+    font-size: 14px;
+}
+
+#promoMessage.text-success {
+    color: #28a745;
+}
+
+#promoMessage.text-danger {
+    color: #dc3545;
+}
+
+.badge {
+    font-size: 12px;
+    padding: 5px 8px;
+}
+
+.badge.bg-success {
+    background-color: #28a745 !important;
+}
+
+#discount-row {
+    color: #dc3545;
+    font-weight: 500;
+}
+
+.total-row {
+    border-top: 2px solid #dee2e6;
+    padding-top: 15px;
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: 600;
+}

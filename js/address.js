@@ -1,381 +1,554 @@
 // Quản lý địa chỉ và tính phí vận chuyển ViettelPost
-class AddressManager {
-    constructor() {
-        console.log('Khởi tạo AddressManager...');
-        this.initializeElements();
-        this.setupConfig();
+(function(window) {
+    console.log('Address.js loaded');
 
-        if (this.validateElements()) {
-            this.setupEventListeners();
-            this.loadProvinces();
-        } else {
-            console.error('Thiếu các phần tử bắt buộc');
-            this.showError('Không thể khởi tạo form địa chỉ. Vui lòng tải lại trang.');
+    class AddressManager {
+        constructor(config = {}) {
+            console.log('AddressManager constructor called with config:', config);
+
+            // Validate config
+            if (!config) {
+                console.error('Config is required');
+                throw new Error('Config is required');
+            }
+
+            if (!config.pickProvince || !config.pickDistrict) {
+                console.error('Missing required config:', config);
+                throw new Error('Missing required config values');
+            }
+
+            this.config = config;
+            console.log('Config validated successfully');
+
+            this.initializeElements();
+            this.setupConfig();
+            this.isIntraProvince = false;
+
+            if (this.validateElements()) {
+                this.setupEventListeners();
+                this.loadProvinces();
+            } else {
+                console.error('Required elements are missing');
+                this.showError('Không thể khởi tạo form địa chỉ. Vui lòng tải lại trang.');
+            }
         }
-    }
 
-    initializeElements() {
-        this.provinceSelect = document.getElementById('province');
-        this.districtSelect = document.getElementById('district');
-        this.wardSelect = document.getElementById('ward');
-        this.shippingFeeDisplay = document.getElementById('shipping-fee');
-        this.shippingFeeInput = document.querySelector('input[name="shipping_fee"]');
-        this.errorMessageContainer = document.getElementById('error-message');
-        this.totalPriceInput = document.querySelector('input[name="total_amount"]');
-        this.totalWeightInput = document.querySelector('input[name="total_weight"]');
-        this.totalValueInput = document.querySelector('input[name="total_value"]');
-        this.totalPaymentSpan = document.querySelector('.total-row .text-danger');
+        initializeElements() {
+            console.log('Initializing elements...');
 
-        console.log('Tìm thấy các phần tử:', {
-            provinceSelect: !!this.provinceSelect,
-            districtSelect: !!this.districtSelect,
-            wardSelect: !!this.wardSelect,
-            shippingFeeDisplay: !!this.shippingFeeDisplay,
-            shippingFeeInput: !!this.shippingFeeInput,
-            errorMessageContainer: !!this.errorMessageContainer,
-            totalPriceInput: !!this.totalPriceInput,
-            totalWeightInput: !!this.totalWeightInput,
-            totalValueInput: !!this.totalValueInput,
-            totalPaymentSpan: !!this.totalPaymentSpan
-        });
-    }
+            try {
+                // Lấy các phần tử
+                this.provinceSelect = document.getElementById('province');
+                this.districtSelect = document.getElementById('district');
+                this.wardSelect = document.getElementById('ward');
+                this.shippingFeeDisplay = document.getElementById('shipping-fee');
+                this.shippingFeeInput = document.querySelector('input[name="shipping_fee"]');
+                this.errorMessageContainer = document.getElementById('address-error');
+                this.totalPriceInput = document.querySelector('input[name="total_amount"]');
+                this.totalWeightInput = document.querySelector('input[name="total_weight"]');
+                this.totalValueInput = document.querySelector('input[name="total_value"]');
+                this.totalPaymentSpan = document.querySelector('.total-row .text-danger');
+                this.streetAddressInput = document.getElementById('street_address');
+                this.fullAddressInput = document.getElementById('full_address');
+                this.fullAddressDisplay = document.getElementById('full-address-display');
 
-    setupConfig() {
-        // Thông tin điểm lấy hàng mặc định
-        this.pickProvince = "1"; // Hà Nội
-        this.pickDistrict = "1"; // Ba Đình
-        this.pickWard = "1"; // Phúc Xá
-        this.pickAddress = "123 Đường Láng";
+                // Log element status
+                console.log('Elements found:', {
+                    provinceSelect: !!this.provinceSelect,
+                    districtSelect: !!this.districtSelect,
+                    wardSelect: !!this.wardSelect,
+                    shippingFeeDisplay: !!this.shippingFeeDisplay,
+                    shippingFeeInput: !!this.shippingFeeInput,
+                    errorMessageContainer: !!this.errorMessageContainer,
+                    totalPriceInput: !!this.totalPriceInput,
+                    totalWeightInput: !!this.totalWeightInput,
+                    totalValueInput: !!this.totalValueInput,
+                    totalPaymentSpan: !!this.totalPaymentSpan,
+                    streetAddressInput: !!this.streetAddressInput,
+                    fullAddressInput: !!this.fullAddressInput,
+                    fullAddressDisplay: !!this.fullAddressDisplay
+                });
+            } catch (error) {
+                console.error('Error initializing elements:', error);
+                throw error;
+            }
+        }
 
-        this.shippingServices = [
-            { id: 'VCN', name: 'Chuyển phát tiêu chuẩn', priority: 1 },
-            { id: 'VPT', name: 'Chuyển phát nhanh', priority: 2 }
-        ].sort((a, b) => a.priority - b.priority);
+        setupConfig() {
+            // Thông tin điểm lấy hàng từ cấu hình
+            this.pickProvince = this.config.pickProvince || "1"; // Hà Nội
+            this.pickDistrict = this.config.pickDistrict || "1"; // Ba Đình
+            this.pickWard = this.config.pickWard || "1"; // Phúc Xá
+            this.pickAddress = this.config.pickAddress || "123 Đường Láng";
 
-        this.defaultProductConfig = {
-            weight: 1000, // 1kg
-            length: 20,
-            width: 20,
-            height: 20,
-            quantity: 1
-        };
+            this.shippingServices = [
+                { id: 'VCN', name: 'Chuyển phát tiêu chuẩn', priority: 1 },
+                { id: 'VPT', name: 'Chuyển phát nhanh', priority: 2 }
+            ].sort((a, b) => a.priority - b.priority);
 
-        this.isCalculating = false;
-        const discountInput = document.querySelector('input[name="total_discount"]');
-        this.totalDiscount = parseFloat(discountInput ? discountInput.value : '0');
-    }
+            this.defaultProductConfig = {
+                weight: this.config.defaultWeight || 1000, // 1kg
+                length: (this.config.defaultDimensions && this.config.defaultDimensions.length) || 20,
+                width: (this.config.defaultDimensions && this.config.defaultDimensions.width) || 20,
+                height: (this.config.defaultDimensions && this.config.defaultDimensions.height) || 20,
+                quantity: 1
+            };
 
-    validateElements() {
-        const requiredElements = [
-            this.provinceSelect,
-            this.districtSelect,
-            this.wardSelect,
-            this.shippingFeeDisplay,
-            this.shippingFeeInput,
-            this.totalPriceInput,
-            this.totalWeightInput,
-            this.totalValueInput,
-            this.totalPaymentSpan
-        ];
+            const discountInput = document.querySelector('input[name="total_discount"]');
+            this.totalDiscount = parseFloat(discountInput ? discountInput.value : '0');
+        }
 
-        return requiredElements.every(element => !!element);
-    }
+        validateElements() {
+            const requiredElements = [
+                this.provinceSelect,
+                this.districtSelect,
+                this.wardSelect,
+                this.shippingFeeInput,
+                this.totalPriceInput,
+                this.totalWeightInput,
+                this.totalValueInput,
+                this.totalPaymentSpan,
+                this.streetAddressInput,
+                this.fullAddressInput,
+                this.fullAddressDisplay
+            ];
 
-    setupEventListeners() {
-        console.log('Cài đặt sự kiện...');
+            const hasAllRequired = requiredElements.every(element => !!element);
 
-        this.provinceSelect.addEventListener('change', () => {
-            this.loadDistricts();
-            this.clearWards();
-            this.calculateShippingDebounced();
-        });
+            if (!hasAllRequired) {
+                console.warn('Missing elements:', {
+                    provinceSelect: !!this.provinceSelect,
+                    districtSelect: !!this.districtSelect,
+                    wardSelect: !!this.wardSelect,
+                    shippingFeeInput: !!this.shippingFeeInput,
+                    totalPriceInput: !!this.totalPriceInput,
+                    totalWeightInput: !!this.totalWeightInput,
+                    totalValueInput: !!this.totalValueInput,
+                    totalPaymentSpan: !!this.totalPaymentSpan,
+                    streetAddressInput: !!this.streetAddressInput,
+                    fullAddressInput: !!this.fullAddressInput,
+                    fullAddressDisplay: !!this.fullAddressDisplay
+                });
+            }
 
-        this.districtSelect.addEventListener('change', () => {
-            this.loadWards();
-            this.calculateShippingDebounced();
-        });
+            return hasAllRequired;
+        }
 
-        this.wardSelect.addEventListener('change', () => {
-            this.calculateShippingDebounced();
-        });
+        setupEventListeners() {
+            console.log('Cài đặt sự kiện...');
 
-        this.calculateShippingDebounced = this.debounce(this.calculateShipping.bind(this), 500);
-    }
+            this.provinceSelect.addEventListener('change', () => {
+                const selectedProvinceId = this.provinceSelect.value;
+                console.log('Province changed:', selectedProvinceId);
 
-    debounce(func, wait) {
-        let timeout;
-        return function executedFunction(...args) {
-            const later = () => {
+                // Disable district select while loading
+                this.districtSelect.disabled = true;
+                this.wardSelect.disabled = true;
+
+                this.loadDistricts(selectedProvinceId);
+                this.clearWards();
+                this.calculateShippingDebounced();
+                this.updateFullAddress();
+            });
+
+            this.districtSelect.addEventListener('change', () => {
+                const selectedDistrictId = this.districtSelect.value;
+                console.log('District changed:', selectedDistrictId);
+
+                // Disable ward select while loading
+                this.wardSelect.disabled = true;
+
+                this.loadWards(selectedDistrictId);
+                this.calculateShippingDebounced();
+                this.updateFullAddress();
+            });
+
+            this.wardSelect.addEventListener('change', () => {
+                console.log('Ward changed:', this.wardSelect.value);
+                this.calculateShippingDebounced();
+                this.updateFullAddress();
+            });
+
+            if (this.streetAddressInput) {
+                this.streetAddressInput.addEventListener('input', () => {
+                    this.updateFullAddress();
+                });
+            }
+
+            // Set up debounced shipping calculation
+            this.calculateShippingDebounced = this.debounce(this.calculateShipping.bind(this), 500);
+        }
+
+        debounce(func, wait) {
+            let timeout;
+            return function executedFunction(...args) {
+                const later = () => {
+                    clearTimeout(timeout);
+                    func(...args);
+                };
                 clearTimeout(timeout);
-                func(...args);
+                timeout = setTimeout(later, wait);
             };
-            clearTimeout(timeout);
-            timeout = setTimeout(later, wait);
-        };
-    }
+        }
 
-    async fetchViettelPost(endpoint, params = {}) {
-        try {
-            const cleanEndpoint = endpoint.replace(/^\/+|\/+$/, '').trim();
-            if (!cleanEndpoint) {
-                throw new Error('Endpoint không được để trống');
-            }
+        async fetchViettelPost(endpoint, params = {}, method = 'GET') {
+            try {
+                console.log('Calling ViettelPost API:', {
+                    endpoint,
+                    params,
+                    method
+                });
 
-            const url = new URL('viettelpost_api.php', window.location.origin + window.location.pathname.replace(/[^/]+$/, ''));
-            url.searchParams.append('endpoint', cleanEndpoint);
-            Object.entries(params).forEach(([key, value]) => {
-                url.searchParams.append(key, value);
-            });
+                let url = `viettelpost_api.php?endpoint=${encodeURIComponent(endpoint)}`;
 
-            console.log(`Gửi yêu cầu ViettelPost tới: ${url.toString()}`);
-
-            const response = await fetch(url.toString(), {
-                method: 'GET',
-                headers: {
-                    'Accept': 'application/json',
-                    'Content-Type': 'application/json'
+                // Add query parameters for GET requests
+                if (method === 'GET' && Object.keys(params).length > 0) {
+                    Object.entries(params).forEach(([key, value]) => {
+                        url += `&${encodeURIComponent(key)}=${encodeURIComponent(value)}`;
+                    });
                 }
-            });
 
-            if (!response.ok) {
-                throw new Error(`Lỗi HTTP: ${response.status}`);
+                console.log('Fetch request:', {
+                    url,
+                    options: {
+                        method,
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'Accept': 'application/json'
+                        },
+                        body: method === 'POST' ? JSON.stringify(params) : undefined
+                    }
+                });
+
+                const response = await fetch(url, {
+                    method,
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: method === 'POST' ? JSON.stringify(params) : undefined
+                });
+
+                console.log('Response status:', response.status);
+
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+
+                const data = await response.json();
+                console.log('Response data:', data);
+
+                if (data.error) {
+                    throw new Error(data.message || 'Unknown API error');
+                }
+
+                return data;
+            } catch (error) {
+                console.error('Error in fetchViettelPost:', error);
+                throw error;
             }
-
-            const contentType = response.headers.get('content-type');
-            if (!contentType || !contentType.includes('application/json')) {
-                const text = await response.text();
-                console.error('Phản hồi không phải JSON:', text);
-                throw new Error('Phản hồi không phải là JSON');
-            }
-
-            const data = await response.json();
-            if (data.error) {
-                throw new Error(data.error);
-            }
-
-            return data;
-        } catch (error) {
-            console.error('Lỗi API ViettelPost:', error);
-            this.showError(`Lỗi khi gọi API: ${error.message}`);
-            throw error;
         }
-    }
 
-    async loadProvinces() {
-        try {
-            this.provinceSelect.disabled = true;
-            this.provinceSelect.innerHTML = '<option value="">Đang tải tỉnh/thành...</option>';
+        async loadProvinces() {
+            try {
+                console.log('Đang tải danh sách tỉnh/thành phố');
+                const responseData = await this.fetchViettelPost('categories/listProvince');
+                console.log('Dữ liệu tỉnh/thành phố:', responseData);
 
-            const response = await this.fetchViettelPost('categories/listProvince');
-            if (!response.data || !Array.isArray(response.data)) {
-                throw new Error('Dữ liệu tỉnh/thành không hợp lệ');
+                // Clear existing options
+                this.provinceSelect.innerHTML = '<option value="">Chọn tỉnh/thành phố</option>';
+
+                // Check if data exists and is an array
+                if (responseData.data && Array.isArray(responseData.data)) {
+                    // Add new options
+                    responseData.data.forEach(province => {
+                        const option = document.createElement('option');
+                        option.value = province.PROVINCE_ID;
+                        option.textContent = province.PROVINCE_NAME;
+                        this.provinceSelect.appendChild(option);
+                    });
+                } else {
+                    throw new Error('Dữ liệu tỉnh/thành phố không hợp lệ');
+                }
+
+                console.log('Đã tải xong danh sách tỉnh/thành phố');
+            } catch (error) {
+                console.error('Lỗi khi tải danh sách tỉnh/thành phố:', error);
+                this.showError('Không thể tải danh sách tỉnh/thành phố. ' + error.message);
             }
-
-            // Sắp xếp tỉnh/thành theo alphabet
-            const sortedProvinces = response.data.sort((a, b) =>
-                a.PROVINCE_NAME.localeCompare(b.PROVINCE_NAME, 'vi-VN')
-            );
-
-            this.provinceSelect.innerHTML = '<option value="">Chọn tỉnh/thành</option>';
-            sortedProvinces.forEach(province => {
-                const option = document.createElement('option');
-                option.value = province.PROVINCE_ID;
-                option.textContent = province.PROVINCE_NAME;
-                this.provinceSelect.appendChild(option);
-            });
-
-            this.provinceSelect.disabled = false;
-        } catch (error) {
-            console.error('Lỗi tải tỉnh/thành:', error);
-            this.showError('Không thể tải danh sách tỉnh/thành. Vui lòng tải lại trang.');
-            this.provinceSelect.innerHTML = '<option value="">Lỗi tải dữ liệu</option>';
-            this.provinceSelect.disabled = false;
         }
-    }
 
-    async loadDistricts() {
-        try {
-            this.districtSelect.disabled = true;
-            this.districtSelect.innerHTML = '<option value="">Đang tải quận/huyện...</option>';
-            this.clearWards();
+        async loadDistricts(provinceId) {
+            try {
+                // Disable district select while loading
+                this.districtSelect.disabled = true;
 
-            if (!this.provinceSelect.value) {
+                if (!provinceId) {
+                    this.districtSelect.innerHTML = '<option value="">Chọn quận/huyện</option>';
+                    this.wardSelect.innerHTML = '<option value="">Chọn phường/xã</option>';
+                    return;
+                }
+
+                console.log('Đang tải danh sách quận/huyện cho tỉnh/thành phố:', provinceId);
+                const responseData = await this.fetchViettelPost(`categories/listDistrict`, { provinceId });
+                console.log('Dữ liệu quận/huyện:', responseData);
+
+                // Clear existing options
                 this.districtSelect.innerHTML = '<option value="">Chọn quận/huyện</option>';
-                return;
-            }
-
-            const response = await this.fetchViettelPost('categories/listDistrict', {
-                provinceId: this.provinceSelect.value
-            });
-
-            // Sắp xếp quận/huyện theo alphabet
-            const sortedDistricts = response.data.sort((a, b) =>
-                a.DISTRICT_NAME.localeCompare(b.DISTRICT_NAME, 'vi-VN')
-            );
-
-            this.districtSelect.innerHTML = '<option value="">Chọn quận/huyện</option>';
-            sortedDistricts.forEach(district => {
-                const option = document.createElement('option');
-                option.value = district.DISTRICT_ID;
-                option.textContent = district.DISTRICT_NAME;
-                this.districtSelect.appendChild(option);
-            });
-
-            this.districtSelect.disabled = false;
-        } catch (error) {
-            console.error('Lỗi tải quận/huyện:', error);
-            this.showError('Không thể tải danh sách quận/huyện. Vui lòng thử lại.');
-            this.districtSelect.innerHTML = '<option value="">Lỗi tải dữ liệu</option>';
-        }
-    }
-
-    async loadWards() {
-        try {
-            this.wardSelect.disabled = true;
-            this.wardSelect.innerHTML = '<option value="">Đang tải phường/xã...</option>';
-
-            if (!this.districtSelect.value) {
                 this.wardSelect.innerHTML = '<option value="">Chọn phường/xã</option>';
-                return;
+
+                // Check if data exists and is an array
+                if (responseData.data && Array.isArray(responseData.data)) {
+                    // Add new options
+                    responseData.data.forEach(district => {
+                        const option = document.createElement('option');
+                        option.value = district.DISTRICT_ID;
+                        option.textContent = district.DISTRICT_NAME;
+                        this.districtSelect.appendChild(option);
+                    });
+
+                    // Enable district select after loading data
+                    this.districtSelect.disabled = false;
+                    this.hideError();
+                } else {
+                    throw new Error('Dữ liệu quận/huyện không hợp lệ');
+                }
+
+                console.log('Đã tải xong danh sách quận/huyện');
+            } catch (error) {
+                console.error('Lỗi khi tải danh sách quận/huyện:', error);
+                this.showError('Không thể tải danh sách quận/huyện. ' + error.message);
+                this.districtSelect.innerHTML = '<option value="">Chọn quận/huyện</option>';
+                this.districtSelect.disabled = true;
             }
+        }
 
-            const response = await this.fetchViettelPost('categories/listWards', {
-                districtId: this.districtSelect.value
-            });
+        async loadWards(districtId) {
+            try {
+                // Disable ward select while loading
+                this.wardSelect.disabled = true;
 
-            // Sắp xếp phường/xã theo alphabet
-            const sortedWards = response.data.sort((a, b) =>
-                a.WARDS_NAME.localeCompare(b.WARDS_NAME, 'vi-VN')
-            );
+                if (!districtId) {
+                    this.wardSelect.innerHTML = '<option value="">Chọn phường/xã</option>';
+                    return;
+                }
 
+                console.log('Đang tải danh sách phường/xã cho quận/huyện:', districtId);
+                const responseData = await this.fetchViettelPost(`categories/listWards`, { districtId });
+                console.log('Dữ liệu phường/xã:', responseData);
+
+                // Clear existing options
+                this.wardSelect.innerHTML = '<option value="">Chọn phường/xã</option>';
+
+                // Check if data exists and is an array
+                if (responseData.data && Array.isArray(responseData.data)) {
+                    // Add new options
+                    responseData.data.forEach(ward => {
+                        const option = document.createElement('option');
+                        option.value = ward.WARDS_ID;
+                        option.textContent = ward.WARDS_NAME;
+                        this.wardSelect.appendChild(option);
+                    });
+
+                    // Enable ward select after loading data
+                    this.wardSelect.disabled = false;
+                    this.hideError();
+                } else {
+                    throw new Error('Dữ liệu phường/xã không hợp lệ');
+                }
+
+                console.log('Đã tải xong danh sách phường/xã');
+            } catch (error) {
+                console.error('Lỗi khi tải danh sách phường/xã:', error);
+                this.showError('Không thể tải danh sách phường/xã. ' + error.message);
+                this.wardSelect.innerHTML = '<option value="">Chọn phường/xã</option>';
+                this.wardSelect.disabled = true;
+            }
+        }
+
+        clearWards() {
             this.wardSelect.innerHTML = '<option value="">Chọn phường/xã</option>';
-            sortedWards.forEach(ward => {
-                const option = document.createElement('option');
-                option.value = ward.WARDS_ID;
-                option.textContent = ward.WARDS_NAME;
-                this.wardSelect.appendChild(option);
-            });
+            this.wardSelect.disabled = true;
+        }
 
-            this.wardSelect.disabled = false;
-        } catch (error) {
-            console.error('Lỗi tải phường/xã:', error);
-            this.showError('Không thể tải danh sách phường/xã. Vui lòng thử lại.');
-            this.wardSelect.innerHTML = '<option value="">Lỗi tải dữ liệu</option>';
+        showError(message) {
+            if (this.errorMessageContainer) {
+                this.errorMessageContainer.textContent = message;
+                this.errorMessageContainer.classList.remove('d-none');
+            } else {
+                console.error('Không tìm thấy phần tử hiển thị lỗi địa chỉ');
+            }
+        }
+
+        hideError() {
+            if (this.errorMessageContainer) {
+                this.errorMessageContainer.classList.add('d-none');
+            }
+        }
+
+        async calculateShipping() {
+            if (this.isCalculating) return;
+
+            try {
+                this.isCalculating = true;
+                this.shippingFeeDisplay.textContent = 'Đang tính...';
+
+                if (!this.validateAddressSelection()) {
+                    this.shippingFeeDisplay.textContent = 'Chọn địa chỉ giao hàng';
+                    return;
+                }
+
+                const fee = await this.calculateShippingFee();
+                this.updateShippingFee(fee);
+                this.updateTotalPayment();
+
+            } catch (error) {
+                console.error('Lỗi tính phí vận chuyển:', error);
+                this.showError('Không thể tính phí vận chuyển. Vui lòng thử lại sau.');
+                this.shippingFeeDisplay.textContent = 'Lỗi tính phí';
+            } finally {
+                this.isCalculating = false;
+            }
+        }
+
+        validateAddressSelection() {
+            return this.provinceSelect.value && this.districtSelect.value && this.wardSelect.value;
+        }
+
+        async calculateShippingFee() {
+            try {
+                const selectedProvince = this.provinceSelect.value;
+                const selectedDistrict = this.districtSelect.value;
+
+                if (!selectedProvince || !selectedDistrict) {
+                    console.log('Chưa chọn đủ thông tin địa chỉ');
+                    return 0;
+                }
+
+                // Cập nhật trạng thái giao hàng nội tỉnh
+                this.isIntraProvince = selectedProvince === this.config.pickProvince;
+
+                const weight = this.totalWeightInput && parseFloat(this.totalWeightInput.value) || this.config.defaultWeight;
+                const productValue = this.totalValueInput && parseFloat(this.totalValueInput.value) || 0;
+
+                console.log('Calculating shipping fee with params:', {
+                    sender: {
+                        province: this.config.pickProvince,
+                        district: this.config.pickDistrict
+                    },
+                    receiver: {
+                        province: selectedProvince,
+                        district: selectedDistrict
+                    },
+                    weight: weight,
+                    value: productValue
+                });
+
+                const defaultDimensions = this.config.defaultDimensions || {};
+                const requestData = {
+                    SENDER_PROVINCE: this.config.pickProvince,
+                    SENDER_DISTRICT: this.config.pickDistrict,
+                    RECEIVER_PROVINCE: selectedProvince,
+                    RECEIVER_DISTRICT: selectedDistrict,
+                    PRODUCT_TYPE: "HH",
+                    PRODUCT_WEIGHT: weight,
+                    PRODUCT_PRICE: productValue,
+                    MONEY_COLLECTION: 0,
+                    PRODUCT_LENGTH: defaultDimensions.length || 10,
+                    PRODUCT_WIDTH: defaultDimensions.width || 10,
+                    PRODUCT_HEIGHT: defaultDimensions.height || 10
+                };
+
+                const response = await this.fetchViettelPost('order/getPriceAll', requestData, 'POST');
+                console.log('Shipping fee response:', response);
+
+                if (!response) {
+                    throw new Error('Không nhận được phản hồi từ API vận chuyển');
+                }
+
+                if (!Array.isArray(response)) {
+                    throw new Error('Định dạng dữ liệu phí vận chuyển không hợp lệ');
+                }
+
+                if (response.length === 0) {
+                    throw new Error('Không có dịch vụ vận chuyển phù hợp cho địa chỉ này');
+                }
+
+                // Sắp xếp theo giá từ thấp đến cao
+                const sortedServices = response.sort((a, b) => a.GIA_CUOC - b.GIA_CUOC);
+                const cheapestService = sortedServices[0];
+
+                if (!cheapestService.GIA_CUOC || isNaN(cheapestService.GIA_CUOC)) {
+                    throw new Error('Không thể tính phí vận chuyển cho địa chỉ này');
+                }
+
+                console.log('Selected shipping service:', {
+                    name: cheapestService.TEN_DICHVU,
+                    fee: cheapestService.GIA_CUOC,
+                    time: cheapestService.THOI_GIAN
+                });
+
+                return cheapestService.GIA_CUOC;
+            } catch (error) {
+                console.error('Lỗi khi tính phí vận chuyển:', error);
+                this.showError('Không thể tính phí vận chuyển: ' + error.message);
+                return 0;
+            }
+        }
+
+        updateShippingFee(fee) {
+            const formattedFee = new Intl.NumberFormat('vi-VN').format(fee);
+            this.shippingFeeDisplay.textContent = `${formattedFee}đ`;
+            this.shippingFeeInput.value = fee;
+        }
+
+        updateTotalPayment() {
+            const totalAmount = parseFloat(this.totalPriceInput.value) || 0;
+            const shippingFee = parseFloat(this.shippingFeeInput.value) || 0;
+            const totalDiscount = this.totalDiscount || 0;
+
+            const totalPayment = totalAmount + shippingFee - totalDiscount;
+            this.totalPaymentSpan.textContent = new Intl.NumberFormat('vi-VN').format(totalPayment) + 'đ';
+        }
+
+        updateFullAddress() {
+            const streetAddress = this.streetAddressInput ? this.streetAddressInput.value.trim() : '';
+            const wardOption = this.wardSelect.options[this.wardSelect.selectedIndex];
+            const districtOption = this.districtSelect.options[this.districtSelect.selectedIndex];
+            const provinceOption = this.provinceSelect.options[this.provinceSelect.selectedIndex];
+
+            const wardText = wardOption ? wardOption.text : '';
+            const districtText = districtOption ? districtOption.text : '';
+            const provinceText = provinceOption ? provinceOption.text : '';
+
+            const addressParts = [
+                streetAddress,
+                wardText !== '' ? `${wardText}` : '',
+                districtText !== '' ? `${districtText}` : '',
+                provinceText !== '' ? `${provinceText}` : ''
+            ].filter(part => part !== '');
+
+            const fullAddress = addressParts.join(', ');
+
+            // Update hidden input for full address
+            if (this.fullAddressInput) {
+                this.fullAddressInput.value = fullAddress;
+            }
+
+            // Update display element
+            if (this.fullAddressDisplay) {
+                this.fullAddressDisplay.textContent = fullAddress || 'Chưa có địa chỉ';
+            }
+
+            console.log('Địa chỉ đầy đủ đã được cập nhật:', fullAddress);
+        }
+
+        triggerShippingCalculation() {
+            const event = new Event('addressChanged');
+            document.dispatchEvent(event);
         }
     }
 
-    clearWards() {
-        this.wardSelect.innerHTML = '<option value="">Chọn phường/xã</option>';
-        this.wardSelect.disabled = true;
-    }
-
-    showError(message) {
-        if (this.errorMessageContainer) {
-            this.errorMessageContainer.textContent = message;
-            this.errorMessageContainer.style.display = 'block';
-        }
-    }
-
-    async calculateShipping() {
-        if (this.isCalculating) return;
-
-        try {
-            this.isCalculating = true;
-            this.shippingFeeDisplay.textContent = 'Đang tính...';
-
-            if (!this.validateAddressSelection()) {
-                this.shippingFeeDisplay.textContent = 'Chọn địa chỉ giao hàng';
-                return;
-            }
-
-            const fee = await this.calculateShippingFee();
-            this.updateShippingFee(fee);
-            this.updateTotalPayment();
-
-        } catch (error) {
-            console.error('Lỗi tính phí vận chuyển:', error);
-            this.showError('Không thể tính phí vận chuyển. Vui lòng thử lại sau.');
-            this.shippingFeeDisplay.textContent = 'Lỗi tính phí';
-        } finally {
-            this.isCalculating = false;
-        }
-    }
-
-    validateAddressSelection() {
-        return this.provinceSelect.value && this.districtSelect.value && this.wardSelect.value;
-    }
-
-    async calculateShippingFee() {
-        try {
-            const weight = parseInt(this.totalWeightInput.value) || 1000; // Mặc định 1kg
-            const data = {
-                SENDER_PROVINCE: this.pickProvince,
-                SENDER_DISTRICT: this.pickDistrict,
-                SENDER_WARD: this.pickWard,
-                RECEIVER_PROVINCE: this.provinceSelect.value,
-                RECEIVER_DISTRICT: this.districtSelect.value,
-                RECEIVER_WARD: this.wardSelect.value,
-                PRODUCT_TYPE: "HH",
-                PRODUCT_WEIGHT: weight,
-                PRODUCT_PRICE: this.totalValueInput.value || 0,
-                MONEY_COLLECTION: "0",
-                TYPE: "1"
-            };
-
-            const response = await fetch('viettelpost_api.php?endpoint=order/getPriceAll', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(data)
-            });
-
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
-            }
-
-            const result = await response.json();
-            if (result.error) {
-                throw new Error(result.error);
-            }
-
-            // Lấy giá vận chuyển thấp nhất từ các dịch vụ
-            const services = result.data || [];
-            if (services.length === 0) {
-                throw new Error('Không có dịch vụ vận chuyển phù hợp');
-            }
-
-            const cheapestService = services.reduce((min, service) =>
-                (!min || service.GIA_CUOC < min.GIA_CUOC) ? service : min
-            );
-
-            return cheapestService.GIA_CUOC;
-        } catch (error) {
-            console.error('Lỗi tính phí vận chuyển:', error);
-            // Tính phí vận chuyển mặc định: 30,000đ + 5,000đ/kg
-            const weight = parseInt(this.totalWeightInput.value) || 1000; // Mặc định 1kg
-            const weightInKg = weight / 1000;
-            return 30000 + (weightInKg * 5000);
-        }
-    }
-
-    updateShippingFee(fee) {
-        const formattedFee = new Intl.NumberFormat('vi-VN').format(fee);
-        this.shippingFeeDisplay.textContent = `${formattedFee}đ`;
-        this.shippingFeeInput.value = fee;
-    }
-
-    updateTotalPayment() {
-        const totalAmount = parseFloat(this.totalPriceInput.value) || 0;
-        const shippingFee = parseFloat(this.shippingFeeInput.value) || 0;
-        const totalDiscount = this.totalDiscount || 0;
-
-        const totalPayment = totalAmount + shippingFee - totalDiscount;
-        this.totalPaymentSpan.textContent = new Intl.NumberFormat('vi-VN').format(totalPayment) + 'đ';
-    }
-}
-
-// Khởi tạo AddressManager khi trang đã tải xong
-document.addEventListener('DOMContentLoaded', () => {
-    window.addressManager = new AddressManager();
-});
+    // Export to window
+    window.AddressManager = AddressManager;
+})(window);

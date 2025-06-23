@@ -77,10 +77,14 @@ try {
     $discount_percent = 0;
     if ($promo['hinh_thuc_km'] === 'Giảm phần trăm') {
         $discount_percent = $promo['KM_GIATRI'];
-        $discount_amount = $amount * ($promo['KM_GIATRI'] / 100);
+        // Giới hạn giảm giá tối đa là 100% giá trị đơn hàng
+        $discount_amount = min($amount, $amount * ($promo['KM_GIATRI'] / 100));
     } elseif ($promo['hinh_thuc_km'] === 'Giảm trực tiếp') {
         $discount_amount = min($promo['KM_GIATRI'], $amount);
     }
+
+    // Đảm bảo số tiền giảm giá không âm và không vượt quá giá trị đơn hàng
+    $discount_amount = max(0, min($discount_amount, $amount));
 
     // Kiểm tra thêm điều kiện cho sản phẩm cụ thể nếu cần
     if ($product_id) {
@@ -88,6 +92,34 @@ try {
             'product_id' => $product_id,
             'discount_amount' => $discount_amount
         ]);
+
+        // Kiểm tra xem mã khuyến mãi có áp dụng cho sản phẩm này không
+        $sql_product = "SELECT * FROM khuyen_mai_san_pham WHERE KM_ID = ? AND SP_ID = ?";
+        $stmt_product = $conn->prepare($sql_product);
+        
+        if (!$stmt_product) {
+            throw new Exception("Lỗi prepare statement cho sản phẩm: " . $conn->error);
+        }
+
+        $stmt_product->bind_param('ii', $promo['KM_ID'], $product_id);
+        
+        if (!$stmt_product->execute()) {
+            throw new Exception("Lỗi execute statement cho sản phẩm: " . $stmt_product->error);
+        }
+
+        $result_product = $stmt_product->get_result();
+
+        if ($result_product->num_rows === 0) {
+            logPromoCheck("Promo code not applicable for this product", [
+                'product_id' => $product_id,
+                'promo_id' => $promo['KM_ID']
+            ]);
+            echo json_encode([
+                'success' => false,
+                'message' => 'Mã khuyến mãi không áp dụng cho sản phẩm này'
+            ]);
+            exit;
+        }
     }
 
     $response = [

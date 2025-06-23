@@ -38,6 +38,17 @@ include 'connect.php';
 // Truy vấn danh sách danh mục
 $sql = "SELECT DM_MA, DM_TEN, DM_AVATAR FROM danh_muc"; // Updated to include DM_MA
 $result = $conn->query($sql);
+
+// Debug: Kiểm tra lỗi SQL
+if (!$result) {
+    error_log("Lỗi truy vấn danh mục: " . $conn->error);
+    echo "Có lỗi xảy ra khi truy vấn danh mục. Vui lòng kiểm tra error log.";
+}
+
+// Debug: Kiểm tra số lượng danh mục
+if ($result) {
+    error_log("Số lượng danh mục tìm thấy: " . $result->num_rows);
+}
 ?>
 
 <body>
@@ -100,36 +111,58 @@ $result = $conn->query($sql);
     </section>
 
     <!-- Category Section -->
-    <section class="category-section">
+    <section class="category-section py-5">
         <div class="container">
-            <div class="section-title">
-                <h2><span class="col_green">Danh mục sản phẩm</span></h2>
+            <div class="section-title text-center mb-5">
+                <h2 class="mb-3"><span class="col_green">Danh mục sản phẩm</span></h2>
                 <p class="text-muted">Khám phá các danh mục sản phẩm đa dạng của chúng tôi</p>
             </div>
             <div class="category-grid">
                 <?php
-            if ($result->num_rows > 0) {
-                $delay = 0;
-                while ($row = $result->fetch_assoc()) {
-                    $category_id = $row['DM_MA'];
-                    $ten_danhmuc = htmlspecialchars($row['DM_TEN']);
-                    $hinh_anh = htmlspecialchars($row['DM_AVATAR']);
-                    echo '
-                    <div class="category-card animate-on-scroll" data-aos="fade-up" data-aos-delay="'.$delay.'">
-                        <a href="category.php?id='.$category_id.'" class="category-link">
-                            <div class="category-image">
-                                <img src="img/'.$hinh_anh.'" alt="'.$ten_danhmuc.'">
-                            </div>
-                            <h3 class="category-title">'.$ten_danhmuc.'</h3>
-                        </a>
-                    </div>';
-                    $delay += 100;
+                // Debug: Kiểm tra kết nối và truy vấn
+                if (!$conn) {
+                    error_log("Lỗi kết nối database");
+                    die("Lỗi kết nối database");
                 }
-            } else {
-                echo '<div class="col-12"><p class="text-center">Không có danh mục nào.</p></div>';
-            }
-            // Do NOT close the connection here
-            ?>
+
+                $sql = "SELECT DM_MA, DM_TEN, DM_AVATAR FROM danh_muc";
+                $result = $conn->query($sql);
+
+                if (!$result) {
+                    error_log("Lỗi truy vấn: " . $conn->error);
+                    die("Lỗi truy vấn database");
+                }
+
+                if ($result->num_rows > 0) {
+                    while ($row = $result->fetch_assoc()) {
+                        $category_id = $row['DM_MA'];
+                        $ten_danhmuc = htmlspecialchars($row['DM_TEN']);
+                        $hinh_anh = htmlspecialchars($row['DM_AVATAR']);
+                        
+                        // Debug: Kiểm tra thông tin danh mục
+                        error_log("Danh mục: ID={$category_id}, Tên={$ten_danhmuc}, Hình={$hinh_anh}");
+                        
+                        // Kiểm tra file hình ảnh tồn tại
+                        $image_path = "img/" . $hinh_anh;
+                        if (!file_exists($image_path)) {
+                            error_log("Không tìm thấy file hình ảnh: {$image_path}");
+                            $hinh_anh = 'default.jpg'; // Sử dụng hình mặc định nếu không tìm thấy
+                        }
+                        
+                        echo '<div class="category-card">
+                                <a href="category.php?id='.$category_id.'" class="category-link">
+                                    <div class="category-image">
+                                        <img src="img/'.$hinh_anh.'" alt="'.$ten_danhmuc.'">
+                                    </div>
+                                    <h3 class="category-title">'.$ten_danhmuc.'</h3>
+                                </a>
+                            </div>';
+                    }
+                } else {
+                    echo '<div class="alert alert-info text-center">Không có danh mục nào.</div>';
+                    error_log("Không tìm thấy danh mục nào trong database");
+                }
+                ?>
             </div>
         </div>
     </section>

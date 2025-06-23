@@ -143,6 +143,8 @@ function removeCartItem($conn, $cart_id, $product_id) {
  */
 function getCartItems($conn, $cart_id) {
     writeLog("Getting cart items for cart_id: $cart_id");
+    
+    // Thêm điều kiện DA_MUA = 0 vào câu truy vấn
     $sql = "SELECT sp.SP_MA, sp.SP_TEN, sp.SP_HINHANH, sp.SP_DONGIA, 
                    c.CTGH_KHOILUONG, c.CTGH_DONVITINH, c.DA_MUA,
                    CASE WHEN sci.SP_MA IS NOT NULL THEN 1 ELSE 0 END as is_selected
@@ -152,38 +154,51 @@ function getCartItems($conn, $cart_id) {
             WHERE c.GH_MA = ? AND c.DA_MUA = 0
             ORDER BY sp.SP_TEN ASC";
     
-    $stmt = $conn->prepare($sql);
-    $stmt->bind_param("i", $cart_id);
-    $stmt->execute();
-    $result = $stmt->get_result();
-    
-    $items = array();
-    $total = 0;
-    
-    while ($row = $result->fetch_assoc()) {
-        $subtotal = $row['SP_DONGIA'] * $row['CTGH_KHOILUONG'];
-        $total += $subtotal;
+    try {
+        $stmt = $conn->prepare($sql);
+        if (!$stmt) {
+            writeLog("Error preparing cart items query: " . $conn->error);
+            throw new Exception("Lỗi khi chuẩn bị truy vấn giỏ hàng");
+        }
+
+        $stmt->bind_param("i", $cart_id);
+        if (!$stmt->execute()) {
+            writeLog("Error executing cart items query: " . $stmt->error);
+            throw new Exception("Lỗi khi thực hiện truy vấn giỏ hàng");
+        }
+
+        $result = $stmt->get_result();
+        $items = array();
+        $total = 0;
         
-        $items[$row['SP_MA']] = array(
-            'id' => $row['SP_MA'],
-            'name' => $row['SP_TEN'],
-            'image' => $row['SP_HINHANH'],
-            'price' => $row['SP_DONGIA'],
-            'quantity' => $row['CTGH_KHOILUONG'],
-            'unit' => $row['CTGH_DONVITINH'],
-            'subtotal' => $subtotal,
-            'is_selected' => $row['is_selected']
+        while ($row = $result->fetch_assoc()) {
+            $subtotal = $row['SP_DONGIA'] * $row['CTGH_KHOILUONG'];
+            $total += $subtotal;
+            
+            $items[$row['SP_MA']] = array(
+                'id' => $row['SP_MA'],
+                'name' => $row['SP_TEN'],
+                'image' => $row['SP_HINHANH'],
+                'price' => $row['SP_DONGIA'],
+                'quantity' => $row['CTGH_KHOILUONG'],
+                'unit' => $row['CTGH_DONVITINH'],
+                'subtotal' => $subtotal,
+                'is_selected' => $row['is_selected']
+            );
+        }
+        
+        $stmt->close();
+        writeLog("Found " . count($items) . " items in cart_id: $cart_id");
+        
+        return array(
+            'items' => $items,
+            'total' => $total,
+            'count' => count($items)
         );
+    } catch (Exception $e) {
+        writeLog("Error in getCartItems: " . $e->getMessage());
+        throw $e;
     }
-    
-    $stmt->close();
-    writeLog("Found " . count($items) . " items in cart_id: $cart_id");
-    
-    return array(
-        'items' => $items,
-        'total' => $total,
-        'count' => count($items)
-    );
 }
 
 /**
@@ -192,14 +207,29 @@ function getCartItems($conn, $cart_id) {
  * @return int Số lượng sản phẩm trong giỏ hàng
  */
 function getCartItemCount($conn, $cart_id) {
-    $sql = "SELECT COUNT(*) as count FROM chitiet_gh WHERE GH_MA = ?";
-    $stmt = $conn->prepare($sql);
-    $stmt->bind_param("i", $cart_id);
-    $stmt->execute();
-    $result = $stmt->get_result();
-    $row = $result->fetch_assoc();
-    $stmt->close();
-    return $row['count'];
+    $sql = "SELECT COUNT(*) as count FROM chitiet_gh WHERE GH_MA = ? AND DA_MUA = 0";
+    try {
+        $stmt = $conn->prepare($sql);
+        if (!$stmt) {
+            writeLog("Error preparing cart count query: " . $conn->error);
+            throw new Exception("Lỗi khi chuẩn bị truy vấn số lượng giỏ hàng");
+        }
+
+        $stmt->bind_param("i", $cart_id);
+        if (!$stmt->execute()) {
+            writeLog("Error executing cart count query: " . $stmt->error);
+            throw new Exception("Lỗi khi thực hiện truy vấn số lượng giỏ hàng");
+        }
+
+        $result = $stmt->get_result();
+        $row = $result->fetch_assoc();
+        $stmt->close();
+        
+        return $row['count'];
+    } catch (Exception $e) {
+        writeLog("Error in getCartItemCount: " . $e->getMessage());
+        throw $e;
+    }
 }
 
 /**
@@ -409,5 +439,92 @@ function reorderFromPreviousCart($conn, $old_cart_id, $new_cart_id) {
     
     $stmt->close();
     return $success;
+}
+
+/**
+ * Cập nhật trạng thái DA_MUA cho nhiều sản phẩm
+ * @param mysqli $conn Kết nối database
+ * @param int $cart_id ID của giỏ hàng
+ * @param array $product_ids Mảng các ID sản phẩm cần cập nhật
+ * @return bool Trạng thái thành công
+ */
+function markProductsAsPurchased($conn, $cart_id, $product_ids) {
+    if (empty($product_ids)) {
+        writeLog("No products to mark as purchased");
+        return false;
+    }
+
+    // Bắt đầu transaction
+    $conn->begin_transaction();
+
+    try {
+        // Tạo placeholders cho câu query IN
+        $placeholders = str_repeat('?,', count($product_ids) - 1) . '?';
+        
+        // 1. Cập nhật trạng thái DA_MUA
+        $update_sql = "UPDATE chitiet_gh SET DA_MUA = 1 WHERE GH_MA = ? AND SP_MA IN ($placeholders)";
+        $stmt = $conn->prepare($update_sql);
+        if (!$stmt) {
+            throw new Exception("Error preparing update query: " . $conn->error);
+        }
+        
+        // Tạo mảng params cho bind_param
+        $params = array_merge(['i'], array_fill(0, count($product_ids), 'i'));
+        $types = implode('', $params);
+        $values = array_merge([$cart_id], $product_ids);
+        
+        // Bind các tham số
+        $bind_params = array();
+        $bind_params[] = $types;
+        foreach ($values as $key => $value) {
+            $bind_params[] = $value;
+        }
+        
+        // Bind tham số động
+        $tmp = array();
+        foreach ($bind_params as $key => $value) {
+            $tmp[$key] = &$bind_params[$key];
+        }
+        call_user_func_array(array($stmt, 'bind_param'), $tmp);
+        
+        if (!$stmt->execute()) {
+            throw new Exception("Error updating DA_MUA status: " . $stmt->error);
+        }
+        $stmt->close();
+
+        // 2. Xóa khỏi selected_cart_items
+        $delete_sql = "DELETE FROM selected_cart_items WHERE GH_MA = ? AND SP_MA IN ($placeholders)";
+        $delete_stmt = $conn->prepare($delete_sql);
+        if (!$delete_stmt) {
+            throw new Exception("Error preparing delete query: " . $conn->error);
+        }
+
+        // Sử dụng lại các tham số từ câu lệnh update
+        $tmp = array();
+        foreach ($bind_params as $key => $value) {
+            $tmp[$key] = &$bind_params[$key];
+        }
+        call_user_func_array(array($delete_stmt, 'bind_param'), $tmp);
+
+        if (!$delete_stmt->execute()) {
+            throw new Exception("Error deleting from selected_cart_items: " . $delete_stmt->error);
+        }
+        $delete_stmt->close();
+
+        // Commit transaction
+        $conn->commit();
+        
+        writeLog("Successfully marked products as purchased and removed from selection", [
+            'cart_id' => $cart_id,
+            'product_ids' => $product_ids
+        ]);
+        
+        return true;
+    } catch (Exception $e) {
+        // Rollback nếu có lỗi
+        $conn->rollback();
+        writeLog("Error in markProductsAsPurchased: " . $e->getMessage());
+        return false;
+    }
 }
 ?> 

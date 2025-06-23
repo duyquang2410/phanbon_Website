@@ -1,12 +1,12 @@
 <?php
-require_once 'error_log.php';
 require_once 'config.php';
+require_once 'error_log.php';
 require_once 'connect.php';
 require_once 'cart_functions.php';
 
-$logger = ErrorLogger::getInstance('logs/checkout.log');
-
 session_start();
+
+$logger = ErrorLogger::getInstance('logs/checkout.log');
 
 // Kiểm tra đăng nhập
 if (!isset($_SESSION['user_id'])) {
@@ -155,103 +155,190 @@ if (!empty($_POST['selected_items'])) {
                     <div class="card-body">
                         <h5 class="card-title mb-4">Thông tin giao hàng</h5>
                         <form id="checkoutForm" method="POST" action="process_order.php">
-                            <div class="row">
-                                <div class="col-md-12 mb-3">
-                                    <label for="fullName" class="form-label">Họ và tên</label>
-                                    <input type="text" class="form-control" id="fullName" name="fullName" 
-                                           value="<?php echo htmlspecialchars($user_info['KH_TEN']); ?>" required>
+                            <!-- Hidden inputs for promo codes -->
+                            <input type="hidden" name="promo_code" id="promoCodeInput" value="<?php echo isset($_POST['promo_code']) ? htmlspecialchars($_POST['promo_code']) : ''; ?>">
+                            <?php if (!empty($_POST['promo_code_item'])): ?>
+                                <?php foreach ($_POST['promo_code_item'] as $product_id => $code): ?>
+                                    <input type="hidden" name="promo_code_item[<?php echo $product_id; ?>]" value="<?php echo htmlspecialchars($code); ?>">
+                                <?php endforeach; ?>
+                            <?php endif; ?>
+                            <!-- Thông tin cá nhân -->
+                            <div class="shipping-section mb-4">
+                                <h6 class="section-title">
+                                    <i class="fa fa-user-circle me-2"></i>Thông tin cá nhân
+                                </h6>
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="row g-3">
+                                            <div class="col-md-12">
+                                                <div class="form-floating">
+                                                    <input type="text" class="form-control" id="fullName" name="fullName" 
+                                                           value="<?php echo htmlspecialchars($user_info['KH_TEN']); ?>" required>
+                                                    <label for="fullName">Họ và tên</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-floating">
+                                                    <input type="tel" class="form-control" id="phone" name="phone" 
+                                                           value="<?php echo htmlspecialchars($user_info['KH_SDT']); ?>" required>
+                                                    <label for="phone">Số điện thoại</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-floating">
+                                                    <input type="email" class="form-control" id="email" name="email" 
+                                                           value="<?php echo htmlspecialchars($user_info['KH_EMAIL']); ?>" required>
+                                                    <label for="email">Email</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="mb-3">
-                                <label for="phone" class="form-label">Số điện thoại</label>
-                                <input type="tel" class="form-control" id="phone" name="phone" 
-                                       value="<?php echo htmlspecialchars($user_info['KH_SDT']); ?>" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="email" class="form-label">Email</label>
-                                <input type="email" class="form-control" id="email" name="email" 
-                                       value="<?php echo htmlspecialchars($user_info['KH_EMAIL']); ?>" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="street_address" class="form-label">Số nhà, tên đường</label>
-                                <input type="text" class="form-control" id="street_address" name="street_address" 
-                                       placeholder="Nhập số nhà, tên đường" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="province" class="form-label">Tỉnh/Thành phố</label>
-                                <select class="form-select" id="province" name="province" data-placeholder="Tỉnh/Thành phố" required>
-                                    <option value="">Chọn Tỉnh/Thành phố</option>
-                                </select>
-                            </div>
-                            <div class="mb-3">
-                                <label for="district" class="form-label">Quận/Huyện</label>
-                                <select class="form-select" id="district" name="district" data-placeholder="Quận/Huyện" required>
-                                    <option value="">Chọn Quận/Huyện</option>
-                                </select>
-                            </div>
-                            <div class="mb-3">
-                                <label for="ward" class="form-label">Phường/Xã</label>
-                                <select class="form-select" id="ward" name="ward" data-placeholder="Phường/Xã" required>
-                                    <option value="">Chọn Phường/Xã</option>
-                                </select>
-                            </div>
-                            <div class="mb-3">
-                                <label for="address" class="form-label">Địa chỉ đầy đủ</label>
-                                <input type="text" class="form-control" id="address" name="address" readonly>
+
+                            <!-- Địa chỉ giao hàng -->
+                            <div class="shipping-section mb-4">
+                                <h6 class="section-title">
+                                    <i class="fa fa-map-marker me-2"></i>Địa chỉ giao hàng
+                                </h6>
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div id="address-error" class="alert alert-danger d-none"></div>
+                                        <div class="row g-3">
+                                            <div class="col-12">
+                                                <div class="form-floating">
+                                                    <input type="text" class="form-control" id="street_address" name="street_address" 
+                                                           placeholder="Nhập số nhà, tên đường" required>
+                                                    <label for="street_address">Số nhà, tên đường</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="form-floating">
+                                                    <select class="form-select" id="province" name="province" required>
+                                                        <option value="">Chọn Tỉnh/Thành phố</option>
+                                                    </select>
+                                                    <label for="province">Tỉnh/Thành phố</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="form-floating">
+                                                    <select class="form-select" id="district" name="district" required>
+                                                        <option value="">Chọn Quận/Huyện</option>
+                                                    </select>
+                                                    <label for="district">Quận/Huyện</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="form-floating">
+                                                    <select class="form-select" id="ward" name="ward" required>
+                                                        <option value="">Chọn Phường/Xã</option>
+                                                    </select>
+                                                    <label for="ward">Phường/Xã</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <label class="form-label text-muted mb-2">Địa chỉ đầy đủ</label>
+                                                <div id="full-address-display" class="form-control-plaintext p-3 bg-light rounded border">
+                                                    <i class="fa fa-info-circle me-2 text-primary"></i>
+                                                    <span>Chưa có địa chỉ</span>
+                                                </div>
+                                                <input type="hidden" id="full_address" name="full_address">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
 
-                            <!-- Hidden pickup information -->
-                            <input type="hidden" name="pick_province" value="1">
-                            <input type="hidden" name="pick_district" value="1">
-                            <input type="hidden" name="pick_ward" value="1">
-                            <input type="hidden" name="pick_address" value="123 Đường Láng, Quận Ba Đình, Hà Nội">
-
-                            <!-- Phí vận chuyển -->
-                            <div class="mb-3">
-                                <label>Phí vận chuyển: </label>
-                                <span id="shipping-fee" style="font-weight:bold;color:#27ae60;">Đang tính...</span>
-                                <input type="hidden" name="shipping_fee" value="0">
-                                <div id="error-message" class="text-danger" style="display: none;"></div>
-                            </div>
-
-                            <!-- Ghi chú -->
-                            <div class="mb-3">
-                                <label for="note" class="form-label">Ghi chú đơn hàng</label>
-                                <textarea class="form-control" id="note" name="note" rows="3" 
-                                          placeholder="Ghi chú về đơn hàng, ví dụ: thời gian hay chỉ dẫn địa điểm giao hàng chi tiết hơn."></textarea>
+                            <!-- Phương thức vận chuyển -->
+                            <div class="shipping-section mb-4">
+                                <h6 class="section-title">
+                                    <i class="fa fa-truck me-2"></i>Phương thức vận chuyển
+                                </h6>
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="shipping-methods">
+                                            <div class="form-check mb-3">
+                                                <input class="form-check-input" type="radio" name="shipping_method" id="standard" value="standard" checked>
+                                                <label class="form-check-label d-flex align-items-center" for="standard">
+                                                    <span class="shipping-icon me-3">
+                                                        <i class="fa fa-truck text-success"></i>
+                                                    </span>
+                                                    <span class="shipping-info flex-grow-1">
+                                                        <span class="d-block fw-bold">Giao hàng tiêu chuẩn</span>
+                                                        <span class="text-muted small">Thời gian giao hàng 3-5 ngày</span>
+                                                    </span>
+                                                    <span id="shipping-fee" class="shipping-fee text-success"></span>
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="shipping_method" id="express" value="express">
+                                                <label class="form-check-label d-flex align-items-center" for="express">
+                                                    <span class="shipping-icon me-3">
+                                                        <i class="fa fa-shipping-fast text-primary"></i>
+                                                    </span>
+                                                    <span class="shipping-info flex-grow-1">
+                                                        <span class="d-block fw-bold">Giao hàng nhanh</span>
+                                                        <span class="text-muted small">Thời gian giao hàng 1-2 ngày</span>
+                                                    </span>
+                                                    <span class="shipping-fee text-primary">
+                                                        <span class="small">(Phụ phí 50%)</span>
+                                                    </span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
 
                             <!-- Phương thức thanh toán -->
-                            <div class="mb-4">
-                                <h5 class="card-title mb-3">Phương thức thanh toán</h5>
-                                <div class="form-check mb-3">
-                                    <input class="form-check-input" type="radio" name="paymentMethod" id="cod" value="1" checked>
-                                    <label class="form-check-label" for="cod">
-                                        <i class="fa fa-money me-2"></i>Thanh toán khi giao hàng (COD)
-                                    </label>
-                                </div>
-                                <div class="form-check mb-3">
-                                    <input class="form-check-input" type="radio" name="paymentMethod" id="bank" value="2">
-                                    <label class="form-check-label" for="bank">
-                                        <i class="fa fa-bank me-2"></i>Chuyển khoản ngân hàng
-                                    </label>
-                                </div>
-                                <div class="form-check mb-3">
-                                    <input class="form-check-input" type="radio" name="paymentMethod" id="card" value="3">
-                                    <label class="form-check-label" for="card">
-                                        <i class="fa fa-credit-card me-2"></i>Thẻ Visa/Mastercard/Amex
-                                    </label>
-                                </div>
-                                <div class="form-check mb-3">
-                                    <input class="form-check-input" type="radio" name="paymentMethod" id="momo" value="4">
-                                    <label class="form-check-label" for="momo">
-                                        <i class="fa fa-mobile me-2"></i>Thanh toán qua ví MoMo
-                                    </label>
+                            <div class="shipping-section mb-4">
+                                <h6 class="section-title">
+                                    <i class="fa fa-credit-card me-2"></i>Phương thức thanh toán
+                                </h6>
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="form-check mb-3">
+                                            <input class="form-check-input" type="radio" name="paymentMethod" id="cod" value="1" checked>
+                                            <label class="form-check-label d-flex align-items-center" for="cod">
+                                                <i class="fa fa-money me-3 text-success"></i>
+                                                <span>Thanh toán khi nhận hàng (COD)</span>
+                                            </label>
+                                        </div>
+                                        <div class="form-check mb-3">
+                                            <input class="form-check-input" type="radio" name="paymentMethod" id="bank" value="2">
+                                            <label class="form-check-label d-flex align-items-center" for="bank">
+                                                <i class="fa fa-bank me-3 text-primary"></i>
+                                                <span>Chuyển khoản ngân hàng</span>
+                                            </label>
+                                        </div>
+                                        <div class="form-check mb-3">
+                                            <input class="form-check-input" type="radio" name="paymentMethod" id="card" value="3">
+                                            <label class="form-check-label d-flex align-items-center" for="card">
+                                                <i class="fa fa-credit-card me-3 text-info"></i>
+                                                <span>Thẻ Visa/Mastercard/Amex</span>
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="paymentMethod" id="momo" value="4">
+                                            <label class="form-check-label d-flex align-items-center" for="momo">
+                                                <i class="fa fa-mobile me-3 text-danger"></i>
+                                                <span>Thanh toán qua ví MoMo</span>
+                                            </label>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
 
                             <!-- Hidden inputs -->
-                            <?php foreach ($_POST['selected_items'] as $product_id): ?>
+                            <input type="hidden" name="shipping_fee">
+                            <input type="hidden" name="total_weight" value="1000">
+                            <input type="hidden" name="total_value" value="<?php echo $total_value; ?>">
+                            <input type="hidden" name="total_amount" value="<?php echo $total_value; ?>">
+                            <input type="hidden" name="total_discount" value="<?php echo $total_discount; ?>">
+                            <?php 
+                            if (isset($_POST['selected_items']) && is_array($_POST['selected_items'])) {
+                                foreach ($_POST['selected_items'] as $product_id): 
+                            ?>
                             <input type="hidden" name="selected_items[]" value="<?php echo htmlspecialchars($product_id); ?>">
                             <input type="hidden" name="item_quantity[<?php echo htmlspecialchars($product_id); ?>]" 
                                    value="<?php echo htmlspecialchars($_POST['item_quantity'][$product_id] ?? 1); ?>">
@@ -263,11 +350,10 @@ if (!empty($_POST['selected_items'])) {
                                    value="<?php echo htmlspecialchars($_POST['item_unit'][$product_id] ?? ''); ?>">
                             <input type="hidden" name="item_image[<?php echo htmlspecialchars($product_id); ?>]"
                                    value="<?php echo htmlspecialchars($_POST['item_image'][$product_id] ?? ''); ?>">
-                            <?php endforeach; ?>
-                            
-                            <input type="hidden" name="total_amount" value="<?php echo htmlspecialchars($_POST['total_amount'] ?? 0); ?>">
-                            <input type="hidden" name="total_weight" value="<?php echo $total_weight; ?>">
-                            <input type="hidden" name="total_value" value="<?php echo $total_value; ?>">
+                            <?php 
+                                endforeach;
+                            } 
+                            ?>
                         </form>
                     </div>
                 </div>
@@ -279,11 +365,13 @@ if (!empty($_POST['selected_items'])) {
                     <div class="card-body">
                         <h5 class="card-title mb-4">Đơn hàng của bạn</h5>
                         <div class="order-items mb-4">
-                            <?php foreach ($_POST['selected_items'] as $product_id): 
-                                $image_path = isset($_POST['item_image'][$product_id]) && !empty($_POST['item_image'][$product_id])
-                                    ? 'img/' . htmlspecialchars($_POST['item_image'][$product_id])
-                                    : 'img/default-product.jpg';
-                                $item_discount = $item_discounts[$product_id] ?? 0;
+                            <?php 
+                            if (isset($_POST['selected_items']) && is_array($_POST['selected_items'])) {
+                                foreach ($_POST['selected_items'] as $product_id): 
+                                    $image_path = isset($_POST['item_image'][$product_id]) && !empty($_POST['item_image'][$product_id])
+                                        ? 'img/' . htmlspecialchars($_POST['item_image'][$product_id])
+                                        : 'img/default-product.jpg';
+                                    $item_discount = $item_discounts[$product_id] ?? 0;
                             ?>
                             <div class="product-item d-flex align-items-center mb-3">
                                 <img src="<?php echo $image_path; ?>" alt="" class="product-image me-3">
@@ -298,31 +386,42 @@ if (!empty($_POST['selected_items'])) {
                                     <?php endif; ?>
                                 </div>
                             </div>
-                            <?php endforeach; ?>
+                            <?php 
+                                endforeach;
+                            } else {
+                                echo '<div class="alert alert-warning">Không có sản phẩm nào được chọn</div>';
+                            }
+                            ?>
                         </div>
 
-                        <div class="order-summary">
-                            <h6 class="mb-3">Tóm tắt đơn hàng</h6>
-                            <div class="summary-row">
-                                <span>Tổng tiền hàng</span>
-                                <span class="text-dark"><?php echo number_format($_POST['total_amount'] ?? 0, 0, ',', '.'); ?>đ</span>
-                            </div>
-                            <div class="summary-row">
-                                <span>Phí vận chuyển</span>
-                                <span id="shipping-fee-summary" class="text-success">Đang tính...</span>
-                            </div>
-                            <div class="summary-row" id="discount-row" style="display: none;">
-                                <span>Giảm giá</span>
-                                <span class="text-danger">
-                                    -<span id="discount-amount">0</span>đ
-                                    <small id="discount-percent-text" style="display: none;">
-                                        (<span id="discount-percent">0</span>%)
-                                    </small>
-                                </span>
-                            </div>
-                            <div class="summary-row total-row">
-                                <span class="fw-bold">Tổng thanh toán</span>
-                                <span id="total-payment" class="text-danger fw-bold"></span>
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <h6 class="section-title">
+                                    <i class="fa fa-receipt me-2"></i>Tóm tắt đơn hàng
+                                </h6>
+                                <div class="summary-row">
+                                    <span>Tổng tiền hàng</span>
+                                    <span class="text-dark"><?php echo number_format($total_value, 0, ',', '.'); ?>đ</span>
+                                </div>
+                                <div class="summary-row">
+                                    <span>Phí vận chuyển</span>
+                                    <span id="shipping-fee-summary" class="text-success">Đang tính...</span>
+                                </div>
+                                <div class="summary-row" id="discount-row" style="display: none;">
+                                    <span>Giảm giá</span>
+                                    <span class="text-danger">
+                                        -<span id="discount-amount">0</span>đ
+                                        <small id="discount-percent-text" style="display: none;">
+                                            (<span id="discount-percent">0</span>%)
+                                        </small>
+                                    </span>
+                                </div>
+                                <div class="summary-row total-row">
+                                    <span class="fw-bold">Tổng thanh toán</span>
+                                    <span id="total-payment" class="text-danger fw-bold">
+                                        <?php echo number_format($total_value, 0, ',', '.'); ?>đ
+                                    </span>
+                                </div>
                             </div>
                         </div>
 
@@ -334,16 +433,21 @@ if (!empty($_POST['selected_items'])) {
                                     value="<?php echo htmlspecialchars($_POST['promo_code'] ?? ''); ?>">
                                 <select class="form-select" id="promoType" style="max-width: 200px;">
                                     <option value="all">Áp dụng cho tất cả</option>
-                                    <?php foreach ($_POST['selected_items'] ?? [] as $product_id): ?>
+                                    <?php 
+                                    if (isset($_POST['selected_items']) && is_array($_POST['selected_items'])) {
+                                        foreach ($_POST['selected_items'] as $product_id): 
+                                    ?>
                                     <option value="<?php echo htmlspecialchars($product_id); ?>">
-                                        <?php echo htmlspecialchars($_POST['item_name'][$product_id]); ?>
+                                        <?php echo htmlspecialchars($_POST['item_name'][$product_id] ?? 'Sản phẩm không xác định'); ?>
                                     </option>
-                                    <?php endforeach; ?>
+                                    <?php 
+                                        endforeach;
+                                    }
+                                    ?>
                                 </select>
                                 <button class="btn btn-success" type="button" id="applyPromo">Áp dụng</button>
                             </div>
                             <div class="promo-error mt-2" style="display: none;"></div>
-                            <input type="hidden" name="promo_code" id="promoCodeInput">
                             <button class="btn btn-outline-secondary w-100 mt-2" type="button" data-bs-toggle="modal" data-bs-target="#promoModal">
                                 <i class="fa fa-ticket me-2"></i>Chọn mã
                             </button>
@@ -351,6 +455,9 @@ if (!empty($_POST['selected_items'])) {
                             <div class="promo-error"><?php echo htmlspecialchars($promo_message); ?></div>
                             <?php endif; ?>
                         </div>
+
+                        <!-- Error message container -->
+                        <div id="error-message" class="alert alert-danger" style="display: none;"></div>
 
                         <button type="submit" form="checkoutForm" class="btn-checkout">
                             <i class="fa fa-check me-2"></i>Đặt hàng
@@ -395,34 +502,45 @@ if (!empty($_POST['selected_items'])) {
         </div>
     </div>
 
+    <!-- Scripts -->
     <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/custom.js"></script>
-    <script src="js/address.js"></script>
     <script src="js/shipping.js"></script>
+    <script src="js/address.js"></script>
     <script src="js/promo.js"></script>
     <script>
-        // Đảm bảo các script được load theo đúng thứ tự
-        document.addEventListener('DOMContentLoaded', async function() {
+        document.addEventListener('DOMContentLoaded', function() {
             try {
-                // Khởi tạo AddressSelector trước
-                window.addressSelector = new AddressSelector();
-                await window.addressSelector.init();
-                console.log('AddressSelector initialized');
+                // Initialize ShippingManager first
+                if (typeof ShippingManager !== 'undefined') {
+                    window.shippingManager = new ShippingManager();
+                    console.log('ShippingManager initialized');
+                } else {
+                    console.error('ShippingManager not found');
+                }
 
-                // Sau đó khởi tạo ShippingCalculator
-                window.shippingCalculator = new ShippingCalculator();
-                console.log('ShippingCalculator initialized');
+                // Initialize AddressManager
+                if (typeof AddressManager !== 'undefined') {
+                    window.addressManager = new AddressManager({
+                        pickProvince: "1", // Hà Nội
+                        pickDistrict: "1", // Ba Đình
+                        pickWard: "1", // Default ward
+                        pickAddress: "123 Đường Láng" // Default address
+                    });
+                    console.log('AddressManager initialized');
+                } else {
+                    console.error('AddressManager not found');
+                }
 
-                // Cuối cùng khởi tạo ShippingManager
-                window.shippingManager = new ShippingManager();
-                console.log('ShippingManager initialized');
+                // Initialize PromoManager
+                if (typeof PromoManager !== 'undefined') {
+                    window.promoManager = new PromoManager();
+                    console.log('PromoManager initialized');
+                } else {
+                    console.error('PromoManager not found');
+                }
+
             } catch (error) {
                 console.error('Error initializing components:', error);
-                const errorContainer = document.getElementById('error-message');
-                if (errorContainer) {
-                    errorContainer.textContent = 'Lỗi khởi tạo hệ thống. Vui lòng tải lại trang.';
-                    errorContainer.style.display = 'block';
-                }
             }
         });
     </script>
