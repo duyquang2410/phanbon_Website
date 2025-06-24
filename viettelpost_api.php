@@ -164,14 +164,20 @@ try {
             $defaultValues = [
                 'PRODUCT_PRICE' => 0,
                 'MONEY_COLLECTION' => 0,
-                'PRODUCT_LENGTH' => DEFAULT_LENGTH,
-                'PRODUCT_WIDTH' => DEFAULT_WIDTH,
-                'PRODUCT_HEIGHT' => DEFAULT_HEIGHT,
+                'PRODUCT_LENGTH' => 20, // Giảm kích thước mặc định xuống
+                'PRODUCT_WIDTH' => 20,
+                'PRODUCT_HEIGHT' => 10,
                 'PRODUCT_QUANTITY' => 1,
                 'TYPE' => 2, // Giao hàng tiêu chuẩn
                 'NATIONAL_TYPE' => 1, // Giao trong nước
                 'SERVICE_ADD_ON' => ''
             ];
+
+            // Validate and adjust weight
+            if (isset($decodedData['PRODUCT_WEIGHT'])) {
+                // Ensure weight is at least 100g but not more than 20kg
+                $decodedData['PRODUCT_WEIGHT'] = max(100, min($decodedData['PRODUCT_WEIGHT'], 20000));
+            }
 
             foreach ($defaultValues as $key => $value) {
                 if (!isset($decodedData[$key]) || $decodedData[$key] === '') {

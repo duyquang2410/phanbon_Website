@@ -3,7 +3,7 @@ Request data: Array
     [GET] => Array
         (
             [endpoint] => categories/listWards
-            [districtId] => 2
+            [districtId] => 35
         )
 
     [POST] => 
@@ -18,15 +18,15 @@ Request data: Array
 
 Nhận request đến endpoint: categories/listWards với method: GET
 Cấu hình API: baseUrl=https://partner.viettelpost.vn/v2, token=51C1E0E74B...
-Gọi API lấy danh sách phường/xã: https://partner.viettelpost.vn/v2/categories/listWards?districtId=2
-[2025-06-23 18:37:38][INFO] API Call: categories/listWards
+Gọi API lấy danh sách phường/xã: https://partner.viettelpost.vn/v2/categories/listWards?districtId=35
+[2025-06-24 15:13:47][INFO] API Call: categories/listWards
 Data: Array
 (
     [endpoint] => categories/listWards
     [request] => Array
         (
-            [districtId] => 2
-            [url] => https://partner.viettelpost.vn/v2/categories/listWards?districtId=2
+            [districtId] => 35
+            [url] => https://partner.viettelpost.vn/v2/categories/listWards?districtId=35
         )
 
     [response] => 
@@ -34,40 +34,40 @@ Data: Array
 )
 
 --------------------------------------------------------------------------------
-Kết quả gọi API: httpCode=200, executionTime=466ms
-Phản hồi từ API: {"status":200,"error":false,"message":"OK","data":[{"WARDS_ID":19,"WARDS_NAME":"XÃ TIÊN PHONG","DISTRICT_ID":2},{"WARDS_ID":20,"WARDS_NAME":"XÃ BA TRẠI","DISTRICT_ID":2},{"WARDS_ID":21,"WARDS_NAME":"XÃ YÊN BÀI","DISTRICT_ID":2},{"WARDS_ID":22,"WARDS_NAME":"XÃ KHÁNH THƯỢNG","DISTRICT_ID":2},{"WARDS_ID":23,"WARDS_NAME":"XÃ BA VÌ","DISTRICT_ID":2},{"WARDS_ID":24,"WARDS_NAME":"THỊ TRẤN TÂY ĐẰNG","DISTRICT_ID":2},{"WARDS_ID":25,"WARDS_NAME":"XÃ PHÚ CƯỜNG","DISTRICT_ID":2},{"WARDS_ID":26,"WARDS_NAME":"XÃ CỔ ĐÔ","DISTRICT_ID":2},{"WARDS_ID":27,"WARDS_NAME":"XÃ TẢN HỒNG","DISTRICT_ID":2},{"WARDS_ID":28,"WARDS_NAME":"XÃ VẠN THẮNG","DISTRICT_ID":2},{"WARDS_ID":29,"WARDS_NAME":"XÃ PHONG VÂN","DISTRICT_ID":2},{"WARDS_ID":30,"WARDS_NAME":"XÃ PHÚ ĐÔNG","DISTRICT_ID":2},{"WARDS_ID":31,"WARDS_NAME":"XÃ PHÚ PHƯƠNG","DISTRICT_ID":2},{"WARDS_ID":32,"WARDS_NAME":"XÃ PHÚ CHÂU","DISTRICT_ID":2},{"WARDS_ID":33,"WARDS_NAME":"XÃ THÁI HÒA","DISTRICT_ID":2},{"WARDS_ID":34,"WARDS_NAME":"XÃ ĐỒNG THÁI","DISTRICT_ID":2},{"WARDS_ID":35,"WARDS_NAME":"XÃ PHÚ SƠN","DISTRICT_ID":2},{"WARDS_ID":36,"WARDS_NAME":"XÃ MINH CHÂU","DISTRICT_ID":2},{"WARDS_ID":37,"WARDS_NAME":"XÃ VẬT LẠI","DISTRICT_ID":2},{"WARDS_ID":38,"WARDS_NAME":"XÃ CHU MINH","DISTRICT_ID":2},{"WARDS_ID":39,"WARDS_NAME":"XÃ TÒNG BẠT","DISTRICT_ID":2},{"WARDS_ID":40,"WARDS_NAME":"XÃ CẨM LĨNH","DISTRICT_ID":2},{"WARDS_ID":41,"WARDS_NAME":"XÃ SƠN ĐÀ","DISTRICT_ID":2},{"WARDS_ID":42,"WARDS_NAME":"XÃ ĐÔNG QUANG","DISTRICT_ID":2},{"WARDS_ID":43,"WARDS_NAME":"XÃ THỤY AN","DISTRICT_ID":2},{"WARDS_ID":44,"WARDS_NAME":"XÃ CAM THƯỢNG","DISTRICT_ID":2},{"WARDS_ID":45,"WARDS_NAME":"XÃ THUẦN MỸ","DISTRICT_ID":2},{"WARDS_ID":46,"WARDS_NAME":"XÃ TẢN LĨNH","DISTRICT_ID":2},{"WARDS_ID":47,"WARDS_NAME":"XÃ VÂN HÒA","DISTRICT_ID":2},{"WARDS_ID":48,"WARDS_NAME":"XÃ CHÂU SƠN","DISTRICT_ID":2},{"WARDS_ID":49,"WARDS_NAME":"XÃ MINH QUANG","DISTRICT_ID":2}]}
-[2025-06-23 18:37:39][INFO] API Call: categories/listWards
+Kết quả gọi API: httpCode=200, executionTime=425ms
+Phản hồi từ API: {"status":200,"error":false,"message":"OK","data":[{"WARDS_ID":672,"WARDS_NAME":"PHƯỜNG 14","DISTRICT_ID":35},{"WARDS_ID":673,"WARDS_NAME":"PHƯỜNG 9","DISTRICT_ID":35},{"WARDS_ID":674,"WARDS_NAME":"PHƯỜNG 10","DISTRICT_ID":35},{"WARDS_ID":675,"WARDS_NAME":"PHƯỜNG 11","DISTRICT_ID":35},{"WARDS_ID":676,"WARDS_NAME":"PHƯỜNG 12","DISTRICT_ID":35},{"WARDS_ID":677,"WARDS_NAME":"PHƯỜNG 13","DISTRICT_ID":35},{"WARDS_ID":678,"WARDS_NAME":"PHƯỜNG 7","DISTRICT_ID":35},{"WARDS_ID":679,"WARDS_NAME":"PHƯỜNG 8","DISTRICT_ID":35},{"WARDS_ID":680,"WARDS_NAME":"PHƯỜNG 6","DISTRICT_ID":35},{"WARDS_ID":681,"WARDS_NAME":"PHƯỜNG  1","DISTRICT_ID":35},{"WARDS_ID":682,"WARDS_NAME":"PHƯỜNG 2","DISTRICT_ID":35},{"WARDS_ID":683,"WARDS_NAME":"PHƯỜNG 3","DISTRICT_ID":35},{"WARDS_ID":684,"WARDS_NAME":"PHƯỜNG 4","DISTRICT_ID":35},{"WARDS_ID":685,"WARDS_NAME":"PHƯỜNG 5","DISTRICT_ID":35},{"WARDS_ID":686,"WARDS_NAME":"PHƯỜNG 15","DISTRICT_ID":35}]}
+[2025-06-24 15:13:48][INFO] API Call: categories/listWards
 Data: Array
 (
     [endpoint] => categories/listWards
     [request] => Array
         (
             [method] => GET
-            [url] => https://partner.viettelpost.vn/v2/categories/listWards?districtId=2
-            [execution_time_ms] => 466
+            [url] => https://partner.viettelpost.vn/v2/categories/listWards?districtId=35
+            [execution_time_ms] => 425
             [http_code] => 200
             [content_type] => application/json;charset=UTF-8
             [curl_info] => Array
                 (
-                    [url] => https://partner.viettelpost.vn/v2/categories/listWards?districtId=2
+                    [url] => https://partner.viettelpost.vn/v2/categories/listWards?districtId=35
                     [content_type] => application/json;charset=UTF-8
                     [http_code] => 200
                     [header_size] => 196
-                    [request_size] => 213
+                    [request_size] => 214
                     [filetime] => -1
                     [ssl_verify_result] => 0
                     [redirect_count] => 0
-                    [total_time] => 0.465788
-                    [namelookup_time] => 0.001445
-                    [connect_time] => 0.030247
-                    [pretransfer_time] => 0.368753
+                    [total_time] => 0.424725
+                    [namelookup_time] => 0.00189
+                    [connect_time] => 0.030081
+                    [pretransfer_time] => 0.333508
                     [size_upload] => 0
-                    [size_download] => 482
-                    [speed_download] => 1034
+                    [size_download] => 219
+                    [speed_download] => 515
                     [speed_upload] => 0
                     [download_content_length] => -1
                     [upload_content_length] => 0
-                    [starttransfer_time] => 0.46568
+                    [starttransfer_time] => 0.424664
                     [redirect_time] => 0
                     [redirect_url] => 
                     [primary_ip] => 125.212.138.85
@@ -77,18 +77,18 @@ Data: Array
 
                     [primary_port] => 443
                     [local_ip] => 192.168.1.6
-                    [local_port] => 2548
+                    [local_port] => 52442
                     [http_version] => 3
                     [protocol] => 2
                     [ssl_verifyresult] => 0
                     [scheme] => HTTPS
-                    [appconnect_time_us] => 368485
-                    [connect_time_us] => 30247
-                    [namelookup_time_us] => 1445
-                    [pretransfer_time_us] => 368753
+                    [appconnect_time_us] => 333253
+                    [connect_time_us] => 30081
+                    [namelookup_time_us] => 1890
+                    [pretransfer_time_us] => 333508
                     [redirect_time_us] => 0
-                    [starttransfer_time_us] => 465680
-                    [total_time_us] => 465788
+                    [starttransfer_time_us] => 424664
+                    [total_time_us] => 424725
                     [effective_method] => GET
                 )
 
@@ -104,219 +104,107 @@ Data: Array
                 (
                     [0] => Array
                         (
-                            [WARDS_ID] => 19
-                            [WARDS_NAME] => XÃ TIÊN PHONG
-                            [DISTRICT_ID] => 2
+                            [WARDS_ID] => 672
+                            [WARDS_NAME] => PHƯỜNG 14
+                            [DISTRICT_ID] => 35
                         )
 
                     [1] => Array
                         (
-                            [WARDS_ID] => 20
-                            [WARDS_NAME] => XÃ BA TRẠI
-                            [DISTRICT_ID] => 2
+                            [WARDS_ID] => 673
+                            [WARDS_NAME] => PHƯỜNG 9
+                            [DISTRICT_ID] => 35
                         )
 
                     [2] => Array
                         (
-                            [WARDS_ID] => 21
-                            [WARDS_NAME] => XÃ YÊN BÀI
-                            [DISTRICT_ID] => 2
+                            [WARDS_ID] => 674
+                            [WARDS_NAME] => PHƯỜNG 10
+                            [DISTRICT_ID] => 35
                         )
 
                     [3] => Array
                         (
-                            [WARDS_ID] => 22
-                            [WARDS_NAME] => XÃ KHÁNH THƯỢNG
-                            [DISTRICT_ID] => 2
+                            [WARDS_ID] => 675
+                            [WARDS_NAME] => PHƯỜNG 11
+                            [DISTRICT_ID] => 35
                         )
 
                     [4] => Array
                         (
-                            [WARDS_ID] => 23
-                            [WARDS_NAME] => XÃ BA VÌ
-                            [DISTRICT_ID] => 2
+                            [WARDS_ID] => 676
+                            [WARDS_NAME] => PHƯỜNG 12
+                            [DISTRICT_ID] => 35
                         )
 
                     [5] => Array
                         (
-                            [WARDS_ID] => 24
-                            [WARDS_NAME] => THỊ TRẤN TÂY ĐẰNG
-                            [DISTRICT_ID] => 2
+                            [WARDS_ID] => 677
+                            [WARDS_NAME] => PHƯỜNG 13
+                            [DISTRICT_ID] => 35
                         )
 
                     [6] => Array
                         (
-                            [WARDS_ID] => 25
-                            [WARDS_NAME] => XÃ PHÚ CƯỜNG
-                            [DISTRICT_ID] => 2
+                            [WARDS_ID] => 678
+                            [WARDS_NAME] => PHƯỜNG 7
+                            [DISTRICT_ID] => 35
                         )
 
                     [7] => Array
                         (
-                            [WARDS_ID] => 26
-                            [WARDS_NAME] => XÃ CỔ ĐÔ
-                            [DISTRICT_ID] => 2
+                            [WARDS_ID] => 679
+                            [WARDS_NAME] => PHƯỜNG 8
+                            [DISTRICT_ID] => 35
                         )
 
                     [8] => Array
                         (
-                            [WARDS_ID] => 27
-                            [WARDS_NAME] => XÃ TẢN HỒNG
-                            [DISTRICT_ID] => 2
+                            [WARDS_ID] => 680
+                            [WARDS_NAME] => PHƯỜNG 6
+                            [DISTRICT_ID] => 35
                         )
 
                     [9] => Array
                         (
-                            [WARDS_ID] => 28
-                            [WARDS_NAME] => XÃ VẠN THẮNG
-                            [DISTRICT_ID] => 2
+                            [WARDS_ID] => 681
+                            [WARDS_NAME] => PHƯỜNG  1
+                            [DISTRICT_ID] => 35
                         )
 
                     [10] => Array
                         (
-                            [WARDS_ID] => 29
-                            [WARDS_NAME] => XÃ PHONG VÂN
-                            [DISTRICT_ID] => 2
+                            [WARDS_ID] => 682
+                            [WARDS_NAME] => PHƯỜNG 2
+                            [DISTRICT_ID] => 35
                         )
 
                     [11] => Array
                         (
-                            [WARDS_ID] => 30
-                            [WARDS_NAME] => XÃ PHÚ ĐÔNG
-                            [DISTRICT_ID] => 2
+                            [WARDS_ID] => 683
+                            [WARDS_NAME] => PHƯỜNG 3
+                            [DISTRICT_ID] => 35
                         )
 
                     [12] => Array
                         (
-                            [WARDS_ID] => 31
-                            [WARDS_NAME] => XÃ PHÚ PHƯƠNG
-                            [DISTRICT_ID] => 2
+                            [WARDS_ID] => 684
+                            [WARDS_NAME] => PHƯỜNG 4
+                            [DISTRICT_ID] => 35
                         )
 
                     [13] => Array
                         (
-                            [WARDS_ID] => 32
-                            [WARDS_NAME] => XÃ PHÚ CHÂU
-                            [DISTRICT_ID] => 2
+                            [WARDS_ID] => 685
+                            [WARDS_NAME] => PHƯỜNG 5
+                            [DISTRICT_ID] => 35
                         )
 
                     [14] => Array
                         (
-                            [WARDS_ID] => 33
-                            [WARDS_NAME] => XÃ THÁI HÒA
-                            [DISTRICT_ID] => 2
-                        )
-
-                    [15] => Array
-                        (
-                            [WARDS_ID] => 34
-                            [WARDS_NAME] => XÃ ĐỒNG THÁI
-                            [DISTRICT_ID] => 2
-                        )
-
-                    [16] => Array
-                        (
-                            [WARDS_ID] => 35
-                            [WARDS_NAME] => XÃ PHÚ SƠN
-                            [DISTRICT_ID] => 2
-                        )
-
-                    [17] => Array
-                        (
-                            [WARDS_ID] => 36
-                            [WARDS_NAME] => XÃ MINH CHÂU
-                            [DISTRICT_ID] => 2
-                        )
-
-                    [18] => Array
-                        (
-                            [WARDS_ID] => 37
-                            [WARDS_NAME] => XÃ VẬT LẠI
-                            [DISTRICT_ID] => 2
-                        )
-
-                    [19] => Array
-                        (
-                            [WARDS_ID] => 38
-                            [WARDS_NAME] => XÃ CHU MINH
-                            [DISTRICT_ID] => 2
-                        )
-
-                    [20] => Array
-                        (
-                            [WARDS_ID] => 39
-                            [WARDS_NAME] => XÃ TÒNG BẠT
-                            [DISTRICT_ID] => 2
-                        )
-
-                    [21] => Array
-                        (
-                            [WARDS_ID] => 40
-                            [WARDS_NAME] => XÃ CẨM LĨNH
-                            [DISTRICT_ID] => 2
-                        )
-
-                    [22] => Array
-                        (
-                            [WARDS_ID] => 41
-                            [WARDS_NAME] => XÃ SƠN ĐÀ
-                            [DISTRICT_ID] => 2
-                        )
-
-                    [23] => Array
-                        (
-                            [WARDS_ID] => 42
-                            [WARDS_NAME] => XÃ ĐÔNG QUANG
-                            [DISTRICT_ID] => 2
-                        )
-
-                    [24] => Array
-                        (
-                            [WARDS_ID] => 43
-                            [WARDS_NAME] => XÃ THỤY AN
-                            [DISTRICT_ID] => 2
-                        )
-
-                    [25] => Array
-                        (
-                            [WARDS_ID] => 44
-                            [WARDS_NAME] => XÃ CAM THƯỢNG
-                            [DISTRICT_ID] => 2
-                        )
-
-                    [26] => Array
-                        (
-                            [WARDS_ID] => 45
-                            [WARDS_NAME] => XÃ THUẦN MỸ
-                            [DISTRICT_ID] => 2
-                        )
-
-                    [27] => Array
-                        (
-                            [WARDS_ID] => 46
-                            [WARDS_NAME] => XÃ TẢN LĨNH
-                            [DISTRICT_ID] => 2
-                        )
-
-                    [28] => Array
-                        (
-                            [WARDS_ID] => 47
-                            [WARDS_NAME] => XÃ VÂN HÒA
-                            [DISTRICT_ID] => 2
-                        )
-
-                    [29] => Array
-                        (
-                            [WARDS_ID] => 48
-                            [WARDS_NAME] => XÃ CHÂU SƠN
-                            [DISTRICT_ID] => 2
-                        )
-
-                    [30] => Array
-                        (
-                            [WARDS_ID] => 49
-                            [WARDS_NAME] => XÃ MINH QUANG
-                            [DISTRICT_ID] => 2
+                            [WARDS_ID] => 686
+                            [WARDS_NAME] => PHƯỜNG 15
+                            [DISTRICT_ID] => 35
                         )
 
                 )

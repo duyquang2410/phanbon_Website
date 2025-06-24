@@ -8121,3 +8121,1980 @@ Data: Array
 )
 
 --------------------------------------------------------------------------------
+[2025-06-23 13:45:08][INFO] Session and GET data
+Data: Array
+(
+    [session] => Array
+        (
+            [user_id] => 2
+            [user_name] => Quang Duy
+            [user_avatar] => default-avatar.jpg
+            [order_id] => 55
+            [success_message] => Đặt hàng thành công! Cảm ơn bạn đã mua sắm tại Plants Shop.
+            [cart_success] => Đã thêm COC85 (20g) - Ngừa bệnh rỉ sắt, đốm đen cho cây trồng, đặc hiệu cho hoa kiểng vào giỏ hàng.
+        )
+
+    [get] => Array
+        (
+            [id] => 15
+        )
+
+)
+
+--------------------------------------------------------------------------------
+[2025-06-23 13:45:08][INFO] Accessing order confirmation page
+Data: Array
+(
+    [user_id] => 2
+    [order_id] => 15
+)
+
+--------------------------------------------------------------------------------
+[2025-06-23 13:45:08][INFO] Order data retrieved
+Data: Array
+(
+    [order_id] => 15
+    [order_data] => Array
+        (
+            [HD_STT] => 15
+            [TT_MA] => 1
+            [DVC_MA] => 21
+            [NV_MA] => 1
+            [PTTT_MA] => 1
+            [KM_MA] => 
+            [GH_MA] => 7
+            [HD_NGAYLAP] => 2025-06-19 11:41:08
+            [HD_TONGTIEN] => 153000
+            [HD_PHISHIP] => 0
+            [HD_LIDOHUY] => 
+            [KH_MA] => 2
+            [KH_TEN] => Quang Duy
+            [KH_SDT] => 0793994771
+            [KH_EMAIL] => duyquang2709pp@gmail.com
+            [KH_DIACHI] => Cần thơ
+            [PTTT_TEN] => Tiền mặt
+            [trang_thai] => Chờ xác nhận
+            [shipping_fee] => 0
+            [total_amount] => 153000
+            [discount_percentage] => 
+            [promo_code] => 
+            [discount_amount] => 0
+            [final_amount] => 153000
+        )
+
+)
+
+--------------------------------------------------------------------------------
+[2025-06-23 13:45:08][WARNING] No specific shipping address found, using default customer address
+Data: Array
+(
+    [order_id] => 15
+    [customer_id] => 2
+    [default_address] => Cần thơ
+)
+
+--------------------------------------------------------------------------------
+[2025-06-23 13:45:08][INFO] Items query result count
+Data: Array
+(
+    [order_id] => 15
+    [count] => 2
+)
+
+--------------------------------------------------------------------------------
+[2025-06-23 13:45:08][INFO] Processing order item
+Data: Array
+(
+    [order_id] => 15
+    [item_data] => Array
+        (
+            [CTHD_ID] => 12
+            [SP_MA] => 4
+            [HD_STT] => 15
+            [CTHD_SOLUONG] => 3
+            [CTHD_DONGIA] => 6000
+            [CTHD_DONVITINH] => 
+            [CTHD_GHICHU] => 
+            [SP_TEN] => Bimix Super Root (20ml)  –  Phát triển mạnh bộ rễ, kích thích cành chiết, cành giâm
+            [SP_HINHANH] => bemix.jpg
+            [SP_DONVITINH] => kg
+            [KM_MA] => 
+            [item_discount] => 0
+            [KM_GIATRI] => 
+            [hinh_thuc_km] => 
+        )
+
+)
+
+--------------------------------------------------------------------------------
+[2025-06-23 13:45:08][INFO] Processing order item
+Data: Array
+(
+    [order_id] => 15
+    [item_data] => Array
+        (
+            [CTHD_ID] => 13
+            [SP_MA] => 5
+            [HD_STT] => 15
+            [CTHD_SOLUONG] => 3
+            [CTHD_DONGIA] => 45000
+            [CTHD_DONVITINH] => 
+            [CTHD_GHICHU] => 
+            [SP_TEN] => Axit humic dạng lỏng 322 Growmore (235ml) - Kích rễ và chống ngộ độc hữu cơ cho cây
+            [SP_HINHANH] => humic.jpg
+            [SP_DONVITINH] => ml
+            [KM_MA] => 
+            [item_discount] => 0
+            [KM_GIATRI] => 
+            [hinh_thuc_km] => 
+        )
+
+)
+
+--------------------------------------------------------------------------------
+[2025-06-23 13:45:08][INFO] Order details retrieved
+Data: Array
+(
+    [order_id] => 15
+    [details] => Array
+        (
+            [0] => Array
+                (
+                    [name] => Bimix Super Root (20ml)  –  Phát triển mạnh bộ rễ, kích thích cành chiết, cành giâm
+                    [image] => bemix.jpg
+                    [quantity] => 3
+                    [price] => 6000
+                    [unit] => kg
+                    [total] => 18000
+                    [discount] => 0
+                    [discount_type] => 
+                    [discount_value] => 
+                )
+
+            [1] => Array
+                (
+                    [name] => Axit humic dạng lỏng 322 Growmore (235ml) - Kích rễ và chống ngộ độc hữu cơ cho cây
+                    [image] => humic.jpg
+                    [quantity] => 3
+                    [price] => 45000
+                    [unit] => ml
+                    [total] => 135000
+                    [discount] => 0
+                    [discount_type] => 
+                    [discount_value] => 
+                )
+
+        )
+
+)
+
+--------------------------------------------------------------------------------
+[2025-06-23 13:45:08][INFO] No promotion code applied
+Data: Array
+(
+    [order_id] => 15
+)
+
+--------------------------------------------------------------------------------
+[2025-06-23 13:45:08][INFO] Processing product image
+Data: Array
+(
+    [product_name] => Bimix Super Root (20ml)  –  Phát triển mạnh bộ rễ, kích thích cành chiết, cành giâm
+    [image_filename] => bemix.jpg
+    [relative_path] => img/bemix.jpg
+    [file_exists] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-06-23 13:45:08][INFO] Processing product image
+Data: Array
+(
+    [product_name] => Axit humic dạng lỏng 322 Growmore (235ml) - Kích rễ và chống ngộ độc hữu cơ cho cây
+    [image_filename] => humic.jpg
+    [relative_path] => img/humic.jpg
+    [file_exists] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-06-23 13:45:26][INFO] Session and GET data
+Data: Array
+(
+    [session] => Array
+        (
+            [user_id] => 2
+            [user_name] => Quang Duy
+            [user_avatar] => default-avatar.jpg
+            [order_id] => 55
+            [success_message] => Đặt hàng thành công! Cảm ơn bạn đã mua sắm tại Plants Shop.
+            [cart_success] => Đã thêm COC85 (20g) - Ngừa bệnh rỉ sắt, đốm đen cho cây trồng, đặc hiệu cho hoa kiểng vào giỏ hàng.
+        )
+
+    [get] => Array
+        (
+            [id] => 55
+        )
+
+)
+
+--------------------------------------------------------------------------------
+[2025-06-23 13:45:26][INFO] Accessing order confirmation page
+Data: Array
+(
+    [user_id] => 2
+    [order_id] => 55
+)
+
+--------------------------------------------------------------------------------
+[2025-06-23 13:45:26][INFO] Order data retrieved
+Data: Array
+(
+    [order_id] => 55
+    [order_data] => Array
+        (
+            [HD_STT] => 55
+            [TT_MA] => 1
+            [DVC_MA] => 71
+            [NV_MA] => 1
+            [PTTT_MA] => 1
+            [KM_MA] => 1
+            [GH_MA] => 
+            [HD_NGAYLAP] => 2025-06-23 18:37:37
+            [HD_TONGTIEN] => 122000
+            [HD_PHISHIP] => 56000
+            [HD_LIDOHUY] => 
+            [KH_MA] => 2
+            [KH_TEN] => Quang Duy
+            [KH_SDT] => 0793994771
+            [KH_EMAIL] => duyquang2709pp@gmail.com
+            [KH_DIACHI] => Cần thơ
+            [PTTT_TEN] => Tiền mặt
+            [trang_thai] => Chờ xác nhận
+            [shipping_fee] => 56000
+            [total_amount] => 122000
+            [discount_percentage] => 10
+            [promo_code] => PHANBON10
+            [discount_amount] => 12200
+            [final_amount] => 109800
+        )
+
+)
+
+--------------------------------------------------------------------------------
+[2025-06-23 13:45:26][INFO] Address data retrieved
+Data: Array
+(
+    [order_id] => 55
+    [address_data] => Array
+        (
+            [DCGH_MA] => 35
+            [DH_MA] => 55
+            [DCGH_TINH] => 1
+            [DCGH_HUYEN] => 2
+            [DCGH_XA] => 20
+            [DCGH_DIACHI] => Cần thơ
+            [DCGH_TENNGUOINHAN] => Quang Duy
+            [DCGH_SDT] => 0793994771
+            [DCGH_EMAIL] => duyquang2709pp@gmail.com
+            [DCGH_GHICHU] => 
+            [DCGH_THOIGIANTAO] => 2025-06-23 18:37:37
+        )
+
+)
+
+--------------------------------------------------------------------------------
+[2025-06-23 13:45:26][INFO] Items query result count
+Data: Array
+(
+    [order_id] => 55
+    [count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-06-23 13:45:26][INFO] Processing order item
+Data: Array
+(
+    [order_id] => 55
+    [item_data] => Array
+        (
+            [CTHD_ID] => 43
+            [SP_MA] => 3
+            [HD_STT] => 55
+            [CTHD_SOLUONG] => 3
+            [CTHD_DONGIA] => 22000
+            [CTHD_DONVITINH] => cái
+            [CTHD_GHICHU] => 
+            [SP_TEN] => Phân dê qua xử lý hàng chuẩn ( chuyên cho lan và hoa hồng ) - 1 túi
+            [SP_HINHANH] => phande.jpg
+            [SP_DONVITINH] => kg
+            [KM_MA] => 1
+            [item_discount] => 6600
+            [KM_GIATRI] => 10
+            [hinh_thuc_km] => Giảm phần trăm
+        )
+
+)
+
+--------------------------------------------------------------------------------
+[2025-06-23 13:45:26][INFO] Order details retrieved
+Data: Array
+(
+    [order_id] => 55
+    [details] => Array
+        (
+            [0] => Array
+                (
+                    [name] => Phân dê qua xử lý hàng chuẩn ( chuyên cho lan và hoa hồng ) - 1 túi
+                    [image] => phande.jpg
+                    [quantity] => 3
+                    [price] => 22000
+                    [unit] => kg
+                    [total] => 66000
+                    [discount] => 6600
+                    [discount_type] => Giảm phần trăm
+                    [discount_value] => 10
+                )
+
+        )
+
+)
+
+--------------------------------------------------------------------------------
+[2025-06-23 13:45:26][INFO] Promotion code applied
+Data: Array
+(
+    [order_id] => 55
+    [promo_code] => PHANBON10
+    [discount_percentage] => 10
+    [discount_amount] => 12200
+)
+
+--------------------------------------------------------------------------------
+[2025-06-23 13:45:26][INFO] Processing product image
+Data: Array
+(
+    [product_name] => Phân dê qua xử lý hàng chuẩn ( chuyên cho lan và hoa hồng ) - 1 túi
+    [image_filename] => phande.jpg
+    [relative_path] => img/phande.jpg
+    [file_exists] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-06-23 13:45:33][INFO] Session and GET data
+Data: Array
+(
+    [session] => Array
+        (
+            [user_id] => 2
+            [user_name] => Quang Duy
+            [user_avatar] => default-avatar.jpg
+            [order_id] => 55
+            [success_message] => Đặt hàng thành công! Cảm ơn bạn đã mua sắm tại Plants Shop.
+            [cart_success] => Đã thêm COC85 (20g) - Ngừa bệnh rỉ sắt, đốm đen cho cây trồng, đặc hiệu cho hoa kiểng vào giỏ hàng.
+        )
+
+    [get] => Array
+        (
+            [id] => 54
+        )
+
+)
+
+--------------------------------------------------------------------------------
+[2025-06-23 13:45:33][INFO] Accessing order confirmation page
+Data: Array
+(
+    [user_id] => 2
+    [order_id] => 54
+)
+
+--------------------------------------------------------------------------------
+[2025-06-23 13:45:33][INFO] Order data retrieved
+Data: Array
+(
+    [order_id] => 54
+    [order_data] => Array
+        (
+            [HD_STT] => 54
+            [TT_MA] => 1
+            [DVC_MA] => 70
+            [NV_MA] => 1
+            [PTTT_MA] => 1
+            [KM_MA] => 2
+            [GH_MA] => 
+            [HD_NGAYLAP] => 2025-06-23 18:15:44
+            [HD_TONGTIEN] => 141001
+            [HD_PHISHIP] => 36001
+            [HD_LIDOHUY] => 
+            [KH_MA] => 2
+            [KH_TEN] => Quang Duy
+            [KH_SDT] => 0793994771
+            [KH_EMAIL] => duyquang2709pp@gmail.com
+            [KH_DIACHI] => Cần thơ
+            [PTTT_TEN] => Tiền mặt
+            [trang_thai] => Chờ xác nhận
+            [shipping_fee] => 36001
+            [total_amount] => 141001
+            [discount_percentage] => 20000
+            [promo_code] => THUOC20K
+            [discount_amount] => 141001
+            [final_amount] => 0
+        )
+
+)
+
+--------------------------------------------------------------------------------
+[2025-06-23 13:45:33][INFO] Address data retrieved
+Data: Array
+(
+    [order_id] => 54
+    [address_data] => Array
+        (
+            [DCGH_MA] => 34
+            [DH_MA] => 54
+            [DCGH_TINH] => 35
+            [DCGH_HUYEN] => 397
+            [DCGH_XA] => 7534
+            [DCGH_DIACHI] => Cần thơ
+            [DCGH_TENNGUOINHAN] => Quang Duy
+            [DCGH_SDT] => 0793994771
+            [DCGH_EMAIL] => duyquang2709pp@gmail.com
+            [DCGH_GHICHU] => 
+            [DCGH_THOIGIANTAO] => 2025-06-23 18:15:44
+        )
+
+)
+
+--------------------------------------------------------------------------------
+[2025-06-23 13:45:34][INFO] Items query result count
+Data: Array
+(
+    [order_id] => 54
+    [count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-06-23 13:45:34][INFO] Processing order item
+Data: Array
+(
+    [order_id] => 54
+    [item_data] => Array
+        (
+            [CTHD_ID] => 42
+            [SP_MA] => 2
+            [HD_STT] => 54
+            [CTHD_SOLUONG] => 3
+            [CTHD_DONGIA] => 35000
+            [CTHD_DONVITINH] => cái
+            [CTHD_GHICHU] => 
+            [SP_TEN] => Chế phẩm EMUNIV (200g) – Ủ phân và rác hữu cơ hiệu quả, nhanh hoai mục
+            [SP_HINHANH] => emu.jpg
+            [SP_DONVITINH] => g
+            [KM_MA] => 2
+            [item_discount] => 20000
+            [KM_GIATRI] => 20000
+            [hinh_thuc_km] => Giảm trực tiếp
+        )
+
+)
+
+--------------------------------------------------------------------------------
+[2025-06-23 13:45:34][INFO] Order details retrieved
+Data: Array
+(
+    [order_id] => 54
+    [details] => Array
+        (
+            [0] => Array
+                (
+                    [name] => Chế phẩm EMUNIV (200g) – Ủ phân và rác hữu cơ hiệu quả, nhanh hoai mục
+                    [image] => emu.jpg
+                    [quantity] => 3
+                    [price] => 35000
+                    [unit] => g
+                    [total] => 105000
+                    [discount] => 20000
+                    [discount_type] => Giảm trực tiếp
+                    [discount_value] => 20000
+                )
+
+        )
+
+)
+
+--------------------------------------------------------------------------------
+[2025-06-23 13:45:34][INFO] Promotion code applied
+Data: Array
+(
+    [order_id] => 54
+    [promo_code] => THUOC20K
+    [discount_percentage] => 20000
+    [discount_amount] => 141001
+)
+
+--------------------------------------------------------------------------------
+[2025-06-23 13:45:34][INFO] Processing product image
+Data: Array
+(
+    [product_name] => Chế phẩm EMUNIV (200g) – Ủ phân và rác hữu cơ hiệu quả, nhanh hoai mục
+    [image_filename] => emu.jpg
+    [relative_path] => img/emu.jpg
+    [file_exists] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-06-23 13:56:53][INFO] Session and GET data
+Data: Array
+(
+    [session] => Array
+        (
+            [user_id] => 2
+            [user_name] => Quang Duy
+            [user_avatar] => default-avatar.jpg
+            [order_id] => 56
+            [success_message] => Đặt hàng thành công! Cảm ơn bạn đã mua sắm tại Plants Shop.
+        )
+
+    [get] => Array
+        (
+            [id] => 56
+        )
+
+)
+
+--------------------------------------------------------------------------------
+[2025-06-23 13:56:53][INFO] Accessing order confirmation page
+Data: Array
+(
+    [user_id] => 2
+    [order_id] => 56
+)
+
+--------------------------------------------------------------------------------
+[2025-06-23 13:56:53][INFO] Order data retrieved
+Data: Array
+(
+    [order_id] => 56
+    [order_data] => Array
+        (
+            [HD_STT] => 56
+            [TT_MA] => 1
+            [DVC_MA] => 72
+            [NV_MA] => 1
+            [PTTT_MA] => 1
+            [KM_MA] => 1
+            [GH_MA] => 
+            [HD_NGAYLAP] => 2025-06-23 18:56:53
+            [HD_TONGTIEN] => 250000
+            [HD_PHISHIP] => 30000
+            [HD_LIDOHUY] => 
+            [KH_MA] => 2
+            [KH_TEN] => Quang Duy
+            [KH_SDT] => 0793994771
+            [KH_EMAIL] => duyquang2709pp@gmail.com
+            [KH_DIACHI] => Cần thơ
+            [PTTT_TEN] => Tiền mặt
+            [trang_thai] => Chờ xác nhận
+            [shipping_fee] => 30000
+            [total_amount] => 250000
+            [discount_percentage] => 10
+            [promo_code] => PHANBON10
+            [discount_amount] => 25000
+            [final_amount] => 225000
+        )
+
+)
+
+--------------------------------------------------------------------------------
+[2025-06-23 13:56:53][INFO] Address data retrieved
+Data: Array
+(
+    [order_id] => 56
+    [address_data] => Array
+        (
+            [DCGH_MA] => 36
+            [DH_MA] => 56
+            [DCGH_TINH] => 4
+            [DCGH_HUYEN] => 73
+            [DCGH_XA] => 1196
+            [DCGH_DIACHI] => Cần thơ
+            [DCGH_TENNGUOINHAN] => Quang Duy
+            [DCGH_SDT] => 0793994771
+            [DCGH_EMAIL] => duyquang2709pp@gmail.com
+            [DCGH_GHICHU] => 
+            [DCGH_THOIGIANTAO] => 2025-06-23 18:56:53
+        )
+
+)
+
+--------------------------------------------------------------------------------
+[2025-06-23 13:56:54][INFO] Items query result count
+Data: Array
+(
+    [order_id] => 56
+    [count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-06-23 13:56:54][INFO] Processing order item
+Data: Array
+(
+    [order_id] => 56
+    [item_data] => Array
+        (
+            [CTHD_ID] => 44
+            [SP_MA] => 8
+            [HD_STT] => 56
+            [CTHD_SOLUONG] => 1
+            [CTHD_DONGIA] => 220000
+            [CTHD_DONVITINH] => cái
+            [CTHD_GHICHU] => 
+            [SP_TEN] => COC85 (20g) - Ngừa bệnh rỉ sắt, đốm đen cho cây trồng, đặc hiệu cho hoa kiểng
+            [SP_HINHANH] => coc85.jpg
+            [SP_DONVITINH] => g
+            [KM_MA] => 1
+            [item_discount] => 22000
+            [KM_GIATRI] => 10
+            [hinh_thuc_km] => Giảm phần trăm
+        )
+
+)
+
+--------------------------------------------------------------------------------
+[2025-06-23 13:56:54][INFO] Order details retrieved
+Data: Array
+(
+    [order_id] => 56
+    [details] => Array
+        (
+            [0] => Array
+                (
+                    [name] => COC85 (20g) - Ngừa bệnh rỉ sắt, đốm đen cho cây trồng, đặc hiệu cho hoa kiểng
+                    [image] => coc85.jpg
+                    [quantity] => 1
+                    [price] => 220000
+                    [unit] => g
+                    [total] => 220000
+                    [discount] => 22000
+                    [discount_type] => Giảm phần trăm
+                    [discount_value] => 10
+                )
+
+        )
+
+)
+
+--------------------------------------------------------------------------------
+[2025-06-23 13:56:54][INFO] Promotion code applied
+Data: Array
+(
+    [order_id] => 56
+    [promo_code] => PHANBON10
+    [discount_percentage] => 10
+    [discount_amount] => 25000
+)
+
+--------------------------------------------------------------------------------
+[2025-06-23 13:56:54][INFO] Processing product image
+Data: Array
+(
+    [product_name] => COC85 (20g) - Ngừa bệnh rỉ sắt, đốm đen cho cây trồng, đặc hiệu cho hoa kiểng
+    [image_filename] => coc85.jpg
+    [relative_path] => img/coc85.jpg
+    [file_exists] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-06-23 13:59:37][INFO] Session and GET data
+Data: Array
+(
+    [session] => Array
+        (
+            [user_id] => 2
+            [user_name] => Quang Duy
+            [user_avatar] => default-avatar.jpg
+            [order_id] => 57
+            [success_message] => Đặt hàng thành công! Cảm ơn bạn đã mua sắm tại Plants Shop.
+            [cart_success] => Đã thêm Phân bón kiểng lá viên nén hữu cơ 100% SFARM - Túi 500 gram vào giỏ hàng.
+        )
+
+    [get] => Array
+        (
+            [id] => 57
+        )
+
+)
+
+--------------------------------------------------------------------------------
+[2025-06-23 13:59:37][INFO] Accessing order confirmation page
+Data: Array
+(
+    [user_id] => 2
+    [order_id] => 57
+)
+
+--------------------------------------------------------------------------------
+[2025-06-23 13:59:37][INFO] Order data retrieved
+Data: Array
+(
+    [order_id] => 57
+    [order_data] => Array
+        (
+            [HD_STT] => 57
+            [TT_MA] => 1
+            [DVC_MA] => 73
+            [NV_MA] => 1
+            [PTTT_MA] => 2
+            [KM_MA] => 
+            [GH_MA] => 
+            [HD_NGAYLAP] => 2025-06-23 18:59:37
+            [HD_TONGTIEN] => 113000
+            [HD_PHISHIP] => 56000
+            [HD_LIDOHUY] => 
+            [KH_MA] => 2
+            [KH_TEN] => Quang Duy
+            [KH_SDT] => 0793994771
+            [KH_EMAIL] => duyquang2709pp@gmail.com
+            [KH_DIACHI] => Cần thơ
+            [PTTT_TEN] => Chuyển khoản ngân hàng
+            [trang_thai] => Chờ xác nhận
+            [shipping_fee] => 56000
+            [total_amount] => 113000
+            [discount_percentage] => 
+            [promo_code] => 
+            [discount_amount] => 0
+            [final_amount] => 113000
+        )
+
+)
+
+--------------------------------------------------------------------------------
+[2025-06-23 13:59:37][INFO] Address data retrieved
+Data: Array
+(
+    [order_id] => 57
+    [address_data] => Array
+        (
+            [DCGH_MA] => 37
+            [DH_MA] => 57
+            [DCGH_TINH] => 41
+            [DCGH_HUYEN] => 469
+            [DCGH_XA] => 8617
+            [DCGH_DIACHI] => Cần thơ
+            [DCGH_TENNGUOINHAN] => Quang Duy
+            [DCGH_SDT] => 0793994771
+            [DCGH_EMAIL] => duyquang2709pp@gmail.com
+            [DCGH_GHICHU] => 
+            [DCGH_THOIGIANTAO] => 2025-06-23 18:59:37
+        )
+
+)
+
+--------------------------------------------------------------------------------
+[2025-06-23 13:59:38][INFO] Items query result count
+Data: Array
+(
+    [order_id] => 57
+    [count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-06-23 13:59:38][INFO] Processing order item
+Data: Array
+(
+    [order_id] => 57
+    [item_data] => Array
+        (
+            [CTHD_ID] => 45
+            [SP_MA] => 6
+            [HD_STT] => 57
+            [CTHD_SOLUONG] => 3
+            [CTHD_DONGIA] => 19000
+            [CTHD_DONVITINH] => cái
+            [CTHD_GHICHU] => 
+            [SP_TEN] => Phân bón kiểng lá viên nén hữu cơ 100% SFARM - Túi 500 gram
+            [SP_HINHANH] => sfram.jpg
+            [SP_DONVITINH] => gói
+            [KM_MA] => 
+            [item_discount] => 0
+            [KM_GIATRI] => 
+            [hinh_thuc_km] => 
+        )
+
+)
+
+--------------------------------------------------------------------------------
+[2025-06-23 13:59:38][INFO] Order details retrieved
+Data: Array
+(
+    [order_id] => 57
+    [details] => Array
+        (
+            [0] => Array
+                (
+                    [name] => Phân bón kiểng lá viên nén hữu cơ 100% SFARM - Túi 500 gram
+                    [image] => sfram.jpg
+                    [quantity] => 3
+                    [price] => 19000
+                    [unit] => gói
+                    [total] => 57000
+                    [discount] => 0
+                    [discount_type] => 
+                    [discount_value] => 
+                )
+
+        )
+
+)
+
+--------------------------------------------------------------------------------
+[2025-06-23 13:59:38][INFO] No promotion code applied
+Data: Array
+(
+    [order_id] => 57
+)
+
+--------------------------------------------------------------------------------
+[2025-06-23 13:59:38][INFO] Processing product image
+Data: Array
+(
+    [product_name] => Phân bón kiểng lá viên nén hữu cơ 100% SFARM - Túi 500 gram
+    [image_filename] => sfram.jpg
+    [relative_path] => img/sfram.jpg
+    [file_exists] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-06-23 13:59:53][INFO] Session and GET data
+Data: Array
+(
+    [session] => Array
+        (
+            [user_id] => 2
+            [user_name] => Quang Duy
+            [user_avatar] => default-avatar.jpg
+            [order_id] => 57
+            [success_message] => Đặt hàng thành công! Cảm ơn bạn đã mua sắm tại Plants Shop.
+            [cart_success] => Đã thêm Phân bón kiểng lá viên nén hữu cơ 100% SFARM - Túi 500 gram vào giỏ hàng.
+        )
+
+    [get] => Array
+        (
+            [id] => 57
+        )
+
+)
+
+--------------------------------------------------------------------------------
+[2025-06-23 13:59:53][INFO] Accessing order confirmation page
+Data: Array
+(
+    [user_id] => 2
+    [order_id] => 57
+)
+
+--------------------------------------------------------------------------------
+[2025-06-23 13:59:53][INFO] Order data retrieved
+Data: Array
+(
+    [order_id] => 57
+    [order_data] => Array
+        (
+            [HD_STT] => 57
+            [TT_MA] => 1
+            [DVC_MA] => 73
+            [NV_MA] => 1
+            [PTTT_MA] => 2
+            [KM_MA] => 
+            [GH_MA] => 
+            [HD_NGAYLAP] => 2025-06-23 18:59:37
+            [HD_TONGTIEN] => 113000
+            [HD_PHISHIP] => 56000
+            [HD_LIDOHUY] => 
+            [KH_MA] => 2
+            [KH_TEN] => Quang Duy
+            [KH_SDT] => 0793994771
+            [KH_EMAIL] => duyquang2709pp@gmail.com
+            [KH_DIACHI] => Cần thơ
+            [PTTT_TEN] => Chuyển khoản ngân hàng
+            [trang_thai] => Chờ xác nhận
+            [shipping_fee] => 56000
+            [total_amount] => 113000
+            [discount_percentage] => 
+            [promo_code] => 
+            [discount_amount] => 0
+            [final_amount] => 113000
+        )
+
+)
+
+--------------------------------------------------------------------------------
+[2025-06-23 13:59:53][INFO] Address data retrieved
+Data: Array
+(
+    [order_id] => 57
+    [address_data] => Array
+        (
+            [DCGH_MA] => 37
+            [DH_MA] => 57
+            [DCGH_TINH] => 41
+            [DCGH_HUYEN] => 469
+            [DCGH_XA] => 8617
+            [DCGH_DIACHI] => Cần thơ
+            [DCGH_TENNGUOINHAN] => Quang Duy
+            [DCGH_SDT] => 0793994771
+            [DCGH_EMAIL] => duyquang2709pp@gmail.com
+            [DCGH_GHICHU] => 
+            [DCGH_THOIGIANTAO] => 2025-06-23 18:59:37
+        )
+
+)
+
+--------------------------------------------------------------------------------
+[2025-06-23 13:59:54][INFO] Items query result count
+Data: Array
+(
+    [order_id] => 57
+    [count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-06-23 13:59:54][INFO] Processing order item
+Data: Array
+(
+    [order_id] => 57
+    [item_data] => Array
+        (
+            [CTHD_ID] => 45
+            [SP_MA] => 6
+            [HD_STT] => 57
+            [CTHD_SOLUONG] => 3
+            [CTHD_DONGIA] => 19000
+            [CTHD_DONVITINH] => cái
+            [CTHD_GHICHU] => 
+            [SP_TEN] => Phân bón kiểng lá viên nén hữu cơ 100% SFARM - Túi 500 gram
+            [SP_HINHANH] => sfram.jpg
+            [SP_DONVITINH] => gói
+            [KM_MA] => 
+            [item_discount] => 0
+            [KM_GIATRI] => 
+            [hinh_thuc_km] => 
+        )
+
+)
+
+--------------------------------------------------------------------------------
+[2025-06-23 13:59:54][INFO] Order details retrieved
+Data: Array
+(
+    [order_id] => 57
+    [details] => Array
+        (
+            [0] => Array
+                (
+                    [name] => Phân bón kiểng lá viên nén hữu cơ 100% SFARM - Túi 500 gram
+                    [image] => sfram.jpg
+                    [quantity] => 3
+                    [price] => 19000
+                    [unit] => gói
+                    [total] => 57000
+                    [discount] => 0
+                    [discount_type] => 
+                    [discount_value] => 
+                )
+
+        )
+
+)
+
+--------------------------------------------------------------------------------
+[2025-06-23 13:59:54][INFO] No promotion code applied
+Data: Array
+(
+    [order_id] => 57
+)
+
+--------------------------------------------------------------------------------
+[2025-06-23 13:59:54][INFO] Processing product image
+Data: Array
+(
+    [product_name] => Phân bón kiểng lá viên nén hữu cơ 100% SFARM - Túi 500 gram
+    [image_filename] => sfram.jpg
+    [relative_path] => img/sfram.jpg
+    [file_exists] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-06-23 14:00:00][INFO] Session and GET data
+Data: Array
+(
+    [session] => Array
+        (
+            [user_id] => 2
+            [user_name] => Quang Duy
+            [user_avatar] => default-avatar.jpg
+            [order_id] => 57
+            [success_message] => Đặt hàng thành công! Cảm ơn bạn đã mua sắm tại Plants Shop.
+            [cart_success] => Đã thêm Phân bón kiểng lá viên nén hữu cơ 100% SFARM - Túi 500 gram vào giỏ hàng.
+        )
+
+    [get] => Array
+        (
+            [id] => 56
+        )
+
+)
+
+--------------------------------------------------------------------------------
+[2025-06-23 14:00:00][INFO] Accessing order confirmation page
+Data: Array
+(
+    [user_id] => 2
+    [order_id] => 56
+)
+
+--------------------------------------------------------------------------------
+[2025-06-23 14:00:00][INFO] Order data retrieved
+Data: Array
+(
+    [order_id] => 56
+    [order_data] => Array
+        (
+            [HD_STT] => 56
+            [TT_MA] => 1
+            [DVC_MA] => 72
+            [NV_MA] => 1
+            [PTTT_MA] => 1
+            [KM_MA] => 1
+            [GH_MA] => 
+            [HD_NGAYLAP] => 2025-06-23 18:56:53
+            [HD_TONGTIEN] => 250000
+            [HD_PHISHIP] => 30000
+            [HD_LIDOHUY] => 
+            [KH_MA] => 2
+            [KH_TEN] => Quang Duy
+            [KH_SDT] => 0793994771
+            [KH_EMAIL] => duyquang2709pp@gmail.com
+            [KH_DIACHI] => Cần thơ
+            [PTTT_TEN] => Tiền mặt
+            [trang_thai] => Chờ xác nhận
+            [shipping_fee] => 30000
+            [total_amount] => 250000
+            [discount_percentage] => 10
+            [promo_code] => PHANBON10
+            [discount_amount] => 25000
+            [final_amount] => 225000
+        )
+
+)
+
+--------------------------------------------------------------------------------
+[2025-06-23 14:00:00][INFO] Address data retrieved
+Data: Array
+(
+    [order_id] => 56
+    [address_data] => Array
+        (
+            [DCGH_MA] => 36
+            [DH_MA] => 56
+            [DCGH_TINH] => 4
+            [DCGH_HUYEN] => 73
+            [DCGH_XA] => 1196
+            [DCGH_DIACHI] => Cần thơ
+            [DCGH_TENNGUOINHAN] => Quang Duy
+            [DCGH_SDT] => 0793994771
+            [DCGH_EMAIL] => duyquang2709pp@gmail.com
+            [DCGH_GHICHU] => 
+            [DCGH_THOIGIANTAO] => 2025-06-23 18:56:53
+        )
+
+)
+
+--------------------------------------------------------------------------------
+[2025-06-23 14:00:01][INFO] Items query result count
+Data: Array
+(
+    [order_id] => 56
+    [count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-06-23 14:00:01][INFO] Processing order item
+Data: Array
+(
+    [order_id] => 56
+    [item_data] => Array
+        (
+            [CTHD_ID] => 44
+            [SP_MA] => 8
+            [HD_STT] => 56
+            [CTHD_SOLUONG] => 1
+            [CTHD_DONGIA] => 220000
+            [CTHD_DONVITINH] => cái
+            [CTHD_GHICHU] => 
+            [SP_TEN] => COC85 (20g) - Ngừa bệnh rỉ sắt, đốm đen cho cây trồng, đặc hiệu cho hoa kiểng
+            [SP_HINHANH] => coc85.jpg
+            [SP_DONVITINH] => g
+            [KM_MA] => 1
+            [item_discount] => 22000
+            [KM_GIATRI] => 10
+            [hinh_thuc_km] => Giảm phần trăm
+        )
+
+)
+
+--------------------------------------------------------------------------------
+[2025-06-23 14:00:01][INFO] Order details retrieved
+Data: Array
+(
+    [order_id] => 56
+    [details] => Array
+        (
+            [0] => Array
+                (
+                    [name] => COC85 (20g) - Ngừa bệnh rỉ sắt, đốm đen cho cây trồng, đặc hiệu cho hoa kiểng
+                    [image] => coc85.jpg
+                    [quantity] => 1
+                    [price] => 220000
+                    [unit] => g
+                    [total] => 220000
+                    [discount] => 22000
+                    [discount_type] => Giảm phần trăm
+                    [discount_value] => 10
+                )
+
+        )
+
+)
+
+--------------------------------------------------------------------------------
+[2025-06-23 14:00:01][INFO] Promotion code applied
+Data: Array
+(
+    [order_id] => 56
+    [promo_code] => PHANBON10
+    [discount_percentage] => 10
+    [discount_amount] => 25000
+)
+
+--------------------------------------------------------------------------------
+[2025-06-23 14:00:01][INFO] Processing product image
+Data: Array
+(
+    [product_name] => COC85 (20g) - Ngừa bệnh rỉ sắt, đốm đen cho cây trồng, đặc hiệu cho hoa kiểng
+    [image_filename] => coc85.jpg
+    [relative_path] => img/coc85.jpg
+    [file_exists] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-06-23 14:00:05][INFO] Session and GET data
+Data: Array
+(
+    [session] => Array
+        (
+            [user_id] => 2
+            [user_name] => Quang Duy
+            [user_avatar] => default-avatar.jpg
+            [order_id] => 57
+            [success_message] => Đặt hàng thành công! Cảm ơn bạn đã mua sắm tại Plants Shop.
+            [cart_success] => Đã thêm Phân bón kiểng lá viên nén hữu cơ 100% SFARM - Túi 500 gram vào giỏ hàng.
+        )
+
+    [get] => Array
+        (
+            [id] => 56
+        )
+
+)
+
+--------------------------------------------------------------------------------
+[2025-06-23 14:00:05][INFO] Accessing order confirmation page
+Data: Array
+(
+    [user_id] => 2
+    [order_id] => 56
+)
+
+--------------------------------------------------------------------------------
+[2025-06-23 14:00:05][INFO] Order data retrieved
+Data: Array
+(
+    [order_id] => 56
+    [order_data] => Array
+        (
+            [HD_STT] => 56
+            [TT_MA] => 1
+            [DVC_MA] => 72
+            [NV_MA] => 1
+            [PTTT_MA] => 1
+            [KM_MA] => 1
+            [GH_MA] => 
+            [HD_NGAYLAP] => 2025-06-23 18:56:53
+            [HD_TONGTIEN] => 250000
+            [HD_PHISHIP] => 30000
+            [HD_LIDOHUY] => 
+            [KH_MA] => 2
+            [KH_TEN] => Quang Duy
+            [KH_SDT] => 0793994771
+            [KH_EMAIL] => duyquang2709pp@gmail.com
+            [KH_DIACHI] => Cần thơ
+            [PTTT_TEN] => Tiền mặt
+            [trang_thai] => Chờ xác nhận
+            [shipping_fee] => 30000
+            [total_amount] => 250000
+            [discount_percentage] => 10
+            [promo_code] => PHANBON10
+            [discount_amount] => 25000
+            [final_amount] => 225000
+        )
+
+)
+
+--------------------------------------------------------------------------------
+[2025-06-23 14:00:05][INFO] Address data retrieved
+Data: Array
+(
+    [order_id] => 56
+    [address_data] => Array
+        (
+            [DCGH_MA] => 36
+            [DH_MA] => 56
+            [DCGH_TINH] => 4
+            [DCGH_HUYEN] => 73
+            [DCGH_XA] => 1196
+            [DCGH_DIACHI] => Cần thơ
+            [DCGH_TENNGUOINHAN] => Quang Duy
+            [DCGH_SDT] => 0793994771
+            [DCGH_EMAIL] => duyquang2709pp@gmail.com
+            [DCGH_GHICHU] => 
+            [DCGH_THOIGIANTAO] => 2025-06-23 18:56:53
+        )
+
+)
+
+--------------------------------------------------------------------------------
+[2025-06-23 14:00:05][INFO] Items query result count
+Data: Array
+(
+    [order_id] => 56
+    [count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-06-23 14:00:05][INFO] Processing order item
+Data: Array
+(
+    [order_id] => 56
+    [item_data] => Array
+        (
+            [CTHD_ID] => 44
+            [SP_MA] => 8
+            [HD_STT] => 56
+            [CTHD_SOLUONG] => 1
+            [CTHD_DONGIA] => 220000
+            [CTHD_DONVITINH] => cái
+            [CTHD_GHICHU] => 
+            [SP_TEN] => COC85 (20g) - Ngừa bệnh rỉ sắt, đốm đen cho cây trồng, đặc hiệu cho hoa kiểng
+            [SP_HINHANH] => coc85.jpg
+            [SP_DONVITINH] => g
+            [KM_MA] => 1
+            [item_discount] => 22000
+            [KM_GIATRI] => 10
+            [hinh_thuc_km] => Giảm phần trăm
+        )
+
+)
+
+--------------------------------------------------------------------------------
+[2025-06-23 14:00:05][INFO] Order details retrieved
+Data: Array
+(
+    [order_id] => 56
+    [details] => Array
+        (
+            [0] => Array
+                (
+                    [name] => COC85 (20g) - Ngừa bệnh rỉ sắt, đốm đen cho cây trồng, đặc hiệu cho hoa kiểng
+                    [image] => coc85.jpg
+                    [quantity] => 1
+                    [price] => 220000
+                    [unit] => g
+                    [total] => 220000
+                    [discount] => 22000
+                    [discount_type] => Giảm phần trăm
+                    [discount_value] => 10
+                )
+
+        )
+
+)
+
+--------------------------------------------------------------------------------
+[2025-06-23 14:00:05][INFO] Promotion code applied
+Data: Array
+(
+    [order_id] => 56
+    [promo_code] => PHANBON10
+    [discount_percentage] => 10
+    [discount_amount] => 25000
+)
+
+--------------------------------------------------------------------------------
+[2025-06-23 14:00:05][INFO] Processing product image
+Data: Array
+(
+    [product_name] => COC85 (20g) - Ngừa bệnh rỉ sắt, đốm đen cho cây trồng, đặc hiệu cho hoa kiểng
+    [image_filename] => coc85.jpg
+    [relative_path] => img/coc85.jpg
+    [file_exists] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-06-23 14:06:43][INFO] Session and GET data
+Data: Array
+(
+    [session] => Array
+        (
+            [user_id] => 2
+            [user_name] => Quang Duy
+            [user_avatar] => default-avatar.jpg
+            [order_id] => 57
+            [success_message] => Đặt hàng thành công! Cảm ơn bạn đã mua sắm tại Plants Shop.
+            [cart_success] => Đã thêm Phân dê qua xử lý hàng chuẩn ( chuyên cho lan và hoa hồng ) - 1 túi vào giỏ hàng.
+        )
+
+    [get] => Array
+        (
+            [id] => 56
+        )
+
+)
+
+--------------------------------------------------------------------------------
+[2025-06-23 14:06:43][INFO] Accessing order confirmation page
+Data: Array
+(
+    [user_id] => 2
+    [order_id] => 56
+)
+
+--------------------------------------------------------------------------------
+[2025-06-23 14:06:43][INFO] Order data retrieved
+Data: Array
+(
+    [order_id] => 56
+    [order_data] => Array
+        (
+            [HD_STT] => 56
+            [TT_MA] => 1
+            [DVC_MA] => 72
+            [NV_MA] => 1
+            [PTTT_MA] => 1
+            [KM_MA] => 1
+            [GH_MA] => 
+            [HD_NGAYLAP] => 2025-06-23 18:56:53
+            [HD_TONGTIEN] => 250000
+            [HD_PHISHIP] => 30000
+            [HD_LIDOHUY] => 
+            [KH_MA] => 2
+            [KH_TEN] => Quang Duy
+            [KH_SDT] => 0793994771
+            [KH_EMAIL] => duyquang2709pp@gmail.com
+            [KH_DIACHI] => Cần thơ
+            [PTTT_TEN] => Tiền mặt
+            [trang_thai] => Chờ xác nhận
+            [shipping_fee] => 30000
+            [total_amount] => 250000
+            [discount_percentage] => 10
+            [promo_code] => PHANBON10
+            [discount_amount] => 25000
+            [final_amount] => 225000
+        )
+
+)
+
+--------------------------------------------------------------------------------
+[2025-06-23 14:06:43][INFO] Address data retrieved
+Data: Array
+(
+    [order_id] => 56
+    [address_data] => Array
+        (
+            [DCGH_MA] => 36
+            [DH_MA] => 56
+            [DCGH_TINH] => 4
+            [DCGH_HUYEN] => 73
+            [DCGH_XA] => 1196
+            [DCGH_DIACHI] => Cần thơ
+            [DCGH_TENNGUOINHAN] => Quang Duy
+            [DCGH_SDT] => 0793994771
+            [DCGH_EMAIL] => duyquang2709pp@gmail.com
+            [DCGH_GHICHU] => 
+            [DCGH_THOIGIANTAO] => 2025-06-23 18:56:53
+        )
+
+)
+
+--------------------------------------------------------------------------------
+[2025-06-23 14:06:44][INFO] Items query result count
+Data: Array
+(
+    [order_id] => 56
+    [count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-06-23 14:06:44][INFO] Processing order item
+Data: Array
+(
+    [order_id] => 56
+    [item_data] => Array
+        (
+            [CTHD_ID] => 44
+            [SP_MA] => 8
+            [HD_STT] => 56
+            [CTHD_SOLUONG] => 1
+            [CTHD_DONGIA] => 220000
+            [CTHD_DONVITINH] => cái
+            [CTHD_GHICHU] => 
+            [SP_TEN] => COC85 (20g) - Ngừa bệnh rỉ sắt, đốm đen cho cây trồng, đặc hiệu cho hoa kiểng
+            [SP_HINHANH] => coc85.jpg
+            [SP_DONVITINH] => g
+            [KM_MA] => 1
+            [item_discount] => 22000
+            [KM_GIATRI] => 10
+            [hinh_thuc_km] => Giảm phần trăm
+        )
+
+)
+
+--------------------------------------------------------------------------------
+[2025-06-23 14:06:44][INFO] Order details retrieved
+Data: Array
+(
+    [order_id] => 56
+    [details] => Array
+        (
+            [0] => Array
+                (
+                    [name] => COC85 (20g) - Ngừa bệnh rỉ sắt, đốm đen cho cây trồng, đặc hiệu cho hoa kiểng
+                    [image] => coc85.jpg
+                    [quantity] => 1
+                    [price] => 220000
+                    [unit] => g
+                    [total] => 220000
+                    [discount] => 22000
+                    [discount_type] => Giảm phần trăm
+                    [discount_value] => 10
+                )
+
+        )
+
+)
+
+--------------------------------------------------------------------------------
+[2025-06-23 14:06:44][INFO] Promotion code applied
+Data: Array
+(
+    [order_id] => 56
+    [promo_code] => PHANBON10
+    [discount_percentage] => 10
+    [discount_amount] => 25000
+)
+
+--------------------------------------------------------------------------------
+[2025-06-23 14:06:44][INFO] Processing product image
+Data: Array
+(
+    [product_name] => COC85 (20g) - Ngừa bệnh rỉ sắt, đốm đen cho cây trồng, đặc hiệu cho hoa kiểng
+    [image_filename] => coc85.jpg
+    [relative_path] => img/coc85.jpg
+    [file_exists] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-06-23 14:06:53][INFO] Session and GET data
+Data: Array
+(
+    [session] => Array
+        (
+            [user_id] => 2
+            [user_name] => Quang Duy
+            [user_avatar] => default-avatar.jpg
+            [order_id] => 57
+            [success_message] => Đặt hàng thành công! Cảm ơn bạn đã mua sắm tại Plants Shop.
+            [cart_success] => Đã thêm Phân dê qua xử lý hàng chuẩn ( chuyên cho lan và hoa hồng ) - 1 túi vào giỏ hàng.
+        )
+
+    [get] => Array
+        (
+            [id] => 57
+        )
+
+)
+
+--------------------------------------------------------------------------------
+[2025-06-23 14:06:53][INFO] Accessing order confirmation page
+Data: Array
+(
+    [user_id] => 2
+    [order_id] => 57
+)
+
+--------------------------------------------------------------------------------
+[2025-06-23 14:06:53][INFO] Order data retrieved
+Data: Array
+(
+    [order_id] => 57
+    [order_data] => Array
+        (
+            [HD_STT] => 57
+            [TT_MA] => 1
+            [DVC_MA] => 73
+            [NV_MA] => 1
+            [PTTT_MA] => 2
+            [KM_MA] => 
+            [GH_MA] => 
+            [HD_NGAYLAP] => 2025-06-23 18:59:37
+            [HD_TONGTIEN] => 113000
+            [HD_PHISHIP] => 56000
+            [HD_LIDOHUY] => 
+            [KH_MA] => 2
+            [KH_TEN] => Quang Duy
+            [KH_SDT] => 0793994771
+            [KH_EMAIL] => duyquang2709pp@gmail.com
+            [KH_DIACHI] => Cần thơ
+            [PTTT_TEN] => Chuyển khoản ngân hàng
+            [trang_thai] => Chờ xác nhận
+            [shipping_fee] => 56000
+            [total_amount] => 113000
+            [discount_percentage] => 
+            [promo_code] => 
+            [discount_amount] => 0
+            [final_amount] => 113000
+        )
+
+)
+
+--------------------------------------------------------------------------------
+[2025-06-23 14:06:53][INFO] Address data retrieved
+Data: Array
+(
+    [order_id] => 57
+    [address_data] => Array
+        (
+            [DCGH_MA] => 37
+            [DH_MA] => 57
+            [DCGH_TINH] => 41
+            [DCGH_HUYEN] => 469
+            [DCGH_XA] => 8617
+            [DCGH_DIACHI] => Cần thơ
+            [DCGH_TENNGUOINHAN] => Quang Duy
+            [DCGH_SDT] => 0793994771
+            [DCGH_EMAIL] => duyquang2709pp@gmail.com
+            [DCGH_GHICHU] => 
+            [DCGH_THOIGIANTAO] => 2025-06-23 18:59:37
+        )
+
+)
+
+--------------------------------------------------------------------------------
+[2025-06-23 14:06:54][INFO] Items query result count
+Data: Array
+(
+    [order_id] => 57
+    [count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-06-23 14:06:54][INFO] Processing order item
+Data: Array
+(
+    [order_id] => 57
+    [item_data] => Array
+        (
+            [CTHD_ID] => 45
+            [SP_MA] => 6
+            [HD_STT] => 57
+            [CTHD_SOLUONG] => 3
+            [CTHD_DONGIA] => 19000
+            [CTHD_DONVITINH] => cái
+            [CTHD_GHICHU] => 
+            [SP_TEN] => Phân bón kiểng lá viên nén hữu cơ 100% SFARM - Túi 500 gram
+            [SP_HINHANH] => sfram.jpg
+            [SP_DONVITINH] => gói
+            [KM_MA] => 
+            [item_discount] => 0
+            [KM_GIATRI] => 
+            [hinh_thuc_km] => 
+        )
+
+)
+
+--------------------------------------------------------------------------------
+[2025-06-23 14:06:54][INFO] Order details retrieved
+Data: Array
+(
+    [order_id] => 57
+    [details] => Array
+        (
+            [0] => Array
+                (
+                    [name] => Phân bón kiểng lá viên nén hữu cơ 100% SFARM - Túi 500 gram
+                    [image] => sfram.jpg
+                    [quantity] => 3
+                    [price] => 19000
+                    [unit] => gói
+                    [total] => 57000
+                    [discount] => 0
+                    [discount_type] => 
+                    [discount_value] => 
+                )
+
+        )
+
+)
+
+--------------------------------------------------------------------------------
+[2025-06-23 14:06:54][INFO] No promotion code applied
+Data: Array
+(
+    [order_id] => 57
+)
+
+--------------------------------------------------------------------------------
+[2025-06-23 14:06:54][INFO] Processing product image
+Data: Array
+(
+    [product_name] => Phân bón kiểng lá viên nén hữu cơ 100% SFARM - Túi 500 gram
+    [image_filename] => sfram.jpg
+    [relative_path] => img/sfram.jpg
+    [file_exists] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-06-23 14:06:59][INFO] Session and GET data
+Data: Array
+(
+    [session] => Array
+        (
+            [user_id] => 2
+            [user_name] => Quang Duy
+            [user_avatar] => default-avatar.jpg
+            [order_id] => 57
+            [success_message] => Đặt hàng thành công! Cảm ơn bạn đã mua sắm tại Plants Shop.
+            [cart_success] => Đã thêm Phân dê qua xử lý hàng chuẩn ( chuyên cho lan và hoa hồng ) - 1 túi vào giỏ hàng.
+        )
+
+    [get] => Array
+        (
+            [id] => 52
+        )
+
+)
+
+--------------------------------------------------------------------------------
+[2025-06-23 14:06:59][INFO] Accessing order confirmation page
+Data: Array
+(
+    [user_id] => 2
+    [order_id] => 52
+)
+
+--------------------------------------------------------------------------------
+[2025-06-23 14:06:59][INFO] Order data retrieved
+Data: Array
+(
+    [order_id] => 52
+    [order_data] => Array
+        (
+            [HD_STT] => 52
+            [TT_MA] => 1
+            [DVC_MA] => 68
+            [NV_MA] => 1
+            [PTTT_MA] => 2
+            [KM_MA] => 1
+            [GH_MA] => 
+            [HD_NGAYLAP] => 2025-06-23 18:10:45
+            [HD_TONGTIEN] => 70000
+            [HD_PHISHIP] => 32000
+            [HD_LIDOHUY] => 
+            [KH_MA] => 2
+            [KH_TEN] => Quang Duy
+            [KH_SDT] => 0793994771
+            [KH_EMAIL] => duyquang2709pp@gmail.com
+            [KH_DIACHI] => Cần thơ
+            [PTTT_TEN] => Chuyển khoản ngân hàng
+            [trang_thai] => Chờ xác nhận
+            [shipping_fee] => 32000
+            [total_amount] => 70000
+            [discount_percentage] => 10
+            [promo_code] => PHANBON10
+            [discount_amount] => 7000
+            [final_amount] => 63000
+        )
+
+)
+
+--------------------------------------------------------------------------------
+[2025-06-23 14:06:59][INFO] Address data retrieved
+Data: Array
+(
+    [order_id] => 52
+    [address_data] => Array
+        (
+            [DCGH_MA] => 32
+            [DH_MA] => 52
+            [DCGH_TINH] => 14
+            [DCGH_HUYEN] => 158
+            [DCGH_XA] => 2438
+            [DCGH_DIACHI] => Cần thơ
+            [DCGH_TENNGUOINHAN] => Quang Duy
+            [DCGH_SDT] => 0793994771
+            [DCGH_EMAIL] => duyquang2709pp@gmail.com
+            [DCGH_GHICHU] => 
+            [DCGH_THOIGIANTAO] => 2025-06-23 18:10:45
+        )
+
+)
+
+--------------------------------------------------------------------------------
+[2025-06-23 14:07:00][INFO] Items query result count
+Data: Array
+(
+    [order_id] => 52
+    [count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-06-23 14:07:00][INFO] Processing order item
+Data: Array
+(
+    [order_id] => 52
+    [item_data] => Array
+        (
+            [CTHD_ID] => 40
+            [SP_MA] => 6
+            [HD_STT] => 52
+            [CTHD_SOLUONG] => 2
+            [CTHD_DONGIA] => 19000
+            [CTHD_DONVITINH] => cái
+            [CTHD_GHICHU] => 
+            [SP_TEN] => Phân bón kiểng lá viên nén hữu cơ 100% SFARM - Túi 500 gram
+            [SP_HINHANH] => sfram.jpg
+            [SP_DONVITINH] => gói
+            [KM_MA] => 1
+            [item_discount] => 3800
+            [KM_GIATRI] => 10
+            [hinh_thuc_km] => Giảm phần trăm
+        )
+
+)
+
+--------------------------------------------------------------------------------
+[2025-06-23 14:07:00][INFO] Order details retrieved
+Data: Array
+(
+    [order_id] => 52
+    [details] => Array
+        (
+            [0] => Array
+                (
+                    [name] => Phân bón kiểng lá viên nén hữu cơ 100% SFARM - Túi 500 gram
+                    [image] => sfram.jpg
+                    [quantity] => 2
+                    [price] => 19000
+                    [unit] => gói
+                    [total] => 38000
+                    [discount] => 3800
+                    [discount_type] => Giảm phần trăm
+                    [discount_value] => 10
+                )
+
+        )
+
+)
+
+--------------------------------------------------------------------------------
+[2025-06-23 14:07:00][INFO] Promotion code applied
+Data: Array
+(
+    [order_id] => 52
+    [promo_code] => PHANBON10
+    [discount_percentage] => 10
+    [discount_amount] => 7000
+)
+
+--------------------------------------------------------------------------------
+[2025-06-23 14:07:00][INFO] Processing product image
+Data: Array
+(
+    [product_name] => Phân bón kiểng lá viên nén hữu cơ 100% SFARM - Túi 500 gram
+    [image_filename] => sfram.jpg
+    [relative_path] => img/sfram.jpg
+    [file_exists] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-06-24 10:13:46][INFO] Session and GET data
+Data: Array
+(
+    [session] => Array
+        (
+            [user_id] => 2
+            [user_name] => Quang Duy
+            [user_avatar] => default-avatar.jpg
+            [order_id] => 58
+            [success_message] => Đặt hàng thành công! Cảm ơn bạn đã mua sắm tại Plants Shop.
+        )
+
+    [get] => Array
+        (
+            [id] => 58
+        )
+
+)
+
+--------------------------------------------------------------------------------
+[2025-06-24 10:13:46][INFO] Accessing order confirmation page
+Data: Array
+(
+    [user_id] => 2
+    [order_id] => 58
+)
+
+--------------------------------------------------------------------------------
+[2025-06-24 10:13:46][INFO] Order data retrieved
+Data: Array
+(
+    [order_id] => 58
+    [order_data] => Array
+        (
+            [HD_STT] => 58
+            [TT_MA] => 1
+            [DVC_MA] => 74
+            [NV_MA] => 1
+            [PTTT_MA] => 1
+            [KM_MA] => 4
+            [GH_MA] => 
+            [HD_NGAYLAP] => 2025-06-24 15:13:46
+            [HD_TONGTIEN] => 65000
+            [HD_PHISHIP] => 29000
+            [HD_LIDOHUY] => 
+            [KH_MA] => 2
+            [KH_TEN] => Quang Duy
+            [KH_SDT] => 0793994771
+            [KH_EMAIL] => duyquang2709pp@gmail.com
+            [KH_DIACHI] => Cần thơ
+            [PTTT_TEN] => Tiền mặt
+            [trang_thai] => Chờ xác nhận
+            [shipping_fee] => 29000
+            [total_amount] => 65000
+            [discount_percentage] => 5
+            [promo_code] => FARMER5
+            [discount_amount] => 3250
+            [final_amount] => 61750
+        )
+
+)
+
+--------------------------------------------------------------------------------
+[2025-06-24 10:13:46][INFO] Address data retrieved
+Data: Array
+(
+    [order_id] => 58
+    [address_data] => Array
+        (
+            [DCGH_MA] => 38
+            [DH_MA] => 58
+            [DCGH_TINH] => 2
+            [DCGH_HUYEN] => 35
+            [DCGH_XA] => 677
+            [DCGH_DIACHI] => 444
+            [DCGH_TENNGUOINHAN] => Quang Duy
+            [DCGH_SDT] => 0793994771
+            [DCGH_EMAIL] => duyquang2709pp@gmail.com
+            [DCGH_GHICHU] => 
+            [DCGH_THOIGIANTAO] => 2025-06-24 15:13:46
+        )
+
+)
+
+--------------------------------------------------------------------------------
+[2025-06-24 10:13:48][INFO] Items query result count
+Data: Array
+(
+    [order_id] => 58
+    [count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-06-24 10:13:48][INFO] Processing order item
+Data: Array
+(
+    [order_id] => 58
+    [item_data] => Array
+        (
+            [CTHD_ID] => 46
+            [SP_MA] => 4
+            [HD_STT] => 58
+            [CTHD_SOLUONG] => 6
+            [CTHD_DONGIA] => 6000
+            [CTHD_DONVITINH] => cái
+            [CTHD_GHICHU] => 
+            [SP_TEN] => Bimix Super Root (20ml)  –  Phát triển mạnh bộ rễ, kích thích cành chiết, cành giâm
+            [SP_HINHANH] => bemix.jpg
+            [SP_DONVITINH] => kg
+            [KM_MA] => 4
+            [item_discount] => 1800
+            [KM_GIATRI] => 5
+            [hinh_thuc_km] => Giảm phần trăm
+        )
+
+)
+
+--------------------------------------------------------------------------------
+[2025-06-24 10:13:48][INFO] Order details retrieved
+Data: Array
+(
+    [order_id] => 58
+    [details] => Array
+        (
+            [0] => Array
+                (
+                    [name] => Bimix Super Root (20ml)  –  Phát triển mạnh bộ rễ, kích thích cành chiết, cành giâm
+                    [image] => bemix.jpg
+                    [quantity] => 6
+                    [price] => 6000
+                    [unit] => kg
+                    [total] => 36000
+                    [discount] => 1800
+                    [discount_type] => Giảm phần trăm
+                    [discount_value] => 5
+                )
+
+        )
+
+)
+
+--------------------------------------------------------------------------------
+[2025-06-24 10:13:48][INFO] Promotion code applied
+Data: Array
+(
+    [order_id] => 58
+    [promo_code] => FARMER5
+    [discount_percentage] => 5
+    [discount_amount] => 3250
+)
+
+--------------------------------------------------------------------------------
+[2025-06-24 10:13:48][INFO] Processing product image
+Data: Array
+(
+    [product_name] => Bimix Super Root (20ml)  –  Phát triển mạnh bộ rễ, kích thích cành chiết, cành giâm
+    [image_filename] => bemix.jpg
+    [relative_path] => img/bemix.jpg
+    [file_exists] => 1
+)
+
+--------------------------------------------------------------------------------

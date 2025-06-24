@@ -12487,3 +12487,671 @@
 [2025-06-23 13:37:53] Found existing cart_id: 7 for user_id: 2
 [2025-06-23 13:37:53] Getting cart items for cart_id: 7
 [2025-06-23 13:37:53] Found 0 items in cart_id: 7
+[2025-06-23 13:41:55] Getting current cart for user_id: 2
+[2025-06-23 13:41:55] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 13:41:55] Getting cart items for cart_id: 7
+[2025-06-23 13:41:55] Found 0 items in cart_id: 7
+[2025-06-23 13:42:50] Getting current cart for user_id: 2
+[2025-06-23 13:42:50] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 13:42:50] Getting cart items for cart_id: 7
+[2025-06-23 13:42:50] Found 0 items in cart_id: 7
+[2025-06-23 13:42:50] Getting current cart for user_id: 2
+[2025-06-23 13:42:50] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 13:42:50] Getting cart items for cart_id: 7
+[2025-06-23 13:42:50] Found 0 items in cart_id: 7
+[2025-06-23 13:42:52] Getting current cart for user_id: 2
+[2025-06-23 13:42:52] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 13:42:52] Getting cart items for cart_id: 7
+[2025-06-23 13:42:52] Found 0 items in cart_id: 7
+[2025-06-23 13:42:53] Getting current cart for user_id: 2
+[2025-06-23 13:42:53] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 13:42:53] Getting cart items for cart_id: 7
+[2025-06-23 13:42:53] Found 0 items in cart_id: 7
+[2025-06-23 13:42:54] Getting current cart for user_id: 2
+[2025-06-23 13:42:54] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 13:42:54] Getting current cart for user_id: 2
+[2025-06-23 13:42:54] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 13:42:54] Getting cart items for cart_id: 7
+[2025-06-23 13:42:54] Found 1 items in cart_id: 7
+[2025-06-23 13:42:54] Getting current cart for user_id: 2
+[2025-06-23 13:42:54] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 13:42:54] Getting cart items for cart_id: 7
+[2025-06-23 13:42:54] Found 1 items in cart_id: 7
+[2025-06-23 13:42:57] Getting current cart for user_id: 2
+[2025-06-23 13:42:57] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 13:42:58] Getting current cart for user_id: 2
+[2025-06-23 13:42:58] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 18:42:58] Getting current cart for user_id: 2
+[2025-06-23 18:42:58] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 18:42:58] Getting cart items for cart_id: 7
+[2025-06-23 18:42:58] Found 1 items in cart_id: 7
+[2025-06-23 18:42:58] Getting current cart for user_id: 2
+[2025-06-23 18:42:58] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 18:42:58] Getting cart items for cart_id: 7
+[2025-06-23 18:42:58] Found 1 items in cart_id: 7
+[2025-06-23 13:44:54] Getting current cart for user_id: 2
+[2025-06-23 13:44:54] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 13:44:54] Getting cart items for cart_id: 7
+[2025-06-23 13:44:54] Found 1 items in cart_id: 7
+[2025-06-23 13:44:57] Getting current cart for user_id: 2
+[2025-06-23 13:44:57] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 13:44:57] Getting cart items for cart_id: 7
+[2025-06-23 13:44:57] Found 1 items in cart_id: 7
+[2025-06-23 13:44:59] Getting current cart for user_id: 2
+[2025-06-23 13:44:59] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 13:44:59] Getting cart items for cart_id: 7
+[2025-06-23 13:44:59] Found 1 items in cart_id: 7
+[2025-06-23 13:45:01] Getting current cart for user_id: 2
+[2025-06-23 13:45:01] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 13:45:01] Getting cart items for cart_id: 7
+[2025-06-23 13:45:01] Found 1 items in cart_id: 7
+[2025-06-23 13:45:03] Getting current cart for user_id: 2
+[2025-06-23 13:45:03] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 13:45:03] Getting cart items for cart_id: 7
+[2025-06-23 13:45:03] Found 1 items in cart_id: 7
+[2025-06-23 13:45:04] Getting current cart for user_id: 2
+[2025-06-23 13:45:04] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 13:45:04] Getting cart items for cart_id: 7
+[2025-06-23 13:45:04] Found 1 items in cart_id: 7
+[2025-06-23 13:45:08] Getting current cart for user_id: 2
+[2025-06-23 13:45:08] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 13:45:08] Getting cart items for cart_id: 7
+[2025-06-23 13:45:08] Found 1 items in cart_id: 7
+[2025-06-23 13:45:11] Getting current cart for user_id: 2
+[2025-06-23 13:45:11] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 13:45:11] Getting cart items for cart_id: 7
+[2025-06-23 13:45:11] Found 1 items in cart_id: 7
+[2025-06-23 13:45:12] Getting current cart for user_id: 2
+[2025-06-23 13:45:12] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 13:45:12] Getting cart items for cart_id: 7
+[2025-06-23 13:45:12] Found 1 items in cart_id: 7
+[2025-06-23 13:45:14] Getting current cart for user_id: 2
+[2025-06-23 13:45:14] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 13:45:14] Getting cart items for cart_id: 7
+[2025-06-23 13:45:14] Found 1 items in cart_id: 7
+[2025-06-23 13:45:15] Getting current cart for user_id: 2
+[2025-06-23 13:45:15] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 13:45:15] Getting cart items for cart_id: 7
+[2025-06-23 13:45:15] Found 1 items in cart_id: 7
+[2025-06-23 13:45:26] Getting current cart for user_id: 2
+[2025-06-23 13:45:26] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 13:45:26] Getting cart items for cart_id: 7
+[2025-06-23 13:45:26] Found 1 items in cart_id: 7
+[2025-06-23 13:45:34] Getting current cart for user_id: 2
+[2025-06-23 13:45:34] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 13:45:34] Getting cart items for cart_id: 7
+[2025-06-23 13:45:34] Found 1 items in cart_id: 7
+[2025-06-23 13:46:20] Getting current cart for user_id: 2
+[2025-06-23 13:46:20] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 13:46:20] Getting cart items for cart_id: 7
+[2025-06-23 13:46:20] Found 1 items in cart_id: 7
+[2025-06-23 13:46:20] Getting current cart for user_id: 2
+[2025-06-23 13:46:20] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 13:46:20] Getting cart items for cart_id: 7
+[2025-06-23 13:46:20] Found 1 items in cart_id: 7
+[2025-06-23 13:46:23] Getting current cart for user_id: 2
+[2025-06-23 13:46:23] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 13:46:23] Getting current cart for user_id: 2
+[2025-06-23 13:46:23] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 18:46:24] Getting current cart for user_id: 2
+[2025-06-23 18:46:24] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 18:46:24] Getting cart items for cart_id: 7
+[2025-06-23 18:46:24] Found 1 items in cart_id: 7
+[2025-06-23 18:46:24] Getting current cart for user_id: 2
+[2025-06-23 18:46:24] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 18:46:24] Getting cart items for cart_id: 7
+[2025-06-23 18:46:24] Found 1 items in cart_id: 7
+[2025-06-23 18:50:20] Getting current cart for user_id: 2
+[2025-06-23 18:50:20] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 18:50:20] Getting cart items for cart_id: 7
+[2025-06-23 18:50:20] Found 1 items in cart_id: 7
+[2025-06-23 18:50:20] Getting current cart for user_id: 2
+[2025-06-23 18:50:20] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 18:50:20] Getting cart items for cart_id: 7
+[2025-06-23 18:50:20] Found 1 items in cart_id: 7
+[2025-06-23 18:53:55] Getting current cart for user_id: 2
+[2025-06-23 18:53:55] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 18:53:55] Getting cart items for cart_id: 7
+[2025-06-23 18:53:55] Found 1 items in cart_id: 7
+[2025-06-23 18:53:55] Getting current cart for user_id: 2
+[2025-06-23 18:53:55] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 18:53:55] Getting cart items for cart_id: 7
+[2025-06-23 18:53:55] Found 1 items in cart_id: 7
+[2025-06-23 18:53:58] Getting current cart for user_id: 2
+[2025-06-23 18:53:58] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 18:53:58] Getting cart items for cart_id: 7
+[2025-06-23 18:53:58] Found 1 items in cart_id: 7
+[2025-06-23 18:53:58] Getting current cart for user_id: 2
+[2025-06-23 18:53:58] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 18:53:58] Getting cart items for cart_id: 7
+[2025-06-23 18:53:58] Found 1 items in cart_id: 7
+[2025-06-23 18:54:52] Getting current cart for user_id: 2
+[2025-06-23 18:54:52] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 18:54:52] Getting cart items for cart_id: 7
+[2025-06-23 18:54:52] Found 1 items in cart_id: 7
+[2025-06-23 18:54:52] Getting current cart for user_id: 2
+[2025-06-23 18:54:52] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 18:54:52] Getting cart items for cart_id: 7
+[2025-06-23 18:54:52] Found 1 items in cart_id: 7
+[2025-06-23 13:55:14] Getting current cart for user_id: 2
+[2025-06-23 13:55:14] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 13:55:14] Getting cart items for cart_id: 7
+[2025-06-23 13:55:14] Found 1 items in cart_id: 7
+[2025-06-23 13:55:14] Getting current cart for user_id: 2
+[2025-06-23 13:55:14] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 13:55:14] Getting cart items for cart_id: 7
+[2025-06-23 13:55:14] Found 1 items in cart_id: 7
+[2025-06-23 13:55:16] Getting current cart for user_id: 2
+[2025-06-23 13:55:16] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 18:55:17] Getting current cart for user_id: 2
+[2025-06-23 18:55:17] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 18:55:17] Getting cart items for cart_id: 7
+[2025-06-23 18:55:17] Found 1 items in cart_id: 7
+[2025-06-23 18:55:17] Getting current cart for user_id: 2
+[2025-06-23 18:55:17] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 18:55:17] Getting cart items for cart_id: 7
+[2025-06-23 18:55:17] Found 1 items in cart_id: 7
+[2025-06-23 18:55:59] Getting current cart for user_id: 2
+[2025-06-23 18:55:59] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 18:55:59] Getting cart items for cart_id: 7
+[2025-06-23 18:55:59] Found 1 items in cart_id: 7
+[2025-06-23 18:55:59] Getting current cart for user_id: 2
+[2025-06-23 18:55:59] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 18:55:59] Getting cart items for cart_id: 7
+[2025-06-23 18:55:59] Found 1 items in cart_id: 7
+[2025-06-23 13:56:06] Getting current cart for user_id: 2
+[2025-06-23 13:56:06] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 13:56:06] Getting cart items for cart_id: 7
+[2025-06-23 13:56:06] Found 1 items in cart_id: 7
+[2025-06-23 13:56:06] Getting current cart for user_id: 2
+[2025-06-23 13:56:06] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 13:56:06] Getting cart items for cart_id: 7
+[2025-06-23 13:56:06] Found 1 items in cart_id: 7
+[2025-06-23 13:56:08] Getting current cart for user_id: 2
+[2025-06-23 13:56:08] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 18:56:08] Getting current cart for user_id: 2
+[2025-06-23 18:56:08] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 18:56:08] Getting cart items for cart_id: 7
+[2025-06-23 18:56:08] Found 1 items in cart_id: 7
+[2025-06-23 18:56:08] Getting current cart for user_id: 2
+[2025-06-23 18:56:08] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 18:56:08] Getting cart items for cart_id: 7
+[2025-06-23 18:56:08] Found 1 items in cart_id: 7
+[2025-06-23 13:56:16] Getting current cart for user_id: 2
+[2025-06-23 13:56:16] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 13:56:16] Getting cart items for cart_id: 7
+[2025-06-23 13:56:16] Found 1 items in cart_id: 7
+[2025-06-23 13:56:16] Getting current cart for user_id: 2
+[2025-06-23 13:56:16] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 13:56:16] Getting cart items for cart_id: 7
+[2025-06-23 13:56:16] Found 1 items in cart_id: 7
+[2025-06-23 13:56:18] Getting current cart for user_id: 2
+[2025-06-23 13:56:18] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 13:56:18] Getting cart items for cart_id: 7
+[2025-06-23 13:56:18] Found 1 items in cart_id: 7
+[2025-06-23 13:56:21] Getting current cart for user_id: 2
+[2025-06-23 13:56:21] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 13:56:21] Getting cart items for cart_id: 7
+[2025-06-23 13:56:21] Found 1 items in cart_id: 7
+[2025-06-23 13:56:23] Getting current cart for user_id: 2
+[2025-06-23 13:56:23] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 13:56:23] Getting cart items for cart_id: 7
+[2025-06-23 13:56:23] Found 1 items in cart_id: 7
+[2025-06-23 13:56:23] Getting current cart for user_id: 2
+[2025-06-23 13:56:23] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 13:56:23] Getting cart items for cart_id: 7
+[2025-06-23 13:56:23] Found 1 items in cart_id: 7
+[2025-06-23 13:56:25] Getting current cart for user_id: 2
+[2025-06-23 13:56:25] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 13:56:25] Getting cart items for cart_id: 7
+[2025-06-23 13:56:25] Found 1 items in cart_id: 7
+[2025-06-23 13:56:25] Getting current cart for user_id: 2
+[2025-06-23 13:56:25] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 13:56:25] Getting cart items for cart_id: 7
+[2025-06-23 13:56:25] Found 1 items in cart_id: 7
+[2025-06-23 13:56:26] Getting current cart for user_id: 2
+[2025-06-23 13:56:26] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 13:56:26] Getting cart items for cart_id: 7
+[2025-06-23 13:56:26] Found 1 items in cart_id: 7
+[2025-06-23 13:56:27] Getting current cart for user_id: 2
+[2025-06-23 13:56:27] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 13:56:27] Getting cart items for cart_id: 7
+[2025-06-23 13:56:27] Found 1 items in cart_id: 7
+[2025-06-23 13:56:27] Getting current cart for user_id: 2
+[2025-06-23 13:56:27] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 13:56:27] Getting cart items for cart_id: 7
+[2025-06-23 13:56:27] Found 1 items in cart_id: 7
+[2025-06-23 13:56:27] Getting current cart for user_id: 2
+[2025-06-23 13:56:27] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 13:56:27] Getting cart items for cart_id: 7
+[2025-06-23 13:56:27] Found 1 items in cart_id: 7
+[2025-06-23 13:56:30] Getting current cart for user_id: 2
+[2025-06-23 13:56:30] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 13:56:30] Getting current cart for user_id: 2
+[2025-06-23 13:56:30] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 18:56:31] Getting current cart for user_id: 2
+[2025-06-23 18:56:31] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 18:56:31] Getting cart items for cart_id: 7
+[2025-06-23 18:56:31] Found 1 items in cart_id: 7
+[2025-06-23 18:56:31] Getting current cart for user_id: 2
+[2025-06-23 18:56:31] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 18:56:31] Getting cart items for cart_id: 7
+[2025-06-23 18:56:31] Found 1 items in cart_id: 7
+[2025-06-23 18:56:52] Getting current cart for user_id: 2
+[2025-06-23 18:56:52] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 18:56:52] Getting cart items for cart_id: 7
+[2025-06-23 18:56:52] Found 1 items in cart_id: 7
+[2025-06-23 13:56:54] Getting current cart for user_id: 2
+[2025-06-23 13:56:54] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 13:56:54] Getting cart items for cart_id: 7
+[2025-06-23 13:56:54] Found 0 items in cart_id: 7
+[2025-06-23 13:56:56] Getting current cart for user_id: 2
+[2025-06-23 13:56:56] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 13:56:56] Getting cart items for cart_id: 7
+[2025-06-23 13:56:56] Found 0 items in cart_id: 7
+[2025-06-23 13:56:56] Getting current cart for user_id: 2
+[2025-06-23 13:56:56] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 13:56:56] Getting cart items for cart_id: 7
+[2025-06-23 13:56:56] Found 0 items in cart_id: 7
+[2025-06-23 13:56:58] Getting current cart for user_id: 2
+[2025-06-23 13:56:58] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 13:56:58] Getting cart items for cart_id: 7
+[2025-06-23 13:56:58] Found 0 items in cart_id: 7
+[2025-06-23 13:57:11] Getting current cart for user_id: 2
+[2025-06-23 13:57:11] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 13:57:11] Getting cart items for cart_id: 7
+[2025-06-23 13:57:11] Found 0 items in cart_id: 7
+[2025-06-23 13:57:12] Getting current cart for user_id: 2
+[2025-06-23 13:57:12] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 13:57:12] Getting current cart for user_id: 2
+[2025-06-23 13:57:12] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 13:57:12] Getting cart items for cart_id: 7
+[2025-06-23 13:57:13] Found 1 items in cart_id: 7
+[2025-06-23 13:57:13] Getting current cart for user_id: 2
+[2025-06-23 13:57:13] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 13:57:13] Getting cart items for cart_id: 7
+[2025-06-23 13:57:13] Found 1 items in cart_id: 7
+[2025-06-23 13:57:15] Getting current cart for user_id: 2
+[2025-06-23 13:57:15] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 18:57:17] Getting current cart for user_id: 2
+[2025-06-23 18:57:17] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 18:57:17] Getting cart items for cart_id: 7
+[2025-06-23 18:57:17] Found 1 items in cart_id: 7
+[2025-06-23 18:57:17] Getting current cart for user_id: 2
+[2025-06-23 18:57:17] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 18:57:17] Getting cart items for cart_id: 7
+[2025-06-23 18:57:17] Found 1 items in cart_id: 7
+[2025-06-23 13:57:42] Getting current cart for user_id: 2
+[2025-06-23 13:57:42] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 13:57:42] Getting cart items for cart_id: 7
+[2025-06-23 13:57:42] Found 1 items in cart_id: 7
+[2025-06-23 13:57:42] Getting current cart for user_id: 2
+[2025-06-23 13:57:42] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 13:57:42] Getting cart items for cart_id: 7
+[2025-06-23 13:57:42] Found 1 items in cart_id: 7
+[2025-06-23 13:57:43] Getting current cart for user_id: 2
+[2025-06-23 13:57:43] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 13:58:07] Getting current cart for user_id: 2
+[2025-06-23 13:58:07] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 13:58:07] Getting cart items for cart_id: 7
+[2025-06-23 13:58:07] Found 1 items in cart_id: 7
+[2025-06-23 13:58:07] Getting current cart for user_id: 2
+[2025-06-23 13:58:07] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 13:58:07] Getting cart items for cart_id: 7
+[2025-06-23 13:58:07] Found 1 items in cart_id: 7
+[2025-06-23 13:58:10] Getting current cart for user_id: 2
+[2025-06-23 13:58:10] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 13:58:10] Getting current cart for user_id: 2
+[2025-06-23 13:58:10] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 13:58:10] Getting current cart for user_id: 2
+[2025-06-23 13:58:10] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 18:58:11] Getting current cart for user_id: 2
+[2025-06-23 18:58:11] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 18:58:11] Getting cart items for cart_id: 7
+[2025-06-23 18:58:11] Found 1 items in cart_id: 7
+[2025-06-23 18:58:11] Getting current cart for user_id: 2
+[2025-06-23 18:58:11] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 18:58:11] Getting cart items for cart_id: 7
+[2025-06-23 18:58:11] Found 1 items in cart_id: 7
+[2025-06-23 13:58:21] Getting current cart for user_id: 2
+[2025-06-23 13:58:21] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 13:58:21] Getting cart items for cart_id: 7
+[2025-06-23 13:58:21] Found 1 items in cart_id: 7
+[2025-06-23 13:58:21] Getting current cart for user_id: 2
+[2025-06-23 13:58:21] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 13:58:21] Getting cart items for cart_id: 7
+[2025-06-23 13:58:21] Found 1 items in cart_id: 7
+[2025-06-23 13:58:23] Getting current cart for user_id: 2
+[2025-06-23 13:58:23] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 18:58:24] Getting current cart for user_id: 2
+[2025-06-23 18:58:24] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 18:58:24] Getting cart items for cart_id: 7
+[2025-06-23 18:58:24] Found 1 items in cart_id: 7
+[2025-06-23 18:58:24] Getting current cart for user_id: 2
+[2025-06-23 18:58:24] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 18:58:24] Getting cart items for cart_id: 7
+[2025-06-23 18:58:24] Found 1 items in cart_id: 7
+[2025-06-23 18:59:37] Getting current cart for user_id: 2
+[2025-06-23 18:59:37] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 18:59:37] Getting cart items for cart_id: 7
+[2025-06-23 18:59:37] Found 1 items in cart_id: 7
+[2025-06-23 13:59:38] Getting current cart for user_id: 2
+[2025-06-23 13:59:38] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 13:59:38] Getting cart items for cart_id: 7
+[2025-06-23 13:59:38] Found 0 items in cart_id: 7
+[2025-06-23 13:59:46] Getting current cart for user_id: 2
+[2025-06-23 13:59:46] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 13:59:46] Getting cart items for cart_id: 7
+[2025-06-23 13:59:46] Found 0 items in cart_id: 7
+[2025-06-23 13:59:54] Getting current cart for user_id: 2
+[2025-06-23 13:59:54] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 13:59:54] Getting cart items for cart_id: 7
+[2025-06-23 13:59:54] Found 0 items in cart_id: 7
+[2025-06-23 13:59:58] Getting current cart for user_id: 2
+[2025-06-23 13:59:58] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 13:59:58] Getting cart items for cart_id: 7
+[2025-06-23 13:59:58] Found 0 items in cart_id: 7
+[2025-06-23 14:00:01] Getting current cart for user_id: 2
+[2025-06-23 14:00:01] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 14:00:01] Getting cart items for cart_id: 7
+[2025-06-23 14:00:01] Found 0 items in cart_id: 7
+[2025-06-23 14:00:03] Getting current cart for user_id: 2
+[2025-06-23 14:00:03] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 14:00:03] Getting cart items for cart_id: 7
+[2025-06-23 14:00:03] Found 0 items in cart_id: 7
+[2025-06-23 14:00:05] Getting current cart for user_id: 2
+[2025-06-23 14:00:05] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 14:00:05] Getting cart items for cart_id: 7
+[2025-06-23 14:00:05] Found 0 items in cart_id: 7
+[2025-06-23 14:00:12] Getting current cart for user_id: 2
+[2025-06-23 14:00:12] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 14:00:12] Getting cart items for cart_id: 7
+[2025-06-23 14:00:12] Found 0 items in cart_id: 7
+[2025-06-23 14:01:20] Getting current cart for user_id: 2
+[2025-06-23 14:01:20] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 14:01:20] Getting cart items for cart_id: 7
+[2025-06-23 14:01:20] Found 0 items in cart_id: 7
+[2025-06-23 14:01:22] Getting current cart for user_id: 2
+[2025-06-23 14:01:22] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 14:01:22] Getting cart items for cart_id: 7
+[2025-06-23 14:01:22] Found 0 items in cart_id: 7
+[2025-06-23 14:01:23] Getting current cart for user_id: 2
+[2025-06-23 14:01:23] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 14:01:24] Getting current cart for user_id: 2
+[2025-06-23 14:01:24] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 14:01:24] Getting cart items for cart_id: 7
+[2025-06-23 14:01:24] Found 1 items in cart_id: 7
+[2025-06-23 14:01:24] Getting current cart for user_id: 2
+[2025-06-23 14:01:24] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 14:01:24] Getting cart items for cart_id: 7
+[2025-06-23 14:01:24] Found 1 items in cart_id: 7
+[2025-06-23 14:01:26] Getting current cart for user_id: 2
+[2025-06-23 14:01:26] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 14:01:26] Getting current cart for user_id: 2
+[2025-06-23 14:01:26] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 14:01:26] Getting current cart for user_id: 2
+[2025-06-23 14:01:26] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 19:01:26] Getting current cart for user_id: 2
+[2025-06-23 19:01:26] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 19:01:26] Getting cart items for cart_id: 7
+[2025-06-23 19:01:26] Found 1 items in cart_id: 7
+[2025-06-23 19:01:26] Getting current cart for user_id: 2
+[2025-06-23 19:01:26] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 19:01:26] Getting cart items for cart_id: 7
+[2025-06-23 19:01:26] Found 1 items in cart_id: 7
+[2025-06-23 14:06:39] Getting current cart for user_id: 2
+[2025-06-23 14:06:39] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 14:06:39] Getting cart items for cart_id: 7
+[2025-06-23 14:06:39] Found 1 items in cart_id: 7
+[2025-06-23 14:06:44] Getting current cart for user_id: 2
+[2025-06-23 14:06:44] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 14:06:44] Getting cart items for cart_id: 7
+[2025-06-23 14:06:44] Found 1 items in cart_id: 7
+[2025-06-23 14:06:54] Getting current cart for user_id: 2
+[2025-06-23 14:06:54] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 14:06:54] Getting cart items for cart_id: 7
+[2025-06-23 14:06:54] Found 1 items in cart_id: 7
+[2025-06-23 14:07:00] Getting current cart for user_id: 2
+[2025-06-23 14:07:00] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 14:07:00] Getting cart items for cart_id: 7
+[2025-06-23 14:07:00] Found 1 items in cart_id: 7
+[2025-06-23 14:07:10] Getting current cart for user_id: 2
+[2025-06-23 14:07:10] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 14:07:10] Getting cart items for cart_id: 7
+[2025-06-23 14:07:10] Found 1 items in cart_id: 7
+[2025-06-23 14:07:20] Getting current cart for user_id: 2
+[2025-06-23 14:07:20] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 14:07:20] Getting cart items for cart_id: 7
+[2025-06-23 14:07:20] Found 1 items in cart_id: 7
+[2025-06-23 14:07:20] Getting current cart for user_id: 2
+[2025-06-23 14:07:20] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 14:07:20] Getting cart items for cart_id: 7
+[2025-06-23 14:07:20] Found 1 items in cart_id: 7
+[2025-06-23 14:07:24] Getting current cart for user_id: 2
+[2025-06-23 14:07:24] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 14:07:25] Getting current cart for user_id: 2
+[2025-06-23 14:07:25] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 14:07:25] Getting current cart for user_id: 2
+[2025-06-23 14:07:25] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 14:07:25] Getting cart items for cart_id: 7
+[2025-06-23 14:07:25] Found 0 items in cart_id: 7
+[2025-06-23 14:07:25] Getting current cart for user_id: 2
+[2025-06-23 14:07:25] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 14:07:25] Getting cart items for cart_id: 7
+[2025-06-23 14:07:25] Found 0 items in cart_id: 7
+[2025-06-23 14:07:25] Getting current cart for user_id: 2
+[2025-06-23 14:07:25] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 14:07:25] Getting cart items for cart_id: 7
+[2025-06-23 14:07:25] Found 0 items in cart_id: 7
+[2025-06-23 14:07:25] Getting current cart for user_id: 2
+[2025-06-23 14:07:25] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 14:07:25] Getting cart items for cart_id: 7
+[2025-06-23 14:07:25] Found 0 items in cart_id: 7
+[2025-06-23 14:07:25] Getting current cart for user_id: 2
+[2025-06-23 14:07:25] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 14:07:25] Getting cart items for cart_id: 7
+[2025-06-23 14:07:25] Found 0 items in cart_id: 7
+[2025-06-23 14:07:25] Getting current cart for user_id: 2
+[2025-06-23 14:07:25] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 14:07:25] Getting cart items for cart_id: 7
+[2025-06-23 14:07:25] Found 0 items in cart_id: 7
+[2025-06-23 14:07:26] Getting current cart for user_id: 2
+[2025-06-23 14:07:26] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 14:07:26] Getting cart items for cart_id: 7
+[2025-06-23 14:07:26] Found 0 items in cart_id: 7
+[2025-06-23 14:07:36] Getting current cart for user_id: 2
+[2025-06-23 14:07:36] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 14:07:36] Getting cart items for cart_id: 7
+[2025-06-23 14:07:36] Found 0 items in cart_id: 7
+[2025-06-23 14:07:37] Getting current cart for user_id: 2
+[2025-06-23 14:07:37] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 14:07:37] Getting cart items for cart_id: 7
+[2025-06-23 14:07:37] Found 0 items in cart_id: 7
+[2025-06-23 14:08:25] Getting current cart for user_id: 2
+[2025-06-23 14:08:25] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 14:08:25] Getting cart items for cart_id: 7
+[2025-06-23 14:08:25] Found 0 items in cart_id: 7
+[2025-06-23 14:08:27] Getting current cart for user_id: 2
+[2025-06-23 14:08:27] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 14:08:27] Getting cart items for cart_id: 7
+[2025-06-23 14:08:27] Found 0 items in cart_id: 7
+[2025-06-23 14:14:48] Getting current cart for user_id: 2
+[2025-06-23 14:14:48] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 14:14:48] Getting cart items for cart_id: 7
+[2025-06-23 14:14:48] Found 0 items in cart_id: 7
+[2025-06-23 14:14:50] Getting current cart for user_id: 2
+[2025-06-23 14:14:50] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 14:14:50] Getting cart items for cart_id: 7
+[2025-06-23 14:14:50] Found 0 items in cart_id: 7
+[2025-06-23 14:14:51] Getting current cart for user_id: 2
+[2025-06-23 14:14:51] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 14:14:51] Getting cart items for cart_id: 7
+[2025-06-23 14:14:51] Found 0 items in cart_id: 7
+[2025-06-23 14:15:04] Getting current cart for user_id: 2
+[2025-06-23 14:15:04] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 14:15:04] Getting cart items for cart_id: 7
+[2025-06-23 14:15:04] Found 0 items in cart_id: 7
+[2025-06-23 14:16:12] Getting current cart for user_id: 2
+[2025-06-23 14:16:12] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 14:16:12] Getting cart items for cart_id: 7
+[2025-06-23 14:16:12] Found 0 items in cart_id: 7
+[2025-06-23 14:16:15] Getting current cart for user_id: 2
+[2025-06-23 14:16:15] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 14:16:15] Getting cart items for cart_id: 7
+[2025-06-23 14:16:15] Found 0 items in cart_id: 7
+[2025-06-23 14:16:16] Getting current cart for user_id: 2
+[2025-06-23 14:16:16] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 14:16:16] Getting cart items for cart_id: 7
+[2025-06-23 14:16:16] Found 0 items in cart_id: 7
+[2025-06-23 14:16:24] Getting current cart for user_id: 2
+[2025-06-23 14:16:24] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 14:16:24] Getting cart items for cart_id: 7
+[2025-06-23 14:16:24] Found 0 items in cart_id: 7
+[2025-06-23 14:16:26] Getting current cart for user_id: 2
+[2025-06-23 14:16:26] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 14:16:26] Getting cart items for cart_id: 7
+[2025-06-23 14:16:26] Found 0 items in cart_id: 7
+[2025-06-23 14:19:25] Getting current cart for user_id: 2
+[2025-06-23 14:19:25] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 14:19:25] Getting cart items for cart_id: 7
+[2025-06-23 14:19:25] Found 0 items in cart_id: 7
+[2025-06-23 14:19:27] Getting current cart for user_id: 2
+[2025-06-23 14:19:27] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 14:19:27] Getting cart items for cart_id: 7
+[2025-06-23 14:19:27] Found 0 items in cart_id: 7
+[2025-06-23 14:22:39] Getting current cart for user_id: 2
+[2025-06-23 14:22:39] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 14:22:39] Getting cart items for cart_id: 7
+[2025-06-23 14:22:39] Found 0 items in cart_id: 7
+[2025-06-23 14:22:58] Getting current cart for user_id: 2
+[2025-06-23 14:22:58] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 14:22:58] Getting cart items for cart_id: 7
+[2025-06-23 14:22:58] Found 0 items in cart_id: 7
+[2025-06-23 14:22:59] Getting current cart for user_id: 2
+[2025-06-23 14:22:59] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 14:22:59] Getting cart items for cart_id: 7
+[2025-06-23 14:22:59] Found 0 items in cart_id: 7
+[2025-06-23 14:23:00] Getting current cart for user_id: 2
+[2025-06-23 14:23:00] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 14:23:00] Getting cart items for cart_id: 7
+[2025-06-23 14:23:00] Found 0 items in cart_id: 7
+[2025-06-23 14:23:00] Getting current cart for user_id: 2
+[2025-06-23 14:23:00] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 14:23:00] Getting cart items for cart_id: 7
+[2025-06-23 14:23:00] Found 0 items in cart_id: 7
+[2025-06-23 14:26:21] Getting current cart for user_id: 2
+[2025-06-23 14:26:21] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 14:26:21] Getting cart items for cart_id: 7
+[2025-06-23 14:26:21] Found 0 items in cart_id: 7
+[2025-06-23 14:26:23] Getting current cart for user_id: 2
+[2025-06-23 14:26:23] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 14:26:23] Getting cart items for cart_id: 7
+[2025-06-23 14:26:23] Found 0 items in cart_id: 7
+[2025-06-23 14:26:24] Getting current cart for user_id: 2
+[2025-06-23 14:26:24] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 14:26:24] Getting cart items for cart_id: 7
+[2025-06-23 14:26:24] Found 0 items in cart_id: 7
+[2025-06-23 14:26:25] Getting current cart for user_id: 2
+[2025-06-23 14:26:25] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 14:26:25] Getting cart items for cart_id: 7
+[2025-06-23 14:26:25] Found 0 items in cart_id: 7
+[2025-06-23 14:27:25] Getting current cart for user_id: 2
+[2025-06-23 14:27:25] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 14:27:25] Getting cart items for cart_id: 7
+[2025-06-23 14:27:25] Found 0 items in cart_id: 7
+[2025-06-23 14:27:58] Getting current cart for user_id: 2
+[2025-06-23 14:27:58] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 14:27:58] Getting cart items for cart_id: 7
+[2025-06-23 14:27:58] Found 0 items in cart_id: 7
+[2025-06-23 14:28:39] Getting current cart for user_id: 2
+[2025-06-23 14:28:39] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 14:28:39] Getting cart items for cart_id: 7
+[2025-06-23 14:28:39] Found 0 items in cart_id: 7
+[2025-06-23 14:28:40] Getting current cart for user_id: 2
+[2025-06-23 14:28:40] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 14:28:40] Getting cart items for cart_id: 7
+[2025-06-23 14:28:40] Found 0 items in cart_id: 7
+[2025-06-23 14:28:41] Getting current cart for user_id: 2
+[2025-06-23 14:28:41] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 14:28:41] Getting cart items for cart_id: 7
+[2025-06-23 14:28:41] Found 0 items in cart_id: 7
+[2025-06-23 14:28:42] Getting current cart for user_id: 2
+[2025-06-23 14:28:42] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 14:28:42] Getting cart items for cart_id: 7
+[2025-06-23 14:28:42] Found 0 items in cart_id: 7
+[2025-06-23 14:28:43] Getting current cart for user_id: 2
+[2025-06-23 14:28:43] Found existing cart_id: 7 for user_id: 2
+[2025-06-23 14:28:43] Getting cart items for cart_id: 7
+[2025-06-23 14:28:43] Found 0 items in cart_id: 7
+[2025-06-24 09:51:57] Getting current cart for user_id: 2
+[2025-06-24 09:51:57] Found existing cart_id: 7 for user_id: 2
+[2025-06-24 09:51:57] Getting cart items for cart_id: 7
+[2025-06-24 09:51:57] Found 0 items in cart_id: 7
+[2025-06-24 09:54:14] Getting current cart for user_id: 2
+[2025-06-24 09:54:14] Found existing cart_id: 7 for user_id: 2
+[2025-06-24 09:54:14] Getting cart items for cart_id: 7
+[2025-06-24 09:54:14] Found 0 items in cart_id: 7
+[2025-06-24 09:54:16] Getting current cart for user_id: 2
+[2025-06-24 09:54:16] Found existing cart_id: 7 for user_id: 2
+[2025-06-24 09:54:16] Getting cart items for cart_id: 7
+[2025-06-24 09:54:16] Found 0 items in cart_id: 7
+[2025-06-24 09:54:17] Getting current cart for user_id: 2
+[2025-06-24 09:54:17] Found existing cart_id: 7 for user_id: 2
+[2025-06-24 09:54:17] Getting current cart for user_id: 2
+[2025-06-24 09:54:17] Found existing cart_id: 7 for user_id: 2
+[2025-06-24 09:54:17] Getting cart items for cart_id: 7
+[2025-06-24 09:54:17] Found 1 items in cart_id: 7
+[2025-06-24 09:54:17] Getting current cart for user_id: 2
+[2025-06-24 09:54:17] Found existing cart_id: 7 for user_id: 2
+[2025-06-24 09:54:17] Getting cart items for cart_id: 7
+[2025-06-24 09:54:17] Found 1 items in cart_id: 7
+[2025-06-24 09:54:19] Getting current cart for user_id: 2
+[2025-06-24 09:54:19] Found existing cart_id: 7 for user_id: 2
+[2025-06-24 09:54:19] Getting current cart for user_id: 2
+[2025-06-24 09:54:19] Found existing cart_id: 7 for user_id: 2
+[2025-06-24 09:54:19] Getting current cart for user_id: 2
+[2025-06-24 09:54:19] Found existing cart_id: 7 for user_id: 2
+[2025-06-24 14:54:22] Getting current cart for user_id: 2
+[2025-06-24 14:54:22] Found existing cart_id: 7 for user_id: 2
+[2025-06-24 14:54:22] Getting cart items for cart_id: 7
+[2025-06-24 14:54:22] Found 1 items in cart_id: 7
+[2025-06-24 14:54:22] Getting current cart for user_id: 2
+[2025-06-24 14:54:22] Found existing cart_id: 7 for user_id: 2
+[2025-06-24 14:54:22] Getting cart items for cart_id: 7
+[2025-06-24 14:54:22] Found 1 items in cart_id: 7
+[2025-06-24 09:55:26] Getting current cart for user_id: 2
+[2025-06-24 09:55:27] Found existing cart_id: 7 for user_id: 2
+[2025-06-24 09:55:27] Getting cart items for cart_id: 7
+[2025-06-24 09:55:27] Found 1 items in cart_id: 7
+[2025-06-24 09:55:30] Getting current cart for user_id: 2
+[2025-06-24 09:55:30] Found existing cart_id: 7 for user_id: 2
+[2025-06-24 09:55:30] Getting cart items for cart_id: 7
+[2025-06-24 09:55:30] Found 1 items in cart_id: 7
+[2025-06-24 10:00:19] Getting current cart for user_id: 2
+[2025-06-24 10:00:19] Found existing cart_id: 7 for user_id: 2
+[2025-06-24 10:00:19] Getting cart items for cart_id: 7
+[2025-06-24 10:00:19] Found 1 items in cart_id: 7
+[2025-06-24 10:00:19] Getting current cart for user_id: 2
+[2025-06-24 10:00:19] Found existing cart_id: 7 for user_id: 2
+[2025-06-24 10:00:19] Getting cart items for cart_id: 7
+[2025-06-24 10:00:19] Found 1 items in cart_id: 7
+[2025-06-24 10:00:22] Getting current cart for user_id: 2
+[2025-06-24 10:00:22] Found existing cart_id: 7 for user_id: 2
+[2025-06-24 10:00:22] Getting current cart for user_id: 2
+[2025-06-24 10:00:22] Found existing cart_id: 7 for user_id: 2
+[2025-06-24 15:00:23] Getting current cart for user_id: 2
+[2025-06-24 15:00:23] Found existing cart_id: 7 for user_id: 2
+[2025-06-24 15:00:23] Getting cart items for cart_id: 7
+[2025-06-24 15:00:23] Found 1 items in cart_id: 7
+[2025-06-24 15:00:23] Getting current cart for user_id: 2
+[2025-06-24 15:00:23] Found existing cart_id: 7 for user_id: 2
+[2025-06-24 15:00:23] Getting cart items for cart_id: 7
+[2025-06-24 15:00:23] Found 1 items in cart_id: 7
+[2025-06-24 15:13:46] Getting current cart for user_id: 2
+[2025-06-24 15:13:46] Found existing cart_id: 7 for user_id: 2
+[2025-06-24 15:13:46] Getting cart items for cart_id: 7
+[2025-06-24 15:13:46] Found 1 items in cart_id: 7
+[2025-06-24 10:13:48] Getting current cart for user_id: 2
+[2025-06-24 10:13:48] Found existing cart_id: 7 for user_id: 2
+[2025-06-24 10:13:48] Getting cart items for cart_id: 7
+[2025-06-24 10:13:48] Found 0 items in cart_id: 7

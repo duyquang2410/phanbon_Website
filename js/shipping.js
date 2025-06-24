@@ -134,26 +134,40 @@
                 const sortedServices = data.sort((a, b) => a.GIA_CUOC - b.GIA_CUOC);
 
                 if (selectedMethod.value === 'express') {
-                    // For express, find the service with TYPE = 1 (Express)
-                    const expressService = data.find(service => service.MA_DV_CHINH === 'VCN' || service.MA_DV_CHINH === 'VPT');
-                    if (expressService) {
-                        shippingFee = expressService.GIA_CUOC;
+                    // Tìm dịch vụ giao hàng nhanh với giá thấp nhất
+                    const expressServices = data.filter(service =>
+                        service.MA_DV_CHINH === 'VCN' || // Viettel Chuyển phát nhanh
+                        service.MA_DV_CHINH === 'VPT' // Viettel Post Tiết kiệm
+                    );
+
+                    if (expressServices.length > 0) {
+                        // Sử dụng dịch vụ giao hàng nhanh có giá thấp nhất
+                        const cheapestExpress = expressServices.reduce((min, service) =>
+                            service.GIA_CUOC < min.GIA_CUOC ? service : min, expressServices[0]);
+                        shippingFee = cheapestExpress.GIA_CUOC;
                     } else {
-                        // If no express service found, use standard service
+                        // Nếu không có dịch vụ nhanh, sử dụng dịch vụ rẻ nhất
                         shippingFee = sortedServices[0].GIA_CUOC || 0;
                     }
                 } else {
-                    // For standard, find the service with TYPE = 2 (Standard)
-                    const standardService = data.find(service => service.MA_DV_CHINH === 'VBS' || service.MA_DV_CHINH === 'V60');
-                    if (standardService) {
-                        shippingFee = standardService.GIA_CUOC;
+                    // Tìm dịch vụ giao hàng tiêu chuẩn với giá thấp nhất
+                    const standardServices = data.filter(service =>
+                        service.MA_DV_CHINH === 'VBS' || // Viettel Bưu chính Tiêu chuẩn
+                        service.MA_DV_CHINH === 'V60' // Viettel 60h
+                    );
+
+                    if (standardServices.length > 0) {
+                        // Sử dụng dịch vụ tiêu chuẩn có giá thấp nhất
+                        const cheapestStandard = standardServices.reduce((min, service) =>
+                            service.GIA_CUOC < min.GIA_CUOC ? service : min, standardServices[0]);
+                        shippingFee = cheapestStandard.GIA_CUOC;
                     } else {
-                        // If no standard service found, use the cheapest service
+                        // Nếu không có dịch vụ tiêu chuẩn, sử dụng dịch vụ rẻ nhất
                         shippingFee = sortedServices[0].GIA_CUOC || 0;
                     }
                 }
             } else {
-                // If no method selected, use the cheapest service
+                // Nếu không chọn phương thức, sử dụng dịch vụ rẻ nhất
                 shippingFee = data[0].GIA_CUOC || 0;
             }
 

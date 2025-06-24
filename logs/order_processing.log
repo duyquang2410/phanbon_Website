@@ -11016,3 +11016,919 @@ Data: Array
     }
 }
 === End Log Entry ===
+[2025-06-23 18:56:52] Received POST data
+Data: Array
+(
+    [promo_code] => PHANBON10
+    [fullName] => Quang Duy
+    [phone] => 0793994771
+    [email] => duyquang2709pp@gmail.com
+    [street_address] => Cần thơ
+    [province] => 4
+    [district] => 73
+    [ward] => 1196
+    [full_address] => Cần thơ, PHƯỜNG KHUÊ MỸ, QUẬN NGŨ HÀNH SƠN, Đà Nẵng
+    [shipping_method] => standard
+    [paymentMethod] => 1
+    [shipping_fee] => 30000
+    [total_weight] => 1000
+    [total_value] => 220000
+    [total_amount] => 220000
+    [total_discount] => 22000
+    [selected_items] => Array
+        (
+            [0] => 8
+        )
+
+    [item_quantity] => Array
+        (
+            [8] => 1
+        )
+
+    [item_price] => Array
+        (
+            [8] => 220000
+        )
+
+    [item_name] => Array
+        (
+            [8] => COC85 (20g) - Ngừa bệnh rỉ sắt, đốm đen cho cây trồng, đặc hiệu cho hoa kiểng
+        )
+
+    [item_unit] => Array
+        (
+            [8] => cái
+        )
+
+    [item_image] => Array
+        (
+            [8] => coc85.jpg
+        )
+
+)
+
+--------------------------------------------------------------------------------
+[2025-06-23 18:56:52] Processing promo code
+Data: Array
+(
+    [promo_code] => PHANBON10
+    [post_data] => Array
+        (
+            [promo_code] => PHANBON10
+            [fullName] => Quang Duy
+            [phone] => 0793994771
+            [email] => duyquang2709pp@gmail.com
+            [street_address] => Cần thơ
+            [province] => 4
+            [district] => 73
+            [ward] => 1196
+            [full_address] => Cần thơ, PHƯỜNG KHUÊ MỸ, QUẬN NGŨ HÀNH SƠN, Đà Nẵng
+            [shipping_method] => standard
+            [paymentMethod] => 1
+            [shipping_fee] => 30000
+            [total_weight] => 1000
+            [total_value] => 220000
+            [total_amount] => 220000
+            [total_discount] => 22000
+            [selected_items] => Array
+                (
+                    [0] => 8
+                )
+
+            [item_quantity] => Array
+                (
+                    [8] => 1
+                )
+
+            [item_price] => Array
+                (
+                    [8] => 220000
+                )
+
+            [item_name] => Array
+                (
+                    [8] => COC85 (20g) - Ngừa bệnh rỉ sắt, đốm đen cho cây trồng, đặc hiệu cho hoa kiểng
+                )
+
+            [item_unit] => Array
+                (
+                    [8] => cái
+                )
+
+            [item_image] => Array
+                (
+                    [8] => coc85.jpg
+                )
+
+        )
+
+)
+
+--------------------------------------------------------------------------------
+[2025-06-23 18:56:52] Promo code found and valid
+Data: Array
+(
+    [code] => PHANBON10
+    [km_ma] => 1
+    [discount_value] => 10
+)
+
+--------------------------------------------------------------------------------
+
+=== Order Processing Log Entry ===
+{
+    "timestamp": "2025-06-23 18:56:52",
+    "message": "Current cart retrieved",
+    "data": {
+        "cart_id": 7
+    }
+}
+=== End Log Entry ===
+
+=== Order Processing Log Entry ===
+{
+    "timestamp": "2025-06-23 18:56:52",
+    "message": "Starting order processing",
+    "data": {
+        "user_id": 2,
+        "cart_id": 7,
+        "payment_method": "1",
+        "shipping_fee": "30000",
+        "shipping_id": null,
+        "address": {
+            "name": "Quang Duy",
+            "phone": "0793994771",
+            "email": "duyquang2709pp@gmail.com",
+            "province": "4",
+            "district": "73",
+            "ward": "1196",
+            "street": "Cần thơ"
+        },
+        "promo_code": 1
+    }
+}
+=== End Log Entry ===
+
+=== Order Processing Log Entry ===
+{
+    "timestamp": "2025-06-23 18:56:52",
+    "message": "Transaction started",
+    "data": []
+}
+=== End Log Entry ===
+
+=== Order Processing Log Entry ===
+{
+    "timestamp": "2025-06-23 18:56:52",
+    "message": "Creating shipping order",
+    "data": {
+        "sql": "INSERT INTO don_van_chuyen (NVC_MA, DVC_DIACHI, DVC_TGBATDAU, DVC_TGHOANTHANH) \n                    VALUES (?, ?, NOW(), DATE_ADD(NOW(), INTERVAL 3 DAY))",
+        "nvc_ma": 1,
+        "address": "Cần thơ, 1196, 73, 4"
+    }
+}
+=== End Log Entry ===
+
+=== Order Processing Log Entry ===
+{
+    "timestamp": "2025-06-23 18:56:53",
+    "message": "Shipping order created successfully",
+    "data": {
+        "dvc_ma": 72
+    }
+}
+=== End Log Entry ===
+
+=== Order Processing Log Entry ===
+{
+    "timestamp": "2025-06-23 18:56:53",
+    "message": "Creating order",
+    "data": {
+        "sql": "INSERT INTO hoa_don (KH_MA, NV_MA, DVC_MA, PTTT_MA, TT_MA, HD_NGAYLAP, HD_TONGTIEN, HD_PHISHIP, KM_MA, HD_LIDOHUY) \n                  VALUES (?, ?, ?, ?, ?, NOW(), ?, ?, ?, NULL)",
+        "params": {
+            "user_id": 2,
+            "nv_ma": 1,
+            "dvc_ma": 72,
+            "payment_method": "1",
+            "tt_ma": 1,
+            "total_amount": 250000,
+            "shipping_fee": "30000",
+            "promo_code": 1
+        }
+    }
+}
+=== End Log Entry ===
+
+=== Order Processing Log Entry ===
+{
+    "timestamp": "2025-06-23 18:56:53",
+    "message": "Order created successfully",
+    "data": {
+        "order_id": 56
+    }
+}
+=== End Log Entry ===
+
+=== Order Processing Log Entry ===
+{
+    "timestamp": "2025-06-23 18:56:53",
+    "message": "Adding shipping address",
+    "data": {
+        "sql": "INSERT INTO dia_chi_giao_hang (DH_MA, DCGH_TINH, DCGH_HUYEN, DCGH_XA, DCGH_DIACHI, \n                    DCGH_TENNGUOINHAN, DCGH_SDT, DCGH_EMAIL, DCGH_GHICHU) \n                    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)",
+        "params": {
+            "order_id": 56,
+            "province": "4",
+            "district": "73",
+            "ward": "1196",
+            "street": "Cần thơ",
+            "recipient": "Quang Duy",
+            "phone": "0793994771",
+            "email": "duyquang2709pp@gmail.com",
+            "note": ""
+        }
+    }
+}
+=== End Log Entry ===
+
+=== Order Processing Log Entry ===
+{
+    "timestamp": "2025-06-23 18:56:53",
+    "message": "Shipping address added successfully",
+    "data": {
+        "order_id": 56,
+        "address": {
+            "province": "4",
+            "district": "73",
+            "ward": "1196",
+            "street": "Cần thơ",
+            "recipient": "Quang Duy",
+            "phone": "0793994771",
+            "email": "duyquang2709pp@gmail.com"
+        }
+    }
+}
+=== End Log Entry ===
+
+=== Order Processing Log Entry ===
+{
+    "timestamp": "2025-06-23 18:56:53",
+    "message": "Order detail added successfully",
+    "data": {
+        "product_id": 8,
+        "order_id": 56,
+        "quantity": 1,
+        "price": 220000,
+        "unit": "cái"
+    }
+}
+=== End Log Entry ===
+
+=== Order Processing Log Entry ===
+{
+    "timestamp": "2025-06-23 18:56:53",
+    "message": "Products removed from cart successfully",
+    "data": {
+        "cart_id": 7,
+        "selected_items": [
+            8
+        ],
+        "affected_rows": 1
+    }
+}
+=== End Log Entry ===
+
+=== Order Processing Log Entry ===
+{
+    "timestamp": "2025-06-23 18:56:53",
+    "message": "Discount data retrieved",
+    "data": {
+        "discount_data": {
+            "KM_GIATRI": 10,
+            "hinh_thuc_km": "Giảm phần trăm"
+        },
+        "original_total": 250000
+    }
+}
+=== End Log Entry ===
+
+=== Order Processing Log Entry ===
+{
+    "timestamp": "2025-06-23 18:56:53",
+    "message": "Discount applied",
+    "data": {
+        "discount_type": "Giảm phần trăm",
+        "discount_value": 10,
+        "discount_amount": 25000,
+        "new_total": 225000
+    }
+}
+=== End Log Entry ===
+
+=== Order Processing Log Entry ===
+{
+    "timestamp": "2025-06-23 18:56:53",
+    "message": "Transaction committed successfully",
+    "data": {
+        "order_id": 56,
+        "total_amount": 225000,
+        "shipping_fee": "30000"
+    }
+}
+=== End Log Entry ===
+
+=== Order Processing Log Entry ===
+{
+    "timestamp": "2025-06-23 18:56:53",
+    "message": "Redirecting to confirmation page",
+    "data": {
+        "order_id": 56,
+        "session": {
+            "user_id": 2,
+            "user_name": "Quang Duy",
+            "user_avatar": "default-avatar.jpg",
+            "order_id": 56,
+            "success_message": "Đặt hàng thành công! Cảm ơn bạn đã mua sắm tại Plants Shop."
+        }
+    }
+}
+=== End Log Entry ===
+[2025-06-23 18:59:37] Received POST data
+Data: Array
+(
+    [promo_code] => 
+    [fullName] => Quang Duy
+    [phone] => 0793994771
+    [email] => duyquang2709pp@gmail.com
+    [street_address] => Cần thơ
+    [province] => 41
+    [district] => 469
+    [ward] => 8617
+    [full_address] => Cần thơ, XÃ HÒA XUÂN NAM, HUYỆN ĐÔNG HÒA, Phú Yên
+    [shipping_method] => express
+    [paymentMethod] => 2
+    [shipping_fee] => 56000
+    [total_weight] => 1000
+    [total_value] => 57000
+    [total_amount] => 57000
+    [total_discount] => 0
+    [selected_items] => Array
+        (
+            [0] => 6
+        )
+
+    [item_quantity] => Array
+        (
+            [6] => 3
+        )
+
+    [item_price] => Array
+        (
+            [6] => 19000
+        )
+
+    [item_name] => Array
+        (
+            [6] => Phân bón kiểng lá viên nén hữu cơ 100% SFARM - Túi 500 gram
+        )
+
+    [item_unit] => Array
+        (
+            [6] => cái
+        )
+
+    [item_image] => Array
+        (
+            [6] => sfram.jpg
+        )
+
+)
+
+--------------------------------------------------------------------------------
+
+=== Order Processing Log Entry ===
+{
+    "timestamp": "2025-06-23 18:59:37",
+    "message": "Current cart retrieved",
+    "data": {
+        "cart_id": 7
+    }
+}
+=== End Log Entry ===
+
+=== Order Processing Log Entry ===
+{
+    "timestamp": "2025-06-23 18:59:37",
+    "message": "Starting order processing",
+    "data": {
+        "user_id": 2,
+        "cart_id": 7,
+        "payment_method": "2",
+        "shipping_fee": "56000",
+        "shipping_id": null,
+        "address": {
+            "name": "Quang Duy",
+            "phone": "0793994771",
+            "email": "duyquang2709pp@gmail.com",
+            "province": "41",
+            "district": "469",
+            "ward": "8617",
+            "street": "Cần thơ"
+        },
+        "promo_code": null
+    }
+}
+=== End Log Entry ===
+
+=== Order Processing Log Entry ===
+{
+    "timestamp": "2025-06-23 18:59:37",
+    "message": "Transaction started",
+    "data": []
+}
+=== End Log Entry ===
+
+=== Order Processing Log Entry ===
+{
+    "timestamp": "2025-06-23 18:59:37",
+    "message": "Creating shipping order",
+    "data": {
+        "sql": "INSERT INTO don_van_chuyen (NVC_MA, DVC_DIACHI, DVC_TGBATDAU, DVC_TGHOANTHANH) \n                    VALUES (?, ?, NOW(), DATE_ADD(NOW(), INTERVAL 3 DAY))",
+        "nvc_ma": 1,
+        "address": "Cần thơ, 8617, 469, 41"
+    }
+}
+=== End Log Entry ===
+
+=== Order Processing Log Entry ===
+{
+    "timestamp": "2025-06-23 18:59:37",
+    "message": "Shipping order created successfully",
+    "data": {
+        "dvc_ma": 73
+    }
+}
+=== End Log Entry ===
+
+=== Order Processing Log Entry ===
+{
+    "timestamp": "2025-06-23 18:59:37",
+    "message": "Creating order",
+    "data": {
+        "sql": "INSERT INTO hoa_don (KH_MA, NV_MA, DVC_MA, PTTT_MA, TT_MA, HD_NGAYLAP, HD_TONGTIEN, HD_PHISHIP, KM_MA, HD_LIDOHUY) \n                  VALUES (?, ?, ?, ?, ?, NOW(), ?, ?, ?, NULL)",
+        "params": {
+            "user_id": 2,
+            "nv_ma": 1,
+            "dvc_ma": 73,
+            "payment_method": "2",
+            "tt_ma": 1,
+            "total_amount": 113000,
+            "shipping_fee": "56000",
+            "promo_code": null
+        }
+    }
+}
+=== End Log Entry ===
+
+=== Order Processing Log Entry ===
+{
+    "timestamp": "2025-06-23 18:59:37",
+    "message": "Order created successfully",
+    "data": {
+        "order_id": 57
+    }
+}
+=== End Log Entry ===
+
+=== Order Processing Log Entry ===
+{
+    "timestamp": "2025-06-23 18:59:37",
+    "message": "Adding shipping address",
+    "data": {
+        "sql": "INSERT INTO dia_chi_giao_hang (DH_MA, DCGH_TINH, DCGH_HUYEN, DCGH_XA, DCGH_DIACHI, \n                    DCGH_TENNGUOINHAN, DCGH_SDT, DCGH_EMAIL, DCGH_GHICHU) \n                    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)",
+        "params": {
+            "order_id": 57,
+            "province": "41",
+            "district": "469",
+            "ward": "8617",
+            "street": "Cần thơ",
+            "recipient": "Quang Duy",
+            "phone": "0793994771",
+            "email": "duyquang2709pp@gmail.com",
+            "note": ""
+        }
+    }
+}
+=== End Log Entry ===
+
+=== Order Processing Log Entry ===
+{
+    "timestamp": "2025-06-23 18:59:37",
+    "message": "Shipping address added successfully",
+    "data": {
+        "order_id": 57,
+        "address": {
+            "province": "41",
+            "district": "469",
+            "ward": "8617",
+            "street": "Cần thơ",
+            "recipient": "Quang Duy",
+            "phone": "0793994771",
+            "email": "duyquang2709pp@gmail.com"
+        }
+    }
+}
+=== End Log Entry ===
+
+=== Order Processing Log Entry ===
+{
+    "timestamp": "2025-06-23 18:59:37",
+    "message": "Order detail added successfully",
+    "data": {
+        "product_id": 6,
+        "order_id": 57,
+        "quantity": 3,
+        "price": 19000,
+        "unit": "cái"
+    }
+}
+=== End Log Entry ===
+
+=== Order Processing Log Entry ===
+{
+    "timestamp": "2025-06-23 18:59:37",
+    "message": "Products removed from cart successfully",
+    "data": {
+        "cart_id": 7,
+        "selected_items": [
+            6
+        ],
+        "affected_rows": 1
+    }
+}
+=== End Log Entry ===
+
+=== Order Processing Log Entry ===
+{
+    "timestamp": "2025-06-23 18:59:37",
+    "message": "Transaction committed successfully",
+    "data": {
+        "order_id": 57,
+        "total_amount": 113000,
+        "shipping_fee": "56000"
+    }
+}
+=== End Log Entry ===
+
+=== Order Processing Log Entry ===
+{
+    "timestamp": "2025-06-23 18:59:37",
+    "message": "Redirecting to confirmation page",
+    "data": {
+        "order_id": 57,
+        "session": {
+            "user_id": 2,
+            "user_name": "Quang Duy",
+            "user_avatar": "default-avatar.jpg",
+            "order_id": 57,
+            "success_message": "Đặt hàng thành công! Cảm ơn bạn đã mua sắm tại Plants Shop.",
+            "cart_success": "Đã thêm Phân bón kiểng lá viên nén hữu cơ 100% SFARM - Túi 500 gram vào giỏ hàng."
+        }
+    }
+}
+=== End Log Entry ===
+[2025-06-24 15:13:46] Received POST data
+Data: Array
+(
+    [promo_code] => FARMER5
+    [fullName] => Quang Duy
+    [phone] => 0793994771
+    [email] => duyquang2709pp@gmail.com
+    [street_address] => 444
+    [province] => 2
+    [district] => 35
+    [ward] => 677
+    [full_address] => 444, PHƯỜNG 13, QUẬN TÂN BÌNH, Hồ Chí Minh
+    [shipping_method] => standard
+    [paymentMethod] => 1
+    [shipping_fee] => 29000
+    [total_weight] => 1000
+    [total_value] => 36000
+    [total_amount] => 36000
+    [total_discount] => 1800
+    [selected_items] => Array
+        (
+            [0] => 4
+        )
+
+    [item_quantity] => Array
+        (
+            [4] => 6
+        )
+
+    [item_price] => Array
+        (
+            [4] => 6000
+        )
+
+    [item_name] => Array
+        (
+            [4] => Bimix Super Root (20ml)  –  Phát triển mạnh bộ rễ, kích thích cành chiết, cành giâm
+        )
+
+    [item_unit] => Array
+        (
+            [4] => cái
+        )
+
+    [item_image] => Array
+        (
+            [4] => bemix.jpg
+        )
+
+)
+
+--------------------------------------------------------------------------------
+[2025-06-24 15:13:46] Processing promo code
+Data: Array
+(
+    [promo_code] => FARMER5
+    [post_data] => Array
+        (
+            [promo_code] => FARMER5
+            [fullName] => Quang Duy
+            [phone] => 0793994771
+            [email] => duyquang2709pp@gmail.com
+            [street_address] => 444
+            [province] => 2
+            [district] => 35
+            [ward] => 677
+            [full_address] => 444, PHƯỜNG 13, QUẬN TÂN BÌNH, Hồ Chí Minh
+            [shipping_method] => standard
+            [paymentMethod] => 1
+            [shipping_fee] => 29000
+            [total_weight] => 1000
+            [total_value] => 36000
+            [total_amount] => 36000
+            [total_discount] => 1800
+            [selected_items] => Array
+                (
+                    [0] => 4
+                )
+
+            [item_quantity] => Array
+                (
+                    [4] => 6
+                )
+
+            [item_price] => Array
+                (
+                    [4] => 6000
+                )
+
+            [item_name] => Array
+                (
+                    [4] => Bimix Super Root (20ml)  –  Phát triển mạnh bộ rễ, kích thích cành chiết, cành giâm
+                )
+
+            [item_unit] => Array
+                (
+                    [4] => cái
+                )
+
+            [item_image] => Array
+                (
+                    [4] => bemix.jpg
+                )
+
+        )
+
+)
+
+--------------------------------------------------------------------------------
+[2025-06-24 15:13:46] Promo code found and valid
+Data: Array
+(
+    [code] => FARMER5
+    [km_ma] => 4
+    [discount_value] => 5
+)
+
+--------------------------------------------------------------------------------
+
+=== Order Processing Log Entry ===
+{
+    "timestamp": "2025-06-24 15:13:46",
+    "message": "Current cart retrieved",
+    "data": {
+        "cart_id": 7
+    }
+}
+=== End Log Entry ===
+
+=== Order Processing Log Entry ===
+{
+    "timestamp": "2025-06-24 15:13:46",
+    "message": "Starting order processing",
+    "data": {
+        "user_id": 2,
+        "cart_id": 7,
+        "payment_method": "1",
+        "shipping_fee": "29000",
+        "shipping_id": null,
+        "address": {
+            "name": "Quang Duy",
+            "phone": "0793994771",
+            "email": "duyquang2709pp@gmail.com",
+            "province": "2",
+            "district": "35",
+            "ward": "677",
+            "street": "444"
+        },
+        "promo_code": 4
+    }
+}
+=== End Log Entry ===
+
+=== Order Processing Log Entry ===
+{
+    "timestamp": "2025-06-24 15:13:46",
+    "message": "Transaction started",
+    "data": []
+}
+=== End Log Entry ===
+
+=== Order Processing Log Entry ===
+{
+    "timestamp": "2025-06-24 15:13:46",
+    "message": "Creating shipping order",
+    "data": {
+        "sql": "INSERT INTO don_van_chuyen (NVC_MA, DVC_DIACHI, DVC_TGBATDAU, DVC_TGHOANTHANH) \n                    VALUES (?, ?, NOW(), DATE_ADD(NOW(), INTERVAL 3 DAY))",
+        "nvc_ma": 1,
+        "address": "444, 677, 35, 2"
+    }
+}
+=== End Log Entry ===
+
+=== Order Processing Log Entry ===
+{
+    "timestamp": "2025-06-24 15:13:46",
+    "message": "Shipping order created successfully",
+    "data": {
+        "dvc_ma": 74
+    }
+}
+=== End Log Entry ===
+
+=== Order Processing Log Entry ===
+{
+    "timestamp": "2025-06-24 15:13:46",
+    "message": "Creating order",
+    "data": {
+        "sql": "INSERT INTO hoa_don (KH_MA, NV_MA, DVC_MA, PTTT_MA, TT_MA, HD_NGAYLAP, HD_TONGTIEN, HD_PHISHIP, KM_MA, HD_LIDOHUY) \n                  VALUES (?, ?, ?, ?, ?, NOW(), ?, ?, ?, NULL)",
+        "params": {
+            "user_id": 2,
+            "nv_ma": 1,
+            "dvc_ma": 74,
+            "payment_method": "1",
+            "tt_ma": 1,
+            "total_amount": 65000,
+            "shipping_fee": "29000",
+            "promo_code": 4
+        }
+    }
+}
+=== End Log Entry ===
+
+=== Order Processing Log Entry ===
+{
+    "timestamp": "2025-06-24 15:13:46",
+    "message": "Order created successfully",
+    "data": {
+        "order_id": 58
+    }
+}
+=== End Log Entry ===
+
+=== Order Processing Log Entry ===
+{
+    "timestamp": "2025-06-24 15:13:46",
+    "message": "Adding shipping address",
+    "data": {
+        "sql": "INSERT INTO dia_chi_giao_hang (DH_MA, DCGH_TINH, DCGH_HUYEN, DCGH_XA, DCGH_DIACHI, \n                    DCGH_TENNGUOINHAN, DCGH_SDT, DCGH_EMAIL, DCGH_GHICHU) \n                    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)",
+        "params": {
+            "order_id": 58,
+            "province": "2",
+            "district": "35",
+            "ward": "677",
+            "street": "444",
+            "recipient": "Quang Duy",
+            "phone": "0793994771",
+            "email": "duyquang2709pp@gmail.com",
+            "note": ""
+        }
+    }
+}
+=== End Log Entry ===
+
+=== Order Processing Log Entry ===
+{
+    "timestamp": "2025-06-24 15:13:46",
+    "message": "Shipping address added successfully",
+    "data": {
+        "order_id": 58,
+        "address": {
+            "province": "2",
+            "district": "35",
+            "ward": "677",
+            "street": "444",
+            "recipient": "Quang Duy",
+            "phone": "0793994771",
+            "email": "duyquang2709pp@gmail.com"
+        }
+    }
+}
+=== End Log Entry ===
+
+=== Order Processing Log Entry ===
+{
+    "timestamp": "2025-06-24 15:13:46",
+    "message": "Order detail added successfully",
+    "data": {
+        "product_id": 4,
+        "order_id": 58,
+        "quantity": 6,
+        "price": 6000,
+        "unit": "cái"
+    }
+}
+=== End Log Entry ===
+
+=== Order Processing Log Entry ===
+{
+    "timestamp": "2025-06-24 15:13:46",
+    "message": "Products removed from cart successfully",
+    "data": {
+        "cart_id": 7,
+        "selected_items": [
+            4
+        ],
+        "affected_rows": 1
+    }
+}
+=== End Log Entry ===
+
+=== Order Processing Log Entry ===
+{
+    "timestamp": "2025-06-24 15:13:46",
+    "message": "Discount data retrieved",
+    "data": {
+        "discount_data": {
+            "KM_GIATRI": 5,
+            "hinh_thuc_km": "Giảm phần trăm"
+        },
+        "original_total": 65000
+    }
+}
+=== End Log Entry ===
+
+=== Order Processing Log Entry ===
+{
+    "timestamp": "2025-06-24 15:13:46",
+    "message": "Discount applied",
+    "data": {
+        "discount_type": "Giảm phần trăm",
+        "discount_value": 5,
+        "discount_amount": 3250,
+        "new_total": 61750
+    }
+}
+=== End Log Entry ===
+
+=== Order Processing Log Entry ===
+{
+    "timestamp": "2025-06-24 15:13:46",
+    "message": "Transaction committed successfully",
+    "data": {
+        "order_id": 58,
+        "total_amount": 61750,
+        "shipping_fee": "29000"
+    }
+}
+=== End Log Entry ===
+
+=== Order Processing Log Entry ===
+{
+    "timestamp": "2025-06-24 15:13:46",
+    "message": "Redirecting to confirmation page",
+    "data": {
+        "order_id": 58,
+        "session": {
+            "user_id": 2,
+            "user_name": "Quang Duy",
+            "user_avatar": "default-avatar.jpg",
+            "order_id": 58,
+            "success_message": "Đặt hàng thành công! Cảm ơn bạn đã mua sắm tại Plants Shop."
+        }
+    }
+}
+=== End Log Entry ===
