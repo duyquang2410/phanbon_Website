@@ -31,13 +31,7 @@ if (isset($_SESSION['user_id'])) {
     $cart_count = $cart_data['count'];
 }
 
-// Đếm số lượng sản phẩm trong giỏ hàng
-$cart_count = 0;
-if(isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
-    foreach($_SESSION['cart'] as $item) {
-        $cart_count += $item['quantity'];
-    }
-}
+// jQuery UI - bắt buộc cho chức năng tự động gợi ý
 ?>
 
 <!-- jQuery UI - bắt buộc cho chức năng tự động gợi ý -->
@@ -45,63 +39,156 @@ if(isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
 <link rel="stylesheet" href="css/autocomplete.css">
 <!-- Header CSS -->
 <link rel="stylesheet" href="css/header.css">
-
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
-<script src="js/search.js"></script>
-<!-- Header JavaScript -->
-<script src="js/header.js"></script>
-
-<!-- Thêm CSS cho search suggestions -->
 <style>
-    .search-suggestions {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background: white;
-        border: 1px solid #ddd;
-        border-radius: 4px;
-        max-height: 400px;
-        overflow-y: auto;
-        z-index: 1000;
-        display: none;
+    /* Header styling */
+    #header {
+        background: #fff;
+        padding: 15px 0;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
 
-    .suggestion-item {
-        padding: 10px;
+    /* Logo styling */
+    .logo a {
+        color: #333;
+        text-decoration: none;
+        font-size: 24px !important;
+        font-weight: 700;
+        display: inline-block;
+    }
+
+    .logo span {
+        color: #e3ae03;
+    }
+
+    /* Navigation menu styling */
+    .navbar-nav {
         display: flex;
         align-items: center;
-        border-bottom: 1px solid #eee;
-        cursor: pointer;
+        gap: 2rem;
     }
 
-    .suggestion-item:hover {
-        background-color: #f8f9fa;
+    .nav-item {
+        position: relative;
     }
 
-    .suggestion-item img {
-        width: 50px;
-        height: 50px;
-        object-fit: cover;
-        margin-right: 10px;
+    .nav-link {
+        color: #333;
+        font-weight: 500;
+        padding: 0.5rem 0;
+        transition: color 0.3s ease;
+        font-size: 16px;
     }
 
-    .suggestion-item .product-info {
-        flex-grow: 1;
+    .nav-link:hover, 
+    .nav-link.active {
+        color: #28a745 !important;
     }
 
-    .suggestion-item .product-name {
-        font-weight: bold;
-        margin-bottom: 5px;
+    /* Search bar styling */
+    .search-container {
+        position: relative;
+        max-width: 100%;
     }
 
-    .suggestion-item .product-price {
+    .search-container .input-group {
+        border-radius: 25px;
+        overflow: hidden;
+    }
+
+    .search-container input {
+        border-right: none;
+        padding: 10px 15px;
+    }
+
+    .search-container .btn {
+        border-radius: 0 25px 25px 0;
+        padding: 10px 20px;
+    }
+
+    /* User menu and cart styling */
+    .user-menu {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .user-greeting,
+    .login-link,
+    .cart-icon {
+        color: #333;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s ease;
+    }
+
+    .user-greeting:hover,
+    .login-link:hover,
+    .cart-icon:hover {
         color: #28a745;
     }
 
-    .search-container {
+    /* Cart icon styling */
+    .cart-icon {
+        font-size: 20px;
         position: relative;
+        display: inline-block;
+        padding: 5px;
+        color: #333;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    .cart-icon:hover {
+        color: #28a745;
+    }
+
+    .cart-badge {
+        position: absolute;
+        top: -8px;
+        right: -8px;
+        background-color: #dc3545;
+        color: white;
+        border-radius: 50%;
+        padding: 0.25rem 0.5rem;
+        font-size: 12px;
+        min-width: 18px;
+        height: 18px;
+        line-height: 14px;
+        text-align: center;
+        font-weight: bold;
+        border: 2px solid #fff;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    @media (max-width: 768px) {
+        .cart-icon {
+            font-size: 18px;
+        }
+        .cart-badge {
+            font-size: 10px;
+            min-width: 16px;
+            height: 16px;
+            line-height: 12px;
+            top: -6px;
+            right: -6px;
+        }
+    }
+
+    /* Mobile menu styling */
+    @media (max-width: 768px) {
+        .mobile-menu-container {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .navbar-nav.mobile-nav {
+            gap: 1rem;
+        }
+
+        .nav-item.mb-2 {
+            margin-bottom: 0.5rem !important;
+        }
     }
 </style>
 
@@ -111,25 +198,25 @@ if(isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
         <div class="row align-items-center">
             <!-- Logo -->
             <div class="col-md-2 col-6">
-                <div class="logo mb-0">
-                    <a href="index.php" class="text-decoration-none fs-4 fw-bold">
+                <div class="logo">
+                    <a href="index.php" class="text-decoration-none">
                         Cây Trồng <i class="fa fa-leaf align-middle" style="color: green;"></i> <span>Shop</span>
                     </a>
                 </div>
             </div>
 
             <!-- Navigation Menu -->
-            <div class="col-md-5 d-none d-md-block">
-                <ul class="navbar-nav flex-row mb-0 justify-content-center">
-                    <li class="nav-item me-4">
+            <div class="col-md-6 d-none d-md-block">
+                <ul class="navbar-nav flex-row justify-content-start gap-4 mb-0">
+                    <li class="nav-item">
                         <a class="nav-link <?php echo (basename($_SERVER['PHP_SELF']) == 'index.php') ? 'active text-success' : ''; ?>"
                             href="index.php">Trang chủ</a>
                     </li>
-                    <li class="nav-item me-4">
+                    <li class="nav-item">
                         <a class="nav-link <?php echo (basename($_SERVER['PHP_SELF']) == 'shop.php') ? 'active text-success' : ''; ?>"
                             href="shop.php">Sản phẩm</a>
                     </li>
-                    <li class="nav-item me-4">
+                    <li class="nav-item">
                         <a class="nav-link <?php echo (basename($_SERVER['PHP_SELF']) == 'about.php') ? 'active text-success' : ''; ?>"
                             href="about.php">Giới thiệu</a>
                     </li>
@@ -137,11 +224,15 @@ if(isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
                         <a class="nav-link <?php echo (basename($_SERVER['PHP_SELF']) == 'contact.php') ? 'active text-success' : ''; ?>"
                             href="contact.php">Liên hệ</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link <?php echo (basename($_SERVER['PHP_SELF']) == 'blog.php') ? 'active text-success' : ''; ?>"
+                            href="blog.php">Cẩm nang</a>
+                    </li>
                 </ul>
             </div>
 
             <!-- Search Bar -->
-            <div class="col-md-3 d-none d-md-block">
+            <div class="col-md-2 d-none d-md-block">
                 <form class="d-flex" action="shop.php" method="GET">
                     <div class="search-container">
                         <div class="input-group">
@@ -149,7 +240,7 @@ if(isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
                                 class="form-control" 
                                 id="searchInput"
                                 name="search" 
-                                placeholder="Tìm kiếm sản phẩm..."
+                                placeholder="Tìm kiếm..."
                                 value="<?php echo isset($_GET['search']) ? htmlspecialchars($_GET['search']) : ''; ?>"
                                 autocomplete="off">
                             <button class="btn btn-success" type="submit">
@@ -161,46 +252,35 @@ if(isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
                 </form>
             </div>
 
-            <!-- Mobile Menu Toggle -->
-            <div class="col-6 d-md-none text-end">
-                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarContent">
-                    <i class="fa fa-bars fs-4 col_yell"></i>
-                </button>
-            </div>
-
             <!-- User Menu and Cart -->
             <div class="col-md-2 d-none d-md-block">
-                <div class="d-flex align-items-center justify-content-end">
+                <div class="user-menu">
                     <!-- Login/User Account -->
                     <?php if(isset($_SESSION['user_id'])): ?>
-                    <div class="dropdown me-3">
+                    <div class="dropdown">
                         <a class="dropdown-toggle user-greeting" href="#" role="button" id="userDropdown"
                             data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="fa fa-user me-1 col_yell"></i>
+                            <i class="fa fa-user me-1"></i>
                             <?php echo htmlspecialchars($_SESSION['user_name']); ?>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
                             <li><a class="dropdown-item" href="profile.php">Tài khoản</a></li>
-                            <li><a class="dropdown-item" href="my_orders.php">Theo Dõi Đơn Hàng </a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
+                            <li><a class="dropdown-item" href="my_orders.php">Theo Dõi Đơn Hàng</a></li>
+                            <li><hr class="dropdown-divider"></li>
                             <li><a class="dropdown-item" href="logout.php">Đăng xuất</a></li>
                         </ul>
                     </div>
                     <?php else: ?>
-                    <a href="login.php" class="login-link me-3">
-                        <i class="fa fa-sign-in col_yell"></i> Đăng nhập
+                    <a href="login.php" class="login-link">
+                        <i class="fa fa-sign-in"></i> Đăng nhập
                     </a>
                     <?php endif; ?>
 
-                    <!-- Cart (moved to end) -->
-                    <a href="cart.php" class="cart-icon position-relative">
-                        <i class="fa fa-shopping-cart fs-5 col_yell"></i>
+                    <!-- Cart -->
+                    <a href="cart.php" class="cart-icon">
+                        <i class="fa fa-shopping-cart"></i>
                         <?php if($cart_count > 0): ?>
-                        <span class="badge rounded-pill bg-danger position-absolute top-0 start-100 translate-middle"
-                            style="font-size: 0.6em;">
+                        <span class="cart-badge">
                             <?php echo $cart_count; ?>
                         </span>
                         <?php endif; ?>
@@ -208,12 +288,20 @@ if(isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
                 </div>
             </div>
 
+            <!-- Mobile Menu Toggle -->
+            <div class="col-6 d-md-none text-end">
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarContent">
+                    <i class="fa fa-bars fs-4"></i>
+                </button>
+            </div>
+
             <!-- Mobile Collapsible Content -->
             <div class="col-12 d-md-none">
-                <div class="collapse navbar-collapse mt-2" id="navbarContent">
+                <div class="collapse navbar-collapse mt-3" id="navbarContent">
                     <div class="mobile-menu-container p-3">
                         <!-- Mobile Navigation Menu -->
-                        <ul class="navbar-nav mb-3">
+                        <ul class="navbar-nav mobile-nav">
                             <li class="nav-item mb-2">
                                 <a class="nav-link <?php echo (basename($_SERVER['PHP_SELF']) == 'index.php') ? 'active text-success' : ''; ?>"
                                     href="index.php">Trang chủ</a>
@@ -230,6 +318,10 @@ if(isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
                                 <a class="nav-link <?php echo (basename($_SERVER['PHP_SELF']) == 'contact.php') ? 'active text-success' : ''; ?>"
                                     href="contact.php">Liên hệ</a>
                             </li>
+                            <li class="nav-item mb-2">
+                                <a class="nav-link <?php echo (basename($_SERVER['PHP_SELF']) == 'blog.php') ? 'active text-success' : ''; ?>"
+                                    href="blog.php">Cẩm nang</a>
+                            </li>
                         </ul>
 
                         <!-- Mobile Search Bar -->
@@ -240,7 +332,7 @@ if(isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
                                         class="form-control" 
                                         id="mobileSearchInput"
                                         name="search" 
-                                        placeholder="Tìm kiếm sản phẩm..."
+                                        placeholder="Tìm kiếm..."
                                         value="<?php echo isset($_GET['search']) ? htmlspecialchars($_GET['search']) : ''; ?>"
                                         autocomplete="off">
                                     <button class="btn btn-success" type="submit">

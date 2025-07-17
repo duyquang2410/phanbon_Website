@@ -5,166 +5,339 @@ Author: TemplatesOnWeb
 Author URI: https://www.templateonweb.com/
 Licence: <a href="https://www.templateonweb.com/license">Website Template Licence</a>
 */
+
+
 /*********************blog****************/
-.center_blog_1li1 ul li a{
-background: rgba(255, 255, 255, 0.2);
-color:#fff; 
- }
-.center_blog_1li1 {
-padding-top:330px;
- }
-.tags li a {
-margin: 0 10px 15px 0;
+
+.center_blog_1li1 ul li a {
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
 }
-.blog_pg1r4i2{
-padding-top:45px; 
- }
+
+.center_blog_1li1 {
+    padding-top: 330px;
+}
+
+.tags li a {
+    margin: 0 10px 15px 0;
+}
+
+.blog_pg1r4i2 {
+    padding-top: 45px;
+}
+
+
 /*********************blog_end****************/
 
 
-@media screen and (max-width : 767px){
-.center_blog_1li1 {
-padding-top:5%;
-}
-.center_blog_1li1 {
-padding-left:10px!important; 
-padding-right:10px!important; 
- }
-.center_blog_1li1 h3{
-font-size:16px;
- }
-.center_blog_1r{
-margin-top:15px; 
- }
-.center_blog_1rir{
-margin-top:15px; 
- }
-.blog_pg1lir{
-margin-top:15px;  
- }
-.blog_pg1r{
-margin-top:15px;   
- }
-.blog_pg1r1 {
-padding:15px!important; 
- }
-.blog_pg1r2 h5{
-text-align:center; 
- }
-.blog_pg1r3 h5{
-text-align:center; 
- }
-.blog_pg1r3i  .pe-0{
-padding-right:12px!important; 
- }
-.blog_pg1r3ir {
-margin-top:15px; 
- }
-.blog_pg1r3ir h5{
-text-align:left; 
- }
-.blog_pg1r4i2 {
-padding:15px!important; 
- }
-.blog_pg1r4i1 img {
-min-height:220px;
- }
-.blog_dt h3{
-text-align:center; 
- }
-.blog_1dt1i1 {
-text-align:center; 
- }
-.blog_1dt1i1r {
-text-align:center!important; 
- }
-.blog_1dt2ir{
-margin-top:15px;
-text-align:center; 
- }
-.blog_1dt2ir p{
-text-align:left; 
- }
-.blog_dt3 {
-text-align:center; 
- }
-.blog_dt3il{
-margin-top:10px; 
- }
-.blog_dt3 p{
-text-align:left; 
- }
- }
+/* Blog Page Styles */
 
+.blog-page {
+    background-color: #f8f9fa;
+}
+
+
+/* Disease Card Styles */
+
+.disease-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.disease-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+.disease-image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.disease-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.disease-card:hover .disease-image {
+    transform: scale(1.05);
+}
+
+.disease-content {
+    position: relative;
+    background: white;
+}
+
+
+/* Plant Tags */
+
+.plant-tags {
+    margin: 1rem 0;
+}
+
+.badge {
+    font-weight: 500;
+    font-size: 0.85rem;
+}
+
+.badge.bg-success-subtle {
+    background-color: rgba(40, 167, 69, 0.1) !important;
+}
+
+
+/* Prevention Tips Section */
+
+.prevention-tips {
+    background-color: #ffffff;
+    border: 1px solid rgba(40, 167, 69, 0.1);
+}
+
+.prevention-list p {
+    color: #6c757d;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.badge.bg-success {
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Responsive Adjustments */
+
+@media (max-width: 767.98px) {
+    .disease-image-wrapper {
+        height: 200px;
+    }
+    .prevention-tips {
+        padding: 1.5rem !important;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .disease-image-wrapper {
+        height: 220px;
+    }
+}
+
+
+/* Breadcrumb Styling */
+
+.breadcrumb {
+    background: transparent;
+    padding: 0;
+}
+
+.breadcrumb-item a {
+    color: #28a745;
+}
+
+.breadcrumb-item.active {
+    color: #6c757d;
+}
+
+
+/* Button Styling */
+
+.btn-outline-success {
+    border-color: #28a745;
+    color: #28a745;
+}
+
+.btn-outline-success:hover {
+    background-color: #28a745;
+    color: white;
+}
+
+
+/* Title Styling */
+
+.display-4 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.lead {
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+
+/* Card Content */
+
+.disease-content h2 {
+    font-size: 1.5rem;
+    line-height: 1.4;
+}
+
+.disease-content p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+
+/* Animation */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.disease-card {
+    animation: fadeIn 0.6s ease-out forwards;
+}
+
+@media screen and (max-width: 767px) {
+    .center_blog_1li1 {
+        padding-top: 5%;
+    }
+    .center_blog_1li1 {
+        padding-left: 10px!important;
+        padding-right: 10px!important;
+    }
+    .center_blog_1li1 h3 {
+        font-size: 16px;
+    }
+    .center_blog_1r {
+        margin-top: 15px;
+    }
+    .center_blog_1rir {
+        margin-top: 15px;
+    }
+    .blog_pg1lir {
+        margin-top: 15px;
+    }
+    .blog_pg1r {
+        margin-top: 15px;
+    }
+    .blog_pg1r1 {
+        padding: 15px!important;
+    }
+    .blog_pg1r2 h5 {
+        text-align: center;
+    }
+    .blog_pg1r3 h5 {
+        text-align: center;
+    }
+    .blog_pg1r3i .pe-0 {
+        padding-right: 12px!important;
+    }
+    .blog_pg1r3ir {
+        margin-top: 15px;
+    }
+    .blog_pg1r3ir h5 {
+        text-align: left;
+    }
+    .blog_pg1r4i2 {
+        padding: 15px!important;
+    }
+    .blog_pg1r4i1 img {
+        min-height: 220px;
+    }
+    .blog_dt h3 {
+        text-align: center;
+    }
+    .blog_1dt1i1 {
+        text-align: center;
+    }
+    .blog_1dt1i1r {
+        text-align: center!important;
+    }
+    .blog_1dt2ir {
+        margin-top: 15px;
+        text-align: center;
+    }
+    .blog_1dt2ir p {
+        text-align: left;
+    }
+    .blog_dt3 {
+        text-align: center;
+    }
+    .blog_dt3il {
+        margin-top: 10px;
+    }
+    .blog_dt3 p {
+        text-align: left;
+    }
+}
 
 @media (min-width:576px) and (max-width:767px) {
-.center_blog_1li1 {
-padding-top:40%;
+    .center_blog_1li1 {
+        padding-top: 40%;
+    }
+    .blog_pg1r4i2 {
+        padding-top: 20%!important;
+    }
+    .blog_1dt2ir {
+        margin-top: 0;
+        text-align: left;
+    }
 }
-.blog_pg1r4i2 {
-padding-top: 20%!important;
-}
-.blog_1dt2ir{
-margin-top:0;
-text-align:left; 
- }
 
- }
- 
 @media (min-width:768px) and (max-width:991px) {
-.center_blog_1li img{
-min-height:535px; 
- }
-.center_blog_1ril h5{
-font-size:14px; 
- }
-.center_blog_1ril ul li a{
-margin-top:3px;
-margin-bottom:3px;
-font-size:12px; 
- }
-.blog_pg1lir h6{
-font-size:13px;  
- }
-.blog_pg1lir h4{
-font-size:18px;  
- }
-.blog_pg1lir p{
-font-size:13px!important;  
- }
-.blog_pg1r1  {
-padding-left:15px!important; 
-padding-right:15px!important; 
- }
-.blog_pg1r1 p {
-font-size:14px!important;
- }
-.blog_pg1r4i1 img{
-min-height:270px; 
- }
-.blog_pg1r4i2 {
-padding-left:10px!important; 
-padding-right:10px!important;
- }
-.blog_1dt1i1r  .social_tag li a {
-width: 40px;
-height: 40px;
-line-height: 40px;
-font-size: 16px;
+    .center_blog_1li img {
+        min-height: 535px;
+    }
+    .center_blog_1ril h5 {
+        font-size: 14px;
+    }
+    .center_blog_1ril ul li a {
+        margin-top: 3px;
+        margin-bottom: 3px;
+        font-size: 12px;
+    }
+    .blog_pg1lir h6 {
+        font-size: 13px;
+    }
+    .blog_pg1lir h4 {
+        font-size: 18px;
+    }
+    .blog_pg1lir p {
+        font-size: 13px!important;
+    }
+    .blog_pg1r1 {
+        padding-left: 15px!important;
+        padding-right: 15px!important;
+    }
+    .blog_pg1r1 p {
+        font-size: 14px!important;
+    }
+    .blog_pg1r4i1 img {
+        min-height: 270px;
+    }
+    .blog_pg1r4i2 {
+        padding-left: 10px!important;
+        padding-right: 10px!important;
+    }
+    .blog_1dt1i1r .social_tag li a {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 16px;
+    }
 }
- }
 
 @media (min-width:992px) and (max-width:1200px) {
-.center_blog_1li img{
-min-height:535px; 
- }
-.blog_pg1r4i1 img{
-min-height:270px; 
- }
- }
-@media (min-width:1201px) and (max-width:1310px) {
+    .center_blog_1li img {
+        min-height: 535px;
+    }
+    .blog_pg1r4i1 img {
+        min-height: 270px;
+    }
+}
 
- }
-
-
-
+@media (min-width:1201px) and (max-width:1310px) {}

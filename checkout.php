@@ -3,10 +3,13 @@ require_once 'config.php';
 require_once 'error_log.php';
 require_once 'connect.php';
 require_once 'cart_functions.php';
+require_once 'create_logs.php';
 
 session_start();
 
 $logger = ErrorLogger::getInstance('logs/checkout.log');
+$shippingLogger = Logger::getInstance('logs/shipping.log');
+$promoLogger = Logger::getInstance('logs/promo.log');
 
 // Kiểm tra đăng nhập
 if (!isset($_SESSION['user_id'])) {
@@ -28,57 +31,176 @@ $stmt->execute();
 $user_result = $stmt->get_result();
 $user_info = $user_result->fetch_assoc();
 
-// Xử lý mã khuyến mãi
-$promo_discount = 0;
-$promo_message = '';
+// Lấy danh sách mã khuyến mãi có hiệu lực
+$promo_sql = "SELECT * FROM khuyen_mai 
+              WHERE KM_TRANGTHAI = 1 
+              AND KM_TGBD <= NOW() 
+              AND KM_TGKT >= NOW()
+              ORDER BY KM_DKSD ASC";
+$promo_result = $conn->query($promo_sql);
+$available_promos = [];
+while ($promo = $promo_result->fetch_assoc()) {
+    $available_promos[] = $promo;
+}
+
+// Khởi tạo biến cho khuyến mãi
+$applied_promo = null;
+$promo_error = '';
+$promo_success = '';
 $total_discount = 0;
 
-// Xử lý mã khuyến mãi chung
-if (isset($_POST['promo_code']) && !empty($_POST['promo_code'])) {
-    $promo = applyPromoCode($conn, trim($_POST['promo_code']));
-    if ($promo['valid']) {
-        $promo_discount = ($_POST['total_amount'] ?? 0) * ($promo['value'] / 100);
-        $total_discount += $promo_discount;
-    } else {
-        $promo_message = $promo['message'] ?? 'Mã khuyến mãi chung không hợp lệ';
-    }
-}
+// Get cart items and calculate total first
+$sql = "SELECT sp.SP_MA, sp.SP_TEN, sp.SP_DONGIA, sp.SP_TRONGLUONG, ctgh.CTGH_KHOILUONG, ctgh.CTGH_DONVITINH, sp.SP_HINHANH 
+        FROM chitiet_gh ctgh
+        JOIN san_pham sp ON ctgh.SP_MA = sp.SP_MA
+        WHERE ctgh.GH_MA = ? AND ctgh.DA_MUA = 0";
 
-// Xử lý mã khuyến mãi theo sản phẩm
-$item_discounts = [];
-if (!empty($_POST['selected_items'])) {
-    foreach ($_POST['selected_items'] as $product_id) {
-        $promo_code = isset($_POST['promo_code_item'][$product_id]) ? trim($_POST['promo_code_item'][$product_id]) : '';
-        if ($promo_code) {
-            $promo = applyPromoCode($conn, $promo_code);
-            if ($promo['valid']) {
-                $item_price = isset($_POST['item_price'][$product_id]) ? (float)$_POST['item_price'][$product_id] : 0;
-                $item_quantity = isset($_POST['item_quantity'][$product_id]) ? (int)$_POST['item_quantity'][$product_id] : 1;
-                $item_subtotal = $item_price * $item_quantity;
-                $discount = $item_subtotal * ($promo['value'] / 100);
-                $item_discounts[$product_id] = $discount;
-                $total_discount += $discount;
-            } else {
-                $item_discounts[$product_id] = 0;
-                $promo_message = $promo['message'] ?? 'Mã khuyến mãi cho sản phẩm không hợp lệ';
-            }
-        }
-    }
-}
+$stmt = $conn->prepare($sql);
+$stmt->bind_param("i", $cart_id);
+$stmt->execute();
+$result = $stmt->get_result();
 
 // Calculate total weight and order value
 $total_weight = 0;
 $total_value = 0;
-if (!empty($_POST['selected_items'])) {
-    foreach ($_POST['selected_items'] as $product_id) {
-        $item_price = isset($_POST['item_price'][$product_id]) ? (float)$_POST['item_price'][$product_id] : 0;
-        $item_quantity = isset($_POST['item_quantity'][$product_id]) ? (int)$_POST['item_quantity'][$product_id] : 1;
-        $item_subtotal = $item_price * $item_quantity;
-        $total_value += $item_subtotal;
-        // Giả định mỗi sản phẩm có trọng lượng 1kg (1000g)
-        $total_weight += 1000 * $item_quantity;
+$weight_details = [];
+$cart_items = [];
+
+while ($row = $result->fetch_assoc()) {
+    $item_quantity = $row['CTGH_KHOILUONG'];
+    $item_price = $row['SP_DONGIA'];
+    $cart_items[] = $row;
+    
+    // Convert weight to grams (assuming SP_TRONGLUONG is in kg)
+    $item_weight = $row['SP_TRONGLUONG'] * 1000; // Convert kg to grams
+    if ($item_weight <= 0) {
+        $item_weight = 1000; // Default to 1kg if no weight specified
+        $shippingLogger->warning("Product has no weight specified, using default", [
+            'product_id' => $row['SP_MA'],
+            'product_name' => $row['SP_TEN'],
+            'default_weight' => $item_weight
+        ]);
+    }
+    
+    // Log individual product weight details
+    $weight_details[] = [
+        'product_id' => $row['SP_MA'],
+        'product_name' => $row['SP_TEN'],
+        'unit_weight' => $item_weight,
+        'quantity' => $item_quantity,
+        'total_item_weight' => $item_weight * $item_quantity
+    ];
+    
+    $total_weight += $item_weight * $item_quantity;
+    $total_value += $item_price * $item_quantity;
+}
+
+// Log cart summary
+$promoLogger->info("Cart summary before promo", [
+    'total_value' => $total_value,
+    'total_weight' => $total_weight,
+    'items_count' => count($cart_items)
+]);
+
+// Kiểm tra giỏ hàng trống
+if (empty($cart_items)) {
+    $promo_error = 'Không có sản phẩm nào trong giỏ hàng';
+    $promoLogger->error("Empty cart", [
+        'cart_id' => $cart_id,
+        'user_id' => $user_id
+    ]);
+}
+
+// Xử lý áp dụng mã khuyến mãi
+if (isset($_POST['apply_promo']) && !empty($_POST['promo_code'])) {
+    $promo_code = trim($_POST['promo_code']);
+    
+    $promoLogger->info("Attempting to apply promo code", [
+        'user_id' => $user_id,
+        'promo_code' => $promo_code,
+        'cart_id' => $cart_id,
+        'total_value' => $total_value
+    ]);
+    
+    if (empty($cart_items)) {
+        $promo_error = 'Vui lòng thêm sản phẩm vào giỏ hàng trước khi áp dụng mã giảm giá';
+        $promoLogger->error("Cannot apply promo to empty cart", [
+            'promo_code' => $promo_code
+        ]);
+    } else {
+        // Kiểm tra mã khuyến mãi
+        $check_promo_sql = "SELECT * FROM khuyen_mai 
+                           WHERE Code = ? 
+                           AND KM_TRANGTHAI = 1 
+                           AND KM_TGBD <= NOW() 
+                           AND KM_TGKT >= NOW()";
+        $check_stmt = $conn->prepare($check_promo_sql);
+        $check_stmt->bind_param("s", $promo_code);
+        $check_stmt->execute();
+        $promo_result = $check_stmt->get_result();
+        
+        if ($promo = $promo_result->fetch_assoc()) {
+            $promoLogger->info("Found valid promo code", [
+                'promo_details' => $promo
+            ]);
+            
+            // Kiểm tra điều kiện áp dụng
+            if ($total_value >= $promo['KM_DKSD']) {
+                $applied_promo = $promo;
+                if ($promo['hinh_thuc_km'] == 'percent') {
+                    $total_discount = min($total_value, $total_value * ($promo['KM_GIATRI'] / 100));
+                    $promoLogger->info("Applied percentage discount", [
+                        'percentage' => $promo['KM_GIATRI'],
+                        'total_value' => $total_value,
+                        'discount_amount' => $total_discount
+                    ]);
+                } else {
+                    $total_discount = min($promo['KM_GIATRI'], $total_value);
+                    $promoLogger->info("Applied fixed discount", [
+                        'fixed_amount' => $promo['KM_GIATRI'],
+                        'total_value' => $total_value,
+                        'discount_amount' => $total_discount
+                    ]);
+                }
+                $promo_success = 'Áp dụng mã giảm giá thành công!';
+                
+                $promoLogger->info("Successfully applied promo code", [
+                    'total_discount' => $total_discount,
+                    'final_amount' => $total_value - $total_discount
+                ]);
+            } else {
+                $promo_error = 'Giá trị đơn hàng chưa đủ điều kiện áp dụng. Tối thiểu ' . number_format($promo['KM_DKSD'], 0, ',', '.') . 'đ';
+                $promoLogger->warning("Order value too low for promo code", [
+                    'required_value' => $promo['KM_DKSD'],
+                    'current_value' => $total_value
+                ]);
+            }
+        } else {
+            $promo_error = 'Mã khuyến mãi không hợp lệ hoặc đã hết hạn';
+            $promoLogger->error("Invalid or expired promo code", [
+                'promo_code' => $promo_code
+            ]);
+        }
     }
 }
+
+// Tính tổng tiền hàng
+$total_value = 0;
+foreach ($cart_items as $row) {
+    $item_quantity = $row['CTGH_KHOILUONG'];
+    $item_price = $row['SP_DONGIA'];
+    $total_value += $item_price * $item_quantity;
+}
+// Tính giảm giá chỉ trên tổng tiền hàng
+if ($applied_promo) {
+    $discount_type = $applied_promo['hinh_thuc_km'];
+    $discount_value = $applied_promo['KM_GIATRI'];
+    $total_discount = calculateDiscount($total_value, $discount_type, $discount_value);
+} else {
+    $total_discount = 0;
+}
+// Tổng thanh toán = (tổng tiền hàng - giảm giá) + phí vận chuyển
+$total_payment = max(0, $total_value - $total_discount) + (isset($shipping_fee) ? $shipping_fee : 0);
 ?>
 
 <!DOCTYPE html>
@@ -143,6 +265,19 @@ if (!empty($_POST['selected_items'])) {
     .promo-item small.text-success {
         font-weight: 600;
     }
+    .dropdown-menu {
+        max-height: 300px;
+        overflow-y: auto;
+    }
+    .promo-item {
+        transition: background-color 0.2s;
+    }
+    .promo-item:hover {
+        background-color: #f8f9fa;
+    }
+    .copy-code {
+        min-width: 80px;
+    }
     </style>
 </head>
 
@@ -155,8 +290,9 @@ if (!empty($_POST['selected_items'])) {
                     <div class="card-body">
                         <h5 class="card-title mb-4">Thông tin giao hàng</h5>
                         <form id="checkoutForm" method="POST" action="process_order.php">
-                            <!-- Hidden inputs for promo codes -->
-                            <input type="hidden" name="promo_code" id="promoCodeInput" value="<?php echo isset($_POST['promo_code']) ? htmlspecialchars($_POST['promo_code']) : ''; ?>">
+                            <!-- Hidden inputs for promo codes and shipping fee -->
+                            <input type="hidden" name="promo_code" id="promoCode" value="">
+                            <input type="hidden" name="shipping_fee" id="shippingFee" value="0">
                             <?php if (!empty($_POST['promo_code_item'])): ?>
                                 <?php foreach ($_POST['promo_code_item'] as $product_id => $code): ?>
                                     <input type="hidden" name="promo_code_item[<?php echo $product_id; ?>]" value="<?php echo htmlspecialchars($code); ?>">
@@ -311,27 +447,14 @@ if (!empty($_POST['selected_items'])) {
                                                 <span>Chuyển khoản ngân hàng</span>
                                             </label>
                                         </div>
-                                        <div class="form-check mb-3">
-                                            <input class="form-check-input" type="radio" name="paymentMethod" id="card" value="3">
-                                            <label class="form-check-label d-flex align-items-center" for="card">
-                                                <i class="fa fa-credit-card me-3 text-info"></i>
-                                                <span>Thẻ Visa/Mastercard/Amex</span>
-                                            </label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="paymentMethod" id="momo" value="4">
-                                            <label class="form-check-label d-flex align-items-center" for="momo">
-                                                <i class="fa fa-mobile me-3 text-danger"></i>
-                                                <span>Thanh toán qua ví MoMo</span>
-                                            </label>
-                                        </div>
+                                       
+                                       
                                     </div>
                                 </div>
                             </div>
 
                             <!-- Hidden inputs -->
-                            <input type="hidden" name="shipping_fee">
-                            <input type="hidden" name="total_weight" value="1000">
+                            <input type="hidden" name="total_weight" value="<?php echo $total_weight; ?>">
                             <input type="hidden" name="total_value" value="<?php echo $total_value; ?>">
                             <input type="hidden" name="total_amount" value="<?php echo $total_value; ?>">
                             <input type="hidden" name="total_discount" value="<?php echo $total_discount; ?>">
@@ -403,9 +526,8 @@ if (!empty($_POST['selected_items'])) {
                                     <span>Tổng tiền hàng</span>
                                     <span class="text-dark"><?php echo number_format($total_value, 0, ',', '.'); ?>đ</span>
                                 </div>
-                                <div class="summary-row">
-                                    <span>Phí vận chuyển</span>
-                                    <span id="shipping-fee-summary" class="text-success">Đang tính...</span>
+                                <div class="summary-row" id="original-price-row" style="display: none;">
+                                    
                                 </div>
                                 <div class="summary-row" id="discount-row" style="display: none;">
                                     <span>Giảm giá</span>
@@ -416,44 +538,72 @@ if (!empty($_POST['selected_items'])) {
                                         </small>
                                     </span>
                                 </div>
+                                <div class="summary-row">
+                                    <span>Phí vận chuyển</span>
+                                    <span id="shipping-fee-summary" class="text-success"><?php echo isset($shipping_fee) ? number_format($shipping_fee, 0, ',', '.') . 'đ' : 'Đang tính...'; ?></span>
+                                </div>
                                 <div class="summary-row total-row">
                                     <span class="fw-bold">Tổng thanh toán</span>
                                     <span id="total-payment" class="text-danger fw-bold">
-                                        <?php echo number_format($total_value, 0, ',', '.'); ?>đ
+                                        <?php echo number_format($total_payment, 0, ',', '.'); ?>đ
                                     </span>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Phần khuyến mãi -->
-                        <div class="promo-code mb-3">
-                            <h6 class="mb-3">Mã khuyến mãi</h6>
-                            <div class="input-group">
-                                <input type="text" class="form-control" placeholder="Nhập mã khuyến mãi" id="promoInput"
-                                    value="<?php echo htmlspecialchars($_POST['promo_code'] ?? ''); ?>">
-                                <select class="form-select" id="promoType" style="max-width: 200px;">
-                                    <option value="all">Áp dụng cho tất cả</option>
-                                    <?php 
-                                    if (isset($_POST['selected_items']) && is_array($_POST['selected_items'])) {
-                                        foreach ($_POST['selected_items'] as $product_id): 
-                                    ?>
-                                    <option value="<?php echo htmlspecialchars($product_id); ?>">
-                                        <?php echo htmlspecialchars($_POST['item_name'][$product_id] ?? 'Sản phẩm không xác định'); ?>
-                                    </option>
-                                    <?php 
-                                        endforeach;
-                                    }
-                                    ?>
-                                </select>
-                                <button class="btn btn-success" type="button" id="applyPromo">Áp dụng</button>
+                        <div class="shipping-section mb-4">
+                            <h6 class="section-title">
+                                <i class="fa fa-gift me-2"></i>Mã khuyến mãi
+                            </h6>
+                            <div class="card">
+                                <div class="card-body">
+                                    <!-- Thông báo -->
+                                    <div class="alert alert-danger d-none" id="promoError"></div>
+                                    <div class="alert alert-success d-none" id="promoSuccess"></div>
+
+                                    <!-- Hidden input cho mã khuyến mãi -->
+                                    <input type="hidden" name="promo_code" id="promoCode" value="">
+                                    <input type="hidden" name="total_amount" id="totalAmount" value="<?php echo $total_value; ?>">
+                                    <input type="hidden" name="shipping_fee" id="shippingFee" value="0">
+                                    <input type="hidden" name="total_weight" id="totalWeight" value="<?php echo $total_weight; ?>">
+                                    <input type="hidden" name="total_value" id="totalValue" value="<?php echo $total_value; ?>">
+
+                                    <!-- Danh sách mã khuyến mãi -->
+                                    <div class="promo-list">
+                                        <?php foreach ($available_promos as $promo): ?>
+                                        <div class="promo-item d-flex justify-content-between align-items-center p-2 border-bottom">
+                                            <div>
+                                                <div class="fw-bold text-primary"><?php echo htmlspecialchars($promo['Code']); ?></div>
+                                                <div class="small text-muted">
+                                                    <?php if ($promo['hinh_thuc_km'] == 'Giảm phần trăm'): ?>
+                                                        Giảm <?php echo $promo['KM_GIATRI']; ?>%
+                                                    <?php else: ?>
+                                                        Giảm <?php echo number_format($promo['KM_GIATRI'], 0, ',', '.'); ?>đ
+                                                    <?php endif; ?>
+                                                    <?php if ($promo['KM_DKSD'] > 0): ?>
+                                                        cho đơn từ <?php echo number_format($promo['KM_DKSD'], 0, ',', '.'); ?>đ
+                                                    <?php endif; ?>
+                                                </div>
+                                            </div>
+                                            <button type="button" 
+                                                    class="btn btn-primary btn-sm apply-promo" 
+                                                    data-code="<?php echo htmlspecialchars($promo['Code']); ?>">
+                                                Áp dụng
+                                            </button>
+                                        </div>
+                                        <?php endforeach; ?>
+                                    </div>
+
+                                    <!-- Hiển thị giảm giá -->
+                                    <div id="discountDisplay" class="d-none mt-3">
+                                        <div class="d-flex justify-content-between text-success">
+                                            <span>Giảm giá:</span>
+                                            <span>-<span id="discountAmount">0</span>đ</span>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="promo-error mt-2" style="display: none;"></div>
-                            <button class="btn btn-outline-secondary w-100 mt-2" type="button" data-bs-toggle="modal" data-bs-target="#promoModal">
-                                <i class="fa fa-ticket me-2"></i>Chọn mã
-                            </button>
-                            <?php if (isset($promo_message)): ?>
-                            <div class="promo-error"><?php echo htmlspecialchars($promo_message); ?></div>
-                            <?php endif; ?>
                         </div>
 
                         <!-- Error message container -->
@@ -504,44 +654,94 @@ if (!empty($_POST['selected_items'])) {
 
     <!-- Scripts -->
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Khởi tạo các biến global
+        window.CART_TOTAL = <?php echo $total_value; ?>;
+        window.CART_WEIGHT = <?php echo $total_weight; ?>;
+    </script>
+    <script src="js/promo.js"></script>
     <script src="js/shipping.js"></script>
     <script src="js/address.js"></script>
-    <script src="js/promo.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             try {
-                // Initialize ShippingManager first
-                if (typeof ShippingManager !== 'undefined') {
-                    window.shippingManager = new ShippingManager();
-                    console.log('ShippingManager initialized');
+                // Initialize PromoManager first
+                if (typeof PromoManager !== 'undefined') {
+                    window.promoManager = new PromoManager();
+                    console.log('PromoManager initialized');
                 } else {
-                    console.error('ShippingManager not found');
+                    console.error('PromoManager class not found');
                 }
 
                 // Initialize AddressManager
                 if (typeof AddressManager !== 'undefined') {
                     window.addressManager = new AddressManager({
-                        pickProvince: "1", // Hà Nội
-                        pickDistrict: "1", // Ba Đình
-                        pickWard: "1", // Default ward
-                        pickAddress: "123 Đường Láng" // Default address
+                        pickProvince: "1",
+                        pickDistrict: "1",
+                        pickWard: "1",
+                        pickAddress: "123 Đường Láng"
                     });
                     console.log('AddressManager initialized');
                 } else {
-                    console.error('AddressManager not found');
+                    console.error('AddressManager class not found');
                 }
 
-                // Initialize PromoManager
-                if (typeof PromoManager !== 'undefined') {
-                    window.promoManager = new PromoManager();
-                    console.log('PromoManager initialized');
+                // Initialize ShippingManager last since it depends on others
+                if (typeof ShippingManager !== 'undefined') {
+                    window.shippingManager = new ShippingManager();
+                    console.log('ShippingManager initialized');
+
+                    // Trigger initial shipping fee calculation
+                    if (window.addressManager && window.addressManager.isAddressComplete()) {
+                        window.shippingManager.calculateShippingFee();
+                    }
                 } else {
-                    console.error('PromoManager not found');
+                    console.error('ShippingManager class not found');
                 }
 
             } catch (error) {
                 console.error('Error initializing components:', error);
             }
+        });
+    </script>
+    <!-- Script xử lý áp dụng mã khuyến mãi -->
+    <script>
+document.querySelectorAll('.apply-promo').forEach(button => {
+    button.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        
+        const code = this.dataset.code;
+        if (window.promoManager) {
+            window.promoManager.applyPromo(code);
+        } else {
+            console.error('PromoManager not initialized');
+        }
+    });
+});
+
+// Ngăn dropdown đóng khi click vào nội dung
+document.querySelector('.dropdown-menu').addEventListener('click', function(e) {
+    e.stopPropagation();
+});
+
+// Tự động ẩn thông báo sau 3 giây
+function hideAlerts() {
+    const alerts = document.querySelectorAll('.alert');
+    alerts.forEach(alert => {
+        if (alert.textContent.trim() !== '') {
+            alert.classList.add('show');
+            setTimeout(() => {
+                alert.classList.remove('show');
+            }, 3000);
+        }
+    });
+}
+
+// Gọi hàm khi trang tải xong và sau khi form submit
+document.addEventListener('DOMContentLoaded', hideAlerts);
+document.getElementById('promoForm').addEventListener('submit', function() {
+    setTimeout(hideAlerts, 100); // Đợi một chút để thông báo được cập nhật
         });
     </script>
 </body>

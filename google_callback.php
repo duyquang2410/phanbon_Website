@@ -116,7 +116,7 @@ if(isset($_GET['code'])) {
                 $_SESSION['user_name'] = $user['KH_TEN'];
                 $_SESSION['user_avatar'] = $user['KH_AVATAR'];
                 
-                header("Location: index.php");
+                header("Location: /web/phanbon_Website/index.php");
                 exit();
             } else {
                 // Tạo người dùng mới
@@ -141,7 +141,7 @@ if(isset($_GET['code'])) {
                     $_SESSION['user_name'] = $name;
                     $_SESSION['user_avatar'] = $avatar;
                     
-                    header("Location: index.php");
+                    header("Location: /web/phanbon_Website/index.php");
                     exit();
                 } else {
                     // Lỗi khi tạo người dùng mới

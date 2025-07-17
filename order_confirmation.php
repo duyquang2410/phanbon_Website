@@ -2,6 +2,7 @@
 session_start();
 include 'connect.php';
 require_once 'create_logs.php';
+require_once 'cart_functions.php';
 
 // Khởi tạo logger
 $logger = Logger::getInstance('logs/order_confirmation.log');
@@ -38,14 +39,17 @@ try {
                   tt.TT_TEN as trang_thai,
                   hd.HD_PHISHIP as shipping_fee,
                   hd.HD_TONGTIEN as total_amount,
-                  km.KM_GIATRI as discount_percentage,
+                  km.KM_GIATRI as discount_value,
                   km.Code as promo_code,
+                  km.hinh_thuc_km as discount_type,
                   CASE 
-                    WHEN km.KM_GIATRI IS NOT NULL THEN LEAST(hd.HD_TONGTIEN, hd.HD_TONGTIEN * km.KM_GIATRI / 100)
+                    WHEN km.hinh_thuc_km = 'percent' THEN LEAST(hd.HD_TONGTIEN, hd.HD_TONGTIEN * km.KM_GIATRI / 100)
+                    WHEN km.hinh_thuc_km = 'fixed' THEN LEAST(km.KM_GIATRI, hd.HD_TONGTIEN)
                     ELSE 0 
                   END as discount_amount,
                   CASE 
-                    WHEN km.KM_GIATRI IS NOT NULL THEN GREATEST(0, hd.HD_TONGTIEN - LEAST(hd.HD_TONGTIEN, hd.HD_TONGTIEN * km.KM_GIATRI / 100))
+                    WHEN km.hinh_thuc_km = 'percent' THEN GREATEST(0, hd.HD_TONGTIEN - LEAST(hd.HD_TONGTIEN, hd.HD_TONGTIEN * km.KM_GIATRI / 100))
+                    WHEN km.hinh_thuc_km = 'fixed' THEN GREATEST(0, hd.HD_TONGTIEN - LEAST(km.KM_GIATRI, hd.HD_TONGTIEN))
                     ELSE hd.HD_TONGTIEN 
                   END as final_amount
                   FROM hoa_don hd 
@@ -93,104 +97,30 @@ try {
     $shipping_notes = '';
     
     try {
-        $address_sql = "SELECT * FROM dia_chi_giao_hang WHERE DH_MA = ?";
+        $address_sql = "SELECT * FROM dia_chi_giao_hang WHERE DH_MA = ? ORDER BY DCGH_MA DESC LIMIT 1";
         $addr_stmt = $conn->prepare($address_sql);
         if (!$addr_stmt) {
             throw new Exception("Prepare address query failed: " . $conn->error);
         }
-
         $addr_stmt->bind_param("i", $order_id);
         if (!$addr_stmt->execute()) {
             throw new Exception("Execute address query failed: " . $addr_stmt->error);
         }
-
         $addr_result = $addr_stmt->get_result();
-        
         if ($addr_result->num_rows > 0) {
             $addr_data = $addr_result->fetch_assoc();
-            
-            // Debug log địa chỉ giao hàng
-            $logger->info('Address data retrieved', [
-                'order_id' => $order_id,
-                'address_data' => $addr_data
-            ]);
-            
-            // Lấy tên tỉnh/thành phố
-            $province_name = '';
-            $province_response = file_get_contents("http://localhost/LVTN_PhanBon/viettelpost_api.php?endpoint=categories/listProvince");
-            $province_data = json_decode($province_response, true);
-            if ($province_data && isset($province_data['data'])) {
-                foreach ($province_data['data'] as $province) {
-                    if ($province['PROVINCE_ID'] == $addr_data['DCGH_TINH']) {
-                        $province_name = $province['PROVINCE_NAME'];
-                        break;
-                    }
-                }
-            }
-
-            // Lấy tên quận/huyện
-            $district_name = '';
-            if ($province_name) {
-                $district_response = file_get_contents("http://localhost/LVTN_PhanBon/viettelpost_api.php?endpoint=categories/listDistrict&provinceId=" . $addr_data['DCGH_TINH']);
-                $district_data = json_decode($district_response, true);
-                if ($district_data && isset($district_data['data'])) {
-                    foreach ($district_data['data'] as $district) {
-                        if ($district['DISTRICT_ID'] == $addr_data['DCGH_HUYEN']) {
-                            $district_name = $district['DISTRICT_NAME'];
-                            break;
-                        }
-                    }
-                }
-            }
-
-            // Lấy tên phường/xã
-            $ward_name = '';
-            if ($district_name) {
-                $ward_response = file_get_contents("http://localhost/LVTN_PhanBon/viettelpost_api.php?endpoint=categories/listWards&districtId=" . $addr_data['DCGH_HUYEN']);
-                $ward_data = json_decode($ward_response, true);
-                if ($ward_data && isset($ward_data['data'])) {
-                    foreach ($ward_data['data'] as $ward) {
-                        if ($ward['WARDS_ID'] == $addr_data['DCGH_XA']) {
-                            $ward_name = $ward['WARDS_NAME'];
-                            break;
-                        }
-                    }
-                }
-            }
-            
-            // Xử lý địa chỉ chỉ khi có giá trị
-            $address_parts = [];
-            if (!empty(trim($addr_data['DCGH_DIACHI']))) {
-                $address_parts[] = trim($addr_data['DCGH_DIACHI']);
-            }
-            if (!empty($ward_name)) {
-                $address_parts[] = $ward_name;
-            }
-            if (!empty($district_name)) {
-                $address_parts[] = $district_name;
-            }
-            if (!empty($province_name)) {
-                $address_parts[] = $province_name;
-            }
-            
-            $shipping_address = implode(', ', $address_parts);
+            // Sử dụng địa chỉ đầy đủ đã được lưu
+            $shipping_address = $addr_data['DCGH_DIACHI'];
             $recipient_name = $addr_data['DCGH_TENNGUOINHAN'];
             $recipient_phone = $addr_data['DCGH_SDT'];
             $recipient_email = $addr_data['DCGH_EMAIL'];
             $shipping_notes = $addr_data['DCGH_GHICHU'];
-            
         } else {
             // Sử dụng thông tin mặc định từ khách hàng
             $shipping_address = $order['KH_DIACHI'];
             $recipient_name = $order['KH_TEN'];
             $recipient_phone = $order['KH_SDT'];
             $recipient_email = $order['KH_EMAIL'];
-            
-            $logger->warning('No specific shipping address found, using default customer address', [
-                'order_id' => $order_id,
-                'customer_id' => $user_id,
-                'default_address' => $shipping_address
-            ]);
         }
     } catch (Exception $e) {
         $logger->error('Error processing shipping address', [
@@ -200,11 +130,11 @@ try {
     }
 
     // Lấy chi tiết đơn hàng
-    $items_sql = "SELECT cthd.*, sp.SP_TEN, sp.SP_HINHANH, sp.SP_DONVITINH,
+    $items_sql = "SELECT cthd.*, sp.SP_TEN, sp.SP_HINHANH, sp.SP_DONVITINH, sp.SP_DONGIA AS gia_goc,
                   hd.KM_MA,
                   CASE 
-                    WHEN km.hinh_thuc_km = 'Giảm phần trăm' THEN LEAST(cthd.CTHD_DONGIA * cthd.CTHD_SOLUONG, cthd.CTHD_DONGIA * cthd.CTHD_SOLUONG * km.KM_GIATRI / 100)
-                    WHEN km.hinh_thuc_km = 'Giảm trực tiếp' THEN LEAST(km.KM_GIATRI, cthd.CTHD_DONGIA * cthd.CTHD_SOLUONG)
+                    WHEN km.hinh_thuc_km = 'percent' THEN LEAST(cthd.CTHD_DONGIA * cthd.CTHD_SOLUONG, cthd.CTHD_DONGIA * cthd.CTHD_SOLUONG * km.KM_GIATRI / 100)
+                    WHEN km.hinh_thuc_km = 'fixed' THEN LEAST(km.KM_GIATRI, cthd.CTHD_DONGIA * cthd.CTHD_SOLUONG)
                     ELSE 0 
                   END as item_discount,
                   km.KM_GIATRI,
@@ -236,6 +166,7 @@ try {
     $items_result = $items_stmt->get_result();
     $order_items = [];
     $total_discount = 0;
+    $has_global_discount = !empty($order['discount_type']) && !empty($order['discount_value']);
 
     // Log số lượng kết quả trả về
     $logger->info('Items query result count', [
@@ -252,23 +183,33 @@ try {
 
         $item_total = $item['CTHD_DONGIA'] * $item['CTHD_SOLUONG'];
         $item_discount = $item['item_discount'] ?? 0;
-        $total_discount += $item_discount;
-        
         $order_items[] = [
             'name' => $item['SP_TEN'],
             'image' => $item['SP_HINHANH'],
             'quantity' => $item['CTHD_SOLUONG'],
             'price' => $item['CTHD_DONGIA'],
+            'gia_goc' => $item['CTHD_GIAGOC'],
             'unit' => $item['SP_DONVITINH'],
             'total' => $item_total,
             'discount' => $item_discount,
             'discount_type' => $item['hinh_thuc_km'],
             'discount_value' => $item['KM_GIATRI']
         ];
+        if (!$has_global_discount) {
+            $total_discount += $item_discount;
+        }
     }
 
-    // Tính tổng giảm giá (bao gồm cả giảm giá chung và giảm giá từng sản phẩm)
-    $total_discount += isset($order['discount_amount']) ? $order['discount_amount'] : 0;
+    // Nếu có khuyến mãi tổng đơn, chỉ tính giảm giá tổng đơn
+    if ($has_global_discount) {
+        $discount_type = $order['discount_type'];
+        $discount_value = $order['discount_value'];
+        $gia_goc = 0;
+        foreach ($order_items as $item) {
+            $gia_goc += $item['gia_goc'] * $item['quantity'];
+        }
+        $total_discount = calculateDiscount($gia_goc, $discount_type, $discount_value);
+    }
 
     // Debug log chi tiết đơn hàng
     $logger->info('Order details retrieved', [
@@ -291,7 +232,7 @@ if (isset($order['promo_code'])) {
     $logger->info('Promotion code applied', [
         'order_id' => $order_id,
         'promo_code' => $order['promo_code'],
-        'discount_percentage' => $order['discount_percentage'],
+        'discount_percentage' => isset($order['discount_percentage']) ? $order['discount_percentage'] : null,
         'discount_amount' => $order['discount_amount']
     ]);
 } else {
@@ -496,7 +437,7 @@ if (isset($order['promo_code'])) {
                                 <i class="fa fa-tag me-1"></i>
                                 <?php echo htmlspecialchars($order['promo_code']); ?>
                             </span>
-                            <?php if ($order['discount_percentage'] > 0): ?>
+                            <?php if (isset($order['discount_percentage']) && $order['discount_percentage'] > 0): ?>
                                 <span class="text-danger ms-2">
                                     (Giảm <?php echo $order['discount_percentage']; ?>%)
                                 </span>
@@ -509,106 +450,131 @@ if (isset($order['promo_code'])) {
 
             <!-- Right Column - Order Details -->
             <div class="col-md-8">
-                <div class="info-card">
-                    <h2 class="card-title">
-                        <i class="fa fa-shopping-cart"></i>
-                        Chi Tiết Đơn Hàng
-                    </h2>
+                <div id="invoice-content">
+                    <div class="info-card">
+                        <h2 class="card-title">
+                            <i class="fa fa-shopping-cart"></i>
+                            Chi Tiết Đơn Hàng
+                        </h2>
                     
-                    <div class="order-header">
-                        <h4 class="mb-0">
-                            <i class="fa fa-shopping-cart me-2"></i>
-                            Đơn hàng #<?php echo $order_id; ?>
-                        </h4>
-                        <p class="mb-0 mt-2">
-                            <span class="badge bg-info">
-                                <i class="fa fa-clock-o me-1"></i>
-                                <?php echo $order['trang_thai']; ?>
-                            </span>
-                        </p>
-                    </div>
-                    
-                    <?php foreach ($order_items as $item): ?>
-                    <?php
-                    // Kiểm tra đường dẫn hình ảnh
-                    $image_filename = trim($item['image']);
-                    $relative_path = 'img/' . $image_filename;
-                    
-                    $logger->info('Processing product image', [
-                        'product_name' => $item['name'],
-                        'image_filename' => $image_filename,
-                        'relative_path' => $relative_path,
-                        'file_exists' => file_exists($relative_path)
-                    ]);
-                    
-                    // Kiểm tra file tồn tại
-                    if (!empty($image_filename) && file_exists($relative_path)) {
-                        $display_image = $relative_path;
-                    } else {
-                        $display_image = 'img/default-avatar.jpg';
-                        $logger->warning('Product image not found, using default', [
+                        <div class="order-header">
+                            <h4 class="mb-0">
+                                <i class="fa fa-shopping-cart me-2"></i>
+                                Đơn hàng #<?php echo $order_id; ?>
+                            </h4>
+                            <p class="mb-0 mt-2">
+                                <span class="badge bg-info">
+                                    <i class="fa fa-clock-o me-1"></i>
+                                    <?php echo $order['trang_thai']; ?>
+                                </span>
+                            </p>
+                        </div>
+                        
+                        <?php foreach ($order_items as $item): ?>
+                        <?php
+                        // Kiểm tra đường dẫn hình ảnh
+                        $image_filename = trim($item['image']);
+                        $relative_path = 'img/' . $image_filename;
+                        
+                        $logger->info('Processing product image', [
                             'product_name' => $item['name'],
                             'image_filename' => $image_filename,
-                            'relative_path' => $relative_path
+                            'relative_path' => $relative_path,
+                            'file_exists' => file_exists($relative_path)
                         ]);
-                    }
-                    ?>
-                    <div class="product-item">
-                        <div class="row align-items-center">
-                            <div class="col-3 col-md-2">
-                                <img src="<?php echo htmlspecialchars($display_image); ?>" 
-                                     alt="<?php echo htmlspecialchars($item['name']); ?>" 
-                                     class="product-image"
-                                     onerror="this.src='img/default-avatar.jpg';">
-                            </div>
-                            <div class="col-9 col-md-6">
-                                <h3 class="product-name"><?php echo htmlspecialchars($item['name']); ?></h3>
-                                <div class="product-unit">Đơn vị: <?php echo htmlspecialchars($item['unit']); ?></div>
-                            </div>
-                            <div class="col-4 col-md-2">
-                                <div class="quantity-badge">
-                                    Số lượng: <?php echo $item['quantity']; ?>
+                        
+                        // Kiểm tra file tồn tại
+                        if (!empty($image_filename) && file_exists($relative_path)) {
+                            $display_image = $relative_path;
+                        } else {
+                            $display_image = 'img/default-avatar.jpg';
+                            $logger->warning('Product image not found, using default', [
+                                'product_name' => $item['name'],
+                                'image_filename' => $image_filename,
+                                'relative_path' => $relative_path
+                            ]);
+                        }
+                        ?>
+                        <div class="product-item">
+                            <div class="row align-items-center">
+                                <div class="col-3 col-md-2">
+                                    <img src="<?php echo htmlspecialchars($display_image); ?>" 
+                                         alt="<?php echo htmlspecialchars($item['name']); ?>" 
+                                         class="product-image"
+                                         onerror="this.src='img/default-avatar.jpg';">
                                 </div>
-                            </div>
-                            <div class="col-8 col-md-2">
-                                <div class="product-price">
-                                    <?php echo number_format($item['total'], 0, ',', '.'); ?>đ
-                                    <?php if ($item['discount'] > 0): ?>
-                                    <div class="discount-price">
-                                        -<?php echo number_format($item['discount'], 0, ',', '.'); ?>đ
+                                <div class="col-9 col-md-6">
+                                    <h3 class="product-name"><?php echo htmlspecialchars($item['name']); ?></h3>
+                                 
+                                   
+                                   
+                                </div>
+                                <div class="col-4 col-md-2">
+                                    <div class="quantity-badge">
+                                        Số lượng: <?php echo $item['quantity']; ?>
                                     </div>
-                                    <?php endif; ?>
+                                </div>
+                                <div class="col-8 col-md-2">
+                                    <div class="product-price">
+                                        <?php echo number_format($item['total'], 0, ',', '.'); ?>đ
+                                        <?php if ($item['discount'] > 0): ?>
+                                        <div class="discount-price">
+                                            -<?php echo number_format($item['discount'], 0, ',', '.'); ?>đ
+                                        </div>
+                                        <?php endif; ?>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                        <?php endforeach; ?>
+
+                        <?php
+                        // Tổng tiền hàng thực tế đã mua (không gồm phí ship)
+                        $tong_tien_hang = 0;
+                        foreach ($order_items as $item) {
+                            $tong_tien_hang += $item['price'] * $item['quantity'];
+                        }
+                        // Lấy số tiền giảm giá thực tế đã lưu trong hóa đơn
+                        $giam_gia = isset($order['HD_GIAMGIA']) ? $order['HD_GIAMGIA'] : 0;
+                        // Tổng thanh toán = (tổng tiền hàng - giảm giá) + phí vận chuyển
+                        $tong_thanh_toan = max(0, $tong_tien_hang - $giam_gia) + $order['shipping_fee'];
+                        ?>
+                        <table class="summary-table">
+                            <tr>
+                                <td>Tổng tiền hàng:</td>
+                                <td>
+                                    <span style="color:#333;">
+                                        <?php echo number_format($tong_tien_hang, 0, ',', '.'); ?>đ
+                                    </span>
+                                </td>
+                            </tr>
+                            <?php if ($giam_gia > 0): ?>
+                            <tr>
+                                <td>Khuyến mãi:</td>
+                                <td class="discount-price">
+                                    -<?php echo number_format($giam_gia, 0, ',', '.'); ?>đ
+                                </td>
+                            </tr>
+                            <?php endif; ?>
+                            <tr>
+                                <td>Phí vận chuyển:</td>
+                                <td><?php echo number_format($order['shipping_fee'], 0, ',', '.'); ?>đ</td>
+                            </tr>
+                            <tr class="total-row">
+                                <td>Tổng thanh toán:</td>
+                                <td>
+                                    <span style="color:#d63384; font-size:18px;">
+                                        <?php echo number_format($tong_thanh_toan, 0, ',', '.'); ?>đ
+                                    </span>
+                                </td>
+                            </tr>
+                        </table>
                     </div>
-                    <?php endforeach; ?>
-
-                    <table class="summary-table">
-                        <tr>
-                            <td>Tổng tiền hàng:</td>
-                            <td><?php echo number_format($order['total_amount'], 0, ',', '.'); ?>đ</td>
-                        </tr>
-                        <?php if ($order['discount_amount'] > 0): ?>
-                        <tr>
-                            <td>Giảm giá:</td>
-                            <td class="discount-price">
-                                -<?php echo number_format($order['discount_amount'], 0, ',', '.'); ?>đ
-                            </td>
-                        </tr>
-                        <?php endif; ?>
-                        <tr>
-                            <td>Phí vận chuyển:</td>
-                            <td><?php echo number_format($order['shipping_fee'], 0, ',', '.'); ?>đ</td>
-                        </tr>
-                        <tr class="total-row">
-                            <td>Tổng thanh toán:</td>
-                            <td><?php echo number_format($order['final_amount'] + $order['shipping_fee'], 0, ',', '.'); ?>đ</td>
-                        </tr>
-                    </table>
                 </div>
-
                 <div class="text-center mt-4">
+                    <a href="generate_invoice.php?order_id=<?php echo $order_id; ?>" target="_blank" class="btn btn-danger btn-action me-2">
+                        <i class="fa fa-print"></i> In hóa đơn PDF
+                    </a>
                     <a href="index.php" class="btn btn-outline-primary btn-action me-2">
                         <i class="fa fa-home"></i> Trang Chủ
                     </a>

@@ -170,10 +170,12 @@ function getCartItems($conn, $cart_id) {
         $result = $stmt->get_result();
         $items = array();
         $total = 0;
+        $unique_items_count = 0;
         
         while ($row = $result->fetch_assoc()) {
             $subtotal = $row['SP_DONGIA'] * $row['CTGH_KHOILUONG'];
             $total += $subtotal;
+            $unique_items_count++;
             
             $items[$row['SP_MA']] = array(
                 'id' => $row['SP_MA'],
@@ -188,12 +190,12 @@ function getCartItems($conn, $cart_id) {
         }
         
         $stmt->close();
-        writeLog("Found " . count($items) . " items in cart_id: $cart_id");
+        writeLog("Found $unique_items_count unique items in cart_id: $cart_id");
         
         return array(
             'items' => $items,
             'total' => $total,
-            'count' => count($items)
+            'count' => $unique_items_count
         );
     } catch (Exception $e) {
         writeLog("Error in getCartItems: " . $e->getMessage());
@@ -526,5 +528,41 @@ function markProductsAsPurchased($conn, $cart_id, $product_ids) {
         writeLog("Error in markProductsAsPurchased: " . $e->getMessage());
         return false;
     }
+}
+
+/**
+ * Tính số tiền giảm giá dựa trên tổng tiền, loại khuyến mãi và giá trị khuyến mãi
+ * @param float $total Tổng tiền hàng gốc
+ * @param string $discount_type Loại khuyến mãi ('percent' hoặc 'fixed')
+ * @param float $discount_value Giá trị khuyến mãi (phần trăm hoặc số tiền)
+ * @return float Số tiền giảm giá
+ */
+function calculateDiscount($total, $discount_type, $discount_value) {
+    if ($discount_type === 'percent') {
+        // Đảm bảo giá trị phần trăm hợp lệ (0-100)
+        $discount_value = min(100, max(0, $discount_value));
+        // Tính giảm giá và làm tròn đến số nguyên
+        return round($total * ($discount_value / 100));
+    } elseif ($discount_type === 'fixed') {
+        return min($discount_value, $total);
+    }
+    return 0;
+}
+
+/**
+ * Tính tổng thanh toán cuối cùng
+ * @param float $total Tổng tiền hàng gốc
+ * @param float $discount Số tiền giảm giá
+ * @param float $shipping_fee Phí vận chuyển
+ * @return float Tổng thanh toán
+ */
+function calculateTotalPayment($total, $discount, $shipping_fee) {
+    // Đảm bảo các giá trị không âm
+    $total = max(0, $total);
+    $discount = max(0, min($discount, $total)); // Giảm giá không vượt quá tổng tiền
+    $shipping_fee = max(0, $shipping_fee);
+    
+    // Tính tổng thanh toán và làm tròn đến số nguyên
+    return round($total - $discount + $shipping_fee);
 }
 ?> 

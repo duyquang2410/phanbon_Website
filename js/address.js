@@ -18,6 +18,7 @@
             }
 
             this.config = config;
+            this.shippingMethod = 'standard'; // Mặc định là giao hàng tiêu chuẩn
             console.log('Config validated successfully');
 
             this.initializeElements();
@@ -177,6 +178,26 @@
 
             // Set up debounced shipping calculation
             this.calculateShippingDebounced = this.debounce(this.calculateShipping.bind(this), 500);
+
+            // Thêm listener cho thay đổi phương thức vận chuyển
+            const standardRadio = document.getElementById('standard');
+            const expressRadio = document.getElementById('express');
+            if (standardRadio) {
+                standardRadio.addEventListener('change', () => {
+                    if (standardRadio.checked) {
+                        this.shippingMethod = 'standard';
+                        this.calculateShippingDebounced();
+                    }
+                });
+            }
+            if (expressRadio) {
+                expressRadio.addEventListener('change', () => {
+                    if (expressRadio.checked) {
+                        this.shippingMethod = 'express';
+                        this.calculateShippingDebounced();
+                    }
+                });
+            }
         }
 
         debounce(func, wait) {
@@ -415,6 +436,22 @@
             return this.provinceSelect.value && this.districtSelect.value && this.wardSelect.value;
         }
 
+        // Kiểm tra địa chỉ đã đủ thông tin chưa
+        isAddressComplete() {
+            return (
+                this.provinceSelect && this.provinceSelect.value &&
+                this.districtSelect && this.districtSelect.value &&
+                this.wardSelect && this.wardSelect.value &&
+                this.streetAddressInput && this.streetAddressInput.value.trim() !== ''
+            );
+        }
+
+        formatCurrency(amount) {
+            // Làm tròn số
+            amount = Math.round(amount);
+            return new Intl.NumberFormat('vi-VN').format(amount);
+        }
+
         async calculateShippingFee() {
             try {
                 const selectedProvince = this.provinceSelect.value;
@@ -430,19 +467,6 @@
 
                 const weight = this.totalWeightInput && parseFloat(this.totalWeightInput.value) || this.config.defaultWeight;
                 const productValue = this.totalValueInput && parseFloat(this.totalValueInput.value) || 0;
-
-                console.log('Calculating shipping fee with params:', {
-                    sender: {
-                        province: this.config.pickProvince,
-                        district: this.config.pickDistrict
-                    },
-                    receiver: {
-                        province: selectedProvince,
-                        district: selectedDistrict
-                    },
-                    weight: weight,
-                    value: productValue
-                });
 
                 const defaultDimensions = this.config.defaultDimensions || {};
                 const requestData = {
@@ -460,35 +484,42 @@
                 };
 
                 const response = await this.fetchViettelPost('order/getPriceAll', requestData, 'POST');
-                console.log('Shipping fee response:', response);
-
                 if (!response) {
                     throw new Error('Không nhận được phản hồi từ API vận chuyển');
                 }
-
                 if (!Array.isArray(response)) {
                     throw new Error('Định dạng dữ liệu phí vận chuyển không hợp lệ');
                 }
-
                 if (response.length === 0) {
                     throw new Error('Không có dịch vụ vận chuyển phù hợp cho địa chỉ này');
                 }
-
                 // Sắp xếp theo giá từ thấp đến cao
                 const sortedServices = response.sort((a, b) => a.GIA_CUOC - b.GIA_CUOC);
                 const cheapestService = sortedServices[0];
-
                 if (!cheapestService.GIA_CUOC || isNaN(cheapestService.GIA_CUOC)) {
                     throw new Error('Không thể tính phí vận chuyển cho địa chỉ này');
                 }
+                let shippingFee = Math.round(cheapestService.GIA_CUOC);
+                // Áp dụng phụ phí 50% cho giao hàng nhanh
+                if (this.shippingMethod === 'express') {
+                    shippingFee = Math.round(shippingFee * 1.5);
+                }
 
-                console.log('Selected shipping service:', {
-                    name: cheapestService.TEN_DICHVU,
-                    fee: cheapestService.GIA_CUOC,
-                    time: cheapestService.THOI_GIAN
-                });
+                // Lấy tổng tiền hàng (chưa tính phí ship)
+                const productTotal = parseFloat(this.totalPriceInput.value) || 0;
 
-                return cheapestService.GIA_CUOC;
+                // 1. Giảm 50% phí ship cho đơn từ 300.000đ
+                if (productTotal >= 300000) {
+                    shippingFee = Math.round(shippingFee * 0.5);
+                }
+
+                // 2. Giảm tiếp 20.000đ cho mọi đơn (không để âm)
+                shippingFee = Math.max(0, shippingFee - 20000);
+
+                // Gửi sự kiện với phí cuối cùng
+                const event = new CustomEvent('shipping-fee-updated', { detail: shippingFee });
+                document.dispatchEvent(event);
+                return shippingFee;
             } catch (error) {
                 console.error('Lỗi khi tính phí vận chuyển:', error);
                 this.showError('Không thể tính phí vận chuyển: ' + error.message);
@@ -497,9 +528,15 @@
         }
 
         updateShippingFee(fee) {
-            const formattedFee = new Intl.NumberFormat('vi-VN').format(fee);
+            const formattedFee = this.formatCurrency(fee);
             this.shippingFeeDisplay.textContent = `${formattedFee}đ`;
             this.shippingFeeInput.value = fee;
+            // Cập nhật phần tóm tắt đơn hàng nếu có
+            const shippingFeeSummary = document.getElementById('shipping-fee-summary');
+            if (shippingFeeSummary) {
+                shippingFeeSummary.textContent = `${formattedFee}đ`;
+            }
+            this.updateTotalPayment();
         }
 
         updateTotalPayment() {
@@ -517,15 +554,31 @@
             const districtOption = this.districtSelect.options[this.districtSelect.selectedIndex];
             const provinceOption = this.provinceSelect.options[this.provinceSelect.selectedIndex];
 
+            // Chỉ lấy số nhà và tên đường từ input, không lấy phần xã/huyện/tỉnh nếu người dùng có nhập
+            let cleanStreetAddress = streetAddress;
             const wardText = wardOption ? wardOption.text : '';
             const districtText = districtOption ? districtOption.text : '';
             const provinceText = provinceOption ? provinceOption.text : '';
 
+            // Loại bỏ các phần trùng lặp với xã/huyện/tỉnh từ địa chỉ đường
+            if (wardText && cleanStreetAddress.toLowerCase().includes(wardText.toLowerCase())) {
+                cleanStreetAddress = cleanStreetAddress.replace(new RegExp(wardText, 'i'), '').trim();
+            }
+            if (districtText && cleanStreetAddress.toLowerCase().includes(districtText.toLowerCase())) {
+                cleanStreetAddress = cleanStreetAddress.replace(new RegExp(districtText, 'i'), '').trim();
+            }
+            if (provinceText && cleanStreetAddress.toLowerCase().includes(provinceText.toLowerCase())) {
+                cleanStreetAddress = cleanStreetAddress.replace(new RegExp(provinceText, 'i'), '').trim();
+            }
+
+            // Loại bỏ dấu phẩy thừa ở cuối địa chỉ đường
+            cleanStreetAddress = cleanStreetAddress.replace(/,\s*$/, '').trim();
+
             const addressParts = [
-                streetAddress,
-                wardText !== '' ? `${wardText}` : '',
-                districtText !== '' ? `${districtText}` : '',
-                provinceText !== '' ? `${provinceText}` : ''
+                cleanStreetAddress,
+                wardText,
+                districtText,
+                provinceText
             ].filter(part => part !== '');
 
             const fullAddress = addressParts.join(', ');
@@ -549,6 +602,75 @@
         }
     }
 
-    // Export to window
+    // Xuất ra window
     window.AddressManager = AddressManager;
+
+    // Lắng nghe sự kiện shipping-fee-updated để cập nhật UI đồng bộ
+    document.addEventListener('shipping-fee-updated', function(e) {
+        if (window.addressManager) {
+            window.addressManager.updateShippingFee(parseInt(e.detail, 10) || 0);
+        }
+    });
+
+    // === BỔ SUNG TÍNH NĂNG CHỌN PHƯƠNG THỨC VẬN CHUYỂN ===
+    document.addEventListener('DOMContentLoaded', function() {
+        const standardRadio = document.getElementById('standard');
+        const expressRadio = document.getElementById('express');
+        const shippingFeeDisplay = document.getElementById('shipping-fee');
+        const shippingFeeInput = document.querySelector('input[name="shipping_fee"]');
+        let baseShippingFee = 0; // Chỉ cập nhật khi tính phí xong
+
+        // Hàm cập nhật phí hiển thị theo radio đang chọn
+        function updateFeeDisplay() {
+            if (!baseShippingFee || baseShippingFee === 0) {
+                // Nếu chưa có phí tiêu chuẩn, hiển thị đang tính
+                if (shippingFeeDisplay) shippingFeeDisplay.textContent = 'Đang tính...';
+                if (shippingFeeInput) shippingFeeInput.value = 0;
+                const shippingFeeSummary = document.getElementById('shipping-fee-summary');
+                if (shippingFeeSummary) shippingFeeSummary.textContent = 'Đang tính...';
+                if (window.addressManager && typeof window.addressManager.updateTotalPayment === 'function') {
+                    window.addressManager.updateTotalPayment();
+                }
+                return;
+            }
+            let finalFee = baseShippingFee;
+            if (expressRadio && expressRadio.checked) {
+                finalFee = Math.round(baseShippingFee * 1.5);
+            }
+            if (shippingFeeDisplay) {
+                shippingFeeDisplay.textContent = new Intl.NumberFormat('vi-VN').format(finalFee) + 'đ';
+            }
+            if (shippingFeeInput) {
+                shippingFeeInput.value = finalFee;
+            }
+            const shippingFeeSummary = document.getElementById('shipping-fee-summary');
+            if (shippingFeeSummary) {
+                shippingFeeSummary.textContent = new Intl.NumberFormat('vi-VN').format(finalFee) + 'đ';
+            }
+            if (window.addressManager && typeof window.addressManager.updateTotalPayment === 'function') {
+                window.addressManager.updateTotalPayment();
+            }
+        }
+
+        // Chỉ cập nhật baseShippingFee khi tính phí xong
+        document.addEventListener('shipping-fee-updated', function(e) {
+            baseShippingFee = parseInt(e.detail, 10) || 0;
+            updateFeeDisplay();
+        });
+
+        if (standardRadio) {
+            standardRadio.addEventListener('change', function() {
+                if (this.checked) {
+                    updateFeeDisplay();
+                }
+            });
+        }
+        if (expressRadio) {
+            expressRadio.addEventListener('change', function() {
+                if (this.checked) {
+                    updateFeeDisplay();
+                }
+            });
+        }
+    });
 })(window);

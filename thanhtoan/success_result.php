@@ -1,5 +1,47 @@
 <?php
 session_start();
+require_once '../connect.php';
+
+// Lấy order_id từ URL
+$order_id = $_GET['order_id'] ?? null;
+
+if (!$order_id) {
+    header('Location: ../index.php');
+    exit();
+}
+
+// Lấy thông tin đơn hàng và thông tin giao hàng
+$sql = "SELECT h.*, k.KH_TEN, k.KH_SDT, k.KH_DIACHI 
+        FROM hoa_don h 
+        LEFT JOIN khach_hang k ON h.KH_MA = k.KH_MA 
+        WHERE h.HD_STT = ?";
+$stmt = $conn->prepare($sql);
+$stmt->bind_param("i", $order_id);
+$stmt->execute();
+$result = $stmt->get_result();
+$order = $result->fetch_assoc();
+
+// Thêm xử lý khi không tìm thấy thông tin
+if (!$order) {
+    header('Location: ../index.php');
+    exit();
+}
+
+// Xử lý giá trị null
+$order['KH_TEN'] = $order['KH_TEN'] ?? 'Không có thông tin';
+$order['KH_SDT'] = $order['KH_SDT'] ?? 'Không có thông tin';
+$order['KH_DIACHI'] = $order['KH_DIACHI'] ?? 'Không có thông tin';
+$order['HD_TONGTIEN'] = $order['HD_TONGTIEN'] ?? 0;
+
+// Lấy chi tiết đơn hàng
+$sql_details = "SELECT c.*, s.SP_TEN 
+               FROM chi_tiet_hd c 
+               JOIN san_pham s ON c.SP_MA = s.SP_MA 
+               WHERE c.HD_STT = ?";
+$stmt_details = $conn->prepare($sql_details);
+$stmt_details->bind_param("i", $order_id);
+$stmt_details->execute();
+$details = $stmt_details->get_result();
 ?>
 
 <!DOCTYPE html>
@@ -7,187 +49,167 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thanh Toán Thành Công - Shop Quần Áo</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome cho icon -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <title>Thanh Toán Thành Công - Phân Bón & Thuốc BVTV</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --primary-color: #2E7D32;
+            --secondary-color: #4CAF50;
+            --accent-color: #8BC34A;
+            --text-color: #333;
+            --light-bg: #F1F8E9;
+        }
+
         body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #f5f5f5;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--light-bg);
+            color: var(--text-color);
         }
-        .navbar {
-            background-color: #f8c1cc; /* Màu hồng phấn nhẹ nhàng */
-        }
-        .navbar-brand, .nav-link {
-            color: #333 !important;
-            font-family: 'Playfair Display', serif;
-        }
-        .navbar-brand:hover, .nav-link:hover {
-            color: #e91e63 !important; /* Màu hồng đậm khi hover */
-        }
+
         .success-container {
-            margin-top: 50px;
-            text-align: center;
-            background-color: white;
-            padding: 40px;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 30px;
+            background: white;
             border-radius: 15px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
         }
+
         .success-icon {
-            font-size: 60px;
-            color: #e91e63;
+            width: 100px;
+            height: 100px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 30px;
+            animation: scaleIn 0.5s ease-out;
         }
-        .success-message {
-            font-size: 28px;
-            font-weight: 700;
-            color: #333;
-            margin-top: 20px;
-            font-family: 'Playfair Display', serif;
+
+        .success-icon i {
+            color: white;
+            font-size: 50px;
         }
-        .success-details {
-            font-size: 16px;
-            color: #666;
-            margin-top: 10px;
-        }
+
         .order-details {
-            margin-top: 30px;
-            text-align: left;
-            background-color: #f9f9f9;
+            background: var(--light-bg);
             padding: 20px;
             border-radius: 10px;
+            margin: 20px 0;
         }
-        .order-details h5 {
-            font-family: 'Playfair Display', serif;
-            color: #e91e63;
+
+        .order-item {
+            padding: 15px;
+            border-bottom: 1px solid #ddd;
+            transition: all 0.3s ease;
         }
-        .btn-continue {
-            margin-top: 20px;
-            background-color: #e91e63;
-            border: none;
-            padding: 10px 30px;
-            font-size: 16px;
+
+        .order-item:last-child {
+            border-bottom: none;
         }
-        .btn-continue:hover {
-            background-color: #d81b60;
+
+        .order-item:hover {
+            background: rgba(139, 195, 74, 0.1);
         }
-        .footer {
-            background-color: #333;
+
+        .btn-custom {
+            background: var(--primary-color);
             color: white;
-            padding: 40px 0;
-            margin-top: 50px;
+            padding: 12px 25px;
+            border-radius: 25px;
+            border: none;
+            transition: all 0.3s ease;
         }
-        .footer a {
-            color: #f8c1cc;
-            text-decoration: none;
+
+        .btn-custom:hover {
+            background: var(--secondary-color);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
-        .footer a:hover {
-            color: #e91e63;
+
+        .payment-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 15px;
+            background: #fff;
+            border-radius: 10px;
+            margin: 10px 0;
+            border: 1px solid #e0e0e0;
+        }
+
+        .payment-info i {
+            font-size: 24px;
+            color: var(--primary-color);
+        }
+
+        @keyframes scaleIn {
+            from {
+                transform: scale(0);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 0.5s ease-out forwards;
+        }
+
+        .status-badge {
+            background: var(--accent-color);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 15px;
+            font-size: 14px;
+            display: inline-block;
         }
     </style>
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg">
-        <div class="container">
-            <a class="navbar-brand" href="#">Shop Quần Áo</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav me-auto">
-                    <li class="nav-item"><a class="nav-link" href="../index.php">Trang Chủ</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Sản Phẩm</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Danh Mục</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Liên Hệ</a></li>
-                </ul>
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="#">Xin chào: <?php echo htmlspecialchars($_SESSION['username'] ?? 'Khách'); ?></a></li>
-                    <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-shopping-cart"></i> 0</a></li>
-                </ul>
+    <div class="container success-container">
+        <div class="text-center mb-4">
+            <div class="success-icon">
+                <i class="fas fa-check"></i>
+            </div>
+            <h2 class="mb-3">Thanh Toán Thành Công!</h2>
+            <p class="text-muted">Cảm ơn bạn đã mua hàng tại cửa hàng chúng tôi</p>
+            <div class="status-badge">
+                <i class="fas fa-clock me-1"></i>
+                Đơn hàng đang được xử lý
             </div>
         </div>
-    </nav>
 
-    <!-- Success Message -->
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="success-container">
-                    <i class="fas fa-check-circle success-icon"></i>
-                    <div class="success-message">Thanh Toán Thành Công</div>
-                    <div class="success-details">
-                        Cảm ơn bạn đã mua sắm tại Shop Quần Áo! Đơn hàng của bạn đã được xử lý thành công.
-                    </div>
+       
 
-                    <!-- Order Details -->
-                    <?php if (isset($_SESSION['order_data'])): 
-                        $order_data = $_SESSION['order_data'];
-                        $new_id = $order_data['new_id'];
-                        $total = $order_data['hd_tongtien'];
-                        $array = $order_data['array'];
-                        $array_sl = $order_data['array_sl'];
-                        $size_array = $order_data['size_array'];
-                        $color_array = $order_data['color_array'];
-                    ?>
-                    <div class="order-details">
-                        <h5>Chi Tiết Đơn Hàng</h5>
-                        <p><strong>Mã đơn hàng:</strong> #<?php echo htmlspecialchars($new_id); ?></p>
-                        <p><strong>Tổng tiền:</strong> <?php echo number_format($total, 0, ',', '.'); ?> VND</p>
-                        <p><strong>Sản phẩm:</strong></p>
-                        <ul>
-                            <?php foreach ($array as $index => $spid): ?>
-                                <li>
-                                    Sản phẩm ID: <?php echo htmlspecialchars($spid); ?> 
-                                    - Số lượng: <?php echo htmlspecialchars($array_sl[$index]); ?>
-                                    - Kích thước: <?php echo htmlspecialchars($size_array[$index] ?? 'N/A'); ?>
-                                    - Màu sắc: <?php echo htmlspecialchars($color_array[$index] ?? 'N/A'); ?>
-                                </li>
-                            <?php endforeach; ?>
-                        </ul>
-                    </div>
-                    <?php endif; ?>
-
-                    <a href="../index.php" class="btn btn-primary btn-continue">Tiếp tục mua sắm</a>
-                </div>
-            </div>
+        <div class="text-center mt-4">
+            <a href="../my_orders.php" class="btn btn-custom me-2">
+                <i class="fas fa-list me-2"></i>
+                Xem đơn hàng của tôi
+            </a>
+            <a href="../index.php" class="btn btn-custom">
+                <i class="fas fa-home me-2"></i>
+                Về trang chủ
+            </a>
         </div>
     </div>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <h5>Shop Quần Áo</h5>
-                    <p>Thời trang hiện đại, phong cách trẻ trung. Mua sắm dễ dàng, giao hàng nhanh chóng!</p>
-                </div>
-                <div class="col-md-4">
-                    <h5>Liên Kết Hữu Ích</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="#">Trang Chủ</a></li>
-                        <li><a href="#">Sản Phẩm</a></li>
-                        <li><a href="#">Liên Hệ</a></li>
-                        <li><a href="#">Chính Sách Bảo Mật</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-4">
-                    <h5>Liên Hệ</h5>
-                    <p><i class="fas fa-map-marker-alt"></i> 123 Đường Thời Trang, TP. HCM</p>
-                    <p><i class="fas fa-phone"></i> 0123 456 789</p>
-                    <p><i class="fas fa-envelope"></i> shopquanao@example.com</p>
-                </div>
-            </div>
-            <div class="text-center mt-4">
-                <p>© 2025 Shop Quần Áo. All Rights Reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

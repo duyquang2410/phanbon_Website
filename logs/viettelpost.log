@@ -2,31 +2,51 @@ Request data: Array
 (
     [GET] => Array
         (
-            [endpoint] => categories/listWards
-            [districtId] => 35
+            [endpoint] => order/getPriceAll
         )
 
-    [POST] => 
+    [POST] => {"SENDER_PROVINCE":"1","SENDER_DISTRICT":"1","RECEIVER_PROVINCE":"17","RECEIVER_DISTRICT":"184","PRODUCT_TYPE":"HH","PRODUCT_WEIGHT":11100,"PRODUCT_PRICE":335000,"MONEY_COLLECTION":0,"PRODUCT_LENGTH":10,"PRODUCT_WIDTH":10,"PRODUCT_HEIGHT":10}
     [SERVER] => Array
         (
-            [REQUEST_METHOD] => GET
-            [CONTENT_TYPE] => Not set
-            [HTTP_ACCEPT] => Not set
+            [REQUEST_METHOD] => POST
+            [CONTENT_TYPE] => application/json
+            [HTTP_ACCEPT] => application/json
         )
 
 )
 
-Nhận request đến endpoint: categories/listWards với method: GET
+Nhận request đến endpoint: order/getPriceAll với method: POST
 Cấu hình API: baseUrl=https://partner.viettelpost.vn/v2, token=51C1E0E74B...
-Gọi API lấy danh sách phường/xã: https://partner.viettelpost.vn/v2/categories/listWards?districtId=35
-[2025-06-24 15:13:47][INFO] API Call: categories/listWards
+Gọi API tính phí vận chuyển: https://partner.viettelpost.vn/v2/order/getPriceAll
+Dữ liệu gửi đi: {"SENDER_PROVINCE":"1","SENDER_DISTRICT":"1","RECEIVER_PROVINCE":"17","RECEIVER_DISTRICT":"184","PRODUCT_TYPE":"HH","PRODUCT_WEIGHT":11100,"PRODUCT_PRICE":335000,"MONEY_COLLECTION":0,"PRODUCT_LENGTH":10,"PRODUCT_WIDTH":10,"PRODUCT_HEIGHT":10}
+Dữ liệu sau khi xử lý: {"SENDER_PROVINCE":5,"SENDER_DISTRICT":82,"RECEIVER_PROVINCE":"17","RECEIVER_DISTRICT":"184","PRODUCT_TYPE":"HH","PRODUCT_WEIGHT":11100,"PRODUCT_PRICE":335000,"MONEY_COLLECTION":0,"PRODUCT_LENGTH":10,"PRODUCT_WIDTH":10,"PRODUCT_HEIGHT":10,"PRODUCT_QUANTITY":1,"TYPE":2,"NATIONAL_TYPE":1,"SERVICE_ADD_ON":"","SENDER_WARD":1276}
+[2025-07-17 15:23:26][INFO] API Call: order/getPriceAll
 Data: Array
 (
-    [endpoint] => categories/listWards
+    [endpoint] => order/getPriceAll
     [request] => Array
         (
-            [districtId] => 35
-            [url] => https://partner.viettelpost.vn/v2/categories/listWards?districtId=35
+            [request] => Array
+                (
+                    [SENDER_PROVINCE] => 5
+                    [SENDER_DISTRICT] => 82
+                    [RECEIVER_PROVINCE] => 17
+                    [RECEIVER_DISTRICT] => 184
+                    [PRODUCT_TYPE] => HH
+                    [PRODUCT_WEIGHT] => 11100
+                    [PRODUCT_PRICE] => 335000
+                    [MONEY_COLLECTION] => 0
+                    [PRODUCT_LENGTH] => 10
+                    [PRODUCT_WIDTH] => 10
+                    [PRODUCT_HEIGHT] => 10
+                    [PRODUCT_QUANTITY] => 1
+                    [TYPE] => 2
+                    [NATIONAL_TYPE] => 1
+                    [SERVICE_ADD_ON] => 
+                    [SENDER_WARD] => 1276
+                )
+
+            [url] => https://partner.viettelpost.vn/v2/order/getPriceAll
         )
 
     [response] => 
@@ -34,40 +54,40 @@ Data: Array
 )
 
 --------------------------------------------------------------------------------
-Kết quả gọi API: httpCode=200, executionTime=425ms
-Phản hồi từ API: {"status":200,"error":false,"message":"OK","data":[{"WARDS_ID":672,"WARDS_NAME":"PHƯỜNG 14","DISTRICT_ID":35},{"WARDS_ID":673,"WARDS_NAME":"PHƯỜNG 9","DISTRICT_ID":35},{"WARDS_ID":674,"WARDS_NAME":"PHƯỜNG 10","DISTRICT_ID":35},{"WARDS_ID":675,"WARDS_NAME":"PHƯỜNG 11","DISTRICT_ID":35},{"WARDS_ID":676,"WARDS_NAME":"PHƯỜNG 12","DISTRICT_ID":35},{"WARDS_ID":677,"WARDS_NAME":"PHƯỜNG 13","DISTRICT_ID":35},{"WARDS_ID":678,"WARDS_NAME":"PHƯỜNG 7","DISTRICT_ID":35},{"WARDS_ID":679,"WARDS_NAME":"PHƯỜNG 8","DISTRICT_ID":35},{"WARDS_ID":680,"WARDS_NAME":"PHƯỜNG 6","DISTRICT_ID":35},{"WARDS_ID":681,"WARDS_NAME":"PHƯỜNG  1","DISTRICT_ID":35},{"WARDS_ID":682,"WARDS_NAME":"PHƯỜNG 2","DISTRICT_ID":35},{"WARDS_ID":683,"WARDS_NAME":"PHƯỜNG 3","DISTRICT_ID":35},{"WARDS_ID":684,"WARDS_NAME":"PHƯỜNG 4","DISTRICT_ID":35},{"WARDS_ID":685,"WARDS_NAME":"PHƯỜNG 5","DISTRICT_ID":35},{"WARDS_ID":686,"WARDS_NAME":"PHƯỜNG 15","DISTRICT_ID":35}]}
-[2025-06-24 15:13:48][INFO] API Call: categories/listWards
+Kết quả gọi API: httpCode=200, executionTime=538ms
+Phản hồi từ API: [{"MA_DV_CHINH":"LCOD","TEN_DICHVU":"TMĐT Tiết Kiệm thỏa thuận","GIA_CUOC":155487,"THOI_GIAN":"96 giờ","EXCHANGE_WEIGHT":0,"EXTRA_SERVICE":[{"SERVICE_CODE":"GGD","SERVICE_NAME":"Giao Bưu phẩm tại điểm giao dịch","DESCRIPTION":null},{"SERVICE_CODE":"GCTP","SERVICE_NAME":"Chuyển tiếp","DESCRIPTION":null},{"SERVICE_CODE":"GBP","SERVICE_NAME":"Báo phát","DESCRIPTION":null},{"SERVICE_CODE":"GTT","SERVICE_NAME":"Phát tận tay","DESCRIPTION":null},{"SERVICE_CODE":"GDK","SERVICE_NAME":"Đồng kiểm","DESCRIPTION":null},{"SERVICE_CODE":"GNG","SERVICE_NAME":"Gửi hàng tại bưu cục","DESCRIPTION":null},{"SERVICE_CODE":"GBH","SERVICE_NAME":"Khai giá","DESCRIPTION":null},{"SERVICE_CODE":"XMG","SERVICE_NAME":"Thu tiền xem hàng","DESCRIPTION":null},{"SERVICE_CODE":"TRS","SERVICE_NAME":"Hoàn cước hai chiều","DESCRIPTION":null},{"SERVICE_CODE":"RRS","SERVICE_NAME":"Hoàn cước chiều về","DESCRIPTION":null},{"SERVICE_CODE":"GGDH","SERVICE_NAME":"Đổi hàng","DESCRIPTION":null},{"SERVICE_CODE":"GGC","SERVICE_NAME":"Gia cố hàng hóa","DESCRIPTION":null},{"SERVICE_CODE":"SMS","SERVICE_NAME":"SMS thông báo đơn hàng","DESCRIPTION":null},{"SERVICE_CODE":"GST","SERVICE_NAME":"Giao hàng đặc thù","DESCRIPTION":null},{"SERVICE_CODE":"GDH","SERVICE_NAME":"Đổi Trả Hàng Nội Bộ","DESCRIPTION":null},{"SERVICE_CODE":"NBOX","SERVICE_NAME":"Nhận hàng tại Box","DESCRIPTION":null},{"SERVICE_CODE":"FRS","SERVICE_NAME":"Hoàn cước chiều đi","DESCRIPTION":null},{"SERVICE_CODE":"ZNS","SERVICE_NAME":"Zalo thông báo đơn hàng","DESCRIPTION":null},{"SERVICE_CODE":"GG1P","SERVICE_NAME":"Giao Một Phần","DESCRIPTION":null},{"SERVICE_CODE":"HGC","SERVICE_NAME":"Hàng giá trị cao","DESCRIPTION":null},{"SERVICE_CODE":"HDV","SERVICE_NAME":"Hàng dễ vỡ","DESCRIPTION":null},{"SERVICE_CODE":"HLH","SERVICE_NAME":"Hàng lạnh","DESCRIPTION":null},{"SERVICE_CODE":"HDN","SERVICE_NAME":"Hóa đơn, giấy chứng nhận","DESCRIPTION":null},{"SERVICE_CODE":"HST","SERVICE_NAME":"Hồ sơ thầu","DESCRIPTION":null},{"SERVICE_CODE":"HQK","SERVICE_NAME":"Hàng quá khổ","DESCRIPTION":null},{"SERVICE_CODE":"HNK","SERVICE_NAME":"Hàng nguyên khối","DESCRIPTION":null},{"SERVICE_CODE":"HCL","SERVICE_NAME":"Chất lỏng","DESCRIPTION":null},{"SERVICE_CODE":"HPN","SERVICE_NAME":"Hàng từ tính, pin","DESCRIPTION":null}]},{"MA_DV_CHINH":"NCOD","TEN_DICHVU":"TMĐT Nhanh thỏa thuận","GIA_CUOC":337499,"THOI_GIAN":"60 giờ","EXCHANGE_WEIGHT":0,"EXTRA_SERVICE":[{"SERVICE_CODE":"GGD","SERVICE_NAME":"Giao Bưu phẩm tại điểm giao dịch","DESCRIPTION":null},{"SERVICE_CODE":"GCTP","SERVICE_NAME":"Chuyển tiếp","DESCRIPTION":null},{"SERVICE_CODE":"GBP","SERVICE_NAME":"Báo phát","DESCRIPTION":null},{"SERVICE_CODE":"GTT","SERVICE_NAME":"Phát tận tay","DESCRIPTION":null},{"SERVICE_CODE":"GDK","SERVICE_NAME":"Đồng kiểm","DESCRIPTION":null},{"SERVICE_CODE":"GNG","SERVICE_NAME":"Gửi hàng tại bưu cục","DESCRIPTION":null},{"SERVICE_CODE":"GBH","SERVICE_NAME":"Khai giá","DESCRIPTION":null},{"SERVICE_CODE":"XMG","SERVICE_NAME":"Thu tiền xem hàng","DESCRIPTION":null},{"SERVICE_CODE":"TRS","SERVICE_NAME":"Hoàn cước hai chiều","DESCRIPTION":null},{"SERVICE_CODE":"RRS","SERVICE_NAME":"Hoàn cước chiều về","DESCRIPTION":null},{"SERVICE_CODE":"GGDH","SERVICE_NAME":"Đổi hàng","DESCRIPTION":null},{"SERVICE_CODE":"GGC","SERVICE_NAME":"Gia cố hàng hóa","DESCRIPTION":null},{"SERVICE_CODE":"SMS","SERVICE_NAME":"SMS thông báo đơn hàng","DESCRIPTION":null},{"SERVICE_CODE":"GST","SERVICE_NAME":"Giao hàng đặc thù","DESCRIPTION":null},{"SERVICE_CODE":"GDH","SERVICE_NAME":"Đổi Trả Hàng Nội Bộ","DESCRIPTION":null},{"SERVICE_CODE":"NBOX","SERVICE_NAME":"Nhận hàng tại Box","DESCRIPTION":null},{"SERVICE_CODE":"FRS","SERVICE_NAME":"Hoàn cước chiều đi","DESCRIPTION":null},{"SERVICE_CODE":"ZNS","SERVICE_NAME":"Zalo thông báo đơn hàng","DESCRIPTION":null},{"SERVICE_CODE":"GG1P","SERVICE_NAME":"Giao Một Phần","DESCRIPTION":null},{"SERVICE_CODE":"HGC","SERVICE_NAME":"Hàng giá trị cao","DESCRIPTION":null},{"SERVICE_CODE":"HDV","SERVICE_NAME":"Hàng dễ vỡ","DESCRIPTION":null},{"SERVICE_CODE":"HLH","SERVICE_NAME":"Hàng lạnh","DESCRIPTION":null},{"SERVICE_CODE":"HDN","SERVICE_NAME":"Hóa đơn, giấy chứng nhận","DESCRIPTION":null},{"SERVICE_CODE":"HST","SERVICE_NAME":"Hồ sơ thầu","DESCRIPTION":null},{"SERVICE_CODE":"HQK","SERVICE_NAME":"Hàng quá khổ","DESCRIPTION":null},{"SERVICE_CODE":"HNK","SERVICE_NAME":"Hàng nguyên khối","DESCRIPTION":null},{"SERVICE_CODE":"HCL","SERVICE_NAME":"Chất lỏng","DESCRIPTION":null},{"SERVICE_CODE":"HPN","SERVICE_NAME":"Hàng từ tính, pin","DESCRIPTION":null}]},{"MA_DV_CHINH":"SCN","TEN_DICHVU":"Chuyển phát nhanh","GIA_CUOC":338000,"THOI_GIAN":"60 giờ","EXCHANGE_WEIGHT":0,"EXTRA_SERVICE":[{"SERVICE_CODE":"GGD","SERVICE_NAME":"Giao Bưu phẩm tại điểm giao dịch","DESCRIPTION":null},{"SERVICE_CODE":"GCTP","SERVICE_NAME":"Chuyển tiếp","DESCRIPTION":null},{"SERVICE_CODE":"GBP","SERVICE_NAME":"Báo phát","DESCRIPTION":null},{"SERVICE_CODE":"GTT","SERVICE_NAME":"Phát tận tay","DESCRIPTION":null},{"SERVICE_CODE":"GDK","SERVICE_NAME":"Đồng kiểm","DESCRIPTION":null},{"SERVICE_CODE":"GNG","SERVICE_NAME":"Gửi hàng tại bưu cục","DESCRIPTION":null},{"SERVICE_CODE":"GBH","SERVICE_NAME":"Khai giá","DESCRIPTION":null},{"SERVICE_CODE":"XMG","SERVICE_NAME":"Thu tiền xem hàng","DESCRIPTION":null},{"SERVICE_CODE":"TRS","SERVICE_NAME":"Hoàn cước hai chiều","DESCRIPTION":null},{"SERVICE_CODE":"RRS","SERVICE_NAME":"Hoàn cước chiều về","DESCRIPTION":null},{"SERVICE_CODE":"GGDH","SERVICE_NAME":"Đổi hàng","DESCRIPTION":null},{"SERVICE_CODE":"GGC","SERVICE_NAME":"Gia cố hàng hóa","DESCRIPTION":null},{"SERVICE_CODE":"SMS","SERVICE_NAME":"SMS thông báo đơn hàng","DESCRIPTION":null},{"SERVICE_CODE":"GST","SERVICE_NAME":"Giao hàng đặc thù","DESCRIPTION":null},{"SERVICE_CODE":"GDH","SERVICE_NAME":"Đổi Trả Hàng Nội Bộ","DESCRIPTION":null},{"SERVICE_CODE":"NBOX","SERVICE_NAME":"Nhận hàng tại Box","DESCRIPTION":null},{"SERVICE_CODE":"FRS","SERVICE_NAME":"Hoàn cước chiều đi","DESCRIPTION":null},{"SERVICE_CODE":"ZNS","SERVICE_NAME":"Zalo thông báo đơn hàng","DESCRIPTION":null},{"SERVICE_CODE":"GG1P","SERVICE_NAME":"Giao Một Phần","DESCRIPTION":null},{"SERVICE_CODE":"HGC","SERVICE_NAME":"Hàng giá trị cao","DESCRIPTION":null},{"SERVICE_CODE":"HDV","SERVICE_NAME":"Hàng dễ vỡ","DESCRIPTION":null},{"SERVICE_CODE":"HDN","SERVICE_NAME":"Hóa đơn, giấy chứng nhận","DESCRIPTION":null},{"SERVICE_CODE":"HQK","SERVICE_NAME":"Hàng quá khổ","DESCRIPTION":null},{"SERVICE_CODE":"HNK","SERVICE_NAME":"Hàng nguyên khối","DESCRIPTION":null},{"SERVICE_CODE":"HCL","SERVICE_NAME":"Chất lỏng","DESCRIPTION":null},{"SERVICE_CODE":"HPN","SERVICE_NAME":"Hàng từ tính, pin","DESCRIPTION":null}]},{"MA_DV_CHINH":"SHT","TEN_DICHVU":"Chuyển phát hỏa tốc","GIA_CUOC":539005,"THOI_GIAN":"48 giờ","EXCHANGE_WEIGHT":0,"EXTRA_SERVICE":[{"SERVICE_CODE":"GGD","SERVICE_NAME":"Giao Bưu phẩm tại điểm giao dịch","DESCRIPTION":null},{"SERVICE_CODE":"GCTP","SERVICE_NAME":"Chuyển tiếp","DESCRIPTION":null},{"SERVICE_CODE":"GBP","SERVICE_NAME":"Báo phát","DESCRIPTION":null},{"SERVICE_CODE":"GTT","SERVICE_NAME":"Phát tận tay","DESCRIPTION":null},{"SERVICE_CODE":"GDK","SERVICE_NAME":"Đồng kiểm","DESCRIPTION":null},{"SERVICE_CODE":"GNG","SERVICE_NAME":"Gửi hàng tại bưu cục","DESCRIPTION":null},{"SERVICE_CODE":"GBH","SERVICE_NAME":"Khai giá","DESCRIPTION":null},{"SERVICE_CODE":"XMG","SERVICE_NAME":"Thu tiền xem hàng","DESCRIPTION":null},{"SERVICE_CODE":"TRS","SERVICE_NAME":"Hoàn cước hai chiều","DESCRIPTION":null},{"SERVICE_CODE":"RRS","SERVICE_NAME":"Hoàn cước chiều về","DESCRIPTION":null},{"SERVICE_CODE":"GGDH","SERVICE_NAME":"Đổi hàng","DESCRIPTION":null},{"SERVICE_CODE":"GGC","SERVICE_NAME":"Gia cố hàng hóa","DESCRIPTION":null},{"SERVICE_CODE":"SMS","SERVICE_NAME":"SMS thông báo đơn hàng","DESCRIPTION":null},{"SERVICE_CODE":"GDH","SERVICE_NAME":"Đổi Trả Hàng Nội Bộ","DESCRIPTION":null},{"SERVICE_CODE":"NBOX","SERVICE_NAME":"Nhận hàng tại Box","DESCRIPTION":null},{"SERVICE_CODE":"FRS","SERVICE_NAME":"Hoàn cước chiều đi","DESCRIPTION":null},{"SERVICE_CODE":"ZNS","SERVICE_NAME":"Zalo thông báo đơn hàng","DESCRIPTION":null},{"SERVICE_CODE":"GG1P","SERVICE_NAME":"Giao Một Phần","DESCRIPTION":null},{"SERVICE_CODE":"HGC","SERVICE_NAME":"Hàng giá trị cao","DESCRIPTION":null},{"SERVICE_CODE":"HDV","SERVICE_NAME":"Hàng dễ vỡ","DESCRIPTION":null},{"SERVICE_CODE":"HDN","SERVICE_NAME":"Hóa đơn, giấy chứng nhận","DESCRIPTION":null},{"SERVICE_CODE":"HQK","SERVICE_NAME":"Hàng quá khổ","DESCRIPTION":null},{"SERVICE_CODE":"HNK","SERVICE_NAME":"Hàng nguyên khối","DESCRIPTION":null},{"SERVICE_CODE":"HCL","SERVICE_NAME":"Chất lỏng","DESCRIPTION":null},{"SERVICE_CODE":"HPN","SERVICE_NAME":"Hàng từ tính, pin","DESCRIPTION":null}]},{"MA_DV_CHINH":"STK","TEN_DICHVU":"Chuyển phát tiêu chuẩn","GIA_CUOC":155508,"THOI_GIAN":"96 giờ","EXCHANGE_WEIGHT":0,"EXTRA_SERVICE":[{"SERVICE_CODE":"GGD","SERVICE_NAME":"Giao Bưu phẩm tại điểm giao dịch","DESCRIPTION":null},{"SERVICE_CODE":"GCTP","SERVICE_NAME":"Chuyển tiếp","DESCRIPTION":null},{"SERVICE_CODE":"GBP","SERVICE_NAME":"Báo phát","DESCRIPTION":null},{"SERVICE_CODE":"GTT","SERVICE_NAME":"Phát tận tay","DESCRIPTION":null},{"SERVICE_CODE":"GDK","SERVICE_NAME":"Đồng kiểm","DESCRIPTION":null},{"SERVICE_CODE":"GNG","SERVICE_NAME":"Gửi hàng tại bưu cục","DESCRIPTION":null},{"SERVICE_CODE":"GBH","SERVICE_NAME":"Khai giá","DESCRIPTION":null},{"SERVICE_CODE":"XMG","SERVICE_NAME":"Thu tiền xem hàng","DESCRIPTION":null},{"SERVICE_CODE":"TRS","SERVICE_NAME":"Hoàn cước hai chiều","DESCRIPTION":null},{"SERVICE_CODE":"RRS","SERVICE_NAME":"Hoàn cước chiều về","DESCRIPTION":null},{"SERVICE_CODE":"GGDH","SERVICE_NAME":"Đổi hàng","DESCRIPTION":null},{"SERVICE_CODE":"GGC","SERVICE_NAME":"Gia cố hàng hóa","DESCRIPTION":null},{"SERVICE_CODE":"SMS","SERVICE_NAME":"SMS thông báo đơn hàng","DESCRIPTION":null},{"SERVICE_CODE":"GST","SERVICE_NAME":"Giao hàng đặc thù","DESCRIPTION":null},{"SERVICE_CODE":"GDH","SERVICE_NAME":"Đổi Trả Hàng Nội Bộ","DESCRIPTION":null},{"SERVICE_CODE":"NBOX","SERVICE_NAME":"Nhận hàng tại Box","DESCRIPTION":null},{"SERVICE_CODE":"FRS","SERVICE_NAME":"Hoàn cước chiều đi","DESCRIPTION":null},{"SERVICE_CODE":"ZNS","SERVICE_NAME":"Zalo thông báo đơn hàng","DESCRIPTION":null},{"SERVICE_CODE":"GG1P","SERVICE_NAME":"Giao Một Phần","DESCRIPTION":null},{"SERVICE_CODE":"HGC","SERVICE_NAME":"Hàng giá trị cao","DESCRIPTION":null},{"SERVICE_CODE":"HDV","SERVICE_NAME":"Hàng dễ vỡ","DESCRIPTION":null},{"SERVICE_CODE":"HDN","SERVICE_NAME":"Hóa đơn, giấy chứng nhận","DESCRIPTION":null},{"SERVICE_CODE":"HQK","SERVICE_NAME":"Hàng quá khổ","DESCRIPTION":null},{"SERVICE_CODE":"HNK","SERVICE_NAME":"Hàng nguyên khối","DESCRIPTION":null},{"SERVICE_CODE":"HCL","SERVICE_NAME":"Chất lỏng","DESCRIPTION":null},{"SERVICE_CODE":"HPN","SERVICE_NAME":"Hàng từ tính, pin","DESCRIPTION":null}]},{"MA_DV_CHINH":"VCN","TEN_DICHVU":"CP nhanh thỏa thuận","GIA_CUOC":389398,"THOI_GIAN":"60 giờ","EXCHANGE_WEIGHT":0,"EXTRA_SERVICE":[{"SERVICE_CODE":"GGD","SERVICE_NAME":"Giao Bưu phẩm tại điểm giao dịch","DESCRIPTION":null},{"SERVICE_CODE":"GCTP","SERVICE_NAME":"Chuyển tiếp","DESCRIPTION":null},{"SERVICE_CODE":"GBP","SERVICE_NAME":"Báo phát","DESCRIPTION":null},{"SERVICE_CODE":"GTT","SERVICE_NAME":"Phát tận tay","DESCRIPTION":null},{"SERVICE_CODE":"GDK","SERVICE_NAME":"Đồng kiểm","DESCRIPTION":null},{"SERVICE_CODE":"GNG","SERVICE_NAME":"Gửi hàng tại bưu cục","DESCRIPTION":null},{"SERVICE_CODE":"GBH","SERVICE_NAME":"Khai giá","DESCRIPTION":null},{"SERVICE_CODE":"TRS","SERVICE_NAME":"Hoàn cước hai chiều","DESCRIPTION":null},{"SERVICE_CODE":"RRS","SERVICE_NAME":"Hoàn cước chiều về","DESCRIPTION":null},{"SERVICE_CODE":"GGDH","SERVICE_NAME":"Đổi hàng","DESCRIPTION":null},{"SERVICE_CODE":"GGC","SERVICE_NAME":"Gia cố hàng hóa","DESCRIPTION":null},{"SERVICE_CODE":"SMS","SERVICE_NAME":"SMS thông báo đơn hàng","DESCRIPTION":null},{"SERVICE_CODE":"GST","SERVICE_NAME":"Giao hàng đặc thù","DESCRIPTION":null},{"SERVICE_CODE":"GDH","SERVICE_NAME":"Đổi Trả Hàng Nội Bộ","DESCRIPTION":null},{"SERVICE_CODE":"NBOX","SERVICE_NAME":"Nhận hàng tại Box","DESCRIPTION":null},{"SERVICE_CODE":"FRS","SERVICE_NAME":"Hoàn cước chiều đi","DESCRIPTION":null},{"SERVICE_CODE":"ZNS","SERVICE_NAME":"Zalo thông báo đơn hàng","DESCRIPTION":null},{"SERVICE_CODE":"HGC","SERVICE_NAME":"Hàng giá trị cao","DESCRIPTION":null},{"SERVICE_CODE":"HDV","SERVICE_NAME":"Hàng dễ vỡ","DESCRIPTION":null},{"SERVICE_CODE":"HLH","SERVICE_NAME":"Hàng lạnh","DESCRIPTION":null},{"SERVICE_CODE":"HDN","SERVICE_NAME":"Hóa đơn, giấy chứng nhận","DESCRIPTION":null},{"SERVICE_CODE":"HQK","SERVICE_NAME":"Hàng quá khổ","DESCRIPTION":null},{"SERVICE_CODE":"HNK","SERVICE_NAME":"Hàng nguyên khối","DESCRIPTION":null},{"SERVICE_CODE":"HCL","SERVICE_NAME":"Chất lỏng","DESCRIPTION":null},{"SERVICE_CODE":"HPN","SERVICE_NAME":"Hàng từ tính, pin","DESCRIPTION":null}]},{"MA_DV_CHINH":"VHT","TEN_DICHVU":"Hỏa tốc thỏa thuận","GIA_CUOC":539005,"THOI_GIAN":"48 giờ","EXCHANGE_WEIGHT":0,"EXTRA_SERVICE":[{"SERVICE_CODE":"GGD","SERVICE_NAME":"Giao Bưu phẩm tại điểm giao dịch","DESCRIPTION":null},{"SERVICE_CODE":"GCTP","SERVICE_NAME":"Chuyển tiếp","DESCRIPTION":null},{"SERVICE_CODE":"GBP","SERVICE_NAME":"Báo phát","DESCRIPTION":null},{"SERVICE_CODE":"GTT","SERVICE_NAME":"Phát tận tay","DESCRIPTION":null},{"SERVICE_CODE":"GDK","SERVICE_NAME":"Đồng kiểm","DESCRIPTION":null},{"SERVICE_CODE":"GNG","SERVICE_NAME":"Gửi hàng tại bưu cục","DESCRIPTION":null},{"SERVICE_CODE":"GBH","SERVICE_NAME":"Khai giá","DESCRIPTION":null},{"SERVICE_CODE":"XMG","SERVICE_NAME":"Thu tiền xem hàng","DESCRIPTION":null},{"SERVICE_CODE":"TRS","SERVICE_NAME":"Hoàn cước hai chiều","DESCRIPTION":null},{"SERVICE_CODE":"RRS","SERVICE_NAME":"Hoàn cước chiều về","DESCRIPTION":null},{"SERVICE_CODE":"GGDH","SERVICE_NAME":"Đổi hàng","DESCRIPTION":null},{"SERVICE_CODE":"GGC","SERVICE_NAME":"Gia cố hàng hóa","DESCRIPTION":null},{"SERVICE_CODE":"SMS","SERVICE_NAME":"SMS thông báo đơn hàng","DESCRIPTION":null},{"SERVICE_CODE":"GDH","SERVICE_NAME":"Đổi Trả Hàng Nội Bộ","DESCRIPTION":null},{"SERVICE_CODE":"NBOX","SERVICE_NAME":"Nhận hàng tại Box","DESCRIPTION":null},{"SERVICE_CODE":"FRS","SERVICE_NAME":"Hoàn cước chiều đi","DESCRIPTION":null},{"SERVICE_CODE":"ZNS","SERVICE_NAME":"Zalo thông báo đơn hàng","DESCRIPTION":null},{"SERVICE_CODE":"GG1P","SERVICE_NAME":"Giao Một Phần","DESCRIPTION":null},{"SERVICE_CODE":"HGC","SERVICE_NAME":"Hàng giá trị cao","DESCRIPTION":null},{"SERVICE_CODE":"HDV","SERVICE_NAME":"Hàng dễ vỡ","DESCRIPTION":null},{"SERVICE_CODE":"HLH","SERVICE_NAME":"Hàng lạnh","DESCRIPTION":null},{"SERVICE_CODE":"HDN","SERVICE_NAME":"Hóa đơn, giấy chứng nhận","DESCRIPTION":null},{"SERVICE_CODE":"HQK","SERVICE_NAME":"Hàng quá khổ","DESCRIPTION":null},{"SERVICE_CODE":"HNK","SERVICE_NAME":"Hàng nguyên khối","DESCRIPTION":null},{"SERVICE_CODE":"HCL","SERVICE_NAME":"Chất lỏng","DESCRIPTION":null},{"SERVICE_CODE":"HPN","SERVICE_NAME":"Hàng từ tính, pin","DESCRIPTION":null}]},{"MA_DV_CHINH":"VTK","TEN_DICHVU":"CP tiết kiệm thỏa thuận","GIA_CUOC":139183,"THOI_GIAN":"96 giờ","EXCHANGE_WEIGHT":0,"EXTRA_SERVICE":[{"SERVICE_CODE":"GGD","SERVICE_NAME":"Giao Bưu phẩm tại điểm giao dịch","DESCRIPTION":null},{"SERVICE_CODE":"GCTP","SERVICE_NAME":"Chuyển tiếp","DESCRIPTION":null},{"SERVICE_CODE":"GBP","SERVICE_NAME":"Báo phát","DESCRIPTION":null},{"SERVICE_CODE":"GTT","SERVICE_NAME":"Phát tận tay","DESCRIPTION":null},{"SERVICE_CODE":"GDK","SERVICE_NAME":"Đồng kiểm","DESCRIPTION":null},{"SERVICE_CODE":"GNG","SERVICE_NAME":"Gửi hàng tại bưu cục","DESCRIPTION":null},{"SERVICE_CODE":"GBH","SERVICE_NAME":"Khai giá","DESCRIPTION":null},{"SERVICE_CODE":"TRS","SERVICE_NAME":"Hoàn cước hai chiều","DESCRIPTION":null},{"SERVICE_CODE":"RRS","SERVICE_NAME":"Hoàn cước chiều về","DESCRIPTION":null},{"SERVICE_CODE":"GGDH","SERVICE_NAME":"Đổi hàng","DESCRIPTION":null},{"SERVICE_CODE":"GGC","SERVICE_NAME":"Gia cố hàng hóa","DESCRIPTION":null},{"SERVICE_CODE":"SMS","SERVICE_NAME":"SMS thông báo đơn hàng","DESCRIPTION":null},{"SERVICE_CODE":"GST","SERVICE_NAME":"Giao hàng đặc thù","DESCRIPTION":null},{"SERVICE_CODE":"GDH","SERVICE_NAME":"Đổi Trả Hàng Nội Bộ","DESCRIPTION":null},{"SERVICE_CODE":"NBOX","SERVICE_NAME":"Nhận hàng tại Box","DESCRIPTION":null},{"SERVICE_CODE":"FRS","SERVICE_NAME":"Hoàn cước chiều đi","DESCRIPTION":null},{"SERVICE_CODE":"ZNS","SERVICE_NAME":"Zalo thông báo đơn hàng","DESCRIPTION":null},{"SERVICE_CODE":"HGC","SERVICE_NAME":"Hàng giá trị cao","DESCRIPTION":null},{"SERVICE_CODE":"HDV","SERVICE_NAME":"Hàng dễ vỡ","DESCRIPTION":null},{"SERVICE_CODE":"HLH","SERVICE_NAME":"Hàng lạnh","DESCRIPTION":null},{"SERVICE_CODE":"HDN","SERVICE_NAME":"Hóa đơn, giấy chứng nhận","DESCRIPTION":null},{"SERVICE_CODE":"HST","SERVICE_NAME":"Hồ sơ thầu","DESCRIPTION":null},{"SERVICE_CODE":"HQK","SERVICE_NAME":"Hàng quá khổ","DESCRIPTION":null},{"SERVICE_CODE":"HNK","SERVICE_NAME":"Hàng nguyên khối","DESCRIPTION":null},{"SERVICE_CODE":"HCL","SERVICE_NAME":"Chất lỏng","DESCRIPTION":null},{"SERVICE_CODE":"HPN","SERVICE_NAME":"Hàng từ tính, pin","DESCRIPTION":null}]}]
+[2025-07-17 15:23:26][INFO] API Call: order/getPriceAll
 Data: Array
 (
-    [endpoint] => categories/listWards
+    [endpoint] => order/getPriceAll
     [request] => Array
         (
-            [method] => GET
-            [url] => https://partner.viettelpost.vn/v2/categories/listWards?districtId=35
-            [execution_time_ms] => 425
+            [method] => POST
+            [url] => https://partner.viettelpost.vn/v2/order/getPriceAll
+            [execution_time_ms] => 538
             [http_code] => 200
             [content_type] => application/json;charset=UTF-8
             [curl_info] => Array
                 (
-                    [url] => https://partner.viettelpost.vn/v2/categories/listWards?districtId=35
+                    [url] => https://partner.viettelpost.vn/v2/order/getPriceAll
                     [content_type] => application/json;charset=UTF-8
                     [http_code] => 200
                     [header_size] => 196
-                    [request_size] => 214
+                    [request_size] => 545
                     [filetime] => -1
                     [ssl_verify_result] => 0
                     [redirect_count] => 0
-                    [total_time] => 0.424725
-                    [namelookup_time] => 0.00189
-                    [connect_time] => 0.030081
-                    [pretransfer_time] => 0.333508
-                    [size_upload] => 0
-                    [size_download] => 219
-                    [speed_download] => 515
-                    [speed_upload] => 0
+                    [total_time] => 0.537629
+                    [namelookup_time] => 0.001361
+                    [connect_time] => 0.028409
+                    [pretransfer_time] => 0.369682
+                    [size_upload] => 326
+                    [size_download] => 1029
+                    [speed_download] => 1913
+                    [speed_upload] => 606
                     [download_content_length] => -1
-                    [upload_content_length] => 0
-                    [starttransfer_time] => 0.424664
+                    [upload_content_length] => 326
+                    [starttransfer_time] => 0.526179
                     [redirect_time] => 0
                     [redirect_url] => 
                     [primary_ip] => 125.212.138.85
@@ -76,135 +96,1612 @@ Data: Array
                         )
 
                     [primary_port] => 443
-                    [local_ip] => 192.168.1.6
-                    [local_port] => 52442
+                    [local_ip] => 192.168.1.4
+                    [local_port] => 47125
                     [http_version] => 3
                     [protocol] => 2
                     [ssl_verifyresult] => 0
                     [scheme] => HTTPS
-                    [appconnect_time_us] => 333253
-                    [connect_time_us] => 30081
-                    [namelookup_time_us] => 1890
-                    [pretransfer_time_us] => 333508
+                    [appconnect_time_us] => 369480
+                    [connect_time_us] => 28409
+                    [namelookup_time_us] => 1361
+                    [pretransfer_time_us] => 369682
                     [redirect_time_us] => 0
-                    [starttransfer_time_us] => 424664
-                    [total_time_us] => 424725
-                    [effective_method] => GET
+                    [starttransfer_time_us] => 526179
+                    [total_time_us] => 537629
+                    [effective_method] => POST
                 )
 
             [retry_count] => 0
+            [data] => Array
+                (
+                    [SENDER_PROVINCE] => 1
+                    [SENDER_DISTRICT] => 1
+                    [RECEIVER_PROVINCE] => 17
+                    [RECEIVER_DISTRICT] => 184
+                    [PRODUCT_TYPE] => HH
+                    [PRODUCT_WEIGHT] => 11100
+                    [PRODUCT_PRICE] => 335000
+                    [MONEY_COLLECTION] => 0
+                    [PRODUCT_LENGTH] => 10
+                    [PRODUCT_WIDTH] => 10
+                    [PRODUCT_HEIGHT] => 10
+                )
+
         )
 
     [response] => Array
         (
-            [status] => 200
-            [error] => 
-            [message] => OK
-            [data] => Array
+            [0] => Array
                 (
-                    [0] => Array
+                    [MA_DV_CHINH] => LCOD
+                    [TEN_DICHVU] => TMĐT Tiết Kiệm thỏa thuận
+                    [GIA_CUOC] => 155487
+                    [THOI_GIAN] => 96 giờ
+                    [EXCHANGE_WEIGHT] => 0
+                    [EXTRA_SERVICE] => Array
                         (
-                            [WARDS_ID] => 672
-                            [WARDS_NAME] => PHƯỜNG 14
-                            [DISTRICT_ID] => 35
+                            [0] => Array
+                                (
+                                    [SERVICE_CODE] => GGD
+                                    [SERVICE_NAME] => Giao Bưu phẩm tại điểm giao dịch
+                                    [DESCRIPTION] => 
+                                )
+
+                            [1] => Array
+                                (
+                                    [SERVICE_CODE] => GCTP
+                                    [SERVICE_NAME] => Chuyển tiếp
+                                    [DESCRIPTION] => 
+                                )
+
+                            [2] => Array
+                                (
+                                    [SERVICE_CODE] => GBP
+                                    [SERVICE_NAME] => Báo phát
+                                    [DESCRIPTION] => 
+                                )
+
+                            [3] => Array
+                                (
+                                    [SERVICE_CODE] => GTT
+                                    [SERVICE_NAME] => Phát tận tay
+                                    [DESCRIPTION] => 
+                                )
+
+                            [4] => Array
+                                (
+                                    [SERVICE_CODE] => GDK
+                                    [SERVICE_NAME] => Đồng kiểm
+                                    [DESCRIPTION] => 
+                                )
+
+                            [5] => Array
+                                (
+                                    [SERVICE_CODE] => GNG
+                                    [SERVICE_NAME] => Gửi hàng tại bưu cục
+                                    [DESCRIPTION] => 
+                                )
+
+                            [6] => Array
+                                (
+                                    [SERVICE_CODE] => GBH
+                                    [SERVICE_NAME] => Khai giá
+                                    [DESCRIPTION] => 
+                                )
+
+                            [7] => Array
+                                (
+                                    [SERVICE_CODE] => XMG
+                                    [SERVICE_NAME] => Thu tiền xem hàng
+                                    [DESCRIPTION] => 
+                                )
+
+                            [8] => Array
+                                (
+                                    [SERVICE_CODE] => TRS
+                                    [SERVICE_NAME] => Hoàn cước hai chiều
+                                    [DESCRIPTION] => 
+                                )
+
+                            [9] => Array
+                                (
+                                    [SERVICE_CODE] => RRS
+                                    [SERVICE_NAME] => Hoàn cước chiều về
+                                    [DESCRIPTION] => 
+                                )
+
+                            [10] => Array
+                                (
+                                    [SERVICE_CODE] => GGDH
+                                    [SERVICE_NAME] => Đổi hàng
+                                    [DESCRIPTION] => 
+                                )
+
+                            [11] => Array
+                                (
+                                    [SERVICE_CODE] => GGC
+                                    [SERVICE_NAME] => Gia cố hàng hóa
+                                    [DESCRIPTION] => 
+                                )
+
+                            [12] => Array
+                                (
+                                    [SERVICE_CODE] => SMS
+                                    [SERVICE_NAME] => SMS thông báo đơn hàng
+                                    [DESCRIPTION] => 
+                                )
+
+                            [13] => Array
+                                (
+                                    [SERVICE_CODE] => GST
+                                    [SERVICE_NAME] => Giao hàng đặc thù
+                                    [DESCRIPTION] => 
+                                )
+
+                            [14] => Array
+                                (
+                                    [SERVICE_CODE] => GDH
+                                    [SERVICE_NAME] => Đổi Trả Hàng Nội Bộ
+                                    [DESCRIPTION] => 
+                                )
+
+                            [15] => Array
+                                (
+                                    [SERVICE_CODE] => NBOX
+                                    [SERVICE_NAME] => Nhận hàng tại Box
+                                    [DESCRIPTION] => 
+                                )
+
+                            [16] => Array
+                                (
+                                    [SERVICE_CODE] => FRS
+                                    [SERVICE_NAME] => Hoàn cước chiều đi
+                                    [DESCRIPTION] => 
+                                )
+
+                            [17] => Array
+                                (
+                                    [SERVICE_CODE] => ZNS
+                                    [SERVICE_NAME] => Zalo thông báo đơn hàng
+                                    [DESCRIPTION] => 
+                                )
+
+                            [18] => Array
+                                (
+                                    [SERVICE_CODE] => GG1P
+                                    [SERVICE_NAME] => Giao Một Phần
+                                    [DESCRIPTION] => 
+                                )
+
+                            [19] => Array
+                                (
+                                    [SERVICE_CODE] => HGC
+                                    [SERVICE_NAME] => Hàng giá trị cao
+                                    [DESCRIPTION] => 
+                                )
+
+                            [20] => Array
+                                (
+                                    [SERVICE_CODE] => HDV
+                                    [SERVICE_NAME] => Hàng dễ vỡ
+                                    [DESCRIPTION] => 
+                                )
+
+                            [21] => Array
+                                (
+                                    [SERVICE_CODE] => HLH
+                                    [SERVICE_NAME] => Hàng lạnh
+                                    [DESCRIPTION] => 
+                                )
+
+                            [22] => Array
+                                (
+                                    [SERVICE_CODE] => HDN
+                                    [SERVICE_NAME] => Hóa đơn, giấy chứng nhận
+                                    [DESCRIPTION] => 
+                                )
+
+                            [23] => Array
+                                (
+                                    [SERVICE_CODE] => HST
+                                    [SERVICE_NAME] => Hồ sơ thầu
+                                    [DESCRIPTION] => 
+                                )
+
+                            [24] => Array
+                                (
+                                    [SERVICE_CODE] => HQK
+                                    [SERVICE_NAME] => Hàng quá khổ
+                                    [DESCRIPTION] => 
+                                )
+
+                            [25] => Array
+                                (
+                                    [SERVICE_CODE] => HNK
+                                    [SERVICE_NAME] => Hàng nguyên khối
+                                    [DESCRIPTION] => 
+                                )
+
+                            [26] => Array
+                                (
+                                    [SERVICE_CODE] => HCL
+                                    [SERVICE_NAME] => Chất lỏng
+                                    [DESCRIPTION] => 
+                                )
+
+                            [27] => Array
+                                (
+                                    [SERVICE_CODE] => HPN
+                                    [SERVICE_NAME] => Hàng từ tính, pin
+                                    [DESCRIPTION] => 
+                                )
+
                         )
 
-                    [1] => Array
+                )
+
+            [1] => Array
+                (
+                    [MA_DV_CHINH] => NCOD
+                    [TEN_DICHVU] => TMĐT Nhanh thỏa thuận
+                    [GIA_CUOC] => 337499
+                    [THOI_GIAN] => 60 giờ
+                    [EXCHANGE_WEIGHT] => 0
+                    [EXTRA_SERVICE] => Array
                         (
-                            [WARDS_ID] => 673
-                            [WARDS_NAME] => PHƯỜNG 9
-                            [DISTRICT_ID] => 35
+                            [0] => Array
+                                (
+                                    [SERVICE_CODE] => GGD
+                                    [SERVICE_NAME] => Giao Bưu phẩm tại điểm giao dịch
+                                    [DESCRIPTION] => 
+                                )
+
+                            [1] => Array
+                                (
+                                    [SERVICE_CODE] => GCTP
+                                    [SERVICE_NAME] => Chuyển tiếp
+                                    [DESCRIPTION] => 
+                                )
+
+                            [2] => Array
+                                (
+                                    [SERVICE_CODE] => GBP
+                                    [SERVICE_NAME] => Báo phát
+                                    [DESCRIPTION] => 
+                                )
+
+                            [3] => Array
+                                (
+                                    [SERVICE_CODE] => GTT
+                                    [SERVICE_NAME] => Phát tận tay
+                                    [DESCRIPTION] => 
+                                )
+
+                            [4] => Array
+                                (
+                                    [SERVICE_CODE] => GDK
+                                    [SERVICE_NAME] => Đồng kiểm
+                                    [DESCRIPTION] => 
+                                )
+
+                            [5] => Array
+                                (
+                                    [SERVICE_CODE] => GNG
+                                    [SERVICE_NAME] => Gửi hàng tại bưu cục
+                                    [DESCRIPTION] => 
+                                )
+
+                            [6] => Array
+                                (
+                                    [SERVICE_CODE] => GBH
+                                    [SERVICE_NAME] => Khai giá
+                                    [DESCRIPTION] => 
+                                )
+
+                            [7] => Array
+                                (
+                                    [SERVICE_CODE] => XMG
+                                    [SERVICE_NAME] => Thu tiền xem hàng
+                                    [DESCRIPTION] => 
+                                )
+
+                            [8] => Array
+                                (
+                                    [SERVICE_CODE] => TRS
+                                    [SERVICE_NAME] => Hoàn cước hai chiều
+                                    [DESCRIPTION] => 
+                                )
+
+                            [9] => Array
+                                (
+                                    [SERVICE_CODE] => RRS
+                                    [SERVICE_NAME] => Hoàn cước chiều về
+                                    [DESCRIPTION] => 
+                                )
+
+                            [10] => Array
+                                (
+                                    [SERVICE_CODE] => GGDH
+                                    [SERVICE_NAME] => Đổi hàng
+                                    [DESCRIPTION] => 
+                                )
+
+                            [11] => Array
+                                (
+                                    [SERVICE_CODE] => GGC
+                                    [SERVICE_NAME] => Gia cố hàng hóa
+                                    [DESCRIPTION] => 
+                                )
+
+                            [12] => Array
+                                (
+                                    [SERVICE_CODE] => SMS
+                                    [SERVICE_NAME] => SMS thông báo đơn hàng
+                                    [DESCRIPTION] => 
+                                )
+
+                            [13] => Array
+                                (
+                                    [SERVICE_CODE] => GST
+                                    [SERVICE_NAME] => Giao hàng đặc thù
+                                    [DESCRIPTION] => 
+                                )
+
+                            [14] => Array
+                                (
+                                    [SERVICE_CODE] => GDH
+                                    [SERVICE_NAME] => Đổi Trả Hàng Nội Bộ
+                                    [DESCRIPTION] => 
+                                )
+
+                            [15] => Array
+                                (
+                                    [SERVICE_CODE] => NBOX
+                                    [SERVICE_NAME] => Nhận hàng tại Box
+                                    [DESCRIPTION] => 
+                                )
+
+                            [16] => Array
+                                (
+                                    [SERVICE_CODE] => FRS
+                                    [SERVICE_NAME] => Hoàn cước chiều đi
+                                    [DESCRIPTION] => 
+                                )
+
+                            [17] => Array
+                                (
+                                    [SERVICE_CODE] => ZNS
+                                    [SERVICE_NAME] => Zalo thông báo đơn hàng
+                                    [DESCRIPTION] => 
+                                )
+
+                            [18] => Array
+                                (
+                                    [SERVICE_CODE] => GG1P
+                                    [SERVICE_NAME] => Giao Một Phần
+                                    [DESCRIPTION] => 
+                                )
+
+                            [19] => Array
+                                (
+                                    [SERVICE_CODE] => HGC
+                                    [SERVICE_NAME] => Hàng giá trị cao
+                                    [DESCRIPTION] => 
+                                )
+
+                            [20] => Array
+                                (
+                                    [SERVICE_CODE] => HDV
+                                    [SERVICE_NAME] => Hàng dễ vỡ
+                                    [DESCRIPTION] => 
+                                )
+
+                            [21] => Array
+                                (
+                                    [SERVICE_CODE] => HLH
+                                    [SERVICE_NAME] => Hàng lạnh
+                                    [DESCRIPTION] => 
+                                )
+
+                            [22] => Array
+                                (
+                                    [SERVICE_CODE] => HDN
+                                    [SERVICE_NAME] => Hóa đơn, giấy chứng nhận
+                                    [DESCRIPTION] => 
+                                )
+
+                            [23] => Array
+                                (
+                                    [SERVICE_CODE] => HST
+                                    [SERVICE_NAME] => Hồ sơ thầu
+                                    [DESCRIPTION] => 
+                                )
+
+                            [24] => Array
+                                (
+                                    [SERVICE_CODE] => HQK
+                                    [SERVICE_NAME] => Hàng quá khổ
+                                    [DESCRIPTION] => 
+                                )
+
+                            [25] => Array
+                                (
+                                    [SERVICE_CODE] => HNK
+                                    [SERVICE_NAME] => Hàng nguyên khối
+                                    [DESCRIPTION] => 
+                                )
+
+                            [26] => Array
+                                (
+                                    [SERVICE_CODE] => HCL
+                                    [SERVICE_NAME] => Chất lỏng
+                                    [DESCRIPTION] => 
+                                )
+
+                            [27] => Array
+                                (
+                                    [SERVICE_CODE] => HPN
+                                    [SERVICE_NAME] => Hàng từ tính, pin
+                                    [DESCRIPTION] => 
+                                )
+
                         )
 
-                    [2] => Array
+                )
+
+            [2] => Array
+                (
+                    [MA_DV_CHINH] => SCN
+                    [TEN_DICHVU] => Chuyển phát nhanh
+                    [GIA_CUOC] => 338000
+                    [THOI_GIAN] => 60 giờ
+                    [EXCHANGE_WEIGHT] => 0
+                    [EXTRA_SERVICE] => Array
                         (
-                            [WARDS_ID] => 674
-                            [WARDS_NAME] => PHƯỜNG 10
-                            [DISTRICT_ID] => 35
+                            [0] => Array
+                                (
+                                    [SERVICE_CODE] => GGD
+                                    [SERVICE_NAME] => Giao Bưu phẩm tại điểm giao dịch
+                                    [DESCRIPTION] => 
+                                )
+
+                            [1] => Array
+                                (
+                                    [SERVICE_CODE] => GCTP
+                                    [SERVICE_NAME] => Chuyển tiếp
+                                    [DESCRIPTION] => 
+                                )
+
+                            [2] => Array
+                                (
+                                    [SERVICE_CODE] => GBP
+                                    [SERVICE_NAME] => Báo phát
+                                    [DESCRIPTION] => 
+                                )
+
+                            [3] => Array
+                                (
+                                    [SERVICE_CODE] => GTT
+                                    [SERVICE_NAME] => Phát tận tay
+                                    [DESCRIPTION] => 
+                                )
+
+                            [4] => Array
+                                (
+                                    [SERVICE_CODE] => GDK
+                                    [SERVICE_NAME] => Đồng kiểm
+                                    [DESCRIPTION] => 
+                                )
+
+                            [5] => Array
+                                (
+                                    [SERVICE_CODE] => GNG
+                                    [SERVICE_NAME] => Gửi hàng tại bưu cục
+                                    [DESCRIPTION] => 
+                                )
+
+                            [6] => Array
+                                (
+                                    [SERVICE_CODE] => GBH
+                                    [SERVICE_NAME] => Khai giá
+                                    [DESCRIPTION] => 
+                                )
+
+                            [7] => Array
+                                (
+                                    [SERVICE_CODE] => XMG
+                                    [SERVICE_NAME] => Thu tiền xem hàng
+                                    [DESCRIPTION] => 
+                                )
+
+                            [8] => Array
+                                (
+                                    [SERVICE_CODE] => TRS
+                                    [SERVICE_NAME] => Hoàn cước hai chiều
+                                    [DESCRIPTION] => 
+                                )
+
+                            [9] => Array
+                                (
+                                    [SERVICE_CODE] => RRS
+                                    [SERVICE_NAME] => Hoàn cước chiều về
+                                    [DESCRIPTION] => 
+                                )
+
+                            [10] => Array
+                                (
+                                    [SERVICE_CODE] => GGDH
+                                    [SERVICE_NAME] => Đổi hàng
+                                    [DESCRIPTION] => 
+                                )
+
+                            [11] => Array
+                                (
+                                    [SERVICE_CODE] => GGC
+                                    [SERVICE_NAME] => Gia cố hàng hóa
+                                    [DESCRIPTION] => 
+                                )
+
+                            [12] => Array
+                                (
+                                    [SERVICE_CODE] => SMS
+                                    [SERVICE_NAME] => SMS thông báo đơn hàng
+                                    [DESCRIPTION] => 
+                                )
+
+                            [13] => Array
+                                (
+                                    [SERVICE_CODE] => GST
+                                    [SERVICE_NAME] => Giao hàng đặc thù
+                                    [DESCRIPTION] => 
+                                )
+
+                            [14] => Array
+                                (
+                                    [SERVICE_CODE] => GDH
+                                    [SERVICE_NAME] => Đổi Trả Hàng Nội Bộ
+                                    [DESCRIPTION] => 
+                                )
+
+                            [15] => Array
+                                (
+                                    [SERVICE_CODE] => NBOX
+                                    [SERVICE_NAME] => Nhận hàng tại Box
+                                    [DESCRIPTION] => 
+                                )
+
+                            [16] => Array
+                                (
+                                    [SERVICE_CODE] => FRS
+                                    [SERVICE_NAME] => Hoàn cước chiều đi
+                                    [DESCRIPTION] => 
+                                )
+
+                            [17] => Array
+                                (
+                                    [SERVICE_CODE] => ZNS
+                                    [SERVICE_NAME] => Zalo thông báo đơn hàng
+                                    [DESCRIPTION] => 
+                                )
+
+                            [18] => Array
+                                (
+                                    [SERVICE_CODE] => GG1P
+                                    [SERVICE_NAME] => Giao Một Phần
+                                    [DESCRIPTION] => 
+                                )
+
+                            [19] => Array
+                                (
+                                    [SERVICE_CODE] => HGC
+                                    [SERVICE_NAME] => Hàng giá trị cao
+                                    [DESCRIPTION] => 
+                                )
+
+                            [20] => Array
+                                (
+                                    [SERVICE_CODE] => HDV
+                                    [SERVICE_NAME] => Hàng dễ vỡ
+                                    [DESCRIPTION] => 
+                                )
+
+                            [21] => Array
+                                (
+                                    [SERVICE_CODE] => HDN
+                                    [SERVICE_NAME] => Hóa đơn, giấy chứng nhận
+                                    [DESCRIPTION] => 
+                                )
+
+                            [22] => Array
+                                (
+                                    [SERVICE_CODE] => HQK
+                                    [SERVICE_NAME] => Hàng quá khổ
+                                    [DESCRIPTION] => 
+                                )
+
+                            [23] => Array
+                                (
+                                    [SERVICE_CODE] => HNK
+                                    [SERVICE_NAME] => Hàng nguyên khối
+                                    [DESCRIPTION] => 
+                                )
+
+                            [24] => Array
+                                (
+                                    [SERVICE_CODE] => HCL
+                                    [SERVICE_NAME] => Chất lỏng
+                                    [DESCRIPTION] => 
+                                )
+
+                            [25] => Array
+                                (
+                                    [SERVICE_CODE] => HPN
+                                    [SERVICE_NAME] => Hàng từ tính, pin
+                                    [DESCRIPTION] => 
+                                )
+
                         )
 
-                    [3] => Array
+                )
+
+            [3] => Array
+                (
+                    [MA_DV_CHINH] => SHT
+                    [TEN_DICHVU] => Chuyển phát hỏa tốc
+                    [GIA_CUOC] => 539005
+                    [THOI_GIAN] => 48 giờ
+                    [EXCHANGE_WEIGHT] => 0
+                    [EXTRA_SERVICE] => Array
                         (
-                            [WARDS_ID] => 675
-                            [WARDS_NAME] => PHƯỜNG 11
-                            [DISTRICT_ID] => 35
+                            [0] => Array
+                                (
+                                    [SERVICE_CODE] => GGD
+                                    [SERVICE_NAME] => Giao Bưu phẩm tại điểm giao dịch
+                                    [DESCRIPTION] => 
+                                )
+
+                            [1] => Array
+                                (
+                                    [SERVICE_CODE] => GCTP
+                                    [SERVICE_NAME] => Chuyển tiếp
+                                    [DESCRIPTION] => 
+                                )
+
+                            [2] => Array
+                                (
+                                    [SERVICE_CODE] => GBP
+                                    [SERVICE_NAME] => Báo phát
+                                    [DESCRIPTION] => 
+                                )
+
+                            [3] => Array
+                                (
+                                    [SERVICE_CODE] => GTT
+                                    [SERVICE_NAME] => Phát tận tay
+                                    [DESCRIPTION] => 
+                                )
+
+                            [4] => Array
+                                (
+                                    [SERVICE_CODE] => GDK
+                                    [SERVICE_NAME] => Đồng kiểm
+                                    [DESCRIPTION] => 
+                                )
+
+                            [5] => Array
+                                (
+                                    [SERVICE_CODE] => GNG
+                                    [SERVICE_NAME] => Gửi hàng tại bưu cục
+                                    [DESCRIPTION] => 
+                                )
+
+                            [6] => Array
+                                (
+                                    [SERVICE_CODE] => GBH
+                                    [SERVICE_NAME] => Khai giá
+                                    [DESCRIPTION] => 
+                                )
+
+                            [7] => Array
+                                (
+                                    [SERVICE_CODE] => XMG
+                                    [SERVICE_NAME] => Thu tiền xem hàng
+                                    [DESCRIPTION] => 
+                                )
+
+                            [8] => Array
+                                (
+                                    [SERVICE_CODE] => TRS
+                                    [SERVICE_NAME] => Hoàn cước hai chiều
+                                    [DESCRIPTION] => 
+                                )
+
+                            [9] => Array
+                                (
+                                    [SERVICE_CODE] => RRS
+                                    [SERVICE_NAME] => Hoàn cước chiều về
+                                    [DESCRIPTION] => 
+                                )
+
+                            [10] => Array
+                                (
+                                    [SERVICE_CODE] => GGDH
+                                    [SERVICE_NAME] => Đổi hàng
+                                    [DESCRIPTION] => 
+                                )
+
+                            [11] => Array
+                                (
+                                    [SERVICE_CODE] => GGC
+                                    [SERVICE_NAME] => Gia cố hàng hóa
+                                    [DESCRIPTION] => 
+                                )
+
+                            [12] => Array
+                                (
+                                    [SERVICE_CODE] => SMS
+                                    [SERVICE_NAME] => SMS thông báo đơn hàng
+                                    [DESCRIPTION] => 
+                                )
+
+                            [13] => Array
+                                (
+                                    [SERVICE_CODE] => GDH
+                                    [SERVICE_NAME] => Đổi Trả Hàng Nội Bộ
+                                    [DESCRIPTION] => 
+                                )
+
+                            [14] => Array
+                                (
+                                    [SERVICE_CODE] => NBOX
+                                    [SERVICE_NAME] => Nhận hàng tại Box
+                                    [DESCRIPTION] => 
+                                )
+
+                            [15] => Array
+                                (
+                                    [SERVICE_CODE] => FRS
+                                    [SERVICE_NAME] => Hoàn cước chiều đi
+                                    [DESCRIPTION] => 
+                                )
+
+                            [16] => Array
+                                (
+                                    [SERVICE_CODE] => ZNS
+                                    [SERVICE_NAME] => Zalo thông báo đơn hàng
+                                    [DESCRIPTION] => 
+                                )
+
+                            [17] => Array
+                                (
+                                    [SERVICE_CODE] => GG1P
+                                    [SERVICE_NAME] => Giao Một Phần
+                                    [DESCRIPTION] => 
+                                )
+
+                            [18] => Array
+                                (
+                                    [SERVICE_CODE] => HGC
+                                    [SERVICE_NAME] => Hàng giá trị cao
+                                    [DESCRIPTION] => 
+                                )
+
+                            [19] => Array
+                                (
+                                    [SERVICE_CODE] => HDV
+                                    [SERVICE_NAME] => Hàng dễ vỡ
+                                    [DESCRIPTION] => 
+                                )
+
+                            [20] => Array
+                                (
+                                    [SERVICE_CODE] => HDN
+                                    [SERVICE_NAME] => Hóa đơn, giấy chứng nhận
+                                    [DESCRIPTION] => 
+                                )
+
+                            [21] => Array
+                                (
+                                    [SERVICE_CODE] => HQK
+                                    [SERVICE_NAME] => Hàng quá khổ
+                                    [DESCRIPTION] => 
+                                )
+
+                            [22] => Array
+                                (
+                                    [SERVICE_CODE] => HNK
+                                    [SERVICE_NAME] => Hàng nguyên khối
+                                    [DESCRIPTION] => 
+                                )
+
+                            [23] => Array
+                                (
+                                    [SERVICE_CODE] => HCL
+                                    [SERVICE_NAME] => Chất lỏng
+                                    [DESCRIPTION] => 
+                                )
+
+                            [24] => Array
+                                (
+                                    [SERVICE_CODE] => HPN
+                                    [SERVICE_NAME] => Hàng từ tính, pin
+                                    [DESCRIPTION] => 
+                                )
+
                         )
 
-                    [4] => Array
+                )
+
+            [4] => Array
+                (
+                    [MA_DV_CHINH] => STK
+                    [TEN_DICHVU] => Chuyển phát tiêu chuẩn
+                    [GIA_CUOC] => 155508
+                    [THOI_GIAN] => 96 giờ
+                    [EXCHANGE_WEIGHT] => 0
+                    [EXTRA_SERVICE] => Array
                         (
-                            [WARDS_ID] => 676
-                            [WARDS_NAME] => PHƯỜNG 12
-                            [DISTRICT_ID] => 35
+                            [0] => Array
+                                (
+                                    [SERVICE_CODE] => GGD
+                                    [SERVICE_NAME] => Giao Bưu phẩm tại điểm giao dịch
+                                    [DESCRIPTION] => 
+                                )
+
+                            [1] => Array
+                                (
+                                    [SERVICE_CODE] => GCTP
+                                    [SERVICE_NAME] => Chuyển tiếp
+                                    [DESCRIPTION] => 
+                                )
+
+                            [2] => Array
+                                (
+                                    [SERVICE_CODE] => GBP
+                                    [SERVICE_NAME] => Báo phát
+                                    [DESCRIPTION] => 
+                                )
+
+                            [3] => Array
+                                (
+                                    [SERVICE_CODE] => GTT
+                                    [SERVICE_NAME] => Phát tận tay
+                                    [DESCRIPTION] => 
+                                )
+
+                            [4] => Array
+                                (
+                                    [SERVICE_CODE] => GDK
+                                    [SERVICE_NAME] => Đồng kiểm
+                                    [DESCRIPTION] => 
+                                )
+
+                            [5] => Array
+                                (
+                                    [SERVICE_CODE] => GNG
+                                    [SERVICE_NAME] => Gửi hàng tại bưu cục
+                                    [DESCRIPTION] => 
+                                )
+
+                            [6] => Array
+                                (
+                                    [SERVICE_CODE] => GBH
+                                    [SERVICE_NAME] => Khai giá
+                                    [DESCRIPTION] => 
+                                )
+
+                            [7] => Array
+                                (
+                                    [SERVICE_CODE] => XMG
+                                    [SERVICE_NAME] => Thu tiền xem hàng
+                                    [DESCRIPTION] => 
+                                )
+
+                            [8] => Array
+                                (
+                                    [SERVICE_CODE] => TRS
+                                    [SERVICE_NAME] => Hoàn cước hai chiều
+                                    [DESCRIPTION] => 
+                                )
+
+                            [9] => Array
+                                (
+                                    [SERVICE_CODE] => RRS
+                                    [SERVICE_NAME] => Hoàn cước chiều về
+                                    [DESCRIPTION] => 
+                                )
+
+                            [10] => Array
+                                (
+                                    [SERVICE_CODE] => GGDH
+                                    [SERVICE_NAME] => Đổi hàng
+                                    [DESCRIPTION] => 
+                                )
+
+                            [11] => Array
+                                (
+                                    [SERVICE_CODE] => GGC
+                                    [SERVICE_NAME] => Gia cố hàng hóa
+                                    [DESCRIPTION] => 
+                                )
+
+                            [12] => Array
+                                (
+                                    [SERVICE_CODE] => SMS
+                                    [SERVICE_NAME] => SMS thông báo đơn hàng
+                                    [DESCRIPTION] => 
+                                )
+
+                            [13] => Array
+                                (
+                                    [SERVICE_CODE] => GST
+                                    [SERVICE_NAME] => Giao hàng đặc thù
+                                    [DESCRIPTION] => 
+                                )
+
+                            [14] => Array
+                                (
+                                    [SERVICE_CODE] => GDH
+                                    [SERVICE_NAME] => Đổi Trả Hàng Nội Bộ
+                                    [DESCRIPTION] => 
+                                )
+
+                            [15] => Array
+                                (
+                                    [SERVICE_CODE] => NBOX
+                                    [SERVICE_NAME] => Nhận hàng tại Box
+                                    [DESCRIPTION] => 
+                                )
+
+                            [16] => Array
+                                (
+                                    [SERVICE_CODE] => FRS
+                                    [SERVICE_NAME] => Hoàn cước chiều đi
+                                    [DESCRIPTION] => 
+                                )
+
+                            [17] => Array
+                                (
+                                    [SERVICE_CODE] => ZNS
+                                    [SERVICE_NAME] => Zalo thông báo đơn hàng
+                                    [DESCRIPTION] => 
+                                )
+
+                            [18] => Array
+                                (
+                                    [SERVICE_CODE] => GG1P
+                                    [SERVICE_NAME] => Giao Một Phần
+                                    [DESCRIPTION] => 
+                                )
+
+                            [19] => Array
+                                (
+                                    [SERVICE_CODE] => HGC
+                                    [SERVICE_NAME] => Hàng giá trị cao
+                                    [DESCRIPTION] => 
+                                )
+
+                            [20] => Array
+                                (
+                                    [SERVICE_CODE] => HDV
+                                    [SERVICE_NAME] => Hàng dễ vỡ
+                                    [DESCRIPTION] => 
+                                )
+
+                            [21] => Array
+                                (
+                                    [SERVICE_CODE] => HDN
+                                    [SERVICE_NAME] => Hóa đơn, giấy chứng nhận
+                                    [DESCRIPTION] => 
+                                )
+
+                            [22] => Array
+                                (
+                                    [SERVICE_CODE] => HQK
+                                    [SERVICE_NAME] => Hàng quá khổ
+                                    [DESCRIPTION] => 
+                                )
+
+                            [23] => Array
+                                (
+                                    [SERVICE_CODE] => HNK
+                                    [SERVICE_NAME] => Hàng nguyên khối
+                                    [DESCRIPTION] => 
+                                )
+
+                            [24] => Array
+                                (
+                                    [SERVICE_CODE] => HCL
+                                    [SERVICE_NAME] => Chất lỏng
+                                    [DESCRIPTION] => 
+                                )
+
+                            [25] => Array
+                                (
+                                    [SERVICE_CODE] => HPN
+                                    [SERVICE_NAME] => Hàng từ tính, pin
+                                    [DESCRIPTION] => 
+                                )
+
                         )
 
-                    [5] => Array
+                )
+
+            [5] => Array
+                (
+                    [MA_DV_CHINH] => VCN
+                    [TEN_DICHVU] => CP nhanh thỏa thuận
+                    [GIA_CUOC] => 389398
+                    [THOI_GIAN] => 60 giờ
+                    [EXCHANGE_WEIGHT] => 0
+                    [EXTRA_SERVICE] => Array
                         (
-                            [WARDS_ID] => 677
-                            [WARDS_NAME] => PHƯỜNG 13
-                            [DISTRICT_ID] => 35
+                            [0] => Array
+                                (
+                                    [SERVICE_CODE] => GGD
+                                    [SERVICE_NAME] => Giao Bưu phẩm tại điểm giao dịch
+                                    [DESCRIPTION] => 
+                                )
+
+                            [1] => Array
+                                (
+                                    [SERVICE_CODE] => GCTP
+                                    [SERVICE_NAME] => Chuyển tiếp
+                                    [DESCRIPTION] => 
+                                )
+
+                            [2] => Array
+                                (
+                                    [SERVICE_CODE] => GBP
+                                    [SERVICE_NAME] => Báo phát
+                                    [DESCRIPTION] => 
+                                )
+
+                            [3] => Array
+                                (
+                                    [SERVICE_CODE] => GTT
+                                    [SERVICE_NAME] => Phát tận tay
+                                    [DESCRIPTION] => 
+                                )
+
+                            [4] => Array
+                                (
+                                    [SERVICE_CODE] => GDK
+                                    [SERVICE_NAME] => Đồng kiểm
+                                    [DESCRIPTION] => 
+                                )
+
+                            [5] => Array
+                                (
+                                    [SERVICE_CODE] => GNG
+                                    [SERVICE_NAME] => Gửi hàng tại bưu cục
+                                    [DESCRIPTION] => 
+                                )
+
+                            [6] => Array
+                                (
+                                    [SERVICE_CODE] => GBH
+                                    [SERVICE_NAME] => Khai giá
+                                    [DESCRIPTION] => 
+                                )
+
+                            [7] => Array
+                                (
+                                    [SERVICE_CODE] => TRS
+                                    [SERVICE_NAME] => Hoàn cước hai chiều
+                                    [DESCRIPTION] => 
+                                )
+
+                            [8] => Array
+                                (
+                                    [SERVICE_CODE] => RRS
+                                    [SERVICE_NAME] => Hoàn cước chiều về
+                                    [DESCRIPTION] => 
+                                )
+
+                            [9] => Array
+                                (
+                                    [SERVICE_CODE] => GGDH
+                                    [SERVICE_NAME] => Đổi hàng
+                                    [DESCRIPTION] => 
+                                )
+
+                            [10] => Array
+                                (
+                                    [SERVICE_CODE] => GGC
+                                    [SERVICE_NAME] => Gia cố hàng hóa
+                                    [DESCRIPTION] => 
+                                )
+
+                            [11] => Array
+                                (
+                                    [SERVICE_CODE] => SMS
+                                    [SERVICE_NAME] => SMS thông báo đơn hàng
+                                    [DESCRIPTION] => 
+                                )
+
+                            [12] => Array
+                                (
+                                    [SERVICE_CODE] => GST
+                                    [SERVICE_NAME] => Giao hàng đặc thù
+                                    [DESCRIPTION] => 
+                                )
+
+                            [13] => Array
+                                (
+                                    [SERVICE_CODE] => GDH
+                                    [SERVICE_NAME] => Đổi Trả Hàng Nội Bộ
+                                    [DESCRIPTION] => 
+                                )
+
+                            [14] => Array
+                                (
+                                    [SERVICE_CODE] => NBOX
+                                    [SERVICE_NAME] => Nhận hàng tại Box
+                                    [DESCRIPTION] => 
+                                )
+
+                            [15] => Array
+                                (
+                                    [SERVICE_CODE] => FRS
+                                    [SERVICE_NAME] => Hoàn cước chiều đi
+                                    [DESCRIPTION] => 
+                                )
+
+                            [16] => Array
+                                (
+                                    [SERVICE_CODE] => ZNS
+                                    [SERVICE_NAME] => Zalo thông báo đơn hàng
+                                    [DESCRIPTION] => 
+                                )
+
+                            [17] => Array
+                                (
+                                    [SERVICE_CODE] => HGC
+                                    [SERVICE_NAME] => Hàng giá trị cao
+                                    [DESCRIPTION] => 
+                                )
+
+                            [18] => Array
+                                (
+                                    [SERVICE_CODE] => HDV
+                                    [SERVICE_NAME] => Hàng dễ vỡ
+                                    [DESCRIPTION] => 
+                                )
+
+                            [19] => Array
+                                (
+                                    [SERVICE_CODE] => HLH
+                                    [SERVICE_NAME] => Hàng lạnh
+                                    [DESCRIPTION] => 
+                                )
+
+                            [20] => Array
+                                (
+                                    [SERVICE_CODE] => HDN
+                                    [SERVICE_NAME] => Hóa đơn, giấy chứng nhận
+                                    [DESCRIPTION] => 
+                                )
+
+                            [21] => Array
+                                (
+                                    [SERVICE_CODE] => HQK
+                                    [SERVICE_NAME] => Hàng quá khổ
+                                    [DESCRIPTION] => 
+                                )
+
+                            [22] => Array
+                                (
+                                    [SERVICE_CODE] => HNK
+                                    [SERVICE_NAME] => Hàng nguyên khối
+                                    [DESCRIPTION] => 
+                                )
+
+                            [23] => Array
+                                (
+                                    [SERVICE_CODE] => HCL
+                                    [SERVICE_NAME] => Chất lỏng
+                                    [DESCRIPTION] => 
+                                )
+
+                            [24] => Array
+                                (
+                                    [SERVICE_CODE] => HPN
+                                    [SERVICE_NAME] => Hàng từ tính, pin
+                                    [DESCRIPTION] => 
+                                )
+
                         )
 
-                    [6] => Array
+                )
+
+            [6] => Array
+                (
+                    [MA_DV_CHINH] => VHT
+                    [TEN_DICHVU] => Hỏa tốc thỏa thuận
+                    [GIA_CUOC] => 539005
+                    [THOI_GIAN] => 48 giờ
+                    [EXCHANGE_WEIGHT] => 0
+                    [EXTRA_SERVICE] => Array
                         (
-                            [WARDS_ID] => 678
-                            [WARDS_NAME] => PHƯỜNG 7
-                            [DISTRICT_ID] => 35
+                            [0] => Array
+                                (
+                                    [SERVICE_CODE] => GGD
+                                    [SERVICE_NAME] => Giao Bưu phẩm tại điểm giao dịch
+                                    [DESCRIPTION] => 
+                                )
+
+                            [1] => Array
+                                (
+                                    [SERVICE_CODE] => GCTP
+                                    [SERVICE_NAME] => Chuyển tiếp
+                                    [DESCRIPTION] => 
+                                )
+
+                            [2] => Array
+                                (
+                                    [SERVICE_CODE] => GBP
+                                    [SERVICE_NAME] => Báo phát
+                                    [DESCRIPTION] => 
+                                )
+
+                            [3] => Array
+                                (
+                                    [SERVICE_CODE] => GTT
+                                    [SERVICE_NAME] => Phát tận tay
+                                    [DESCRIPTION] => 
+                                )
+
+                            [4] => Array
+                                (
+                                    [SERVICE_CODE] => GDK
+                                    [SERVICE_NAME] => Đồng kiểm
+                                    [DESCRIPTION] => 
+                                )
+
+                            [5] => Array
+                                (
+                                    [SERVICE_CODE] => GNG
+                                    [SERVICE_NAME] => Gửi hàng tại bưu cục
+                                    [DESCRIPTION] => 
+                                )
+
+                            [6] => Array
+                                (
+                                    [SERVICE_CODE] => GBH
+                                    [SERVICE_NAME] => Khai giá
+                                    [DESCRIPTION] => 
+                                )
+
+                            [7] => Array
+                                (
+                                    [SERVICE_CODE] => XMG
+                                    [SERVICE_NAME] => Thu tiền xem hàng
+                                    [DESCRIPTION] => 
+                                )
+
+                            [8] => Array
+                                (
+                                    [SERVICE_CODE] => TRS
+                                    [SERVICE_NAME] => Hoàn cước hai chiều
+                                    [DESCRIPTION] => 
+                                )
+
+                            [9] => Array
+                                (
+                                    [SERVICE_CODE] => RRS
+                                    [SERVICE_NAME] => Hoàn cước chiều về
+                                    [DESCRIPTION] => 
+                                )
+
+                            [10] => Array
+                                (
+                                    [SERVICE_CODE] => GGDH
+                                    [SERVICE_NAME] => Đổi hàng
+                                    [DESCRIPTION] => 
+                                )
+
+                            [11] => Array
+                                (
+                                    [SERVICE_CODE] => GGC
+                                    [SERVICE_NAME] => Gia cố hàng hóa
+                                    [DESCRIPTION] => 
+                                )
+
+                            [12] => Array
+                                (
+                                    [SERVICE_CODE] => SMS
+                                    [SERVICE_NAME] => SMS thông báo đơn hàng
+                                    [DESCRIPTION] => 
+                                )
+
+                            [13] => Array
+                                (
+                                    [SERVICE_CODE] => GDH
+                                    [SERVICE_NAME] => Đổi Trả Hàng Nội Bộ
+                                    [DESCRIPTION] => 
+                                )
+
+                            [14] => Array
+                                (
+                                    [SERVICE_CODE] => NBOX
+                                    [SERVICE_NAME] => Nhận hàng tại Box
+                                    [DESCRIPTION] => 
+                                )
+
+                            [15] => Array
+                                (
+                                    [SERVICE_CODE] => FRS
+                                    [SERVICE_NAME] => Hoàn cước chiều đi
+                                    [DESCRIPTION] => 
+                                )
+
+                            [16] => Array
+                                (
+                                    [SERVICE_CODE] => ZNS
+                                    [SERVICE_NAME] => Zalo thông báo đơn hàng
+                                    [DESCRIPTION] => 
+                                )
+
+                            [17] => Array
+                                (
+                                    [SERVICE_CODE] => GG1P
+                                    [SERVICE_NAME] => Giao Một Phần
+                                    [DESCRIPTION] => 
+                                )
+
+                            [18] => Array
+                                (
+                                    [SERVICE_CODE] => HGC
+                                    [SERVICE_NAME] => Hàng giá trị cao
+                                    [DESCRIPTION] => 
+                                )
+
+                            [19] => Array
+                                (
+                                    [SERVICE_CODE] => HDV
+                                    [SERVICE_NAME] => Hàng dễ vỡ
+                                    [DESCRIPTION] => 
+                                )
+
+                            [20] => Array
+                                (
+                                    [SERVICE_CODE] => HLH
+                                    [SERVICE_NAME] => Hàng lạnh
+                                    [DESCRIPTION] => 
+                                )
+
+                            [21] => Array
+                                (
+                                    [SERVICE_CODE] => HDN
+                                    [SERVICE_NAME] => Hóa đơn, giấy chứng nhận
+                                    [DESCRIPTION] => 
+                                )
+
+                            [22] => Array
+                                (
+                                    [SERVICE_CODE] => HQK
+                                    [SERVICE_NAME] => Hàng quá khổ
+                                    [DESCRIPTION] => 
+                                )
+
+                            [23] => Array
+                                (
+                                    [SERVICE_CODE] => HNK
+                                    [SERVICE_NAME] => Hàng nguyên khối
+                                    [DESCRIPTION] => 
+                                )
+
+                            [24] => Array
+                                (
+                                    [SERVICE_CODE] => HCL
+                                    [SERVICE_NAME] => Chất lỏng
+                                    [DESCRIPTION] => 
+                                )
+
+                            [25] => Array
+                                (
+                                    [SERVICE_CODE] => HPN
+                                    [SERVICE_NAME] => Hàng từ tính, pin
+                                    [DESCRIPTION] => 
+                                )
+
                         )
 
-                    [7] => Array
-                        (
-                            [WARDS_ID] => 679
-                            [WARDS_NAME] => PHƯỜNG 8
-                            [DISTRICT_ID] => 35
-                        )
+                )
 
-                    [8] => Array
+            [7] => Array
+                (
+                    [MA_DV_CHINH] => VTK
+                    [TEN_DICHVU] => CP tiết kiệm thỏa thuận
+                    [GIA_CUOC] => 139183
+                    [THOI_GIAN] => 96 giờ
+                    [EXCHANGE_WEIGHT] => 0
+                    [EXTRA_SERVICE] => Array
                         (
-                            [WARDS_ID] => 680
-                            [WARDS_NAME] => PHƯỜNG 6
-                            [DISTRICT_ID] => 35
-                        )
+                            [0] => Array
+                                (
+                                    [SERVICE_CODE] => GGD
+                                    [SERVICE_NAME] => Giao Bưu phẩm tại điểm giao dịch
+                                    [DESCRIPTION] => 
+                                )
 
-                    [9] => Array
-                        (
-                            [WARDS_ID] => 681
-                            [WARDS_NAME] => PHƯỜNG  1
-                            [DISTRICT_ID] => 35
-                        )
+                            [1] => Array
+                                (
+                                    [SERVICE_CODE] => GCTP
+                                    [SERVICE_NAME] => Chuyển tiếp
+                                    [DESCRIPTION] => 
+                                )
 
-                    [10] => Array
-                        (
-                            [WARDS_ID] => 682
-                            [WARDS_NAME] => PHƯỜNG 2
-                            [DISTRICT_ID] => 35
-                        )
+                            [2] => Array
+                                (
+                                    [SERVICE_CODE] => GBP
+                                    [SERVICE_NAME] => Báo phát
+                                    [DESCRIPTION] => 
+                                )
 
-                    [11] => Array
-                        (
-                            [WARDS_ID] => 683
-                            [WARDS_NAME] => PHƯỜNG 3
-                            [DISTRICT_ID] => 35
-                        )
+                            [3] => Array
+                                (
+                                    [SERVICE_CODE] => GTT
+                                    [SERVICE_NAME] => Phát tận tay
+                                    [DESCRIPTION] => 
+                                )
 
-                    [12] => Array
-                        (
-                            [WARDS_ID] => 684
-                            [WARDS_NAME] => PHƯỜNG 4
-                            [DISTRICT_ID] => 35
-                        )
+                            [4] => Array
+                                (
+                                    [SERVICE_CODE] => GDK
+                                    [SERVICE_NAME] => Đồng kiểm
+                                    [DESCRIPTION] => 
+                                )
 
-                    [13] => Array
-                        (
-                            [WARDS_ID] => 685
-                            [WARDS_NAME] => PHƯỜNG 5
-                            [DISTRICT_ID] => 35
-                        )
+                            [5] => Array
+                                (
+                                    [SERVICE_CODE] => GNG
+                                    [SERVICE_NAME] => Gửi hàng tại bưu cục
+                                    [DESCRIPTION] => 
+                                )
 
-                    [14] => Array
-                        (
-                            [WARDS_ID] => 686
-                            [WARDS_NAME] => PHƯỜNG 15
-                            [DISTRICT_ID] => 35
+                            [6] => Array
+                                (
+                                    [SERVICE_CODE] => GBH
+                                    [SERVICE_NAME] => Khai giá
+                                    [DESCRIPTION] => 
+                                )
+
+                            [7] => Array
+                                (
+                                    [SERVICE_CODE] => TRS
+                                    [SERVICE_NAME] => Hoàn cước hai chiều
+                                    [DESCRIPTION] => 
+                                )
+
+                            [8] => Array
+                                (
+                                    [SERVICE_CODE] => RRS
+                                    [SERVICE_NAME] => Hoàn cước chiều về
+                                    [DESCRIPTION] => 
+                                )
+
+                            [9] => Array
+                                (
+                                    [SERVICE_CODE] => GGDH
+                                    [SERVICE_NAME] => Đổi hàng
+                                    [DESCRIPTION] => 
+                                )
+
+                            [10] => Array
+                                (
+                                    [SERVICE_CODE] => GGC
+                                    [SERVICE_NAME] => Gia cố hàng hóa
+                                    [DESCRIPTION] => 
+                                )
+
+                            [11] => Array
+                                (
+                                    [SERVICE_CODE] => SMS
+                                    [SERVICE_NAME] => SMS thông báo đơn hàng
+                                    [DESCRIPTION] => 
+                                )
+
+                            [12] => Array
+                                (
+                                    [SERVICE_CODE] => GST
+                                    [SERVICE_NAME] => Giao hàng đặc thù
+                                    [DESCRIPTION] => 
+                                )
+
+                            [13] => Array
+                                (
+                                    [SERVICE_CODE] => GDH
+                                    [SERVICE_NAME] => Đổi Trả Hàng Nội Bộ
+                                    [DESCRIPTION] => 
+                                )
+
+                            [14] => Array
+                                (
+                                    [SERVICE_CODE] => NBOX
+                                    [SERVICE_NAME] => Nhận hàng tại Box
+                                    [DESCRIPTION] => 
+                                )
+
+                            [15] => Array
+                                (
+                                    [SERVICE_CODE] => FRS
+                                    [SERVICE_NAME] => Hoàn cước chiều đi
+                                    [DESCRIPTION] => 
+                                )
+
+                            [16] => Array
+                                (
+                                    [SERVICE_CODE] => ZNS
+                                    [SERVICE_NAME] => Zalo thông báo đơn hàng
+                                    [DESCRIPTION] => 
+                                )
+
+                            [17] => Array
+                                (
+                                    [SERVICE_CODE] => HGC
+                                    [SERVICE_NAME] => Hàng giá trị cao
+                                    [DESCRIPTION] => 
+                                )
+
+                            [18] => Array
+                                (
+                                    [SERVICE_CODE] => HDV
+                                    [SERVICE_NAME] => Hàng dễ vỡ
+                                    [DESCRIPTION] => 
+                                )
+
+                            [19] => Array
+                                (
+                                    [SERVICE_CODE] => HLH
+                                    [SERVICE_NAME] => Hàng lạnh
+                                    [DESCRIPTION] => 
+                                )
+
+                            [20] => Array
+                                (
+                                    [SERVICE_CODE] => HDN
+                                    [SERVICE_NAME] => Hóa đơn, giấy chứng nhận
+                                    [DESCRIPTION] => 
+                                )
+
+                            [21] => Array
+                                (
+                                    [SERVICE_CODE] => HST
+                                    [SERVICE_NAME] => Hồ sơ thầu
+                                    [DESCRIPTION] => 
+                                )
+
+                            [22] => Array
+                                (
+                                    [SERVICE_CODE] => HQK
+                                    [SERVICE_NAME] => Hàng quá khổ
+                                    [DESCRIPTION] => 
+                                )
+
+                            [23] => Array
+                                (
+                                    [SERVICE_CODE] => HNK
+                                    [SERVICE_NAME] => Hàng nguyên khối
+                                    [DESCRIPTION] => 
+                                )
+
+                            [24] => Array
+                                (
+                                    [SERVICE_CODE] => HCL
+                                    [SERVICE_NAME] => Chất lỏng
+                                    [DESCRIPTION] => 
+                                )
+
+                            [25] => Array
+                                (
+                                    [SERVICE_CODE] => HPN
+                                    [SERVICE_NAME] => Hàng từ tính, pin
+                                    [DESCRIPTION] => 
+                                )
+
                         )
 
                 )

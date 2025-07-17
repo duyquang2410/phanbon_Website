@@ -75,3 +75,39 @@
 [2025-06-22 16:15:02] [EXCEPTION] Unknown column 'KM_TRANGTHAI' in 'where clause' {"file":"C:\\xampp\\htdocs\\LVTN_PhanBon\\checkout.php","line":485,"trace":"#0 C:\\xampp\\htdocs\\LVTN_PhanBon\\checkout.php(485): mysqli->query('SELECT * FROM k...')\n#1 {main}"}
 [2025-06-22 16:15:16] [EXCEPTION] Unknown column 'KM_TRANGTHAI' in 'where clause' {"file":"C:\\xampp\\htdocs\\LVTN_PhanBon\\checkout.php","line":485,"trace":"#0 C:\\xampp\\htdocs\\LVTN_PhanBon\\checkout.php(485): mysqli->query('SELECT * FROM k...')\n#1 {main}"}
 [2025-06-22 16:17:43] [EXCEPTION] Unknown column 'KM_TRANGTHAI' in 'where clause' {"file":"C:\\xampp\\htdocs\\LVTN_PhanBon\\checkout.php","line":485,"trace":"#0 C:\\xampp\\htdocs\\LVTN_PhanBon\\checkout.php(485): mysqli->query('SELECT * FROM k...')\n#1 {main}"}
+[2025-07-15 12:43:17] [ERROR] Undefined variable $total_value {"file":"C:\\xampp\\htdocs\\web\\phanbon_Website\\checkout.php","line":68,"type":2}
+[2025-07-15 12:43:25] [ERROR] Undefined variable $total_value {"file":"C:\\xampp\\htdocs\\web\\phanbon_Website\\checkout.php","line":68,"type":2}
+[2025-07-15 12:47:10] [ERROR] Undefined variable $total_value {"file":"C:\\xampp\\htdocs\\web\\phanbon_Website\\checkout.php","line":68,"type":2}
+[2025-07-15 13:00:42] [ERROR] Undefined array key "SP_MA" {"file":"C:\\xampp\\htdocs\\web\\phanbon_Website\\checkout.php","line":558,"type":2}
+[2025-07-15 13:00:42] [ERROR] Undefined array key "SP_TEN" {"file":"C:\\xampp\\htdocs\\web\\phanbon_Website\\checkout.php","line":559,"type":2}
+[2025-07-15 13:00:42] [ERROR] htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated {"file":"C:\\xampp\\htdocs\\web\\phanbon_Website\\checkout.php","line":559,"type":8192}
+[2025-07-16 19:45:21] [ERROR] Undefined array key "SP_TEN" {"file":"C:\\xampp\\htdocs\\web\\phanbon_Website\\checkout.php","line":496,"type":2}
+[2025-07-16 19:45:21] [ERROR] htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated {"file":"C:\\xampp\\htdocs\\web\\phanbon_Website\\checkout.php","line":496,"type":8192}
+[2025-07-16 19:45:21] [ERROR] Undefined array key "CTGH_KHOILUONG" {"file":"C:\\xampp\\htdocs\\web\\phanbon_Website\\checkout.php","line":498,"type":2}
+[2025-07-16 19:45:21] [ERROR] htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated {"file":"C:\\xampp\\htdocs\\web\\phanbon_Website\\checkout.php","line":498,"type":8192}
+[2025-07-16 19:45:21] [ERROR] Undefined array key "CTGH_DONVITINH" {"file":"C:\\xampp\\htdocs\\web\\phanbon_Website\\checkout.php","line":498,"type":2}
+[2025-07-16 19:45:21] [ERROR] htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated {"file":"C:\\xampp\\htdocs\\web\\phanbon_Website\\checkout.php","line":498,"type":8192}
+[2025-07-16 19:45:21] [ERROR] Undefined array key "SP_DONGIA" {"file":"C:\\xampp\\htdocs\\web\\phanbon_Website\\checkout.php","line":499,"type":2}
+[2025-07-16 19:45:21] [ERROR] number_format(): Passing null to parameter #1 ($num) of type float is deprecated {"file":"C:\\xampp\\htdocs\\web\\phanbon_Website\\checkout.php","line":499,"type":8192}
+[2025-07-16 19:47:44] [ERROR] Undefined array key "SP_DONGIA" {"file":"C:\\xampp\\htdocs\\web\\phanbon_Website\\checkout.php","line":492,"type":2}
+[2025-07-16 19:47:44] [ERROR] Undefined array key "CTGH_KHOILUONG" {"file":"C:\\xampp\\htdocs\\web\\phanbon_Website\\checkout.php","line":492,"type":2}
+[2025-07-16 19:47:44] [ERROR] Undefined array key "SP_TEN" {"file":"C:\\xampp\\htdocs\\web\\phanbon_Website\\checkout.php","line":497,"type":2}
+[2025-07-16 19:47:44] [ERROR] htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated {"file":"C:\\xampp\\htdocs\\web\\phanbon_Website\\checkout.php","line":497,"type":8192}
+[2025-07-16 19:47:44] [ERROR] Undefined array key "CTGH_KHOILUONG" {"file":"C:\\xampp\\htdocs\\web\\phanbon_Website\\checkout.php","line":500,"type":2}
+[2025-07-16 19:47:44] [ERROR] number_format(): Passing null to parameter #1 ($num) of type float is deprecated {"file":"C:\\xampp\\htdocs\\web\\phanbon_Website\\checkout.php","line":500,"type":8192}
+[2025-07-16 19:47:44] [ERROR] Undefined array key "CTGH_DONVITINH" {"file":"C:\\xampp\\htdocs\\web\\phanbon_Website\\checkout.php","line":501,"type":2}
+[2025-07-16 19:47:44] [ERROR] htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated {"file":"C:\\xampp\\htdocs\\web\\phanbon_Website\\checkout.php","line":501,"type":8192}
+[2025-07-16 19:47:44] [ERROR] Undefined array key "SP_MA" {"file":"C:\\xampp\\htdocs\\web\\phanbon_Website\\checkout.php","line":573,"type":2}
+[2025-07-16 19:47:44] [ERROR] Undefined array key "SP_MA" {"file":"C:\\xampp\\htdocs\\web\\phanbon_Website\\checkout.php","line":574,"type":2}
+[2025-07-16 19:47:44] [ERROR] Undefined array key "CTGH_KHOILUONG" {"file":"C:\\xampp\\htdocs\\web\\phanbon_Website\\checkout.php","line":574,"type":2}
+[2025-07-16 19:47:44] [ERROR] Undefined array key "SP_MA" {"file":"C:\\xampp\\htdocs\\web\\phanbon_Website\\checkout.php","line":575,"type":2}
+[2025-07-16 19:47:44] [ERROR] Undefined array key "SP_DONGIA" {"file":"C:\\xampp\\htdocs\\web\\phanbon_Website\\checkout.php","line":575,"type":2}
+[2025-07-16 19:47:44] [ERROR] Undefined array key "SP_MA" {"file":"C:\\xampp\\htdocs\\web\\phanbon_Website\\checkout.php","line":576,"type":2}
+[2025-07-16 19:47:44] [ERROR] Undefined array key "SP_TEN" {"file":"C:\\xampp\\htdocs\\web\\phanbon_Website\\checkout.php","line":576,"type":2}
+[2025-07-16 19:47:44] [ERROR] Undefined array key "SP_MA" {"file":"C:\\xampp\\htdocs\\web\\phanbon_Website\\checkout.php","line":577,"type":2}
+[2025-07-16 19:47:44] [ERROR] Undefined array key "CTGH_DONVITINH" {"file":"C:\\xampp\\htdocs\\web\\phanbon_Website\\checkout.php","line":577,"type":2}
+[2025-07-16 19:47:44] [ERROR] Undefined array key "SP_MA" {"file":"C:\\xampp\\htdocs\\web\\phanbon_Website\\checkout.php","line":578,"type":2}
+[2025-07-16 19:47:44] [ERROR] Undefined array key "SP_HINHANH" {"file":"C:\\xampp\\htdocs\\web\\phanbon_Website\\checkout.php","line":578,"type":2}
+[2025-07-16 20:01:28] [EXCEPTION] Call to undefined method ErrorLogger::info() {"file":"C:\\xampp\\htdocs\\web\\phanbon_Website\\checkout.php","line":196,"trace":"#0 {main}"}
+[2025-07-16 20:01:33] [EXCEPTION] Call to undefined method ErrorLogger::info() {"file":"C:\\xampp\\htdocs\\web\\phanbon_Website\\checkout.php","line":196,"trace":"#0 {main}"}
+[2025-07-16 20:05:20] [EXCEPTION] Call to undefined method ErrorLogger::info() {"file":"C:\\xampp\\htdocs\\web\\phanbon_Website\\checkout.php","line":187,"trace":"#0 {main}"}

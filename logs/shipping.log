@@ -948,3 +948,354 @@
     }
 }
 ---
+[2025-07-15 12:34:29][INFO] Calculated total order weight
+Data: Array
+(
+    [total_weight_grams] => 170
+    [total_value] => 429000
+    [weight_details] => Array
+        (
+            [0] => Array
+                (
+                    [product_id] => 4
+                    [product_name] => Bimix Super Root (20ml)  –  Phát triển mạnh bộ rễ, kích thích cành chiết, cành giâm
+                    [unit_weight] => 20
+                    [quantity] => 4
+                    [total_item_weight] => 80
+                )
+
+            [1] => Array
+                (
+                    [product_id] => 5
+                    [product_name] => Axit humic dạng lỏng 322 Growmore (235ml) - Kích rễ và chống ngộ độc hữu cơ cho cây
+                    [unit_weight] => 10
+                    [quantity] => 9
+                    [total_item_weight] => 90
+                )
+
+        )
+
+)
+
+--------------------------------------------------------------------------------
+[2025-07-15 12:38:51][INFO] Calculated total order weight
+Data: Array
+(
+    [total_weight_grams] => 210
+    [total_value] => 609000
+    [weight_details] => Array
+        (
+            [0] => Array
+                (
+                    [product_id] => 4
+                    [product_name] => Bimix Super Root (20ml)  –  Phát triển mạnh bộ rễ, kích thích cành chiết, cành giâm
+                    [unit_weight] => 20
+                    [quantity] => 4
+                    [total_item_weight] => 80
+                )
+
+            [1] => Array
+                (
+                    [product_id] => 5
+                    [product_name] => Axit humic dạng lỏng 322 Growmore (235ml) - Kích rễ và chống ngộ độc hữu cơ cho cây
+                    [unit_weight] => 10
+                    [quantity] => 13
+                    [total_item_weight] => 130
+                )
+
+        )
+
+)
+
+--------------------------------------------------------------------------------
+[2025-07-15 12:39:33][INFO] Calculated total order weight
+Data: Array
+(
+    [total_weight_grams] => 5210
+    [total_value] => 784000
+    [weight_details] => Array
+        (
+            [0] => Array
+                (
+                    [product_id] => 2
+                    [product_name] => Chế phẩm EMUNIV (200g) – Ủ phân và rác hữu cơ hiệu quả, nhanh hoai mục
+                    [unit_weight] => 1000
+                    [quantity] => 5
+                    [total_item_weight] => 5000
+                )
+
+            [1] => Array
+                (
+                    [product_id] => 4
+                    [product_name] => Bimix Super Root (20ml)  –  Phát triển mạnh bộ rễ, kích thích cành chiết, cành giâm
+                    [unit_weight] => 20
+                    [quantity] => 4
+                    [total_item_weight] => 80
+                )
+
+            [2] => Array
+                (
+                    [product_id] => 5
+                    [product_name] => Axit humic dạng lỏng 322 Growmore (235ml) - Kích rễ và chống ngộ độc hữu cơ cho cây
+                    [unit_weight] => 10
+                    [quantity] => 13
+                    [total_item_weight] => 130
+                )
+
+        )
+
+)
+
+--------------------------------------------------------------------------------
+[2025-07-15 12:40:18][INFO] Calculated total order weight
+Data: Array
+(
+    [total_weight_grams] => 3000
+    [total_value] => 105000
+    [weight_details] => Array
+        (
+            [0] => Array
+                (
+                    [product_id] => 2
+                    [product_name] => Chế phẩm EMUNIV (200g) – Ủ phân và rác hữu cơ hiệu quả, nhanh hoai mục
+                    [unit_weight] => 1000
+                    [quantity] => 3
+                    [total_item_weight] => 3000
+                )
+
+        )
+
+)
+
+--------------------------------------------------------------------------------
+[2025-07-15 12:43:08][INFO] Calculated total order weight
+Data: Array
+(
+    [total_weight_grams] => 3000
+    [total_value] => 105000
+    [weight_details] => Array
+        (
+            [0] => Array
+                (
+                    [product_id] => 2
+                    [product_name] => Chế phẩm EMUNIV (200g) – Ủ phân và rác hữu cơ hiệu quả, nhanh hoai mục
+                    [unit_weight] => 1000
+                    [quantity] => 3
+                    [total_item_weight] => 3000
+                )
+
+        )
+
+)
+
+--------------------------------------------------------------------------------
+[2025-07-15 12:43:17][INFO] Calculated total order weight
+Data: Array
+(
+    [total_weight_grams] => 3000
+    [total_value] => 105000
+    [weight_details] => Array
+        (
+            [0] => Array
+                (
+                    [product_id] => 2
+                    [product_name] => Chế phẩm EMUNIV (200g) – Ủ phân và rác hữu cơ hiệu quả, nhanh hoai mục
+                    [unit_weight] => 1000
+                    [quantity] => 3
+                    [total_item_weight] => 3000
+                )
+
+        )
+
+)
+
+--------------------------------------------------------------------------------
+[2025-07-15 12:43:22][INFO] Calculated total order weight
+Data: Array
+(
+    [total_weight_grams] => 6000
+    [total_value] => 210000
+    [weight_details] => Array
+        (
+            [0] => Array
+                (
+                    [product_id] => 2
+                    [product_name] => Chế phẩm EMUNIV (200g) – Ủ phân và rác hữu cơ hiệu quả, nhanh hoai mục
+                    [unit_weight] => 1000
+                    [quantity] => 6
+                    [total_item_weight] => 6000
+                )
+
+        )
+
+)
+
+--------------------------------------------------------------------------------
+[2025-07-15 12:43:25][INFO] Calculated total order weight
+Data: Array
+(
+    [total_weight_grams] => 6000
+    [total_value] => 210000
+    [weight_details] => Array
+        (
+            [0] => Array
+                (
+                    [product_id] => 2
+                    [product_name] => Chế phẩm EMUNIV (200g) – Ủ phân và rác hữu cơ hiệu quả, nhanh hoai mục
+                    [unit_weight] => 1000
+                    [quantity] => 6
+                    [total_item_weight] => 6000
+                )
+
+        )
+
+)
+
+--------------------------------------------------------------------------------
+[2025-07-15 12:47:10][INFO] Calculated total order weight
+Data: Array
+(
+    [total_weight_grams] => 6000
+    [total_value] => 210000
+    [weight_details] => Array
+        (
+            [0] => Array
+                (
+                    [product_id] => 2
+                    [product_name] => Chế phẩm EMUNIV (200g) – Ủ phân và rác hữu cơ hiệu quả, nhanh hoai mục
+                    [unit_weight] => 1000
+                    [quantity] => 6
+                    [total_item_weight] => 6000
+                )
+
+        )
+
+)
+
+--------------------------------------------------------------------------------
+[2025-07-15 12:50:38][INFO] Calculated total order weight
+Data: Array
+(
+    [total_weight_grams] => 8000
+    [total_value] => 280000
+    [weight_details] => Array
+        (
+            [0] => Array
+                (
+                    [product_id] => 2
+                    [product_name] => Chế phẩm EMUNIV (200g) – Ủ phân và rác hữu cơ hiệu quả, nhanh hoai mục
+                    [unit_weight] => 1000
+                    [quantity] => 8
+                    [total_item_weight] => 8000
+                )
+
+        )
+
+)
+
+--------------------------------------------------------------------------------
+[2025-07-15 12:50:49][INFO] Calculated total order weight
+Data: Array
+(
+    [total_weight_grams] => 8000
+    [total_value] => 280000
+    [weight_details] => Array
+        (
+            [0] => Array
+                (
+                    [product_id] => 2
+                    [product_name] => Chế phẩm EMUNIV (200g) – Ủ phân và rác hữu cơ hiệu quả, nhanh hoai mục
+                    [unit_weight] => 1000
+                    [quantity] => 8
+                    [total_item_weight] => 8000
+                )
+
+        )
+
+)
+
+--------------------------------------------------------------------------------
+[2025-07-15 12:52:46][INFO] Calculated total order weight
+Data: Array
+(
+    [total_weight_grams] => 10000
+    [total_value] => 350000
+    [weight_details] => Array
+        (
+            [0] => Array
+                (
+                    [product_id] => 2
+                    [product_name] => Chế phẩm EMUNIV (200g) – Ủ phân và rác hữu cơ hiệu quả, nhanh hoai mục
+                    [unit_weight] => 1000
+                    [quantity] => 10
+                    [total_item_weight] => 10000
+                )
+
+        )
+
+)
+
+--------------------------------------------------------------------------------
+[2025-07-15 12:53:57][INFO] Calculated total order weight
+Data: Array
+(
+    [total_weight_grams] => 10000
+    [total_value] => 350000
+    [weight_details] => Array
+        (
+            [0] => Array
+                (
+                    [product_id] => 2
+                    [product_name] => Chế phẩm EMUNIV (200g) – Ủ phân và rác hữu cơ hiệu quả, nhanh hoai mục
+                    [unit_weight] => 1000
+                    [quantity] => 10
+                    [total_item_weight] => 10000
+                )
+
+        )
+
+)
+
+--------------------------------------------------------------------------------
+[2025-07-15 12:54:11][INFO] Calculated total order weight
+Data: Array
+(
+    [total_weight_grams] => 11000
+    [total_value] => 385000
+    [weight_details] => Array
+        (
+            [0] => Array
+                (
+                    [product_id] => 2
+                    [product_name] => Chế phẩm EMUNIV (200g) – Ủ phân và rác hữu cơ hiệu quả, nhanh hoai mục
+                    [unit_weight] => 1000
+                    [quantity] => 11
+                    [total_item_weight] => 11000
+                )
+
+        )
+
+)
+
+--------------------------------------------------------------------------------
+[2025-07-15 12:54:33][INFO] Calculated total order weight
+Data: Array
+(
+    [total_weight_grams] => 11000
+    [total_value] => 385000
+    [weight_details] => Array
+        (
+            [0] => Array
+                (
+                    [product_id] => 2
+                    [product_name] => Chế phẩm EMUNIV (200g) – Ủ phân và rác hữu cơ hiệu quả, nhanh hoai mục
+                    [unit_weight] => 1000
+                    [quantity] => 11
+                    [total_item_weight] => 11000
+                )
+
+        )
+
+)
+
+--------------------------------------------------------------------------------

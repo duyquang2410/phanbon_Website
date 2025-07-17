@@ -37,15 +37,15 @@ $order_sql = "SELECT
     hd.HD_TONGTIEN as subtotal,
     hd.HD_PHISHIP as shipping_fee,
     CASE 
-        WHEN km.hinh_thuc_km = 'Giảm phần trăm' THEN LEAST(hd.HD_TONGTIEN, hd.HD_TONGTIEN * km.KM_GIATRI / 100)
-        WHEN km.hinh_thuc_km = 'Giảm trực tiếp' THEN LEAST(km.KM_GIATRI, hd.HD_TONGTIEN)
+        WHEN km.hinh_thuc_km = 'percent' THEN LEAST(hd.HD_TONGTIEN, hd.HD_TONGTIEN * km.KM_GIATRI / 100)
+        WHEN km.hinh_thuc_km = 'fixed' THEN LEAST(km.KM_GIATRI, hd.HD_TONGTIEN)
         ELSE 0 
     END as discount_amount,
     tt.TT_TEN AS trang_thai,
     pttt.PTTT_TEN AS phuong_thuc,
     km.Code AS promo_code,
-    km.KM_GIATRI AS discount_percentage,
-    km.hinh_thuc_km
+    km.KM_GIATRI AS discount_value,
+    km.hinh_thuc_km AS discount_type
 FROM hoa_don hd
 JOIN trang_thai tt ON hd.TT_MA = tt.TT_MA
 JOIN phuong_thuc_thanh_toan pttt ON hd.PTTT_MA = pttt.PTTT_MA
@@ -254,7 +254,7 @@ $result = $stmt->get_result();
                                     <td><span class="<?php echo $statusClass; ?>"><?php echo htmlspecialchars($row['trang_thai']); ?></span></td>
                                     <td><?php echo $payIcon . htmlspecialchars($row['phuong_thuc']); ?></td>
                                     <td><?php echo isset($row['promo_code']) && $row['promo_code'] !== null && $row['promo_code'] !== '' ? htmlspecialchars($row['promo_code']) : '-'; ?></td>
-                                    <td><?php echo isset($row['discount_percentage']) && $row['discount_percentage'] !== null && $row['discount_percentage'] > 0 ? $row['discount_percentage'].'%' : '-'; ?></td>
+                                    <td><?php echo isset($row['discount_value']) && $row['discount_value'] !== null && $row['discount_value'] > 0 ? $row['discount_value'].'%' : '-'; ?></td>
                                     <td><a href="order_confirmation.php?id=<?php echo $row['HD_STT']; ?>" class="btn btn-detail"><i class="fa fa-eye"></i> Xem</a></td>
                                 </tr>
                                 <?php endwhile; ?>

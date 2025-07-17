@@ -7,12 +7,30 @@ header('Content-Type: application/json');
 
 // Hàm ghi log
 function logPromoCheck($message, $data = null) {
-    $log = date('Y-m-d H:i:s') . " - " . $message;
-    if ($data !== null) {
-        $log .= "\nData: " . print_r($data, true);
+    try {
+        $log_dir = __DIR__ . '/logs';
+        if (!file_exists($log_dir)) {
+            mkdir($log_dir, 0777, true);
+        }
+
+        $log_file = $log_dir . '/promo_errors.log';
+        
+        $log = date('Y-m-d H:i:s') . " - " . $message;
+        if ($data !== null) {
+            if (is_array($data)) {
+                $log .= "\nData: " . print_r($data, true);
+            } else {
+                $log .= "\nData: " . strval($data);
+            }
+        }
+        $log .= "\n\n";
+        
+        if (!file_put_contents($log_file, $log, FILE_APPEND | LOCK_EX)) {
+            error_log("Failed to write to promo_errors.log");
+        }
+    } catch (Exception $e) {
+        error_log("Error in logPromoCheck: " . $e->getMessage());
     }
-    $log .= "\n\n";
-    error_log($log, 3, "logs/promo_errors.log");
 }
 
 // Xử lý input từ cả JSON và form-data
@@ -32,7 +50,7 @@ if ($jsonData !== null) {
 }
 
 if (!$promo_code) {
-    logPromoCheck("Missing promo code in request", $jsonData ?? $_POST);
+    logPromoCheck("Missing promo code in request", ['post_data' => $_POST, 'json_data' => $jsonData]);
     echo json_encode(['success' => false, 'message' => 'Vui lòng nhập mã khuyến mãi']);
     exit;
 }
@@ -45,7 +63,7 @@ logPromoCheck("Checking promo code", [
 
 try {
     // Kiểm tra mã khuyến mãi trong database
-    $sql = "SELECT * FROM khuyen_mai WHERE Code = ? AND KM_TGBD <= NOW() AND KM_TGKT >= NOW()";
+    $sql = "SELECT * FROM khuyen_mai WHERE Code = ? AND KM_TGBD <= NOW() AND KM_TGKT >= NOW() AND KM_TRANGTHAI = 1";
     $stmt = $conn->prepare($sql);
     
     if (!$stmt) {
@@ -72,69 +90,39 @@ try {
     $promo = $result->fetch_assoc();
     logPromoCheck("Promo code found", $promo);
 
+    // Kiểm tra điều kiện tối thiểu
+    if ($amount < $promo['KM_DKSD']) {
+        logPromoCheck("Order value too low", [
+            'required' => $promo['KM_DKSD'],
+            'current' => $amount
+        ]);
+        echo json_encode([
+            'success' => false,
+            'message' => 'Giá trị đơn hàng chưa đủ điều kiện áp dụng. Tối thiểu ' . number_format($promo['KM_DKSD'], 0, ',', '.') . 'đ'
+        ]);
+        exit;
+    }
+
     // Tính toán giảm giá
     $discount_amount = 0;
     $discount_percent = 0;
-    if ($promo['hinh_thuc_km'] === 'Giảm phần trăm') {
-        $discount_percent = $promo['KM_GIATRI'];
-        // Giới hạn giảm giá tối đa là 100% giá trị đơn hàng
-        $discount_amount = min($amount, $amount * ($promo['KM_GIATRI'] / 100));
-    } elseif ($promo['hinh_thuc_km'] === 'Giảm trực tiếp') {
+    if ($promo['hinh_thuc_km'] === 'percent') {
+        $discount_percent = min(100, max(0, $promo['KM_GIATRI'])); // Ensure valid percentage
+        // Giới hạn giảm giá tối đa là 100% giá trị đơn hàng và làm tròn
+        $discount_amount = round(min($amount, $amount * ($discount_percent / 100)));
+    } elseif ($promo['hinh_thuc_km'] === 'fixed') {
         $discount_amount = min($promo['KM_GIATRI'], $amount);
     }
 
-    // Đảm bảo số tiền giảm giá không âm và không vượt quá giá trị đơn hàng
-    $discount_amount = max(0, min($discount_amount, $amount));
-
-    // Kiểm tra thêm điều kiện cho sản phẩm cụ thể nếu cần
-    if ($product_id) {
-        logPromoCheck("Checking product-specific conditions", [
-            'product_id' => $product_id,
-            'discount_amount' => $discount_amount
-        ]);
-
-        // Kiểm tra xem mã khuyến mãi có áp dụng cho sản phẩm này không
-        $sql_product = "SELECT * FROM khuyen_mai_san_pham WHERE KM_ID = ? AND SP_ID = ?";
-        $stmt_product = $conn->prepare($sql_product);
-        
-        if (!$stmt_product) {
-            throw new Exception("Lỗi prepare statement cho sản phẩm: " . $conn->error);
-        }
-
-        $stmt_product->bind_param('ii', $promo['KM_ID'], $product_id);
-        
-        if (!$stmt_product->execute()) {
-            throw new Exception("Lỗi execute statement cho sản phẩm: " . $stmt_product->error);
-        }
-
-        $result_product = $stmt_product->get_result();
-
-        if ($result_product->num_rows === 0) {
-            logPromoCheck("Promo code not applicable for this product", [
-                'product_id' => $product_id,
-                'promo_id' => $promo['KM_ID']
-            ]);
-            echo json_encode([
-                'success' => false,
-                'message' => 'Mã khuyến mãi không áp dụng cho sản phẩm này'
-            ]);
-            exit;
-        }
-    }
-
-    $response = [
+    // Trả về kết quả
+    echo json_encode([
         'success' => true,
-        'discount_percent' => $discount_percent,
+        'message' => 'Áp dụng mã khuyến mãi thành công!',
         'discount' => $discount_amount,
-        'message' => sprintf(
-            'Áp dụng mã giảm giá thành công: %s %s',
-            $promo['hinh_thuc_km'] === 'Giảm phần trăm' ? $promo['KM_GIATRI'] . '%' : number_format($discount_amount, 0, ',', '.') . 'đ',
-            $product_id ? 'cho sản phẩm' : 'cho đơn hàng'
-        )
-    ];
-
-    logPromoCheck("Promo code applied successfully", $response);
-    echo json_encode($response);
+        'discount_type' => $promo['hinh_thuc_km'],
+        'percent_value' => $discount_percent,
+        'final_amount' => $amount - $discount_amount
+    ]);
 
 } catch (Exception $e) {
     logPromoCheck("Error processing promo code", [
