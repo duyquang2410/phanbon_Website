@@ -36,6 +36,7 @@ $order_sql = "SELECT
     hd.HD_NGAYLAP,
     hd.HD_TONGTIEN as subtotal,
     hd.HD_PHISHIP as shipping_fee,
+    hd.TT_MA,
     CASE 
         WHEN km.hinh_thuc_km = 'percent' THEN LEAST(hd.HD_TONGTIEN, hd.HD_TONGTIEN * km.KM_GIATRI / 100)
         WHEN km.hinh_thuc_km = 'fixed' THEN LEAST(km.KM_GIATRI, hd.HD_TONGTIEN)
@@ -255,7 +256,19 @@ $result = $stmt->get_result();
                                     <td><?php echo $payIcon . htmlspecialchars($row['phuong_thuc']); ?></td>
                                     <td><?php echo isset($row['promo_code']) && $row['promo_code'] !== null && $row['promo_code'] !== '' ? htmlspecialchars($row['promo_code']) : '-'; ?></td>
                                     <td><?php echo isset($row['discount_value']) && $row['discount_value'] !== null && $row['discount_value'] > 0 ? $row['discount_value'].'%' : '-'; ?></td>
-                                    <td><a href="order_confirmation.php?id=<?php echo $row['HD_STT']; ?>" class="btn btn-detail"><i class="fa fa-eye"></i> Xem</a></td>
+                                    <td>
+                                        <div class="d-flex gap-2">
+                                            <a href="order_confirmation.php?id=<?php echo $row['HD_STT']; ?>" class="btn btn-info btn-sm">
+                                                Chi tiết
+                                            </a>
+                                            <?php if ($row['TT_MA'] == 1 || $row['TT_MA'] == 6): // Cho phép hủy đơn khi ở trạng thái chờ xác nhận hoặc chờ giao ?>
+                                                <form action="cancel_order.php" method="POST" class="d-inline" onsubmit="return confirmCancel(this);">
+                                                    <input type="hidden" name="order_id" value="<?php echo $row['HD_STT']; ?>">
+                                                    <button type="submit" class="btn btn-danger btn-sm">Hủy đơn</button>
+                                                </form>
+                                            <?php endif; ?>
+                                        </div>
+                                    </td>
                                 </tr>
                                 <?php endwhile; ?>
                             <?php else: ?>
@@ -309,5 +322,29 @@ $result = $stmt->get_result();
     </div>
 </div>
 <?php include 'footer.php'; ?>
+<script>
+function confirmCancel(form) {
+    return confirm('Bạn có chắc chắn muốn hủy đơn hàng này không? Lưu ý: Chỉ có thể hủy trong vòng 24h kể từ khi đặt hàng.');
+}
+</script>
+<?php if (isset($_SESSION['success'])): ?>
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <?php 
+        echo $_SESSION['success'];
+        unset($_SESSION['success']);
+        ?>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+<?php endif; ?>
+
+<?php if (isset($_SESSION['error'])): ?>
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <?php 
+        echo $_SESSION['error'];
+        unset($_SESSION['error']);
+        ?>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+<?php endif; ?>
 </body>
 </html> 

@@ -36,8 +36,8 @@ if ($vnpay->verifyResponse($_GET)) {
     if ($vnp_ResponseCode == '00') {
         writeLog("Payment successful, updating order status");
         try {
-            // Cập nhật trạng thái đơn hàng trong database
-            $sql = "UPDATE hoa_don SET TT_MA = 2, HD_MAGIAODICH = ? WHERE HD_STT = ?";
+            // Cập nhật trạng thái đơn hàng trong database thành "Chờ giao"
+            $sql = "UPDATE hoa_don SET TT_MA = 6, HD_MAGIAODICH = ? WHERE HD_STT = ?";
             $stmt = $conn->prepare($sql);
             $stmt->bind_param("si", $vnp_TransactionNo, $vnp_TxnRef);
             

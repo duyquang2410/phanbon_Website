@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="vi">
 
@@ -37,6 +40,7 @@
     .tab-pane h5 {
         color: #000000;
         margin-bottom: 15px;
+        font-weight: 600;
     }
 
     /* Cải thiện độ tương phản cho các tab khác */
@@ -81,6 +85,62 @@
         color: #000000 !important;
     }
 
+    /* Style cho danh sách thành phần */
+    .ingredients-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .ingredients-list li {
+        padding: 12px 15px;
+        margin-bottom: 10px;
+        background-color: #f8f9fa;
+        border-radius: 5px;
+        border-left: 4px solid #28a745;
+    }
+
+    .ingredients-list li:last-child {
+        margin-bottom: 0;
+    }
+
+    /* Style cho hướng dẫn sử dụng */
+    .usage-steps {
+        counter-reset: step;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .usage-steps li {
+        position: relative;
+        padding: 15px 20px 15px 50px;
+        margin-bottom: 15px;
+        background-color: #f8f9fa;
+        border-radius: 5px;
+        counter-increment: step;
+    }
+
+    .usage-steps li::before {
+        content: counter(step);
+        position: absolute;
+        left: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 25px;
+        height: 25px;
+        line-height: 25px;
+        text-align: center;
+        background-color: #28a745;
+        color: white;
+        border-radius: 50%;
+        font-weight: bold;
+    }
+
+    .usage-steps li:last-child {
+        margin-bottom: 0;
+    }
+
     .button {
         background-color: #28a745 !important;
         color: #ffffff !important;
@@ -112,14 +172,188 @@
     .button i {
         margin-right: 8px !important;
     }
+
+    /* Style cho tab menu */
+    .product-tabs {
+        border-bottom: 1px solid #dee2e6;
+        margin-bottom: 30px;
+        display: flex;
+        gap: 10px;
+        padding: 0;
+        list-style: none;
+    }
+
+    .product-tabs .tab-item {
+        margin: 0;
+        position: relative;
+    }
+
+    .product-tabs .tab-link {
+        display: inline-block;
+        padding: 12px 25px;
+        font-size: 16px;
+        font-weight: 600;
+        color: #666;
+        text-decoration: none;
+        background: #f8f9fa;
+        border: 1px solid #dee2e6;
+        border-bottom: none;
+        border-radius: 6px 6px 0 0;
+        transition: all 0.3s ease;
+        cursor: pointer;
+    }
+
+    .product-tabs .tab-link:hover {
+        color: #28a745;
+        background: #fff;
+    }
+
+    .product-tabs .tab-link.active {
+        color: #28a745;
+        background: #fff;
+        border-bottom: 2px solid #28a745;
+        margin-bottom: -1px;
+    }
+
+    .product-tabs .tab-link:focus {
+        outline: none;
+        box-shadow: none;
+    }
+
+    .tab-content {
+        padding: 20px;
+        background: #fff;
+        border: 1px solid #dee2e6;
+        border-top: none;
+        border-radius: 0 0 6px 6px;
+    }
+
+    .tab-pane {
+        display: none;
+    }
+
+    .tab-pane.active {
+        display: block;
+    }
+
+    /* CSS mới cho hiển thị hình ảnh sản phẩm */
+    .product-image-container {
+        position: relative;
+        width: 100%;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 400px;
+        transition: all 0.3s ease;
+    }
+
+    .product-image-container img {
+        max-width: 100%;
+        max-height: 100%;
+        width: auto;
+        height: auto;
+        object-fit: contain;
+        transition: transform 0.5s ease;
+    }
+
+    .product-image-container:hover img {
+        transform: scale(1.02);
+    }
+
+    /* Responsive cho container hình ảnh */
+    @media (max-width: 768px) {
+        .product-image-container {
+            padding: 10px;
+            margin-bottom: 20px;
+            min-height: 300px;
+        }
+    }
+
+    /* Cải thiện hiển thị hình ảnh sản phẩm liên quan */
+    .list_h2i1 figure {
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    .list_h2i1 img {
+        transition: transform 0.5s ease;
+    }
+
+    .list_h2i1:hover img {
+        transform: scale(1.02);
+    }
     </style>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Lấy tất cả các tab links và tab panes
+            const tabLinks = document.querySelectorAll('.tab-link');
+            const tabPanes = document.querySelectorAll('.tab-pane');
+
+            // Thêm sự kiện click cho mỗi tab link
+            tabLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+
+                    // Xóa active class từ tất cả các tab links và panes
+                    tabLinks.forEach(l => l.classList.remove('active'));
+                    tabPanes.forEach(p => {
+                        p.classList.remove('active');
+                        p.classList.remove('show');
+                    });
+
+                    // Thêm active class cho tab được click
+                    this.classList.add('active');
+
+                    // Hiển thị tab content tương ứng
+                    const tabId = this.getAttribute('href');
+                    const tabPane = document.querySelector(tabId);
+                    if (tabPane) {
+                        tabPane.classList.add('active');
+                        tabPane.classList.add('show');
+                    }
+                });
+            });
+
+            // Xử lý tăng giảm số lượng
+            window.incrementQuantity = function() {
+                const quantityInput = document.getElementById('quantity');
+                const maxQuantity = parseInt(quantityInput.getAttribute('max'));
+                let currentValue = parseInt(quantityInput.value);
+                
+                if (currentValue < maxQuantity) {
+                    quantityInput.value = currentValue + 1;
+                }
+            }
+
+            window.decrementQuantity = function() {
+                const quantityInput = document.getElementById('quantity');
+                let currentValue = parseInt(quantityInput.value);
+                
+                if (currentValue > 1) {
+                    quantityInput.value = currentValue - 1;
+                }
+            }
+
+            // Xử lý khi người dùng nhập trực tiếp vào input
+            const quantityInput = document.getElementById('quantity');
+            quantityInput.addEventListener('change', function() {
+                let value = parseInt(this.value);
+                const max = parseInt(this.getAttribute('max'));
+                
+                if (isNaN(value) || value < 1) {
+                    this.value = 1;
+                } else if (value > max) {
+                    this.value = max;
+                }
+            });
+        });
+    </script>
 </head>
 
 <body>
     <?php
-    // Start the session
-    session_start();
-
     // Include file cấu hình kết nối cơ sở dữ liệu
     include 'connect.php';
 
@@ -196,7 +430,7 @@
                 <div class="col-md-6">
                     <div class="shop_dt1l">
                         <div class="product-image-container">
-                            <img src="img/<?php echo $product['SP_HINHANH']; ?>" class="d-block w-100"
+                            <img src="img/<?php echo $product['SP_HINHANH']; ?>"
                                 alt="<?php echo htmlspecialchars($product['SP_TEN']); ?>">
                         </div>
                     </div>
@@ -248,149 +482,118 @@
 
                         <h5 class="fs-6 mt-4">Số lượng</h5>
                         <div class="shop_dt1ri mt-3">
-                            <?php if(isset($_SESSION['user_id'])): ?>
-                            <form method="post" action="cart_add.php">
+                            <form action="cart_add.php" method="post">
                                 <input type="hidden" name="product_id" value="<?php echo $product_id; ?>">
-                                <input type="number" min="1" max="<?php echo $product['SP_SOLUONGTON']; ?>" value="1"
-                                    name="quantity" class="form-control float-start me-3 rounded-3"
-                                    placeholder="Số lượng" style="width:80px; height:50px;">
-                                <button type="submit" class="button border-0"
-                                    <?php echo ($product['SP_SOLUONGTON'] <= 0) ? 'disabled' : ''; ?>>
-                                    <i class="fa fa-shopping-bag me-1"></i> Thêm vào giỏ hàng
+                                <div class="input-group mb-3" style="width: 150px;">
+                                    <button class="btn btn-outline-secondary" type="button" onclick="decrementQuantity()">-</button>
+                                    <input type="number" class="form-control text-center" name="quantity" id="quantity" value="1" min="1" max="<?php echo $product['SP_SOLUONGTON']; ?>">
+                                    <button class="btn btn-outline-secondary" type="button" onclick="incrementQuantity()">+</button>
+                                </div>
+                                <button type="submit" class="button mt-3" <?php echo ($product['SP_SOLUONGTON'] <= 0) ? 'disabled' : ''; ?>>
+                                    <i class="fa fa-shopping-cart"></i> Thêm vào giỏ hàng
                                 </button>
                             </form>
-                            <?php else: ?>
-                            <div class="alert alert-warning" role="alert">
-                                <i class="fa fa-exclamation-circle me-1"></i> Vui lòng <a href="login.php"
-                                    class="alert-link">đăng nhập</a> để thêm sản phẩm vào giỏ hàng.
-                            </div>
-                            <a href="login.php" class="button">
-                                <i class="fa fa-sign-in me-1"></i> Đăng nhập để mua hàng
-                            </a>
-                            <?php endif; ?>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="shop_dt3 row mt-4">
+            <!-- Tabs for product details -->
+            <div class="row mt-5">
                 <div class="col-md-12">
-                    <ul class="nav nav-tabs mb-0 border-0">
-                        <li class="nav-item">
-                            <a href="#description" data-bs-toggle="tab" class="nav-link active">Mô tả sản phẩm</a>
+                    <!-- Tab Menu -->
+                    <ul class="product-tabs">
+                        <li class="tab-item">
+                            <a href="#description" class="tab-link active">Mô tả</a>
                         </li>
-                        <li class="nav-item">
-                            <a href="#details" data-bs-toggle="tab" class="nav-link">Thông tin chi tiết</a>
+                        <li class="tab-item">
+                            <a href="#details" class="tab-link">Chi tiết</a>
                         </li>
-                        <?php if (!empty($product['SP_THANHPHAN'])): ?>
-                        <li class="nav-item">
-                            <a href="#ingredients" data-bs-toggle="tab" class="nav-link">Thành phần</a>
+                        <li class="tab-item">
+                            <a href="#ingredients" class="tab-link">Thành phần</a>
                         </li>
-                        <?php endif; ?>
-                        <?php if (!empty($product['SP_HUONGDANSUDUNG'])): ?>
-                        <li class="nav-item">
-                            <a href="#usage" data-bs-toggle="tab" class="nav-link">Hướng dẫn sử dụng</a>
+                        <li class="tab-item">
+                            <a href="#usage" class="tab-link">Hướng dẫn sử dụng</a>
                         </li>
-                        <?php endif; ?>
                     </ul>
-                </div>
-            </div>
 
-            <div class="shop_dt4 row mt-4">
-                <div class="col-md-12">
+                    <!-- Tab Content -->
                     <div class="tab-content">
-                        <div class="tab-pane active" id="description">
-                            <div class="product-description">
-                                <?php if (!empty($product['SP_MOTA'])): ?>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <h5 class="mb-3">Mô tả sản phẩm</h5>
-                                        <div class="description-content">
-                                            <?php echo nl2br(htmlspecialchars($product['SP_MOTA'])); ?>
-                                        </div>
-                                    </div>
-                                </div>
-                                <?php else: ?>
-                                <p class="text-center py-3">Chưa có mô tả cho sản phẩm này.</p>
-                                <?php endif; ?>
-                            </div>
-                        </div>
-                        <div class="tab-pane" id="details">
-                            <div class="product-details">
-                                <h5 class="mb-3">Thông tin chi tiết sản phẩm</h5>
-                                <table class="table table-bordered">
-                                    <tbody>
-                                        <tr>
-                                            <td width="30%"><strong>Mã sản phẩm</strong></td>
-                                            <td><?php echo $product['SP_MA']; ?></td>
-                                        </tr>
-                                        <tr>
-                                            <td><strong>Tên sản phẩm</strong></td>
-                                            <td><?php echo htmlspecialchars($product['SP_TEN']); ?></td>
-                                        </tr>
-                                        <tr>
-                                            <td><strong>Thương hiệu</strong></td>
-                                            <td><?php echo htmlspecialchars($product['SP_NHASANXUAT']); ?></td>
-                                        </tr>
-                                        <?php if (!empty($product['SP_SIZE'])): ?>
-                                        <tr>
-                                            <td><strong>Kích thước</strong></td>
-                                            <td><?php echo htmlspecialchars($product['SP_SIZE']); ?></td>
-                                        </tr>
-                                        <?php endif; ?>
-                                        <tr>
-                                            <td><strong>Danh mục</strong></td>
-                                            <td>
-                                                <?php if (!empty($product['DM_MA'])): ?>
-                                                <a href="category.php?id=<?php echo $product['DM_MA']; ?>">
-                                                    <?php echo htmlspecialchars($product['DM_TEN']); ?>
-                                                </a>
-                                                <?php else: ?>
-                                                Chưa phân loại
-                                                <?php endif; ?>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td><strong>Đơn giá</strong></td>
-                                            <td><?php echo number_format($product['SP_DONGIA'], 0); ?> VNĐ</td>
-                                        </tr>
-                                        <tr>
-                                            <td><strong>Đơn vị tính</strong></td>
-                                            <td><?php echo htmlspecialchars($product['SP_DONVITINH']); ?></td>
-                                        </tr>
-                                        <tr>
-                                            <td><strong>Số lượng tồn</strong></td>
-                                            <td><?php echo $product['SP_SOLUONGTON']; ?> sản phẩm</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                        <div class="tab-pane fade show active" id="description">
+                            <h5>Mô tả sản phẩm</h5>
+                            <div class="description-content">
+                                <?php echo $product['SP_MOTA'] ? $product['SP_MOTA'] : 'Chưa có mô tả cho sản phẩm này.'; ?>
                             </div>
                         </div>
 
-                        <?php if (!empty($product['SP_THANHPHAN'])): ?>
-                        <div class="tab-pane" id="ingredients">
-                            <div class="product-details">
-                                <h5 class="mb-3">Thành phần sản phẩm</h5>
-                                <div class="p-3 bg-white rounded">
-                                    <?php echo nl2br(htmlspecialchars($product['SP_THANHPHAN'])); ?>
-                                </div>
-                            </div>
+                        <!-- Chi tiết -->
+                        <div class="tab-pane fade" id="details">
+                            <h5>Thông tin chi tiết</h5>
+                            <table class="table">
+                                <tr>
+                                    <th>Thương hiệu:</th>
+                                    <td><?php echo htmlspecialchars($product['SP_NHASANXUAT']); ?></td>
+                                </tr>
+                                <tr>
+                                    <th>Trọng lượng:</th>
+                                    <td><?php echo htmlspecialchars($product['SP_TRONGLUONG']); ?> <?php echo htmlspecialchars($product['SP_DONVITINH']); ?></td>
+                                </tr>
+                                <tr>
+                                    <th>Đơn vị tính:</th>
+                                    <td><?php echo htmlspecialchars($product['SP_DONVITINH']); ?></td>
+                                </tr>
+                            </table>
                         </div>
-                        <?php endif; ?>
 
-                        <?php if (!empty($product['SP_HUONGDANSUDUNG'])): ?>
-                        <div class="tab-pane" id="usage">
-                            <div class="product-details">
-                                <h5 class="mb-3">Hướng dẫn sử dụng</h5>
-                                <div class="p-3 bg-white rounded">
-                                    <?php echo nl2br(htmlspecialchars($product['SP_HUONGDANSUDUNG'])); ?>
-                                </div>
+                        <!-- Thành phần -->
+                        <div class="tab-pane fade" id="ingredients">
+                            <div class="description-content">
+                                <?php 
+                                if ($product['SP_THANHPHAN']) {
+                                    // Tách thành phần thành từng dòng
+                                    $thanhphan_array = explode("<br>", $product['SP_THANHPHAN']);
+                                    echo '<ul class="ingredients-list">';
+                                    foreach ($thanhphan_array as $item) {
+                                        if (trim($item) !== '') {
+                                            echo '<li>' . trim($item) . '</li>';
+                                        }
+                                    }
+                                    echo '</ul>';
+                                } else {
+                                    echo 'Chưa có thông tin về thành phần.';
+                                }
+                                ?>
                             </div>
                         </div>
-                        <?php endif; ?>
+
+                        <!-- Hướng dẫn sử dụng -->
+                        <div class="tab-pane fade" id="usage">
+                            <div class="description-content">
+                                <?php 
+                                if ($product['SP_HUONGDANSUDUNG']) {
+                                    // Tách hướng dẫn thành từng bước
+                                    $huongdan_array = explode("<br>", $product['SP_HUONGDANSUDUNG']);
+                                    echo '<ul class="usage-steps">';
+                                    foreach ($huongdan_array as $step) {
+                                        if (trim($step) !== '') {
+                                            if (strpos(strtolower($step), 'bước') === 0 || strpos(strtolower($step), 'step') === 0) {
+                                                // Loại bỏ số bước và dấu : nếu có
+                                                $step = preg_replace('/^(bước|step)\s*\d*\s*:\s*/i', '', $step);
+                                            }
+                                            echo '<li>' . trim($step) . '</li>';
+                                        }
+                                    }
+                                    echo '</ul>';
+                                } else {
+                                    echo 'Chưa có hướng dẫn sử dụng.';
+                                }
+                                ?>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+            <!-- End Tabs -->
 
             <!-- Sản phẩm liên quan -->
             <div class="shop_dt6 row mt-4">

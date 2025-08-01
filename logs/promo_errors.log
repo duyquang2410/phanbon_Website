@@ -17098,3 +17098,4371 @@ Data: Array
 )
 
 
+2025-07-19 09:32:31 - Checking promo code
+Data: Array
+(
+    [code] => THUOC20K
+    [product_id] => 
+    [amount] => 315000
+)
+
+
+2025-07-19 09:32:31 - Promo code found
+Data: Array
+(
+    [KM_MA] => 2
+    [Code] => THUOC20K
+    [KM_TGBD] => 2025-06-15 00:00:00
+    [KM_TGKT] => 2025-07-19 23:59:59
+    [KM_GIATRI] => 20000
+    [hinh_thuc_km] => fixed
+    [KM_DKSD] => 50000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 20,000đ cho đơn từ 50,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-16 20:59:45
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-19 09:32:31 - Checking promo code
+Data: Array
+(
+    [code] => THUOC20K
+    [product_id] => 
+    [amount] => 315000
+)
+
+
+2025-07-19 09:32:31 - Promo code found
+Data: Array
+(
+    [KM_MA] => 2
+    [Code] => THUOC20K
+    [KM_TGBD] => 2025-06-15 00:00:00
+    [KM_TGKT] => 2025-07-19 23:59:59
+    [KM_GIATRI] => 20000
+    [hinh_thuc_km] => fixed
+    [KM_DKSD] => 50000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 20,000đ cho đơn từ 50,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-16 20:59:45
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-19 09:32:31 - Checking promo code
+Data: Array
+(
+    [code] => THUOC20K
+    [product_id] => 
+    [amount] => 315000
+)
+
+
+2025-07-19 09:32:31 - Promo code found
+Data: Array
+(
+    [KM_MA] => 2
+    [Code] => THUOC20K
+    [KM_TGBD] => 2025-06-15 00:00:00
+    [KM_TGKT] => 2025-07-19 23:59:59
+    [KM_GIATRI] => 20000
+    [hinh_thuc_km] => fixed
+    [KM_DKSD] => 50000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 20,000đ cho đơn từ 50,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-16 20:59:45
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-19 10:14:46 - Checking promo code
+Data: Array
+(
+    [code] => THUOC20K
+    [product_id] => 
+    [amount] => 1100000
+)
+
+
+2025-07-19 10:14:46 - Promo code found
+Data: Array
+(
+    [KM_MA] => 2
+    [Code] => THUOC20K
+    [KM_TGBD] => 2025-06-15 00:00:00
+    [KM_TGKT] => 2025-07-19 23:59:59
+    [KM_GIATRI] => 20000
+    [hinh_thuc_km] => fixed
+    [KM_DKSD] => 50000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 20,000đ cho đơn từ 50,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-16 20:59:45
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-19 10:14:46 - Checking promo code
+Data: Array
+(
+    [code] => THUOC20K
+    [product_id] => 
+    [amount] => 1100000
+)
+
+
+2025-07-19 10:14:46 - Promo code found
+Data: Array
+(
+    [KM_MA] => 2
+    [Code] => THUOC20K
+    [KM_TGBD] => 2025-06-15 00:00:00
+    [KM_TGKT] => 2025-07-19 23:59:59
+    [KM_GIATRI] => 20000
+    [hinh_thuc_km] => fixed
+    [KM_DKSD] => 50000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 20,000đ cho đơn từ 50,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-16 20:59:45
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-19 10:14:46 - Checking promo code
+Data: Array
+(
+    [code] => THUOC20K
+    [product_id] => 
+    [amount] => 1100000
+)
+
+
+2025-07-19 10:14:46 - Promo code found
+Data: Array
+(
+    [KM_MA] => 2
+    [Code] => THUOC20K
+    [KM_TGBD] => 2025-06-15 00:00:00
+    [KM_TGKT] => 2025-07-19 23:59:59
+    [KM_GIATRI] => 20000
+    [hinh_thuc_km] => fixed
+    [KM_DKSD] => 50000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 20,000đ cho đơn từ 50,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-16 20:59:45
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-19 10:15:11 - Checking promo code
+Data: Array
+(
+    [code] => PESTCONTROL
+    [product_id] => 
+    [amount] => 1320000
+)
+
+
+2025-07-19 10:15:11 - Promo code found
+Data: Array
+(
+    [KM_MA] => 5
+    [Code] => PESTCONTROL
+    [KM_TGBD] => 2025-07-01 00:00:00
+    [KM_TGKT] => 2025-07-31 23:59:59
+    [KM_GIATRI] => 15
+    [hinh_thuc_km] => percent
+    [KM_DKSD] => 150000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 15% cho đơn từ 150,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-07 13:54:53
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-19 10:15:11 - Checking promo code
+Data: Array
+(
+    [code] => PESTCONTROL
+    [product_id] => 
+    [amount] => 1320000
+)
+
+
+2025-07-19 10:15:11 - Promo code found
+Data: Array
+(
+    [KM_MA] => 5
+    [Code] => PESTCONTROL
+    [KM_TGBD] => 2025-07-01 00:00:00
+    [KM_TGKT] => 2025-07-31 23:59:59
+    [KM_GIATRI] => 15
+    [hinh_thuc_km] => percent
+    [KM_DKSD] => 150000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 15% cho đơn từ 150,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-07 13:54:53
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-19 10:15:11 - Checking promo code
+Data: Array
+(
+    [code] => PESTCONTROL
+    [product_id] => 
+    [amount] => 1320000
+)
+
+
+2025-07-19 10:15:11 - Promo code found
+Data: Array
+(
+    [KM_MA] => 5
+    [Code] => PESTCONTROL
+    [KM_TGBD] => 2025-07-01 00:00:00
+    [KM_TGKT] => 2025-07-31 23:59:59
+    [KM_GIATRI] => 15
+    [hinh_thuc_km] => percent
+    [KM_DKSD] => 150000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 15% cho đơn từ 150,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-07 13:54:53
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-19 10:18:52 - Checking promo code
+Data: Array
+(
+    [code] => THUOC20K
+    [product_id] => 
+    [amount] => 1760000
+)
+
+
+2025-07-19 10:18:52 - Promo code found
+Data: Array
+(
+    [KM_MA] => 2
+    [Code] => THUOC20K
+    [KM_TGBD] => 2025-06-15 00:00:00
+    [KM_TGKT] => 2025-07-19 23:59:59
+    [KM_GIATRI] => 20000
+    [hinh_thuc_km] => fixed
+    [KM_DKSD] => 50000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 20,000đ cho đơn từ 50,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-16 20:59:45
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-19 10:18:52 - Checking promo code
+Data: Array
+(
+    [code] => THUOC20K
+    [product_id] => 
+    [amount] => 1760000
+)
+
+
+2025-07-19 10:18:52 - Promo code found
+Data: Array
+(
+    [KM_MA] => 2
+    [Code] => THUOC20K
+    [KM_TGBD] => 2025-06-15 00:00:00
+    [KM_TGKT] => 2025-07-19 23:59:59
+    [KM_GIATRI] => 20000
+    [hinh_thuc_km] => fixed
+    [KM_DKSD] => 50000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 20,000đ cho đơn từ 50,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-16 20:59:45
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-19 10:18:52 - Checking promo code
+Data: Array
+(
+    [code] => THUOC20K
+    [product_id] => 
+    [amount] => 1760000
+)
+
+
+2025-07-19 10:18:52 - Promo code found
+Data: Array
+(
+    [KM_MA] => 2
+    [Code] => THUOC20K
+    [KM_TGBD] => 2025-06-15 00:00:00
+    [KM_TGKT] => 2025-07-19 23:59:59
+    [KM_GIATRI] => 20000
+    [hinh_thuc_km] => fixed
+    [KM_DKSD] => 50000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 20,000đ cho đơn từ 50,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-16 20:59:45
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-19 10:20:49 - Checking promo code
+Data: Array
+(
+    [code] => THUOC20K
+    [product_id] => 
+    [amount] => 2200000
+)
+
+
+2025-07-19 10:20:49 - Promo code found
+Data: Array
+(
+    [KM_MA] => 2
+    [Code] => THUOC20K
+    [KM_TGBD] => 2025-06-15 00:00:00
+    [KM_TGKT] => 2025-07-19 23:59:59
+    [KM_GIATRI] => 20000
+    [hinh_thuc_km] => fixed
+    [KM_DKSD] => 50000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 20,000đ cho đơn từ 50,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-16 20:59:45
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-19 10:20:49 - Checking promo code
+Data: Array
+(
+    [code] => THUOC20K
+    [product_id] => 
+    [amount] => 2200000
+)
+
+
+2025-07-19 10:20:49 - Promo code found
+Data: Array
+(
+    [KM_MA] => 2
+    [Code] => THUOC20K
+    [KM_TGBD] => 2025-06-15 00:00:00
+    [KM_TGKT] => 2025-07-19 23:59:59
+    [KM_GIATRI] => 20000
+    [hinh_thuc_km] => fixed
+    [KM_DKSD] => 50000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 20,000đ cho đơn từ 50,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-16 20:59:45
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-19 10:20:49 - Checking promo code
+Data: Array
+(
+    [code] => THUOC20K
+    [product_id] => 
+    [amount] => 2200000
+)
+
+
+2025-07-19 10:20:49 - Promo code found
+Data: Array
+(
+    [KM_MA] => 2
+    [Code] => THUOC20K
+    [KM_TGBD] => 2025-06-15 00:00:00
+    [KM_TGKT] => 2025-07-19 23:59:59
+    [KM_GIATRI] => 20000
+    [hinh_thuc_km] => fixed
+    [KM_DKSD] => 50000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 20,000đ cho đơn từ 50,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-16 20:59:45
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-19 10:25:40 - Checking promo code
+Data: Array
+(
+    [code] => THUOC20K
+    [product_id] => 
+    [amount] => 2640000
+)
+
+
+2025-07-19 10:25:40 - Promo code found
+Data: Array
+(
+    [KM_MA] => 2
+    [Code] => THUOC20K
+    [KM_TGBD] => 2025-06-15 00:00:00
+    [KM_TGKT] => 2025-07-19 23:59:59
+    [KM_GIATRI] => 20000
+    [hinh_thuc_km] => fixed
+    [KM_DKSD] => 50000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 20,000đ cho đơn từ 50,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-16 20:59:45
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-19 10:25:40 - Checking promo code
+Data: Array
+(
+    [code] => THUOC20K
+    [product_id] => 
+    [amount] => 2640000
+)
+
+
+2025-07-19 10:25:40 - Promo code found
+Data: Array
+(
+    [KM_MA] => 2
+    [Code] => THUOC20K
+    [KM_TGBD] => 2025-06-15 00:00:00
+    [KM_TGKT] => 2025-07-19 23:59:59
+    [KM_GIATRI] => 20000
+    [hinh_thuc_km] => fixed
+    [KM_DKSD] => 50000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 20,000đ cho đơn từ 50,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-16 20:59:45
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-19 10:25:40 - Checking promo code
+Data: Array
+(
+    [code] => THUOC20K
+    [product_id] => 
+    [amount] => 2640000
+)
+
+
+2025-07-19 10:25:40 - Promo code found
+Data: Array
+(
+    [KM_MA] => 2
+    [Code] => THUOC20K
+    [KM_TGBD] => 2025-06-15 00:00:00
+    [KM_TGKT] => 2025-07-19 23:59:59
+    [KM_GIATRI] => 20000
+    [hinh_thuc_km] => fixed
+    [KM_DKSD] => 50000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 20,000đ cho đơn từ 50,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-16 20:59:45
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-19 10:31:23 - Checking promo code
+Data: Array
+(
+    [code] => PESTCONTROL
+    [product_id] => 
+    [amount] => 2860000
+)
+
+
+2025-07-19 10:31:23 - Promo code found
+Data: Array
+(
+    [KM_MA] => 5
+    [Code] => PESTCONTROL
+    [KM_TGBD] => 2025-07-01 00:00:00
+    [KM_TGKT] => 2025-07-31 23:59:59
+    [KM_GIATRI] => 15
+    [hinh_thuc_km] => percent
+    [KM_DKSD] => 150000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 15% cho đơn từ 150,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-07 13:54:53
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-19 10:31:23 - Checking promo code
+Data: Array
+(
+    [code] => PESTCONTROL
+    [product_id] => 
+    [amount] => 2860000
+)
+
+
+2025-07-19 10:31:23 - Promo code found
+Data: Array
+(
+    [KM_MA] => 5
+    [Code] => PESTCONTROL
+    [KM_TGBD] => 2025-07-01 00:00:00
+    [KM_TGKT] => 2025-07-31 23:59:59
+    [KM_GIATRI] => 15
+    [hinh_thuc_km] => percent
+    [KM_DKSD] => 150000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 15% cho đơn từ 150,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-07 13:54:53
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-19 10:31:23 - Checking promo code
+Data: Array
+(
+    [code] => PESTCONTROL
+    [product_id] => 
+    [amount] => 2860000
+)
+
+
+2025-07-19 10:31:23 - Promo code found
+Data: Array
+(
+    [KM_MA] => 5
+    [Code] => PESTCONTROL
+    [KM_TGBD] => 2025-07-01 00:00:00
+    [KM_TGKT] => 2025-07-31 23:59:59
+    [KM_GIATRI] => 15
+    [hinh_thuc_km] => percent
+    [KM_DKSD] => 150000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 15% cho đơn từ 150,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-07 13:54:53
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-19 10:36:58 - Checking promo code
+Data: Array
+(
+    [code] => THUOC20K
+    [product_id] => 
+    [amount] => 60000
+)
+
+
+2025-07-19 10:36:58 - Promo code found
+Data: Array
+(
+    [KM_MA] => 2
+    [Code] => THUOC20K
+    [KM_TGBD] => 2025-06-15 00:00:00
+    [KM_TGKT] => 2025-07-19 23:59:59
+    [KM_GIATRI] => 20000
+    [hinh_thuc_km] => fixed
+    [KM_DKSD] => 50000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 20,000đ cho đơn từ 50,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-16 20:59:45
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-19 10:36:58 - Checking promo code
+Data: Array
+(
+    [code] => THUOC20K
+    [product_id] => 
+    [amount] => 60000
+)
+
+
+2025-07-19 10:36:58 - Promo code found
+Data: Array
+(
+    [KM_MA] => 2
+    [Code] => THUOC20K
+    [KM_TGBD] => 2025-06-15 00:00:00
+    [KM_TGKT] => 2025-07-19 23:59:59
+    [KM_GIATRI] => 20000
+    [hinh_thuc_km] => fixed
+    [KM_DKSD] => 50000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 20,000đ cho đơn từ 50,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-16 20:59:45
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-19 10:36:58 - Checking promo code
+Data: Array
+(
+    [code] => THUOC20K
+    [product_id] => 
+    [amount] => 60000
+)
+
+
+2025-07-19 10:36:58 - Promo code found
+Data: Array
+(
+    [KM_MA] => 2
+    [Code] => THUOC20K
+    [KM_TGBD] => 2025-06-15 00:00:00
+    [KM_TGKT] => 2025-07-19 23:59:59
+    [KM_GIATRI] => 20000
+    [hinh_thuc_km] => fixed
+    [KM_DKSD] => 50000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 20,000đ cho đơn từ 50,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-16 20:59:45
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-19 10:38:57 - Checking promo code
+Data: Array
+(
+    [code] => THUOC20K
+    [product_id] => 
+    [amount] => 95000
+)
+
+
+2025-07-19 10:38:57 - Promo code found
+Data: Array
+(
+    [KM_MA] => 2
+    [Code] => THUOC20K
+    [KM_TGBD] => 2025-06-15 00:00:00
+    [KM_TGKT] => 2025-07-19 23:59:59
+    [KM_GIATRI] => 20000
+    [hinh_thuc_km] => fixed
+    [KM_DKSD] => 50000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 20,000đ cho đơn từ 50,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-16 20:59:45
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-19 10:38:57 - Checking promo code
+Data: Array
+(
+    [code] => THUOC20K
+    [product_id] => 
+    [amount] => 95000
+)
+
+
+2025-07-19 10:38:57 - Promo code found
+Data: Array
+(
+    [KM_MA] => 2
+    [Code] => THUOC20K
+    [KM_TGBD] => 2025-06-15 00:00:00
+    [KM_TGKT] => 2025-07-19 23:59:59
+    [KM_GIATRI] => 20000
+    [hinh_thuc_km] => fixed
+    [KM_DKSD] => 50000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 20,000đ cho đơn từ 50,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-16 20:59:45
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-19 10:38:57 - Checking promo code
+Data: Array
+(
+    [code] => THUOC20K
+    [product_id] => 
+    [amount] => 95000
+)
+
+
+2025-07-19 10:38:57 - Promo code found
+Data: Array
+(
+    [KM_MA] => 2
+    [Code] => THUOC20K
+    [KM_TGBD] => 2025-06-15 00:00:00
+    [KM_TGKT] => 2025-07-19 23:59:59
+    [KM_GIATRI] => 20000
+    [hinh_thuc_km] => fixed
+    [KM_DKSD] => 50000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 20,000đ cho đơn từ 50,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-16 20:59:45
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-19 10:45:29 - Checking promo code
+Data: Array
+(
+    [code] => THUOC20K
+    [product_id] => 
+    [amount] => 76000
+)
+
+
+2025-07-19 10:45:29 - Promo code found
+Data: Array
+(
+    [KM_MA] => 2
+    [Code] => THUOC20K
+    [KM_TGBD] => 2025-06-15 00:00:00
+    [KM_TGKT] => 2025-07-19 23:59:59
+    [KM_GIATRI] => 20000
+    [hinh_thuc_km] => fixed
+    [KM_DKSD] => 50000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 20,000đ cho đơn từ 50,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-16 20:59:45
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-19 10:45:29 - Checking promo code
+Data: Array
+(
+    [code] => THUOC20K
+    [product_id] => 
+    [amount] => 76000
+)
+
+
+2025-07-19 10:45:29 - Promo code found
+Data: Array
+(
+    [KM_MA] => 2
+    [Code] => THUOC20K
+    [KM_TGBD] => 2025-06-15 00:00:00
+    [KM_TGKT] => 2025-07-19 23:59:59
+    [KM_GIATRI] => 20000
+    [hinh_thuc_km] => fixed
+    [KM_DKSD] => 50000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 20,000đ cho đơn từ 50,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-16 20:59:45
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-19 10:45:30 - Checking promo code
+Data: Array
+(
+    [code] => THUOC20K
+    [product_id] => 
+    [amount] => 76000
+)
+
+
+2025-07-19 10:45:30 - Promo code found
+Data: Array
+(
+    [KM_MA] => 2
+    [Code] => THUOC20K
+    [KM_TGBD] => 2025-06-15 00:00:00
+    [KM_TGKT] => 2025-07-19 23:59:59
+    [KM_GIATRI] => 20000
+    [hinh_thuc_km] => fixed
+    [KM_DKSD] => 50000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 20,000đ cho đơn từ 50,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-16 20:59:45
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-19 10:48:33 - Checking promo code
+Data: Array
+(
+    [code] => THUOC20K
+    [product_id] => 
+    [amount] => 38000
+)
+
+
+2025-07-19 10:48:33 - Promo code found
+Data: Array
+(
+    [KM_MA] => 2
+    [Code] => THUOC20K
+    [KM_TGBD] => 2025-06-15 00:00:00
+    [KM_TGKT] => 2025-07-19 23:59:59
+    [KM_GIATRI] => 20000
+    [hinh_thuc_km] => fixed
+    [KM_DKSD] => 50000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 20,000đ cho đơn từ 50,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-16 20:59:45
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-19 10:48:33 - Order value too low
+Data: Array
+(
+    [required] => 50000.00
+    [current] => 38000
+)
+
+
+2025-07-19 10:48:33 - Checking promo code
+Data: Array
+(
+    [code] => THUOC20K
+    [product_id] => 
+    [amount] => 38000
+)
+
+
+2025-07-19 10:48:33 - Promo code found
+Data: Array
+(
+    [KM_MA] => 2
+    [Code] => THUOC20K
+    [KM_TGBD] => 2025-06-15 00:00:00
+    [KM_TGKT] => 2025-07-19 23:59:59
+    [KM_GIATRI] => 20000
+    [hinh_thuc_km] => fixed
+    [KM_DKSD] => 50000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 20,000đ cho đơn từ 50,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-16 20:59:45
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-19 10:48:33 - Order value too low
+Data: Array
+(
+    [required] => 50000.00
+    [current] => 38000
+)
+
+
+2025-07-19 10:48:33 - Checking promo code
+Data: Array
+(
+    [code] => THUOC20K
+    [product_id] => 
+    [amount] => 38000
+)
+
+
+2025-07-19 10:48:33 - Promo code found
+Data: Array
+(
+    [KM_MA] => 2
+    [Code] => THUOC20K
+    [KM_TGBD] => 2025-06-15 00:00:00
+    [KM_TGKT] => 2025-07-19 23:59:59
+    [KM_GIATRI] => 20000
+    [hinh_thuc_km] => fixed
+    [KM_DKSD] => 50000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 20,000đ cho đơn từ 50,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-16 20:59:45
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-19 10:48:33 - Order value too low
+Data: Array
+(
+    [required] => 50000.00
+    [current] => 38000
+)
+
+
+2025-07-19 10:48:34 - Checking promo code
+Data: Array
+(
+    [code] => THUOC20K
+    [product_id] => 
+    [amount] => 38000
+)
+
+
+2025-07-19 10:48:34 - Promo code found
+Data: Array
+(
+    [KM_MA] => 2
+    [Code] => THUOC20K
+    [KM_TGBD] => 2025-06-15 00:00:00
+    [KM_TGKT] => 2025-07-19 23:59:59
+    [KM_GIATRI] => 20000
+    [hinh_thuc_km] => fixed
+    [KM_DKSD] => 50000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 20,000đ cho đơn từ 50,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-16 20:59:45
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-19 10:48:34 - Order value too low
+Data: Array
+(
+    [required] => 50000.00
+    [current] => 38000
+)
+
+
+2025-07-19 10:48:34 - Checking promo code
+Data: Array
+(
+    [code] => THUOC20K
+    [product_id] => 
+    [amount] => 38000
+)
+
+
+2025-07-19 10:48:34 - Promo code found
+Data: Array
+(
+    [KM_MA] => 2
+    [Code] => THUOC20K
+    [KM_TGBD] => 2025-06-15 00:00:00
+    [KM_TGKT] => 2025-07-19 23:59:59
+    [KM_GIATRI] => 20000
+    [hinh_thuc_km] => fixed
+    [KM_DKSD] => 50000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 20,000đ cho đơn từ 50,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-16 20:59:45
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-19 10:48:34 - Order value too low
+Data: Array
+(
+    [required] => 50000.00
+    [current] => 38000
+)
+
+
+2025-07-19 10:48:34 - Checking promo code
+Data: Array
+(
+    [code] => THUOC20K
+    [product_id] => 
+    [amount] => 38000
+)
+
+
+2025-07-19 10:48:34 - Promo code found
+Data: Array
+(
+    [KM_MA] => 2
+    [Code] => THUOC20K
+    [KM_TGBD] => 2025-06-15 00:00:00
+    [KM_TGKT] => 2025-07-19 23:59:59
+    [KM_GIATRI] => 20000
+    [hinh_thuc_km] => fixed
+    [KM_DKSD] => 50000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 20,000đ cho đơn từ 50,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-16 20:59:45
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-19 10:48:34 - Order value too low
+Data: Array
+(
+    [required] => 50000.00
+    [current] => 38000
+)
+
+
+2025-07-19 10:48:54 - Checking promo code
+Data: Array
+(
+    [code] => THUOC20K
+    [product_id] => 
+    [amount] => 114000
+)
+
+
+2025-07-19 10:48:54 - Promo code found
+Data: Array
+(
+    [KM_MA] => 2
+    [Code] => THUOC20K
+    [KM_TGBD] => 2025-06-15 00:00:00
+    [KM_TGKT] => 2025-07-19 23:59:59
+    [KM_GIATRI] => 20000
+    [hinh_thuc_km] => fixed
+    [KM_DKSD] => 50000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 20,000đ cho đơn từ 50,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-16 20:59:45
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-19 10:48:54 - Checking promo code
+Data: Array
+(
+    [code] => THUOC20K
+    [product_id] => 
+    [amount] => 114000
+)
+
+
+2025-07-19 10:48:54 - Promo code found
+Data: Array
+(
+    [KM_MA] => 2
+    [Code] => THUOC20K
+    [KM_TGBD] => 2025-06-15 00:00:00
+    [KM_TGKT] => 2025-07-19 23:59:59
+    [KM_GIATRI] => 20000
+    [hinh_thuc_km] => fixed
+    [KM_DKSD] => 50000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 20,000đ cho đơn từ 50,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-16 20:59:45
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-19 10:48:54 - Checking promo code
+Data: Array
+(
+    [code] => THUOC20K
+    [product_id] => 
+    [amount] => 114000
+)
+
+
+2025-07-19 10:48:54 - Promo code found
+Data: Array
+(
+    [KM_MA] => 2
+    [Code] => THUOC20K
+    [KM_TGBD] => 2025-06-15 00:00:00
+    [KM_TGKT] => 2025-07-19 23:59:59
+    [KM_GIATRI] => 20000
+    [hinh_thuc_km] => fixed
+    [KM_DKSD] => 50000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 20,000đ cho đơn từ 50,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-16 20:59:45
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-19 10:55:49 - Checking promo code
+Data: Array
+(
+    [code] => THUOC20K
+    [product_id] => 
+    [amount] => 133000
+)
+
+
+2025-07-19 10:55:49 - Promo code found
+Data: Array
+(
+    [KM_MA] => 2
+    [Code] => THUOC20K
+    [KM_TGBD] => 2025-06-15 00:00:00
+    [KM_TGKT] => 2025-07-19 23:59:59
+    [KM_GIATRI] => 20000
+    [hinh_thuc_km] => fixed
+    [KM_DKSD] => 50000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 20,000đ cho đơn từ 50,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-16 20:59:45
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-19 10:55:49 - Checking promo code
+Data: Array
+(
+    [code] => THUOC20K
+    [product_id] => 
+    [amount] => 133000
+)
+
+
+2025-07-19 10:55:50 - Promo code found
+Data: Array
+(
+    [KM_MA] => 2
+    [Code] => THUOC20K
+    [KM_TGBD] => 2025-06-15 00:00:00
+    [KM_TGKT] => 2025-07-19 23:59:59
+    [KM_GIATRI] => 20000
+    [hinh_thuc_km] => fixed
+    [KM_DKSD] => 50000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 20,000đ cho đơn từ 50,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-16 20:59:45
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-19 10:55:50 - Checking promo code
+Data: Array
+(
+    [code] => THUOC20K
+    [product_id] => 
+    [amount] => 133000
+)
+
+
+2025-07-19 10:55:50 - Promo code found
+Data: Array
+(
+    [KM_MA] => 2
+    [Code] => THUOC20K
+    [KM_TGBD] => 2025-06-15 00:00:00
+    [KM_TGKT] => 2025-07-19 23:59:59
+    [KM_GIATRI] => 20000
+    [hinh_thuc_km] => fixed
+    [KM_DKSD] => 50000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 20,000đ cho đơn từ 50,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-16 20:59:45
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-19 11:16:17 - Checking promo code
+Data: Array
+(
+    [code] => THUOC20K
+    [product_id] => 
+    [amount] => 140000
+)
+
+
+2025-07-19 11:16:17 - Promo code found
+Data: Array
+(
+    [KM_MA] => 2
+    [Code] => THUOC20K
+    [KM_TGBD] => 2025-06-15 00:00:00
+    [KM_TGKT] => 2025-07-19 23:59:59
+    [KM_GIATRI] => 20000
+    [hinh_thuc_km] => fixed
+    [KM_DKSD] => 50000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 20,000đ cho đơn từ 50,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-16 20:59:45
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-19 11:16:17 - Checking promo code
+Data: Array
+(
+    [code] => THUOC20K
+    [product_id] => 
+    [amount] => 140000
+)
+
+
+2025-07-19 11:16:17 - Promo code found
+Data: Array
+(
+    [KM_MA] => 2
+    [Code] => THUOC20K
+    [KM_TGBD] => 2025-06-15 00:00:00
+    [KM_TGKT] => 2025-07-19 23:59:59
+    [KM_GIATRI] => 20000
+    [hinh_thuc_km] => fixed
+    [KM_DKSD] => 50000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 20,000đ cho đơn từ 50,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-16 20:59:45
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-19 11:16:17 - Checking promo code
+Data: Array
+(
+    [code] => THUOC20K
+    [product_id] => 
+    [amount] => 140000
+)
+
+
+2025-07-19 11:16:17 - Promo code found
+Data: Array
+(
+    [KM_MA] => 2
+    [Code] => THUOC20K
+    [KM_TGBD] => 2025-06-15 00:00:00
+    [KM_TGKT] => 2025-07-19 23:59:59
+    [KM_GIATRI] => 20000
+    [hinh_thuc_km] => fixed
+    [KM_DKSD] => 50000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 20,000đ cho đơn từ 50,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-16 20:59:45
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-19 11:22:21 - Checking promo code
+Data: Array
+(
+    [code] => THUOC20K
+    [product_id] => 
+    [amount] => 245000
+)
+
+
+2025-07-19 11:22:21 - Promo code found
+Data: Array
+(
+    [KM_MA] => 2
+    [Code] => THUOC20K
+    [KM_TGBD] => 2025-06-15 00:00:00
+    [KM_TGKT] => 2025-07-19 23:59:59
+    [KM_GIATRI] => 20000
+    [hinh_thuc_km] => fixed
+    [KM_DKSD] => 50000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 20,000đ cho đơn từ 50,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-16 20:59:45
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-19 11:22:21 - Checking promo code
+Data: Array
+(
+    [code] => THUOC20K
+    [product_id] => 
+    [amount] => 245000
+)
+
+
+2025-07-19 11:22:21 - Promo code found
+Data: Array
+(
+    [KM_MA] => 2
+    [Code] => THUOC20K
+    [KM_TGBD] => 2025-06-15 00:00:00
+    [KM_TGKT] => 2025-07-19 23:59:59
+    [KM_GIATRI] => 20000
+    [hinh_thuc_km] => fixed
+    [KM_DKSD] => 50000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 20,000đ cho đơn từ 50,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-16 20:59:45
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-19 11:22:21 - Checking promo code
+Data: Array
+(
+    [code] => THUOC20K
+    [product_id] => 
+    [amount] => 245000
+)
+
+
+2025-07-19 11:22:21 - Promo code found
+Data: Array
+(
+    [KM_MA] => 2
+    [Code] => THUOC20K
+    [KM_TGBD] => 2025-06-15 00:00:00
+    [KM_TGKT] => 2025-07-19 23:59:59
+    [KM_GIATRI] => 20000
+    [hinh_thuc_km] => fixed
+    [KM_DKSD] => 50000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 20,000đ cho đơn từ 50,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-16 20:59:45
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-19 11:23:07 - Checking promo code
+Data: Array
+(
+    [code] => PESTCONTROL
+    [product_id] => 
+    [amount] => 280000
+)
+
+
+2025-07-19 11:23:07 - Promo code found
+Data: Array
+(
+    [KM_MA] => 5
+    [Code] => PESTCONTROL
+    [KM_TGBD] => 2025-07-01 00:00:00
+    [KM_TGKT] => 2025-07-31 23:59:59
+    [KM_GIATRI] => 15
+    [hinh_thuc_km] => percent
+    [KM_DKSD] => 150000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 15% cho đơn từ 150,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-07 13:54:53
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-19 11:23:07 - Checking promo code
+Data: Array
+(
+    [code] => PESTCONTROL
+    [product_id] => 
+    [amount] => 280000
+)
+
+
+2025-07-19 11:23:07 - Promo code found
+Data: Array
+(
+    [KM_MA] => 5
+    [Code] => PESTCONTROL
+    [KM_TGBD] => 2025-07-01 00:00:00
+    [KM_TGKT] => 2025-07-31 23:59:59
+    [KM_GIATRI] => 15
+    [hinh_thuc_km] => percent
+    [KM_DKSD] => 150000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 15% cho đơn từ 150,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-07 13:54:53
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-19 11:23:08 - Checking promo code
+Data: Array
+(
+    [code] => PESTCONTROL
+    [product_id] => 
+    [amount] => 280000
+)
+
+
+2025-07-19 11:23:08 - Promo code found
+Data: Array
+(
+    [KM_MA] => 5
+    [Code] => PESTCONTROL
+    [KM_TGBD] => 2025-07-01 00:00:00
+    [KM_TGKT] => 2025-07-31 23:59:59
+    [KM_GIATRI] => 15
+    [hinh_thuc_km] => percent
+    [KM_DKSD] => 150000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 15% cho đơn từ 150,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-07 13:54:53
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-19 11:29:15 - Checking promo code
+Data: Array
+(
+    [code] => PESTCONTROL
+    [product_id] => 
+    [amount] => 1841000
+)
+
+
+2025-07-19 11:29:15 - Promo code found
+Data: Array
+(
+    [KM_MA] => 5
+    [Code] => PESTCONTROL
+    [KM_TGBD] => 2025-07-01 00:00:00
+    [KM_TGKT] => 2025-07-31 23:59:59
+    [KM_GIATRI] => 15
+    [hinh_thuc_km] => percent
+    [KM_DKSD] => 150000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 15% cho đơn từ 150,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-07 13:54:53
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-19 11:29:15 - Checking promo code
+Data: Array
+(
+    [code] => PESTCONTROL
+    [product_id] => 
+    [amount] => 1841000
+)
+
+
+2025-07-19 11:29:15 - Promo code found
+Data: Array
+(
+    [KM_MA] => 5
+    [Code] => PESTCONTROL
+    [KM_TGBD] => 2025-07-01 00:00:00
+    [KM_TGKT] => 2025-07-31 23:59:59
+    [KM_GIATRI] => 15
+    [hinh_thuc_km] => percent
+    [KM_DKSD] => 150000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 15% cho đơn từ 150,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-07 13:54:53
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-19 11:29:15 - Checking promo code
+Data: Array
+(
+    [code] => PESTCONTROL
+    [product_id] => 
+    [amount] => 1841000
+)
+
+
+2025-07-19 11:29:15 - Promo code found
+Data: Array
+(
+    [KM_MA] => 5
+    [Code] => PESTCONTROL
+    [KM_TGBD] => 2025-07-01 00:00:00
+    [KM_TGKT] => 2025-07-31 23:59:59
+    [KM_GIATRI] => 15
+    [hinh_thuc_km] => percent
+    [KM_DKSD] => 150000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 15% cho đơn từ 150,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-07 13:54:53
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-19 11:33:28 - Checking promo code
+Data: Array
+(
+    [code] => THUOC20K
+    [product_id] => 
+    [amount] => 133000
+)
+
+
+2025-07-19 11:33:28 - Promo code found
+Data: Array
+(
+    [KM_MA] => 2
+    [Code] => THUOC20K
+    [KM_TGBD] => 2025-06-15 00:00:00
+    [KM_TGKT] => 2025-07-19 23:59:59
+    [KM_GIATRI] => 20000
+    [hinh_thuc_km] => fixed
+    [KM_DKSD] => 50000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 20,000đ cho đơn từ 50,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-16 20:59:45
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-19 11:33:28 - Checking promo code
+Data: Array
+(
+    [code] => THUOC20K
+    [product_id] => 
+    [amount] => 133000
+)
+
+
+2025-07-19 11:33:28 - Promo code found
+Data: Array
+(
+    [KM_MA] => 2
+    [Code] => THUOC20K
+    [KM_TGBD] => 2025-06-15 00:00:00
+    [KM_TGKT] => 2025-07-19 23:59:59
+    [KM_GIATRI] => 20000
+    [hinh_thuc_km] => fixed
+    [KM_DKSD] => 50000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 20,000đ cho đơn từ 50,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-16 20:59:45
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-19 11:33:28 - Checking promo code
+Data: Array
+(
+    [code] => THUOC20K
+    [product_id] => 
+    [amount] => 133000
+)
+
+
+2025-07-19 11:33:28 - Promo code found
+Data: Array
+(
+    [KM_MA] => 2
+    [Code] => THUOC20K
+    [KM_TGBD] => 2025-06-15 00:00:00
+    [KM_TGKT] => 2025-07-19 23:59:59
+    [KM_GIATRI] => 20000
+    [hinh_thuc_km] => fixed
+    [KM_DKSD] => 50000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 20,000đ cho đơn từ 50,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-16 20:59:45
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-19 11:35:32 - Checking promo code
+Data: Array
+(
+    [code] => THUOC20K
+    [product_id] => 
+    [amount] => 245000
+)
+
+
+2025-07-19 11:35:32 - Promo code found
+Data: Array
+(
+    [KM_MA] => 2
+    [Code] => THUOC20K
+    [KM_TGBD] => 2025-06-15 00:00:00
+    [KM_TGKT] => 2025-07-19 23:59:59
+    [KM_GIATRI] => 20000
+    [hinh_thuc_km] => fixed
+    [KM_DKSD] => 50000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 20,000đ cho đơn từ 50,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-16 20:59:45
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-19 11:35:32 - Checking promo code
+Data: Array
+(
+    [code] => THUOC20K
+    [product_id] => 
+    [amount] => 245000
+)
+
+
+2025-07-19 11:35:32 - Promo code found
+Data: Array
+(
+    [KM_MA] => 2
+    [Code] => THUOC20K
+    [KM_TGBD] => 2025-06-15 00:00:00
+    [KM_TGKT] => 2025-07-19 23:59:59
+    [KM_GIATRI] => 20000
+    [hinh_thuc_km] => fixed
+    [KM_DKSD] => 50000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 20,000đ cho đơn từ 50,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-16 20:59:45
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-19 11:35:32 - Checking promo code
+Data: Array
+(
+    [code] => THUOC20K
+    [product_id] => 
+    [amount] => 245000
+)
+
+
+2025-07-19 11:35:32 - Promo code found
+Data: Array
+(
+    [KM_MA] => 2
+    [Code] => THUOC20K
+    [KM_TGBD] => 2025-06-15 00:00:00
+    [KM_TGKT] => 2025-07-19 23:59:59
+    [KM_GIATRI] => 20000
+    [hinh_thuc_km] => fixed
+    [KM_DKSD] => 50000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 20,000đ cho đơn từ 50,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-16 20:59:45
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-19 11:39:58 - Checking promo code
+Data: Array
+(
+    [code] => PESTCONTROL
+    [product_id] => 
+    [amount] => 1320000
+)
+
+
+2025-07-19 11:39:58 - Promo code found
+Data: Array
+(
+    [KM_MA] => 5
+    [Code] => PESTCONTROL
+    [KM_TGBD] => 2025-07-01 00:00:00
+    [KM_TGKT] => 2025-07-31 23:59:59
+    [KM_GIATRI] => 15
+    [hinh_thuc_km] => percent
+    [KM_DKSD] => 150000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 15% cho đơn từ 150,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-07 13:54:53
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-19 11:39:58 - Checking promo code
+Data: Array
+(
+    [code] => PESTCONTROL
+    [product_id] => 
+    [amount] => 1320000
+)
+
+
+2025-07-19 11:39:58 - Promo code found
+Data: Array
+(
+    [KM_MA] => 5
+    [Code] => PESTCONTROL
+    [KM_TGBD] => 2025-07-01 00:00:00
+    [KM_TGKT] => 2025-07-31 23:59:59
+    [KM_GIATRI] => 15
+    [hinh_thuc_km] => percent
+    [KM_DKSD] => 150000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 15% cho đơn từ 150,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-07 13:54:53
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-19 11:39:58 - Checking promo code
+Data: Array
+(
+    [code] => PESTCONTROL
+    [product_id] => 
+    [amount] => 1320000
+)
+
+
+2025-07-19 11:39:58 - Promo code found
+Data: Array
+(
+    [KM_MA] => 5
+    [Code] => PESTCONTROL
+    [KM_TGBD] => 2025-07-01 00:00:00
+    [KM_TGKT] => 2025-07-31 23:59:59
+    [KM_GIATRI] => 15
+    [hinh_thuc_km] => percent
+    [KM_DKSD] => 150000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 15% cho đơn từ 150,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-07 13:54:53
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-19 11:52:55 - Checking promo code
+Data: Array
+(
+    [code] => PESTCONTROL
+    [product_id] => 
+    [amount] => 178500
+)
+
+
+2025-07-19 11:52:55 - Promo code found
+Data: Array
+(
+    [KM_MA] => 5
+    [Code] => PESTCONTROL
+    [KM_TGBD] => 2025-07-01 00:00:00
+    [KM_TGKT] => 2025-07-31 23:59:59
+    [KM_GIATRI] => 15
+    [hinh_thuc_km] => percent
+    [KM_DKSD] => 150000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 15% cho đơn từ 150,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-07 13:54:53
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-19 11:52:55 - Checking promo code
+Data: Array
+(
+    [code] => PESTCONTROL
+    [product_id] => 
+    [amount] => 178500
+)
+
+
+2025-07-19 11:52:55 - Promo code found
+Data: Array
+(
+    [KM_MA] => 5
+    [Code] => PESTCONTROL
+    [KM_TGBD] => 2025-07-01 00:00:00
+    [KM_TGKT] => 2025-07-31 23:59:59
+    [KM_GIATRI] => 15
+    [hinh_thuc_km] => percent
+    [KM_DKSD] => 150000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 15% cho đơn từ 150,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-07 13:54:53
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-19 11:52:55 - Checking promo code
+Data: Array
+(
+    [code] => PESTCONTROL
+    [product_id] => 
+    [amount] => 178500
+)
+
+
+2025-07-19 11:52:55 - Promo code found
+Data: Array
+(
+    [KM_MA] => 5
+    [Code] => PESTCONTROL
+    [KM_TGBD] => 2025-07-01 00:00:00
+    [KM_TGKT] => 2025-07-31 23:59:59
+    [KM_GIATRI] => 15
+    [hinh_thuc_km] => percent
+    [KM_DKSD] => 150000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 15% cho đơn từ 150,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-07 13:54:53
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-19 11:54:06 - Checking promo code
+Data: Array
+(
+    [code] => PESTCONTROL
+    [product_id] => 
+    [amount] => 189000
+)
+
+
+2025-07-19 11:54:06 - Promo code found
+Data: Array
+(
+    [KM_MA] => 5
+    [Code] => PESTCONTROL
+    [KM_TGBD] => 2025-07-01 00:00:00
+    [KM_TGKT] => 2025-07-31 23:59:59
+    [KM_GIATRI] => 15
+    [hinh_thuc_km] => percent
+    [KM_DKSD] => 150000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 15% cho đơn từ 150,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-07 13:54:53
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-19 11:54:06 - Checking promo code
+Data: Array
+(
+    [code] => PESTCONTROL
+    [product_id] => 
+    [amount] => 189000
+)
+
+
+2025-07-19 11:54:06 - Promo code found
+Data: Array
+(
+    [KM_MA] => 5
+    [Code] => PESTCONTROL
+    [KM_TGBD] => 2025-07-01 00:00:00
+    [KM_TGKT] => 2025-07-31 23:59:59
+    [KM_GIATRI] => 15
+    [hinh_thuc_km] => percent
+    [KM_DKSD] => 150000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 15% cho đơn từ 150,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-07 13:54:53
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-19 11:54:06 - Checking promo code
+Data: Array
+(
+    [code] => PESTCONTROL
+    [product_id] => 
+    [amount] => 189000
+)
+
+
+2025-07-19 11:54:06 - Promo code found
+Data: Array
+(
+    [KM_MA] => 5
+    [Code] => PESTCONTROL
+    [KM_TGBD] => 2025-07-01 00:00:00
+    [KM_TGKT] => 2025-07-31 23:59:59
+    [KM_GIATRI] => 15
+    [hinh_thuc_km] => percent
+    [KM_DKSD] => 150000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 15% cho đơn từ 150,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-07 13:54:53
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-19 11:56:48 - Checking promo code
+Data: Array
+(
+    [code] => PESTCONTROL
+    [product_id] => 
+    [amount] => 199500
+)
+
+
+2025-07-19 11:56:48 - Promo code found
+Data: Array
+(
+    [KM_MA] => 5
+    [Code] => PESTCONTROL
+    [KM_TGBD] => 2025-07-01 00:00:00
+    [KM_TGKT] => 2025-07-31 23:59:59
+    [KM_GIATRI] => 15
+    [hinh_thuc_km] => percent
+    [KM_DKSD] => 150000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 15% cho đơn từ 150,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-07 13:54:53
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-19 11:56:48 - Checking promo code
+Data: Array
+(
+    [code] => PESTCONTROL
+    [product_id] => 
+    [amount] => 199500
+)
+
+
+2025-07-19 11:56:48 - Promo code found
+Data: Array
+(
+    [KM_MA] => 5
+    [Code] => PESTCONTROL
+    [KM_TGBD] => 2025-07-01 00:00:00
+    [KM_TGKT] => 2025-07-31 23:59:59
+    [KM_GIATRI] => 15
+    [hinh_thuc_km] => percent
+    [KM_DKSD] => 150000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 15% cho đơn từ 150,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-07 13:54:53
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-19 11:56:48 - Checking promo code
+Data: Array
+(
+    [code] => PESTCONTROL
+    [product_id] => 
+    [amount] => 199500
+)
+
+
+2025-07-19 11:56:48 - Promo code found
+Data: Array
+(
+    [KM_MA] => 5
+    [Code] => PESTCONTROL
+    [KM_TGBD] => 2025-07-01 00:00:00
+    [KM_TGKT] => 2025-07-31 23:59:59
+    [KM_GIATRI] => 15
+    [hinh_thuc_km] => percent
+    [KM_DKSD] => 150000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 15% cho đơn từ 150,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-07 13:54:53
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-19 11:57:50 - Checking promo code
+Data: Array
+(
+    [code] => PESTCONTROL
+    [product_id] => 
+    [amount] => 210000
+)
+
+
+2025-07-19 11:57:50 - Promo code found
+Data: Array
+(
+    [KM_MA] => 5
+    [Code] => PESTCONTROL
+    [KM_TGBD] => 2025-07-01 00:00:00
+    [KM_TGKT] => 2025-07-31 23:59:59
+    [KM_GIATRI] => 15
+    [hinh_thuc_km] => percent
+    [KM_DKSD] => 150000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 15% cho đơn từ 150,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-07 13:54:53
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-19 11:57:50 - Checking promo code
+Data: Array
+(
+    [code] => PESTCONTROL
+    [product_id] => 
+    [amount] => 210000
+)
+
+
+2025-07-19 11:57:50 - Promo code found
+Data: Array
+(
+    [KM_MA] => 5
+    [Code] => PESTCONTROL
+    [KM_TGBD] => 2025-07-01 00:00:00
+    [KM_TGKT] => 2025-07-31 23:59:59
+    [KM_GIATRI] => 15
+    [hinh_thuc_km] => percent
+    [KM_DKSD] => 150000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 15% cho đơn từ 150,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-07 13:54:53
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-19 11:57:50 - Checking promo code
+Data: Array
+(
+    [code] => PESTCONTROL
+    [product_id] => 
+    [amount] => 210000
+)
+
+
+2025-07-19 11:57:50 - Promo code found
+Data: Array
+(
+    [KM_MA] => 5
+    [Code] => PESTCONTROL
+    [KM_TGBD] => 2025-07-01 00:00:00
+    [KM_TGKT] => 2025-07-31 23:59:59
+    [KM_GIATRI] => 15
+    [hinh_thuc_km] => percent
+    [KM_DKSD] => 150000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 15% cho đơn từ 150,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-07 13:54:53
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-19 11:58:45 - Checking promo code
+Data: Array
+(
+    [code] => THUOC20K
+    [product_id] => 
+    [amount] => 367500
+)
+
+
+2025-07-19 11:58:45 - Promo code found
+Data: Array
+(
+    [KM_MA] => 2
+    [Code] => THUOC20K
+    [KM_TGBD] => 2025-06-15 00:00:00
+    [KM_TGKT] => 2025-07-19 23:59:59
+    [KM_GIATRI] => 20000
+    [hinh_thuc_km] => fixed
+    [KM_DKSD] => 50000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 20,000đ cho đơn từ 50,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-16 20:59:45
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-19 11:58:45 - Checking promo code
+Data: Array
+(
+    [code] => THUOC20K
+    [product_id] => 
+    [amount] => 367500
+)
+
+
+2025-07-19 11:58:45 - Promo code found
+Data: Array
+(
+    [KM_MA] => 2
+    [Code] => THUOC20K
+    [KM_TGBD] => 2025-06-15 00:00:00
+    [KM_TGKT] => 2025-07-19 23:59:59
+    [KM_GIATRI] => 20000
+    [hinh_thuc_km] => fixed
+    [KM_DKSD] => 50000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 20,000đ cho đơn từ 50,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-16 20:59:45
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-19 11:58:45 - Checking promo code
+Data: Array
+(
+    [code] => THUOC20K
+    [product_id] => 
+    [amount] => 367500
+)
+
+
+2025-07-19 11:58:45 - Promo code found
+Data: Array
+(
+    [KM_MA] => 2
+    [Code] => THUOC20K
+    [KM_TGBD] => 2025-06-15 00:00:00
+    [KM_TGKT] => 2025-07-19 23:59:59
+    [KM_GIATRI] => 20000
+    [hinh_thuc_km] => fixed
+    [KM_DKSD] => 50000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 20,000đ cho đơn từ 50,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-16 20:59:45
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-19 11:59:19 - Checking promo code
+Data: Array
+(
+    [code] => PESTCONTROL
+    [product_id] => 
+    [amount] => 105000
+)
+
+
+2025-07-19 11:59:19 - Promo code found
+Data: Array
+(
+    [KM_MA] => 5
+    [Code] => PESTCONTROL
+    [KM_TGBD] => 2025-07-01 00:00:00
+    [KM_TGKT] => 2025-07-31 23:59:59
+    [KM_GIATRI] => 15
+    [hinh_thuc_km] => percent
+    [KM_DKSD] => 150000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 15% cho đơn từ 150,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-07 13:54:53
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-19 11:59:19 - Order value too low
+Data: Array
+(
+    [required] => 150000.00
+    [current] => 105000
+)
+
+
+2025-07-19 11:59:19 - Checking promo code
+Data: Array
+(
+    [code] => PESTCONTROL
+    [product_id] => 
+    [amount] => 105000
+)
+
+
+2025-07-19 11:59:19 - Promo code found
+Data: Array
+(
+    [KM_MA] => 5
+    [Code] => PESTCONTROL
+    [KM_TGBD] => 2025-07-01 00:00:00
+    [KM_TGKT] => 2025-07-31 23:59:59
+    [KM_GIATRI] => 15
+    [hinh_thuc_km] => percent
+    [KM_DKSD] => 150000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 15% cho đơn từ 150,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-07 13:54:53
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-19 11:59:19 - Order value too low
+Data: Array
+(
+    [required] => 150000.00
+    [current] => 105000
+)
+
+
+2025-07-19 11:59:19 - Checking promo code
+Data: Array
+(
+    [code] => PESTCONTROL
+    [product_id] => 
+    [amount] => 105000
+)
+
+
+2025-07-19 11:59:19 - Promo code found
+Data: Array
+(
+    [KM_MA] => 5
+    [Code] => PESTCONTROL
+    [KM_TGBD] => 2025-07-01 00:00:00
+    [KM_TGKT] => 2025-07-31 23:59:59
+    [KM_GIATRI] => 15
+    [hinh_thuc_km] => percent
+    [KM_DKSD] => 150000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 15% cho đơn từ 150,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-07 13:54:53
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-19 11:59:19 - Order value too low
+Data: Array
+(
+    [required] => 150000.00
+    [current] => 105000
+)
+
+
+2025-07-19 11:59:22 - Checking promo code
+Data: Array
+(
+    [code] => THUOC20K
+    [product_id] => 
+    [amount] => 105000
+)
+
+
+2025-07-19 11:59:22 - Promo code found
+Data: Array
+(
+    [KM_MA] => 2
+    [Code] => THUOC20K
+    [KM_TGBD] => 2025-06-15 00:00:00
+    [KM_TGKT] => 2025-07-19 23:59:59
+    [KM_GIATRI] => 20000
+    [hinh_thuc_km] => fixed
+    [KM_DKSD] => 50000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 20,000đ cho đơn từ 50,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-16 20:59:45
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-19 11:59:22 - Checking promo code
+Data: Array
+(
+    [code] => THUOC20K
+    [product_id] => 
+    [amount] => 105000
+)
+
+
+2025-07-19 11:59:22 - Promo code found
+Data: Array
+(
+    [KM_MA] => 2
+    [Code] => THUOC20K
+    [KM_TGBD] => 2025-06-15 00:00:00
+    [KM_TGKT] => 2025-07-19 23:59:59
+    [KM_GIATRI] => 20000
+    [hinh_thuc_km] => fixed
+    [KM_DKSD] => 50000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 20,000đ cho đơn từ 50,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-16 20:59:45
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-19 11:59:22 - Checking promo code
+Data: Array
+(
+    [code] => THUOC20K
+    [product_id] => 
+    [amount] => 105000
+)
+
+
+2025-07-19 11:59:22 - Promo code found
+Data: Array
+(
+    [KM_MA] => 2
+    [Code] => THUOC20K
+    [KM_TGBD] => 2025-06-15 00:00:00
+    [KM_TGKT] => 2025-07-19 23:59:59
+    [KM_GIATRI] => 20000
+    [hinh_thuc_km] => fixed
+    [KM_DKSD] => 50000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 20,000đ cho đơn từ 50,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-16 20:59:45
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-19 12:00:17 - Checking promo code
+Data: Array
+(
+    [code] => THUOC20K
+    [product_id] => 
+    [amount] => 84000
+)
+
+
+2025-07-19 12:00:17 - Promo code found
+Data: Array
+(
+    [KM_MA] => 2
+    [Code] => THUOC20K
+    [KM_TGBD] => 2025-06-15 00:00:00
+    [KM_TGKT] => 2025-07-19 23:59:59
+    [KM_GIATRI] => 20000
+    [hinh_thuc_km] => fixed
+    [KM_DKSD] => 50000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 20,000đ cho đơn từ 50,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-16 20:59:45
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-19 12:00:17 - Checking promo code
+Data: Array
+(
+    [code] => THUOC20K
+    [product_id] => 
+    [amount] => 84000
+)
+
+
+2025-07-19 12:00:17 - Promo code found
+Data: Array
+(
+    [KM_MA] => 2
+    [Code] => THUOC20K
+    [KM_TGBD] => 2025-06-15 00:00:00
+    [KM_TGKT] => 2025-07-19 23:59:59
+    [KM_GIATRI] => 20000
+    [hinh_thuc_km] => fixed
+    [KM_DKSD] => 50000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 20,000đ cho đơn từ 50,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-16 20:59:45
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-19 12:00:17 - Checking promo code
+Data: Array
+(
+    [code] => THUOC20K
+    [product_id] => 
+    [amount] => 84000
+)
+
+
+2025-07-19 12:00:17 - Promo code found
+Data: Array
+(
+    [KM_MA] => 2
+    [Code] => THUOC20K
+    [KM_TGBD] => 2025-06-15 00:00:00
+    [KM_TGKT] => 2025-07-19 23:59:59
+    [KM_GIATRI] => 20000
+    [hinh_thuc_km] => fixed
+    [KM_DKSD] => 50000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 20,000đ cho đơn từ 50,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-16 20:59:45
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-19 12:00:49 - Checking promo code
+Data: Array
+(
+    [code] => THUOC20K
+    [product_id] => 
+    [amount] => 78000
+)
+
+
+2025-07-19 12:00:49 - Promo code found
+Data: Array
+(
+    [KM_MA] => 2
+    [Code] => THUOC20K
+    [KM_TGBD] => 2025-06-15 00:00:00
+    [KM_TGKT] => 2025-07-19 23:59:59
+    [KM_GIATRI] => 20000
+    [hinh_thuc_km] => fixed
+    [KM_DKSD] => 50000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 20,000đ cho đơn từ 50,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-16 20:59:45
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-19 12:00:49 - Checking promo code
+Data: Array
+(
+    [code] => THUOC20K
+    [product_id] => 
+    [amount] => 78000
+)
+
+
+2025-07-19 12:00:49 - Promo code found
+Data: Array
+(
+    [KM_MA] => 2
+    [Code] => THUOC20K
+    [KM_TGBD] => 2025-06-15 00:00:00
+    [KM_TGKT] => 2025-07-19 23:59:59
+    [KM_GIATRI] => 20000
+    [hinh_thuc_km] => fixed
+    [KM_DKSD] => 50000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 20,000đ cho đơn từ 50,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-16 20:59:45
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-19 12:00:49 - Checking promo code
+Data: Array
+(
+    [code] => THUOC20K
+    [product_id] => 
+    [amount] => 78000
+)
+
+
+2025-07-19 12:00:49 - Promo code found
+Data: Array
+(
+    [KM_MA] => 2
+    [Code] => THUOC20K
+    [KM_TGBD] => 2025-06-15 00:00:00
+    [KM_TGKT] => 2025-07-19 23:59:59
+    [KM_GIATRI] => 20000
+    [hinh_thuc_km] => fixed
+    [KM_DKSD] => 50000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 20,000đ cho đơn từ 50,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-16 20:59:45
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-20 09:52:38 - Checking promo code
+Data: Array
+(
+    [code] => PESTCONTROL
+    [product_id] => 
+    [amount] => 152000
+)
+
+
+2025-07-20 09:52:38 - Promo code found
+Data: Array
+(
+    [KM_MA] => 5
+    [Code] => PESTCONTROL
+    [KM_TGBD] => 2025-07-01 00:00:00
+    [KM_TGKT] => 2025-07-31 23:59:59
+    [KM_GIATRI] => 15
+    [hinh_thuc_km] => percent
+    [KM_DKSD] => 150000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 15% cho đơn từ 150,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-07 13:54:53
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-20 09:52:38 - Checking promo code
+Data: Array
+(
+    [code] => PESTCONTROL
+    [product_id] => 
+    [amount] => 152000
+)
+
+
+2025-07-20 09:52:38 - Promo code found
+Data: Array
+(
+    [KM_MA] => 5
+    [Code] => PESTCONTROL
+    [KM_TGBD] => 2025-07-01 00:00:00
+    [KM_TGKT] => 2025-07-31 23:59:59
+    [KM_GIATRI] => 15
+    [hinh_thuc_km] => percent
+    [KM_DKSD] => 150000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 15% cho đơn từ 150,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-07 13:54:53
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-20 09:52:38 - Checking promo code
+Data: Array
+(
+    [code] => PESTCONTROL
+    [product_id] => 
+    [amount] => 152000
+)
+
+
+2025-07-20 09:52:38 - Promo code found
+Data: Array
+(
+    [KM_MA] => 5
+    [Code] => PESTCONTROL
+    [KM_TGBD] => 2025-07-01 00:00:00
+    [KM_TGKT] => 2025-07-31 23:59:59
+    [KM_GIATRI] => 15
+    [hinh_thuc_km] => percent
+    [KM_DKSD] => 150000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 15% cho đơn từ 150,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-07 13:54:53
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-21 11:15:31 - Checking promo code
+Data: Array
+(
+    [code] => PESTCONTROL
+    [product_id] => 
+    [amount] => 175000
+)
+
+
+2025-07-21 11:15:31 - Promo code found
+Data: Array
+(
+    [KM_MA] => 5
+    [Code] => PESTCONTROL
+    [KM_TGBD] => 2025-07-01 00:00:00
+    [KM_TGKT] => 2025-07-31 23:59:59
+    [KM_GIATRI] => 15
+    [hinh_thuc_km] => percent
+    [KM_DKSD] => 150000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 15% cho đơn từ 150,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-07 13:54:53
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-21 11:15:31 - Checking promo code
+Data: Array
+(
+    [code] => PESTCONTROL
+    [product_id] => 
+    [amount] => 175000
+)
+
+
+2025-07-21 11:15:31 - Promo code found
+Data: Array
+(
+    [KM_MA] => 5
+    [Code] => PESTCONTROL
+    [KM_TGBD] => 2025-07-01 00:00:00
+    [KM_TGKT] => 2025-07-31 23:59:59
+    [KM_GIATRI] => 15
+    [hinh_thuc_km] => percent
+    [KM_DKSD] => 150000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 15% cho đơn từ 150,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-07 13:54:53
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-21 11:15:31 - Checking promo code
+Data: Array
+(
+    [code] => PESTCONTROL
+    [product_id] => 
+    [amount] => 175000
+)
+
+
+2025-07-21 11:15:31 - Promo code found
+Data: Array
+(
+    [KM_MA] => 5
+    [Code] => PESTCONTROL
+    [KM_TGBD] => 2025-07-01 00:00:00
+    [KM_TGKT] => 2025-07-31 23:59:59
+    [KM_GIATRI] => 15
+    [hinh_thuc_km] => percent
+    [KM_DKSD] => 150000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 15% cho đơn từ 150,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-07 13:54:53
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-22 06:23:38 - Checking promo code
+Data: Array
+(
+    [code] => PESTCONTROL
+    [product_id] => 
+    [amount] => 210000
+)
+
+
+2025-07-22 06:23:38 - Promo code found
+Data: Array
+(
+    [KM_MA] => 5
+    [Code] => PESTCONTROL
+    [KM_TGBD] => 2025-07-01 00:00:00
+    [KM_TGKT] => 2025-07-31 23:59:59
+    [KM_GIATRI] => 15
+    [hinh_thuc_km] => percent
+    [KM_DKSD] => 150000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 15% cho đơn từ 150,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-07 13:54:53
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-22 06:23:38 - Checking promo code
+Data: Array
+(
+    [code] => PESTCONTROL
+    [product_id] => 
+    [amount] => 210000
+)
+
+
+2025-07-22 06:23:38 - Promo code found
+Data: Array
+(
+    [KM_MA] => 5
+    [Code] => PESTCONTROL
+    [KM_TGBD] => 2025-07-01 00:00:00
+    [KM_TGKT] => 2025-07-31 23:59:59
+    [KM_GIATRI] => 15
+    [hinh_thuc_km] => percent
+    [KM_DKSD] => 150000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 15% cho đơn từ 150,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-07 13:54:53
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-22 06:23:38 - Checking promo code
+Data: Array
+(
+    [code] => PESTCONTROL
+    [product_id] => 
+    [amount] => 210000
+)
+
+
+2025-07-22 06:23:38 - Promo code found
+Data: Array
+(
+    [KM_MA] => 5
+    [Code] => PESTCONTROL
+    [KM_TGBD] => 2025-07-01 00:00:00
+    [KM_TGKT] => 2025-07-31 23:59:59
+    [KM_GIATRI] => 15
+    [hinh_thuc_km] => percent
+    [KM_DKSD] => 150000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 15% cho đơn từ 150,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-07 13:54:53
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-22 06:28:10 - Checking promo code
+Data: Array
+(
+    [code] => PESTCONTROL
+    [product_id] => 
+    [amount] => 210000
+)
+
+
+2025-07-22 06:28:10 - Promo code found
+Data: Array
+(
+    [KM_MA] => 5
+    [Code] => PESTCONTROL
+    [KM_TGBD] => 2025-07-01 00:00:00
+    [KM_TGKT] => 2025-07-31 23:59:59
+    [KM_GIATRI] => 15
+    [hinh_thuc_km] => percent
+    [KM_DKSD] => 150000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 15% cho đơn từ 150,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-07 13:54:53
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-22 06:28:10 - Checking promo code
+Data: Array
+(
+    [code] => PESTCONTROL
+    [product_id] => 
+    [amount] => 210000
+)
+
+
+2025-07-22 06:28:10 - Promo code found
+Data: Array
+(
+    [KM_MA] => 5
+    [Code] => PESTCONTROL
+    [KM_TGBD] => 2025-07-01 00:00:00
+    [KM_TGKT] => 2025-07-31 23:59:59
+    [KM_GIATRI] => 15
+    [hinh_thuc_km] => percent
+    [KM_DKSD] => 150000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 15% cho đơn từ 150,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-07 13:54:53
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-22 06:28:10 - Checking promo code
+Data: Array
+(
+    [code] => PESTCONTROL
+    [product_id] => 
+    [amount] => 210000
+)
+
+
+2025-07-22 06:28:10 - Promo code found
+Data: Array
+(
+    [KM_MA] => 5
+    [Code] => PESTCONTROL
+    [KM_TGBD] => 2025-07-01 00:00:00
+    [KM_TGKT] => 2025-07-31 23:59:59
+    [KM_GIATRI] => 15
+    [hinh_thuc_km] => percent
+    [KM_DKSD] => 150000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 15% cho đơn từ 150,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-07 13:54:53
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-22 06:55:48 - Checking promo code
+Data: Array
+(
+    [code] => PESTCONTROL
+    [product_id] => 
+    [amount] => 36000
+)
+
+
+2025-07-22 06:55:48 - Promo code found
+Data: Array
+(
+    [KM_MA] => 5
+    [Code] => PESTCONTROL
+    [KM_TGBD] => 2025-07-01 00:00:00
+    [KM_TGKT] => 2025-07-31 23:59:59
+    [KM_GIATRI] => 15
+    [hinh_thuc_km] => percent
+    [KM_DKSD] => 150000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 15% cho đơn từ 150,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-07 13:54:53
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-22 06:55:48 - Order value too low
+Data: Array
+(
+    [required] => 150000.00
+    [current] => 36000
+)
+
+
+2025-07-22 06:55:48 - Checking promo code
+Data: Array
+(
+    [code] => PESTCONTROL
+    [product_id] => 
+    [amount] => 36000
+)
+
+
+2025-07-22 06:55:48 - Promo code found
+Data: Array
+(
+    [KM_MA] => 5
+    [Code] => PESTCONTROL
+    [KM_TGBD] => 2025-07-01 00:00:00
+    [KM_TGKT] => 2025-07-31 23:59:59
+    [KM_GIATRI] => 15
+    [hinh_thuc_km] => percent
+    [KM_DKSD] => 150000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 15% cho đơn từ 150,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-07 13:54:53
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-22 06:55:48 - Order value too low
+Data: Array
+(
+    [required] => 150000.00
+    [current] => 36000
+)
+
+
+2025-07-22 06:55:48 - Checking promo code
+Data: Array
+(
+    [code] => PESTCONTROL
+    [product_id] => 
+    [amount] => 36000
+)
+
+
+2025-07-22 06:55:48 - Promo code found
+Data: Array
+(
+    [KM_MA] => 5
+    [Code] => PESTCONTROL
+    [KM_TGBD] => 2025-07-01 00:00:00
+    [KM_TGKT] => 2025-07-31 23:59:59
+    [KM_GIATRI] => 15
+    [hinh_thuc_km] => percent
+    [KM_DKSD] => 150000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 15% cho đơn từ 150,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-07 13:54:53
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-22 06:55:48 - Order value too low
+Data: Array
+(
+    [required] => 150000.00
+    [current] => 36000
+)
+
+
+2025-07-22 07:06:45 - Checking promo code
+Data: Array
+(
+    [code] => PESTCONTROL
+    [product_id] => 
+    [amount] => 210000
+)
+
+
+2025-07-22 07:06:45 - Promo code found
+Data: Array
+(
+    [KM_MA] => 5
+    [Code] => PESTCONTROL
+    [KM_TGBD] => 2025-07-01 00:00:00
+    [KM_TGKT] => 2025-07-31 23:59:59
+    [KM_GIATRI] => 15
+    [hinh_thuc_km] => percent
+    [KM_DKSD] => 150000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 15% cho đơn từ 150,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-07 13:54:53
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-22 07:06:45 - Checking promo code
+Data: Array
+(
+    [code] => PESTCONTROL
+    [product_id] => 
+    [amount] => 210000
+)
+
+
+2025-07-22 07:06:45 - Promo code found
+Data: Array
+(
+    [KM_MA] => 5
+    [Code] => PESTCONTROL
+    [KM_TGBD] => 2025-07-01 00:00:00
+    [KM_TGKT] => 2025-07-31 23:59:59
+    [KM_GIATRI] => 15
+    [hinh_thuc_km] => percent
+    [KM_DKSD] => 150000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 15% cho đơn từ 150,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-07 13:54:53
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-22 07:06:45 - Checking promo code
+Data: Array
+(
+    [code] => PESTCONTROL
+    [product_id] => 
+    [amount] => 210000
+)
+
+
+2025-07-22 07:06:45 - Promo code found
+Data: Array
+(
+    [KM_MA] => 5
+    [Code] => PESTCONTROL
+    [KM_TGBD] => 2025-07-01 00:00:00
+    [KM_TGKT] => 2025-07-31 23:59:59
+    [KM_GIATRI] => 15
+    [hinh_thuc_km] => percent
+    [KM_DKSD] => 150000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 15% cho đơn từ 150,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-07 13:54:53
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-23 13:04:23 - Checking promo code
+Data: Array
+(
+    [code] => PESTCONTROL
+    [product_id] => 
+    [amount] => 210000
+)
+
+
+2025-07-23 13:04:23 - Promo code found
+Data: Array
+(
+    [KM_MA] => 5
+    [Code] => PESTCONTROL
+    [KM_TGBD] => 2025-07-01 00:00:00
+    [KM_TGKT] => 2025-07-31 23:59:59
+    [KM_GIATRI] => 15
+    [hinh_thuc_km] => percent
+    [KM_DKSD] => 150000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 15% cho đơn từ 150,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-07 13:54:53
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-23 13:04:23 - Checking promo code
+Data: Array
+(
+    [code] => PESTCONTROL
+    [product_id] => 
+    [amount] => 210000
+)
+
+
+2025-07-23 13:04:23 - Promo code found
+Data: Array
+(
+    [KM_MA] => 5
+    [Code] => PESTCONTROL
+    [KM_TGBD] => 2025-07-01 00:00:00
+    [KM_TGKT] => 2025-07-31 23:59:59
+    [KM_GIATRI] => 15
+    [hinh_thuc_km] => percent
+    [KM_DKSD] => 150000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 15% cho đơn từ 150,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-07 13:54:53
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-23 13:04:23 - Checking promo code
+Data: Array
+(
+    [code] => PESTCONTROL
+    [product_id] => 
+    [amount] => 210000
+)
+
+
+2025-07-23 13:04:23 - Promo code found
+Data: Array
+(
+    [KM_MA] => 5
+    [Code] => PESTCONTROL
+    [KM_TGBD] => 2025-07-01 00:00:00
+    [KM_TGKT] => 2025-07-31 23:59:59
+    [KM_GIATRI] => 15
+    [hinh_thuc_km] => percent
+    [KM_DKSD] => 150000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 15% cho đơn từ 150,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-07 13:54:53
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-23 13:08:49 - Checking promo code
+Data: Array
+(
+    [code] => PESTCONTROL
+    [product_id] => 
+    [amount] => 880000
+)
+
+
+2025-07-23 13:08:49 - Promo code found
+Data: Array
+(
+    [KM_MA] => 5
+    [Code] => PESTCONTROL
+    [KM_TGBD] => 2025-07-01 00:00:00
+    [KM_TGKT] => 2025-07-31 23:59:59
+    [KM_GIATRI] => 15
+    [hinh_thuc_km] => percent
+    [KM_DKSD] => 150000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 15% cho đơn từ 150,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-07 13:54:53
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-23 13:08:49 - Checking promo code
+Data: Array
+(
+    [code] => PESTCONTROL
+    [product_id] => 
+    [amount] => 880000
+)
+
+
+2025-07-23 13:08:49 - Promo code found
+Data: Array
+(
+    [KM_MA] => 5
+    [Code] => PESTCONTROL
+    [KM_TGBD] => 2025-07-01 00:00:00
+    [KM_TGKT] => 2025-07-31 23:59:59
+    [KM_GIATRI] => 15
+    [hinh_thuc_km] => percent
+    [KM_DKSD] => 150000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 15% cho đơn từ 150,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-07 13:54:53
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-23 13:08:49 - Checking promo code
+Data: Array
+(
+    [code] => PESTCONTROL
+    [product_id] => 
+    [amount] => 880000
+)
+
+
+2025-07-23 13:08:49 - Promo code found
+Data: Array
+(
+    [KM_MA] => 5
+    [Code] => PESTCONTROL
+    [KM_TGBD] => 2025-07-01 00:00:00
+    [KM_TGKT] => 2025-07-31 23:59:59
+    [KM_GIATRI] => 15
+    [hinh_thuc_km] => percent
+    [KM_DKSD] => 150000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 15% cho đơn từ 150,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-07 13:54:53
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-25 08:45:38 - Checking promo code
+Data: Array
+(
+    [code] => PESTCONTROL
+    [product_id] => 
+    [amount] => 24000
+)
+
+
+2025-07-25 08:45:38 - Promo code found
+Data: Array
+(
+    [KM_MA] => 5
+    [Code] => PESTCONTROL
+    [KM_TGBD] => 2025-07-01 00:00:00
+    [KM_TGKT] => 2025-07-31 23:59:59
+    [KM_GIATRI] => 15
+    [hinh_thuc_km] => percent
+    [KM_DKSD] => 150000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 15% cho đơn từ 150,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-07 13:54:53
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-25 08:45:38 - Order value too low
+Data: Array
+(
+    [required] => 150000.00
+    [current] => 24000
+)
+
+
+2025-07-25 08:45:38 - Checking promo code
+Data: Array
+(
+    [code] => PESTCONTROL
+    [product_id] => 
+    [amount] => 24000
+)
+
+
+2025-07-25 08:45:38 - Promo code found
+Data: Array
+(
+    [KM_MA] => 5
+    [Code] => PESTCONTROL
+    [KM_TGBD] => 2025-07-01 00:00:00
+    [KM_TGKT] => 2025-07-31 23:59:59
+    [KM_GIATRI] => 15
+    [hinh_thuc_km] => percent
+    [KM_DKSD] => 150000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 15% cho đơn từ 150,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-07 13:54:53
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-25 08:45:38 - Order value too low
+Data: Array
+(
+    [required] => 150000.00
+    [current] => 24000
+)
+
+
+2025-07-25 08:45:38 - Checking promo code
+Data: Array
+(
+    [code] => PESTCONTROL
+    [product_id] => 
+    [amount] => 24000
+)
+
+
+2025-07-25 08:45:38 - Promo code found
+Data: Array
+(
+    [KM_MA] => 5
+    [Code] => PESTCONTROL
+    [KM_TGBD] => 2025-07-01 00:00:00
+    [KM_TGKT] => 2025-07-31 23:59:59
+    [KM_GIATRI] => 15
+    [hinh_thuc_km] => percent
+    [KM_DKSD] => 150000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 15% cho đơn từ 150,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-07 13:54:53
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-25 08:45:38 - Order value too low
+Data: Array
+(
+    [required] => 150000.00
+    [current] => 24000
+)
+
+
+2025-07-26 04:56:23 - Checking promo code
+Data: Array
+(
+    [code] => PESTCONTROL
+    [product_id] => 
+    [amount] => 596000
+)
+
+
+2025-07-26 04:56:23 - Promo code found
+Data: Array
+(
+    [KM_MA] => 5
+    [Code] => PESTCONTROL
+    [KM_TGBD] => 2025-07-01 00:00:00
+    [KM_TGKT] => 2025-07-31 23:59:59
+    [KM_GIATRI] => 15
+    [hinh_thuc_km] => percent
+    [KM_DKSD] => 150000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 15% cho đơn từ 150,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-07 13:54:53
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-26 04:56:23 - Checking promo code
+Data: Array
+(
+    [code] => PESTCONTROL
+    [product_id] => 
+    [amount] => 596000
+)
+
+
+2025-07-26 04:56:23 - Promo code found
+Data: Array
+(
+    [KM_MA] => 5
+    [Code] => PESTCONTROL
+    [KM_TGBD] => 2025-07-01 00:00:00
+    [KM_TGKT] => 2025-07-31 23:59:59
+    [KM_GIATRI] => 15
+    [hinh_thuc_km] => percent
+    [KM_DKSD] => 150000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 15% cho đơn từ 150,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-07 13:54:53
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-26 04:56:23 - Checking promo code
+Data: Array
+(
+    [code] => PESTCONTROL
+    [product_id] => 
+    [amount] => 596000
+)
+
+
+2025-07-26 04:56:23 - Promo code found
+Data: Array
+(
+    [KM_MA] => 5
+    [Code] => PESTCONTROL
+    [KM_TGBD] => 2025-07-01 00:00:00
+    [KM_TGKT] => 2025-07-31 23:59:59
+    [KM_GIATRI] => 15
+    [hinh_thuc_km] => percent
+    [KM_DKSD] => 150000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 15% cho đơn từ 150,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-07 13:54:53
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-26 05:11:38 - Checking promo code
+Data: Array
+(
+    [code] => PESTCONTROL
+    [product_id] => 
+    [amount] => 175000
+)
+
+
+2025-07-26 05:11:38 - Promo code found
+Data: Array
+(
+    [KM_MA] => 5
+    [Code] => PESTCONTROL
+    [KM_TGBD] => 2025-07-01 00:00:00
+    [KM_TGKT] => 2025-07-31 23:59:59
+    [KM_GIATRI] => 15
+    [hinh_thuc_km] => percent
+    [KM_DKSD] => 150000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 15% cho đơn từ 150,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-07 13:54:53
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-26 05:11:38 - Checking promo code
+Data: Array
+(
+    [code] => PESTCONTROL
+    [product_id] => 
+    [amount] => 175000
+)
+
+
+2025-07-26 05:11:38 - Promo code found
+Data: Array
+(
+    [KM_MA] => 5
+    [Code] => PESTCONTROL
+    [KM_TGBD] => 2025-07-01 00:00:00
+    [KM_TGKT] => 2025-07-31 23:59:59
+    [KM_GIATRI] => 15
+    [hinh_thuc_km] => percent
+    [KM_DKSD] => 150000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 15% cho đơn từ 150,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-07 13:54:53
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-26 05:11:38 - Checking promo code
+Data: Array
+(
+    [code] => PESTCONTROL
+    [product_id] => 
+    [amount] => 175000
+)
+
+
+2025-07-26 05:11:38 - Promo code found
+Data: Array
+(
+    [KM_MA] => 5
+    [Code] => PESTCONTROL
+    [KM_TGBD] => 2025-07-01 00:00:00
+    [KM_TGKT] => 2025-07-31 23:59:59
+    [KM_GIATRI] => 15
+    [hinh_thuc_km] => percent
+    [KM_DKSD] => 150000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 15% cho đơn từ 150,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-07 13:54:53
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-26 08:30:12 - Checking promo code
+Data: Array
+(
+    [code] => PESTCONTROL
+    [product_id] => 
+    [amount] => 405000
+)
+
+
+2025-07-26 08:30:12 - Promo code found
+Data: Array
+(
+    [KM_MA] => 5
+    [Code] => PESTCONTROL
+    [KM_TGBD] => 2025-07-01 00:00:00
+    [KM_TGKT] => 2025-07-31 23:59:59
+    [KM_GIATRI] => 15
+    [hinh_thuc_km] => percent
+    [KM_DKSD] => 150000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 15% cho đơn từ 150,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-07 13:54:53
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-26 08:30:12 - Checking promo code
+Data: Array
+(
+    [code] => PESTCONTROL
+    [product_id] => 
+    [amount] => 405000
+)
+
+
+2025-07-26 08:30:12 - Promo code found
+Data: Array
+(
+    [KM_MA] => 5
+    [Code] => PESTCONTROL
+    [KM_TGBD] => 2025-07-01 00:00:00
+    [KM_TGKT] => 2025-07-31 23:59:59
+    [KM_GIATRI] => 15
+    [hinh_thuc_km] => percent
+    [KM_DKSD] => 150000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 15% cho đơn từ 150,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-07 13:54:53
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-26 08:30:12 - Checking promo code
+Data: Array
+(
+    [code] => PESTCONTROL
+    [product_id] => 
+    [amount] => 405000
+)
+
+
+2025-07-26 08:30:12 - Promo code found
+Data: Array
+(
+    [KM_MA] => 5
+    [Code] => PESTCONTROL
+    [KM_TGBD] => 2025-07-01 00:00:00
+    [KM_TGKT] => 2025-07-31 23:59:59
+    [KM_GIATRI] => 15
+    [hinh_thuc_km] => percent
+    [KM_DKSD] => 150000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 15% cho đơn từ 150,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-07 13:54:53
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-28 18:25:47 - Checking promo code
+Data: Array
+(
+    [code] => PESTCONTROL
+    [product_id] => 
+    [amount] => 1980000
+)
+
+
+2025-07-28 18:25:47 - Promo code found
+Data: Array
+(
+    [KM_MA] => 5
+    [Code] => PESTCONTROL
+    [KM_TGBD] => 2025-07-01 00:00:00
+    [KM_TGKT] => 2025-07-31 23:59:59
+    [KM_GIATRI] => 15
+    [hinh_thuc_km] => percent
+    [KM_DKSD] => 150000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 15% cho đơn từ 150,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-07 13:54:53
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-28 18:25:47 - Checking promo code
+Data: Array
+(
+    [code] => PESTCONTROL
+    [product_id] => 
+    [amount] => 1980000
+)
+
+
+2025-07-28 18:25:47 - Promo code found
+Data: Array
+(
+    [KM_MA] => 5
+    [Code] => PESTCONTROL
+    [KM_TGBD] => 2025-07-01 00:00:00
+    [KM_TGKT] => 2025-07-31 23:59:59
+    [KM_GIATRI] => 15
+    [hinh_thuc_km] => percent
+    [KM_DKSD] => 150000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 15% cho đơn từ 150,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-07 13:54:53
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-28 18:25:47 - Checking promo code
+Data: Array
+(
+    [code] => PESTCONTROL
+    [product_id] => 
+    [amount] => 1980000
+)
+
+
+2025-07-28 18:25:47 - Promo code found
+Data: Array
+(
+    [KM_MA] => 5
+    [Code] => PESTCONTROL
+    [KM_TGBD] => 2025-07-01 00:00:00
+    [KM_TGKT] => 2025-07-31 23:59:59
+    [KM_GIATRI] => 15
+    [hinh_thuc_km] => percent
+    [KM_DKSD] => 150000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 15% cho đơn từ 150,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-07 13:54:53
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-28 18:29:29 - Checking promo code
+Data: Array
+(
+    [code] => PESTCONTROL
+    [product_id] => 
+    [amount] => 140000
+)
+
+
+2025-07-28 18:29:29 - Promo code found
+Data: Array
+(
+    [KM_MA] => 5
+    [Code] => PESTCONTROL
+    [KM_TGBD] => 2025-07-01 00:00:00
+    [KM_TGKT] => 2025-07-31 23:59:59
+    [KM_GIATRI] => 15
+    [hinh_thuc_km] => percent
+    [KM_DKSD] => 150000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 15% cho đơn từ 150,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-07 13:54:53
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-28 18:29:29 - Order value too low
+Data: Array
+(
+    [required] => 150000.00
+    [current] => 140000
+)
+
+
+2025-07-28 18:29:29 - Checking promo code
+Data: Array
+(
+    [code] => PESTCONTROL
+    [product_id] => 
+    [amount] => 140000
+)
+
+
+2025-07-28 18:29:29 - Promo code found
+Data: Array
+(
+    [KM_MA] => 5
+    [Code] => PESTCONTROL
+    [KM_TGBD] => 2025-07-01 00:00:00
+    [KM_TGKT] => 2025-07-31 23:59:59
+    [KM_GIATRI] => 15
+    [hinh_thuc_km] => percent
+    [KM_DKSD] => 150000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 15% cho đơn từ 150,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-07 13:54:53
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-28 18:29:29 - Order value too low
+Data: Array
+(
+    [required] => 150000.00
+    [current] => 140000
+)
+
+
+2025-07-28 18:29:29 - Checking promo code
+Data: Array
+(
+    [code] => PESTCONTROL
+    [product_id] => 
+    [amount] => 140000
+)
+
+
+2025-07-28 18:29:29 - Promo code found
+Data: Array
+(
+    [KM_MA] => 5
+    [Code] => PESTCONTROL
+    [KM_TGBD] => 2025-07-01 00:00:00
+    [KM_TGKT] => 2025-07-31 23:59:59
+    [KM_GIATRI] => 15
+    [hinh_thuc_km] => percent
+    [KM_DKSD] => 150000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 15% cho đơn từ 150,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-07 13:54:53
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-28 18:29:29 - Order value too low
+Data: Array
+(
+    [required] => 150000.00
+    [current] => 140000
+)
+
+
+2025-07-28 18:30:20 - Checking promo code
+Data: Array
+(
+    [code] => PESTCONTROL
+    [product_id] => 
+    [amount] => 1100000
+)
+
+
+2025-07-28 18:30:20 - Promo code found
+Data: Array
+(
+    [KM_MA] => 5
+    [Code] => PESTCONTROL
+    [KM_TGBD] => 2025-07-01 00:00:00
+    [KM_TGKT] => 2025-07-31 23:59:59
+    [KM_GIATRI] => 15
+    [hinh_thuc_km] => percent
+    [KM_DKSD] => 150000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 15% cho đơn từ 150,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-07 13:54:53
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-28 18:30:20 - Checking promo code
+Data: Array
+(
+    [code] => PESTCONTROL
+    [product_id] => 
+    [amount] => 1100000
+)
+
+
+2025-07-28 18:30:20 - Promo code found
+Data: Array
+(
+    [KM_MA] => 5
+    [Code] => PESTCONTROL
+    [KM_TGBD] => 2025-07-01 00:00:00
+    [KM_TGKT] => 2025-07-31 23:59:59
+    [KM_GIATRI] => 15
+    [hinh_thuc_km] => percent
+    [KM_DKSD] => 150000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 15% cho đơn từ 150,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-07 13:54:53
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-28 18:30:20 - Checking promo code
+Data: Array
+(
+    [code] => PESTCONTROL
+    [product_id] => 
+    [amount] => 1100000
+)
+
+
+2025-07-28 18:30:20 - Promo code found
+Data: Array
+(
+    [KM_MA] => 5
+    [Code] => PESTCONTROL
+    [KM_TGBD] => 2025-07-01 00:00:00
+    [KM_TGKT] => 2025-07-31 23:59:59
+    [KM_GIATRI] => 15
+    [hinh_thuc_km] => percent
+    [KM_DKSD] => 150000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 15% cho đơn từ 150,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-07 13:54:53
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-28 18:41:54 - Checking promo code
+Data: Array
+(
+    [code] => PESTCONTROL
+    [product_id] => 
+    [amount] => 1540000
+)
+
+
+2025-07-28 18:41:54 - Promo code found
+Data: Array
+(
+    [KM_MA] => 5
+    [Code] => PESTCONTROL
+    [KM_TGBD] => 2025-07-01 00:00:00
+    [KM_TGKT] => 2025-07-31 23:59:59
+    [KM_GIATRI] => 15
+    [hinh_thuc_km] => percent
+    [KM_DKSD] => 150000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 15% cho đơn từ 150,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-07 13:54:53
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-28 18:41:54 - Checking promo code
+Data: Array
+(
+    [code] => PESTCONTROL
+    [product_id] => 
+    [amount] => 1540000
+)
+
+
+2025-07-28 18:41:54 - Promo code found
+Data: Array
+(
+    [KM_MA] => 5
+    [Code] => PESTCONTROL
+    [KM_TGBD] => 2025-07-01 00:00:00
+    [KM_TGKT] => 2025-07-31 23:59:59
+    [KM_GIATRI] => 15
+    [hinh_thuc_km] => percent
+    [KM_DKSD] => 150000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 15% cho đơn từ 150,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-07 13:54:53
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-28 18:41:54 - Checking promo code
+Data: Array
+(
+    [code] => PESTCONTROL
+    [product_id] => 
+    [amount] => 1540000
+)
+
+
+2025-07-28 18:41:54 - Promo code found
+Data: Array
+(
+    [KM_MA] => 5
+    [Code] => PESTCONTROL
+    [KM_TGBD] => 2025-07-01 00:00:00
+    [KM_TGKT] => 2025-07-31 23:59:59
+    [KM_GIATRI] => 15
+    [hinh_thuc_km] => percent
+    [KM_DKSD] => 150000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 15% cho đơn từ 150,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-07 13:54:53
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-28 18:50:06 - Checking promo code
+Data: Array
+(
+    [code] => PESTCONTROL
+    [product_id] => 
+    [amount] => 210000
+)
+
+
+2025-07-28 18:50:06 - Promo code found
+Data: Array
+(
+    [KM_MA] => 5
+    [Code] => PESTCONTROL
+    [KM_TGBD] => 2025-07-01 00:00:00
+    [KM_TGKT] => 2025-07-31 23:59:59
+    [KM_GIATRI] => 15
+    [hinh_thuc_km] => percent
+    [KM_DKSD] => 150000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 15% cho đơn từ 150,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-07 13:54:53
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-28 18:50:06 - Checking promo code
+Data: Array
+(
+    [code] => PESTCONTROL
+    [product_id] => 
+    [amount] => 210000
+)
+
+
+2025-07-28 18:50:06 - Promo code found
+Data: Array
+(
+    [KM_MA] => 5
+    [Code] => PESTCONTROL
+    [KM_TGBD] => 2025-07-01 00:00:00
+    [KM_TGKT] => 2025-07-31 23:59:59
+    [KM_GIATRI] => 15
+    [hinh_thuc_km] => percent
+    [KM_DKSD] => 150000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 15% cho đơn từ 150,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-07 13:54:53
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-28 18:50:06 - Checking promo code
+Data: Array
+(
+    [code] => PESTCONTROL
+    [product_id] => 
+    [amount] => 210000
+)
+
+
+2025-07-28 18:50:06 - Promo code found
+Data: Array
+(
+    [KM_MA] => 5
+    [Code] => PESTCONTROL
+    [KM_TGBD] => 2025-07-01 00:00:00
+    [KM_TGKT] => 2025-07-31 23:59:59
+    [KM_GIATRI] => 15
+    [hinh_thuc_km] => percent
+    [KM_DKSD] => 150000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 15% cho đơn từ 150,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-07 13:54:53
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-28 19:07:52 - Checking promo code
+Data: Array
+(
+    [code] => PESTCONTROL
+    [product_id] => 
+    [amount] => 110000
+)
+
+
+2025-07-28 19:07:52 - Promo code found
+Data: Array
+(
+    [KM_MA] => 5
+    [Code] => PESTCONTROL
+    [KM_TGBD] => 2025-07-01 00:00:00
+    [KM_TGKT] => 2025-07-31 23:59:59
+    [KM_GIATRI] => 15
+    [hinh_thuc_km] => percent
+    [KM_DKSD] => 150000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 15% cho đơn từ 150,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-07 13:54:53
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-28 19:07:52 - Order value too low
+Data: Array
+(
+    [required] => 150000.00
+    [current] => 110000
+)
+
+
+2025-07-28 19:07:52 - Checking promo code
+Data: Array
+(
+    [code] => PESTCONTROL
+    [product_id] => 
+    [amount] => 110000
+)
+
+
+2025-07-28 19:07:52 - Promo code found
+Data: Array
+(
+    [KM_MA] => 5
+    [Code] => PESTCONTROL
+    [KM_TGBD] => 2025-07-01 00:00:00
+    [KM_TGKT] => 2025-07-31 23:59:59
+    [KM_GIATRI] => 15
+    [hinh_thuc_km] => percent
+    [KM_DKSD] => 150000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 15% cho đơn từ 150,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-07 13:54:53
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-28 19:07:52 - Order value too low
+Data: Array
+(
+    [required] => 150000.00
+    [current] => 110000
+)
+
+
+2025-07-28 19:07:52 - Checking promo code
+Data: Array
+(
+    [code] => PESTCONTROL
+    [product_id] => 
+    [amount] => 110000
+)
+
+
+2025-07-28 19:07:52 - Promo code found
+Data: Array
+(
+    [KM_MA] => 5
+    [Code] => PESTCONTROL
+    [KM_TGBD] => 2025-07-01 00:00:00
+    [KM_TGKT] => 2025-07-31 23:59:59
+    [KM_GIATRI] => 15
+    [hinh_thuc_km] => percent
+    [KM_DKSD] => 150000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 15% cho đơn từ 150,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-07 13:54:53
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-28 19:07:52 - Order value too low
+Data: Array
+(
+    [required] => 150000.00
+    [current] => 110000
+)
+
+
+2025-07-28 19:08:11 - Checking promo code
+Data: Array
+(
+    [code] => PESTCONTROL
+    [product_id] => 
+    [amount] => 171000
+)
+
+
+2025-07-28 19:08:11 - Promo code found
+Data: Array
+(
+    [KM_MA] => 5
+    [Code] => PESTCONTROL
+    [KM_TGBD] => 2025-07-01 00:00:00
+    [KM_TGKT] => 2025-07-31 23:59:59
+    [KM_GIATRI] => 15
+    [hinh_thuc_km] => percent
+    [KM_DKSD] => 150000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 15% cho đơn từ 150,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-07 13:54:53
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-28 19:08:11 - Checking promo code
+Data: Array
+(
+    [code] => PESTCONTROL
+    [product_id] => 
+    [amount] => 171000
+)
+
+
+2025-07-28 19:08:11 - Promo code found
+Data: Array
+(
+    [KM_MA] => 5
+    [Code] => PESTCONTROL
+    [KM_TGBD] => 2025-07-01 00:00:00
+    [KM_TGKT] => 2025-07-31 23:59:59
+    [KM_GIATRI] => 15
+    [hinh_thuc_km] => percent
+    [KM_DKSD] => 150000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 15% cho đơn từ 150,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-07 13:54:53
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-28 19:08:11 - Checking promo code
+Data: Array
+(
+    [code] => PESTCONTROL
+    [product_id] => 
+    [amount] => 171000
+)
+
+
+2025-07-28 19:08:11 - Promo code found
+Data: Array
+(
+    [KM_MA] => 5
+    [Code] => PESTCONTROL
+    [KM_TGBD] => 2025-07-01 00:00:00
+    [KM_TGKT] => 2025-07-31 23:59:59
+    [KM_GIATRI] => 15
+    [hinh_thuc_km] => percent
+    [KM_DKSD] => 150000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 15% cho đơn từ 150,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-07 13:54:53
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-30 10:39:23 - Checking promo code
+Data: Array
+(
+    [code] => PESTCONTROL
+    [product_id] => 
+    [amount] => 475000
+)
+
+
+2025-07-30 10:39:23 - Promo code found
+Data: Array
+(
+    [KM_MA] => 5
+    [Code] => PESTCONTROL
+    [KM_TGBD] => 2025-07-01 00:00:00
+    [KM_TGKT] => 2025-07-31 23:59:59
+    [KM_GIATRI] => 15
+    [hinh_thuc_km] => percent
+    [KM_DKSD] => 150000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 15% cho đơn từ 150,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-07 13:54:53
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-30 10:39:23 - Checking promo code
+Data: Array
+(
+    [code] => PESTCONTROL
+    [product_id] => 
+    [amount] => 475000
+)
+
+
+2025-07-30 10:39:23 - Promo code found
+Data: Array
+(
+    [KM_MA] => 5
+    [Code] => PESTCONTROL
+    [KM_TGBD] => 2025-07-01 00:00:00
+    [KM_TGKT] => 2025-07-31 23:59:59
+    [KM_GIATRI] => 15
+    [hinh_thuc_km] => percent
+    [KM_DKSD] => 150000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 15% cho đơn từ 150,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-07 13:54:53
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+
+2025-07-30 10:39:23 - Checking promo code
+Data: Array
+(
+    [code] => PESTCONTROL
+    [product_id] => 
+    [amount] => 475000
+)
+
+
+2025-07-30 10:39:23 - Promo code found
+Data: Array
+(
+    [KM_MA] => 5
+    [Code] => PESTCONTROL
+    [KM_TGBD] => 2025-07-01 00:00:00
+    [KM_TGKT] => 2025-07-31 23:59:59
+    [KM_GIATRI] => 15
+    [hinh_thuc_km] => percent
+    [KM_DKSD] => 150000.00
+    [KM_TRANGTHAI] => 1
+    [KM_MOTA] => Giảm 15% cho đơn từ 150,000đ
+    [KM_NGAYTAO] => 2025-07-07 13:47:54
+    [KM_NGAYCAPNHAT] => 2025-07-07 13:54:53
+    [KM_SOLUONG] => 
+    [KM_SOLUONG_TOIDA] => 
+)
+
+

@@ -1592,3 +1592,1612 @@ Data: Array
 )
 
 --------------------------------------------------------------------------------
+[2025-07-19 14:32:21][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 315000
+    [total_weight] => 9000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-19 15:14:04][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 1100000
+    [total_weight] => 5000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-19 15:14:47][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 1100000
+    [total_weight] => 5000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-19 15:15:01][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 1320000
+    [total_weight] => 6000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-19 15:15:17][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 1320000
+    [total_weight] => 6000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-19 15:18:39][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 1320000
+    [total_weight] => 6000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-19 15:18:43][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 1760000
+    [total_weight] => 8000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-19 15:20:37][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 1760000
+    [total_weight] => 8000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-19 15:20:42][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 2200000
+    [total_weight] => 10000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-19 15:20:51][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 2200000
+    [total_weight] => 10000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-19 15:25:32][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 2640000
+    [total_weight] => 12000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-19 15:26:15][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 2640000
+    [total_weight] => 12000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-19 15:30:32][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 2860000
+    [total_weight] => 13000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-19 15:36:47][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 60000
+    [total_weight] => 200
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-19 15:38:48][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 95000
+    [total_weight] => 5000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-19 15:38:58][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 95000
+    [total_weight] => 5000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-19 15:45:17][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 76000
+    [total_weight] => 4000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-19 15:45:31][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 76000
+    [total_weight] => 4000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-19 15:48:24][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 38000
+    [total_weight] => 2000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-19 15:48:38][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 114000
+    [total_weight] => 6000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-19 15:55:40][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 133000
+    [total_weight] => 7000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-19 16:16:09][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 140000
+    [total_weight] => 4000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-19 16:21:45][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 140000
+    [total_weight] => 4000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-19 16:22:11][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 245000
+    [total_weight] => 7000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-19 16:22:22][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 245000
+    [total_weight] => 7000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-19 16:22:57][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 280000
+    [total_weight] => 8000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-19 16:29:06][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 1841000
+    [total_weight] => 175000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-19 16:33:19][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 133000
+    [total_weight] => 7000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-19 16:35:22][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 245000
+    [total_weight] => 7000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-19 16:39:48][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 1320000
+    [total_weight] => 6000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-19 16:52:44][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 178500
+    [total_weight] => 170
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-19 16:52:56][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 178500
+    [total_weight] => 170
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-19 16:53:40][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 189000
+    [total_weight] => 180
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-19 16:54:10][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 189000
+    [total_weight] => 180
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-19 16:56:37][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 199500
+    [total_weight] => 190
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-19 16:57:40][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 210000
+    [total_weight] => 200
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-19 16:57:51][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 210000
+    [total_weight] => 200
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-19 16:58:13][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 210000
+    [total_weight] => 200
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-19 16:58:22][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 367500
+    [total_weight] => 350
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-19 16:58:57][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 367500
+    [total_weight] => 350
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-19 16:59:06][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 105000
+    [total_weight] => 100
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-19 16:59:23][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 105000
+    [total_weight] => 100
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-19 17:00:03][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 105000
+    [total_weight] => 100
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-19 17:00:08][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 84000
+    [total_weight] => 80
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-19 17:00:38][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 78000
+    [total_weight] => 260
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-20 14:52:23][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 152000
+    [total_weight] => 8000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-21 16:15:20][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 175000
+    [total_weight] => 5000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-22 11:22:40][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 210000
+    [total_weight] => 6000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-22 11:24:15][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 35000
+    [total_weight] => 1000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-22 11:24:39][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 35000
+    [total_weight] => 1000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-22 11:24:45][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 35000
+    [total_weight] => 1000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-22 11:27:00][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 70000
+    [total_weight] => 2000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-22 11:27:31][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 210000
+    [total_weight] => 6000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-22 11:55:21][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 36000
+    [total_weight] => 120
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-22 12:05:40][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 140000
+    [total_weight] => 4000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-22 12:06:34][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 210000
+    [total_weight] => 6000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-23 18:04:13][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 210000
+    [total_weight] => 6000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-23 18:08:32][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 880000
+    [total_weight] => 4000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-23 18:08:37][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 880000
+    [total_weight] => 4000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-25 13:45:18][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 24000
+    [total_weight] => 80
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-25 13:46:09][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 24000
+    [total_weight] => 80
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-25 14:53:19][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 36000
+    [total_weight] => 120
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-25 15:00:16][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 36000
+    [total_weight] => 120
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-25 15:04:29][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 36000
+    [total_weight] => 120
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-25 15:07:07][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 48000
+    [total_weight] => 160
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-25 15:09:46][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 36000
+    [total_weight] => 120
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-25 15:10:31][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 140000
+    [total_weight] => 4000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-25 15:48:20][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 210000
+    [total_weight] => 6000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-25 15:53:45][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 245000
+    [total_weight] => 7000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-25 15:57:44][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 245000
+    [total_weight] => 7000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-25 15:57:55][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 350000
+    [total_weight] => 10000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-25 16:05:29][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 315000
+    [total_weight] => 9000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-25 16:05:36][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 315000
+    [total_weight] => 9000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-25 16:05:59][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 315000
+    [total_weight] => 9000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-25 16:06:12][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 350000
+    [total_weight] => 10000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-25 16:10:55][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 350000
+    [total_weight] => 10000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-25 16:11:02][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 385000
+    [total_weight] => 11000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-25 16:15:43][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 280000
+    [total_weight] => 8000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-25 16:46:14][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 280000
+    [total_weight] => 8000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-25 16:46:26][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 385000
+    [total_weight] => 11000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-25 16:46:54][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 420000
+    [total_weight] => 12000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-25 16:49:28][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 525000
+    [total_weight] => 15000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-25 16:51:59][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 525000
+    [total_weight] => 15000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-25 16:52:08][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 595000
+    [total_weight] => 17000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-25 16:54:02][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 665000
+    [total_weight] => 19000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-25 16:56:07][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 665000
+    [total_weight] => 19000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-25 16:59:25][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 560000
+    [total_weight] => 16000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-26 09:56:14][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 596000
+    [total_weight] => 16120
+    [items_count] => 2
+)
+
+--------------------------------------------------------------------------------
+[2025-07-26 09:59:18][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 880000
+    [total_weight] => 4000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-26 10:02:43][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 660000
+    [total_weight] => 3000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-26 10:03:41][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 660000
+    [total_weight] => 3000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-26 10:06:03][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 660000
+    [total_weight] => 3000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-26 10:06:07][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 1320000
+    [total_weight] => 6000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-26 10:06:53][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 220000
+    [total_weight] => 1000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-26 10:07:21][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 140000
+    [total_weight] => 4000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-26 10:07:39][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 35000
+    [total_weight] => 1000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-26 10:11:24][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 175000
+    [total_weight] => 5000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-26 13:28:26][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 270000
+    [total_weight] => 60
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-26 13:28:52][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 405000
+    [total_weight] => 90
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-26 13:35:14][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 45000
+    [total_weight] => 10
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-28 21:45:25][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 140000
+    [total_weight] => 4000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-28 21:48:53][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 210000
+    [total_weight] => 6000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-28 21:49:13][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 175000
+    [total_weight] => 5000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-28 21:49:23][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 175000
+    [total_weight] => 5000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-28 21:52:38][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 210000
+    [total_weight] => 6000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-28 21:53:51][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 280000
+    [total_weight] => 8000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-28 21:55:42][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 280000
+    [total_weight] => 8000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-28 21:55:47][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 280000
+    [total_weight] => 8000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-28 21:55:54][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 175000
+    [total_weight] => 5000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-28 21:56:52][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 175000
+    [total_weight] => 5000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-28 21:56:55][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 245000
+    [total_weight] => 7000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-28 21:59:29][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 245000
+    [total_weight] => 7000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-28 21:59:38][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 350000
+    [total_weight] => 10000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-28 22:01:17][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 210000
+    [total_weight] => 6000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-28 22:03:14][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 175000
+    [total_weight] => 5000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-28 22:05:34][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 245000
+    [total_weight] => 7000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-28 22:08:37][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 140000
+    [total_weight] => 4000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-28 22:14:29][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 245000
+    [total_weight] => 7000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-28 22:16:34][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 245000
+    [total_weight] => 7000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-28 22:16:40][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 280000
+    [total_weight] => 8000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-28 22:18:28][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 280000
+    [total_weight] => 8000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-28 22:22:42][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 175000
+    [total_weight] => 5000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-28 22:26:44][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 210000
+    [total_weight] => 6000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-28 22:28:09][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 350000
+    [total_weight] => 10000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-28 22:30:27][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 350000
+    [total_weight] => 10000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-28 22:30:29][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 350000
+    [total_weight] => 10000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-28 22:32:59][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 350000
+    [total_weight] => 10000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-28 22:33:28][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 350000
+    [total_weight] => 10000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-28 22:36:18][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 350000
+    [total_weight] => 10000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-28 22:40:14][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 420000
+    [total_weight] => 12000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-28 22:43:44][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 210000
+    [total_weight] => 6000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-28 22:44:25][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 105000
+    [total_weight] => 3000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-28 22:44:43][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 315000
+    [total_weight] => 9000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-28 22:46:27][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 182000
+    [total_weight] => 7000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-28 22:49:12][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 182000
+    [total_weight] => 7000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-28 22:55:59][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 182000
+    [total_weight] => 7000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-28 22:56:01][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 182000
+    [total_weight] => 7000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-28 23:00:23][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 1320000
+    [total_weight] => 6000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-28 23:04:06][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 1540000
+    [total_weight] => 7000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-28 23:25:36][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 1980000
+    [total_weight] => 9000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-28 23:28:47][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 175000
+    [total_weight] => 5000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-28 23:29:18][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 140000
+    [total_weight] => 4000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-28 23:30:13][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 1100000
+    [total_weight] => 5000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-28 23:41:43][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 880000
+    [total_weight] => 4000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-28 23:41:46][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 1540000
+    [total_weight] => 7000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-28 23:49:59][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 105000
+    [total_weight] => 3000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-28 23:50:02][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 210000
+    [total_weight] => 6000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-28 23:54:23][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 0
+    [total_weight] => 0
+    [items_count] => 0
+)
+
+--------------------------------------------------------------------------------
+[2025-07-28 23:54:23][ERROR] Empty cart
+Data: Array
+(
+    [cart_id] => 7
+    [user_id] => 2
+)
+
+--------------------------------------------------------------------------------
+[2025-07-28 23:54:33][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 1320000
+    [total_weight] => 6000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-29 00:07:47][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 110000
+    [total_weight] => 5000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-29 00:08:06][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 171000
+    [total_weight] => 9000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-29 00:09:00][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 0
+    [total_weight] => 0
+    [items_count] => 0
+)
+
+--------------------------------------------------------------------------------
+[2025-07-29 00:09:00][ERROR] Empty cart
+Data: Array
+(
+    [cart_id] => 7
+    [user_id] => 2
+)
+
+--------------------------------------------------------------------------------
+[2025-07-29 00:09:14][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 92000
+    [total_weight] => 4000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-29 00:09:17][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 138000
+    [total_weight] => 6000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-29 00:15:05][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 36000
+    [total_weight] => 120
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-29 00:16:12][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 176000
+    [total_weight] => 8000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-29 00:16:26][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 220000
+    [total_weight] => 10000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-29 10:03:14][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 1280000
+    [total_weight] => 8000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-29 10:07:03][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 210000
+    [total_weight] => 6000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-29 12:31:42][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 315000
+    [total_weight] => 9000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-29 12:33:10][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 315000
+    [total_weight] => 9000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-29 12:36:14][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 315000
+    [total_weight] => 9000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-29 12:36:17][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 315000
+    [total_weight] => 9000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-30 13:18:41][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 420000
+    [total_weight] => 12000
+    [items_count] => 1
+)
+
+--------------------------------------------------------------------------------
+[2025-07-30 14:02:18][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 430000
+    [total_weight] => 11010
+    [items_count] => 2
+)
+
+--------------------------------------------------------------------------------
+[2025-07-30 14:04:17][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 430000
+    [total_weight] => 11010
+    [items_count] => 2
+)
+
+--------------------------------------------------------------------------------
+[2025-07-30 14:07:13][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 430000
+    [total_weight] => 11010
+    [items_count] => 2
+)
+
+--------------------------------------------------------------------------------
+[2025-07-30 14:07:46][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 475000
+    [total_weight] => 11020
+    [items_count] => 2
+)
+
+--------------------------------------------------------------------------------
+[2025-07-30 14:10:07][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 475000
+    [total_weight] => 11020
+    [items_count] => 2
+)
+
+--------------------------------------------------------------------------------
+[2025-07-30 14:14:21][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 475000
+    [total_weight] => 11020
+    [items_count] => 2
+)
+
+--------------------------------------------------------------------------------
+[2025-07-30 14:17:04][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 475000
+    [total_weight] => 11020
+    [items_count] => 2
+)
+
+--------------------------------------------------------------------------------
+[2025-07-30 14:17:18][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 475000
+    [total_weight] => 11020
+    [items_count] => 2
+)
+
+--------------------------------------------------------------------------------
+[2025-07-30 14:19:22][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 475000
+    [total_weight] => 11020
+    [items_count] => 2
+)
+
+--------------------------------------------------------------------------------
+[2025-07-30 15:32:59][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 475000
+    [total_weight] => 11020
+    [items_count] => 2
+)
+
+--------------------------------------------------------------------------------
+[2025-07-30 15:33:09][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 475000
+    [total_weight] => 11020
+    [items_count] => 2
+)
+
+--------------------------------------------------------------------------------
+[2025-07-30 15:35:50][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 475000
+    [total_weight] => 11020
+    [items_count] => 2
+)
+
+--------------------------------------------------------------------------------
+[2025-07-30 15:39:18][INFO] Cart summary before promo
+Data: Array
+(
+    [total_value] => 475000
+    [total_weight] => 11020
+    [items_count] => 2
+)
+
+--------------------------------------------------------------------------------

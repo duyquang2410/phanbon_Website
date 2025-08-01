@@ -152,48 +152,25 @@ try {
                 'SENDER_PROVINCE', 'SENDER_DISTRICT', 'RECEIVER_PROVINCE', 
                 'RECEIVER_DISTRICT', 'PRODUCT_WEIGHT', 'PRODUCT_TYPE'
             ];
-            $missingFields = array_filter($requiredFields, function($field) use ($decodedData) {
-                return !isset($decodedData[$field]) || $decodedData[$field] === '';
-            });
             
-            if (!empty($missingFields)) {
-                sendErrorResponse(400, 'Missing required fields', ['fields' => $missingFields]);
-            }
-
-            // Set default values if not provided
-            $defaultValues = [
-                'PRODUCT_PRICE' => 0,
-                'MONEY_COLLECTION' => 0,
-                'PRODUCT_LENGTH' => 20, // Giảm kích thước mặc định xuống
-                'PRODUCT_WIDTH' => 20,
-                'PRODUCT_HEIGHT' => 10,
-                'PRODUCT_QUANTITY' => 1,
-                'TYPE' => 2, // Giao hàng tiêu chuẩn
-                'NATIONAL_TYPE' => 1, // Giao trong nước
-                'SERVICE_ADD_ON' => ''
-            ];
-
-            // Validate and adjust weight
-            if (isset($decodedData['PRODUCT_WEIGHT'])) {
-                // Ensure weight is at least 100g but not more than 20kg
-                $decodedData['PRODUCT_WEIGHT'] = max(100, min($decodedData['PRODUCT_WEIGHT'], 20000));
-            }
-
-            foreach ($defaultValues as $key => $value) {
-                if (!isset($decodedData[$key]) || $decodedData[$key] === '') {
-                    $decodedData[$key] = $value;
+            foreach ($requiredFields as $field) {
+                if (!isset($decodedData[$field]) || empty($decodedData[$field])) {
+                    sendErrorResponse(400, 'Missing required field: ' . $field);
                 }
             }
 
-            // Ensure sender info matches config
-            $decodedData['SENDER_PROVINCE'] = PICK_PROVINCE;
-            $decodedData['SENDER_DISTRICT'] = PICK_DISTRICT;
-            $decodedData['SENDER_WARD'] = PICK_WARD;
-
-            error_log('Dữ liệu sau khi xử lý: ' . json_encode($decodedData));
-            file_put_contents('logs/viettelpost.log', 'Dữ liệu sau khi xử lý: ' . json_encode($decodedData) . "\n", FILE_APPEND);
-
-            // Log request data
+            // Chỉ thêm các giá trị mặc định nếu chưa có
+            if (!isset($decodedData['PRODUCT_QUANTITY'])) {
+                $decodedData['PRODUCT_QUANTITY'] = 1;
+            }
+            if (!isset($decodedData['NATIONAL_TYPE'])) {
+                $decodedData['NATIONAL_TYPE'] = 1; // Giao hàng trong nước
+            }
+            if (!isset($decodedData['SERVICE_ADD_ON'])) {
+                $decodedData['SERVICE_ADD_ON'] = '';
+            }
+            
+            // Log request details
             logViettelPostApi('order/getPriceAll', [
                 'request' => $decodedData,
                 'url' => $url

@@ -1,0 +1,803 @@
+[2025-07-26 11:57:42] Request Data:
+Array
+(
+    [maphieunhap] => PN20250726115729
+    [ngayNhap] => 2025-07-26
+    [nhaCungCap] => 2
+    [products] => Array
+        (
+            [0] => 2
+        )
+
+    [quantities] => Array
+        (
+            [0] => 20
+        )
+
+    [prices] => Array
+        (
+            [0] => 2000
+        )
+
+    [ghiChu] => 
+)
+
+------------------------
+[2025-07-26 11:57:42] Processed Data:
+Array
+(
+    [ngayNhap] => 2025-07-26
+    [nhaCungCap] => 2
+    [ghiChu] => 
+    [products] => Array
+        (
+            [0] => 2
+        )
+
+    [quantities] => Array
+        (
+            [0] => 20
+        )
+
+    [prices] => Array
+        (
+            [0] => 2000
+        )
+
+    [maphieunhap] => PN20250726115729
+)
+
+------------------------
+[2025-07-26 11:57:42] SQL Create Receipt:
+INSERT INTO phieu_nhap (PN_MA, NV_MA, NH_MA, PN_NGAYNHAP, PN_GHICHU, PN_TRANGTHAI) 
+                     VALUES (?, ?, ?, ?, ?, 'Chờ duyệt')
+------------------------
+[2025-07-27 08:36:36] Request Data:
+Array
+(
+    [maphieunhap] => PN20250727083617
+    [ngayNhap] => 2025-07-27
+    [nhaCungCap] => 2
+    [products] => Array
+        (
+            [0] => 2
+        )
+
+    [quantities] => Array
+        (
+            [0] => 20
+        )
+
+    [prices] => Array
+        (
+            [0] => 20000
+        )
+
+    [ghiChu] => 
+)
+
+------------------------
+[2025-07-27 08:36:36] Processed Data:
+Array
+(
+    [ngayNhap] => 2025-07-27
+    [nhaCungCap] => 2
+    [ghiChu] => 
+    [products] => Array
+        (
+            [0] => 2
+        )
+
+    [quantities] => Array
+        (
+            [0] => 20
+        )
+
+    [prices] => Array
+        (
+            [0] => 20000
+        )
+
+    [maphieunhap] => PN20250727083617
+)
+
+------------------------
+[2025-07-27 08:36:36] SQL Create Receipt:
+INSERT INTO phieu_nhap (PN_MA, NV_MA, NH_MA, PN_NGAYNHAP, PN_GHICHU, PN_TRANGTHAI) 
+                     VALUES (?, ?, ?, ?, ?, 'Chờ duyệt')
+------------------------
+[2025-07-27 08:42:50] Request Data:
+Array
+(
+    [maphieunhap] => PN20250727084232
+    [ngayNhap] => 2025-07-27
+    [nhaCungCap] => 2
+    [products] => Array
+        (
+            [0] => 2
+        )
+
+    [quantities] => Array
+        (
+            [0] => 20
+        )
+
+    [prices] => Array
+        (
+            [0] => 20000
+        )
+
+    [ghiChu] => thêm hàng 
+)
+
+------------------------
+[2025-07-27 08:42:50] Processed Data:
+Array
+(
+    [ngayNhap] => 2025-07-27
+    [nhaCungCap] => 2
+    [ghiChu] => thêm hàng 
+    [products] => Array
+        (
+            [0] => 2
+        )
+
+    [quantities] => Array
+        (
+            [0] => 20
+        )
+
+    [prices] => Array
+        (
+            [0] => 20000
+        )
+
+    [maphieunhap] => PN20250727084232
+)
+
+------------------------
+[2025-07-27 08:42:50] Error:
+Unknown column 'NH_MA' in 'field list'
+------------------------
+[2025-07-27 08:42:50] Error:
+Unknown column 'NH_MA' in 'field list'
+------------------------
+[2025-07-27 08:47:01] Request Data:
+Array
+(
+    [maphieunhap] => PN20250727084630
+    [ngayNhap] => 2025-07-27
+    [nhaCungCap] => 2
+    [products] => Array
+        (
+            [0] => 6
+        )
+
+    [quantities] => Array
+        (
+            [0] => 20
+        )
+
+    [prices] => Array
+        (
+            [0] => 19000
+        )
+
+    [ghiChu] => thêm hàng 
+)
+
+------------------------
+[2025-07-27 08:47:01] Processed Data:
+Array
+(
+    [ngayNhap] => 2025-07-27
+    [nhaCungCap] => 2
+    [ghiChu] => thêm hàng 
+    [products] => Array
+        (
+            [0] => 6
+        )
+
+    [quantities] => Array
+        (
+            [0] => 20
+        )
+
+    [prices] => Array
+        (
+            [0] => 19000
+        )
+
+    [maphieunhap] => PN20250727084630
+)
+
+------------------------
+[2025-07-27 08:47:01] Error:
+Field 'PN_STT' doesn't have a default value
+------------------------
+[2025-07-27 08:47:01] Error:
+Field 'PN_STT' doesn't have a default value
+------------------------
+[2025-07-27 08:50:15] Request Data:
+Array
+(
+    [maphieunhap] => PN20250727084950
+    [ngayNhap] => 2025-07-27
+    [nhaCungCap] => 4
+    [products] => Array
+        (
+            [0] => 7
+        )
+
+    [quantities] => Array
+        (
+            [0] => 20
+        )
+
+    [prices] => Array
+        (
+            [0] => 200000
+        )
+
+    [ghiChu] => thêm hàng 
+)
+
+------------------------
+[2025-07-27 08:50:15] Processed Data:
+Array
+(
+    [ngayNhap] => 2025-07-27
+    [nhaCungCap] => 4
+    [ghiChu] => thêm hàng 
+    [products] => Array
+        (
+            [0] => 7
+        )
+
+    [quantities] => Array
+        (
+            [0] => 20
+        )
+
+    [prices] => Array
+        (
+            [0] => 200000
+        )
+
+    [maphieunhap] => PN20250727084950
+)
+
+------------------------
+[2025-07-27 08:50:15] Error:
+Unknown column 'PN_MA' in 'field list'
+------------------------
+[2025-07-27 08:50:15] Error:
+Unknown column 'PN_MA' in 'field list'
+------------------------
+[2025-07-27 09:23:00] Request Data:
+Array
+(
+    [maphieunhap] => PN20250727084950
+    [ngayNhap] => 2025-07-27
+    [nhaCungCap] => 4
+    [products] => Array
+        (
+            [0] => 7
+        )
+
+    [quantities] => Array
+        (
+            [0] => 20
+        )
+
+    [prices] => Array
+        (
+            [0] => 200000
+        )
+
+    [ghiChu] => thêm hàng 
+)
+
+------------------------
+[2025-07-27 09:23:00] Processed Data:
+Array
+(
+    [ngayNhap] => 2025-07-27
+    [nhaCungCap] => 4
+    [ghiChu] => thêm hàng 
+    [products] => Array
+        (
+            [0] => 7
+        )
+
+    [quantities] => Array
+        (
+            [0] => 20
+        )
+
+    [prices] => Array
+        (
+            [0] => 200000
+        )
+
+    [maphieunhap] => PN20250727084950
+)
+
+------------------------
+[2025-07-27 09:23:00] Error:
+Field 'PN_MA' doesn't have a default value
+------------------------
+[2025-07-27 09:23:00] Error:
+Field 'PN_MA' doesn't have a default value
+------------------------
+[2025-07-27 09:23:39] Request Data:
+Array
+(
+    [maphieunhap] => PN20250727092324
+    [ngayNhap] => 2025-07-27
+    [nhaCungCap] => 4
+    [products] => Array
+        (
+            [0] => 2
+        )
+
+    [quantities] => Array
+        (
+            [0] => 20
+        )
+
+    [prices] => Array
+        (
+            [0] => 20000
+        )
+
+    [ghiChu] => thêm
+)
+
+------------------------
+[2025-07-27 09:23:39] Processed Data:
+Array
+(
+    [ngayNhap] => 2025-07-27
+    [nhaCungCap] => 4
+    [ghiChu] => thêm
+    [products] => Array
+        (
+            [0] => 2
+        )
+
+    [quantities] => Array
+        (
+            [0] => 20
+        )
+
+    [prices] => Array
+        (
+            [0] => 20000
+        )
+
+    [maphieunhap] => PN20250727092324
+)
+
+------------------------
+[2025-07-27 09:23:39] Error:
+Field 'PN_MA' doesn't have a default value
+------------------------
+[2025-07-27 09:23:39] Error:
+Field 'PN_MA' doesn't have a default value
+------------------------
+[2025-07-27 09:29:27] Request Data:
+Array
+(
+    [maphieunhap] => PN20250727092909
+    [ngayNhap] => 2025-07-27
+    [nhaCungCap] => 6
+    [products] => Array
+        (
+            [0] => 2
+        )
+
+    [quantities] => Array
+        (
+            [0] => 20
+        )
+
+    [prices] => Array
+        (
+            [0] => 20000
+        )
+
+    [ghiChu] => thêm
+)
+
+------------------------
+[2025-07-27 09:29:27] Processed Data:
+Array
+(
+    [ngayNhap] => 2025-07-27
+    [nhaCungCap] => 6
+    [ghiChu] => thêm
+    [products] => Array
+        (
+            [0] => 2
+        )
+
+    [quantities] => Array
+        (
+            [0] => 20
+        )
+
+    [prices] => Array
+        (
+            [0] => 20000
+        )
+
+    [maphieunhap] => PN20250727092909
+)
+
+------------------------
+[2025-07-27 09:29:27] Error:
+Unknown column 'SP_NGAYCAPNHAT' in 'field list'
+------------------------
+[2025-07-27 09:29:27] Error:
+Unknown column 'SP_NGAYCAPNHAT' in 'field list'
+------------------------
+[2025-07-27 09:34:32] Request Data:
+Array
+(
+    [maphieunhap] => PN20250727093418
+    [ngayNhap] => 2025-07-27
+    [nhaCungCap] => 6
+    [products] => Array
+        (
+            [0] => 2
+        )
+
+    [quantities] => Array
+        (
+            [0] => 20
+        )
+
+    [prices] => Array
+        (
+            [0] => 20000
+        )
+
+    [ghiChu] => thêm hàng 
+)
+
+------------------------
+[2025-07-27 09:34:32] Processed Data:
+Array
+(
+    [ngayNhap] => 2025-07-27
+    [nhaCungCap] => 6
+    [ghiChu] => thêm hàng 
+    [products] => Array
+        (
+            [0] => 2
+        )
+
+    [quantities] => Array
+        (
+            [0] => 20
+        )
+
+    [prices] => Array
+        (
+            [0] => 20000
+        )
+
+    [maphieunhap] => PN20250727093418
+)
+
+------------------------
+[2025-07-27 09:34:32] Error:
+Field 'NH_MA' doesn't have a default value
+------------------------
+[2025-07-27 09:34:32] Error:
+Field 'NH_MA' doesn't have a default value
+------------------------
+[2025-07-27 09:39:51] Request Data:
+Array
+(
+    [maphieunhap] => PN20250727093931
+    [ngayNhap] => 2025-07-27
+    [nhaCungCap] => 6
+    [products] => Array
+        (
+            [0] => 2
+        )
+
+    [quantities] => Array
+        (
+            [0] => 20
+        )
+
+    [prices] => Array
+        (
+            [0] => 20000
+        )
+
+    [ghiChu] => thêm
+)
+
+------------------------
+[2025-07-27 09:39:51] Processed Data:
+Array
+(
+    [ngayNhap] => 2025-07-27
+    [nhaCungCap] => 6
+    [ghiChu] => thêm
+    [products] => Array
+        (
+            [0] => 2
+        )
+
+    [quantities] => Array
+        (
+            [0] => 20
+        )
+
+    [prices] => Array
+        (
+            [0] => 20000
+        )
+
+    [maphieunhap] => PN20250727093931
+)
+
+------------------------
+[2025-07-27 09:40:37] Request Data:
+Array
+(
+    [maphieunhap] => PN20250727094023
+    [ngayNhap] => 2025-07-27
+    [nhaCungCap] => 6
+    [products] => Array
+        (
+            [0] => 2
+        )
+
+    [quantities] => Array
+        (
+            [0] => 20
+        )
+
+    [prices] => Array
+        (
+            [0] => 20000
+        )
+
+    [ghiChu] => thêm
+)
+
+------------------------
+[2025-07-27 09:40:37] Processed Data:
+Array
+(
+    [ngayNhap] => 2025-07-27
+    [nhaCungCap] => 6
+    [ghiChu] => thêm
+    [products] => Array
+        (
+            [0] => 2
+        )
+
+    [quantities] => Array
+        (
+            [0] => 20
+        )
+
+    [prices] => Array
+        (
+            [0] => 20000
+        )
+
+    [maphieunhap] => PN20250727094023
+)
+
+------------------------
+[2025-07-27 09:45:42] Request Data:
+Array
+(
+    [maphieunhap] => PN20250727094525
+    [ngayNhap] => 2025-07-27
+    [nhaCungCap] => 6
+    [products] => Array
+        (
+            [0] => 2
+        )
+
+    [quantities] => Array
+        (
+            [0] => 200
+        )
+
+    [prices] => Array
+        (
+            [0] => 20000
+        )
+
+    [ghiChu] => thêm
+)
+
+------------------------
+[2025-07-27 09:45:42] Processed Data:
+Array
+(
+    [ngayNhap] => 2025-07-27
+    [nhaCungCap] => 6
+    [ghiChu] => thêm
+    [products] => Array
+        (
+            [0] => 2
+        )
+
+    [quantities] => Array
+        (
+            [0] => 200
+        )
+
+    [prices] => Array
+        (
+            [0] => 20000
+        )
+
+    [maphieunhap] => PN20250727094525
+)
+
+------------------------
+[2025-07-27 09:45:42] Error:
+Column 'CTPN_DONVITINH' cannot be null
+------------------------
+[2025-07-27 09:51:17] Request Data:
+Array
+(
+    [maphieunhap] => PN20250727095049
+    [ngayNhap] => 2025-07-27
+    [nhaCungCap] => 4
+    [products] => Array
+        (
+            [0] => 7
+        )
+
+    [quantities] => Array
+        (
+            [0] => 200
+        )
+
+    [prices] => Array
+        (
+            [0] => 20000
+        )
+
+    [ghiChu] => thêm hàng 
+)
+
+------------------------
+[2025-07-27 09:51:17] Processed Data:
+Array
+(
+    [ngayNhap] => 2025-07-27
+    [nhaCungCap] => 4
+    [ghiChu] => thêm hàng 
+    [products] => Array
+        (
+            [0] => 7
+        )
+
+    [quantities] => Array
+        (
+            [0] => 200
+        )
+
+    [prices] => Array
+        (
+            [0] => 20000
+        )
+
+    [maphieunhap] => PN20250727095049
+)
+
+------------------------
+[2025-07-27 09:55:57] Request Data:
+Array
+(
+    [maphieunhap] => PN20250727095540
+    [ngayNhap] => 2025-07-27
+    [nhaCungCap] => 4
+    [products] => Array
+        (
+            [0] => 6
+        )
+
+    [quantities] => Array
+        (
+            [0] => 20
+        )
+
+    [prices] => Array
+        (
+            [0] => 19000
+        )
+
+    [ghiChu] => thêm
+)
+
+------------------------
+[2025-07-27 09:55:57] Processed Data:
+Array
+(
+    [ngayNhap] => 2025-07-27
+    [nhaCungCap] => 4
+    [ghiChu] => thêm
+    [products] => Array
+        (
+            [0] => 6
+        )
+
+    [quantities] => Array
+        (
+            [0] => 20
+        )
+
+    [prices] => Array
+        (
+            [0] => 19000
+        )
+
+    [maphieunhap] => PN20250727095540
+)
+
+------------------------
+[2025-07-27 09:59:34] Processed Data::
+Array
+(
+    [ngayNhap] => 2025-07-27
+    [nhaCungCap] => 4
+    [ghiChu] => thêm
+    [products] => Array
+        (
+            [0] => 6
+        )
+
+    [quantities] => Array
+        (
+            [0] => 20
+        )
+
+    [prices] => Array
+        (
+            [0] => 19000
+        )
+
+    [maphieunhap] => PN20250727095540
+)
+
+------------------------
+[2025-07-27 09:59:57] Processed Data::
+Array
+(
+    [ngayNhap] => 2025-07-27
+    [nhaCungCap] => 6
+    [ghiChu] => thêm
+    [products] => Array
+        (
+            [0] => 2
+        )
+
+    [quantities] => Array
+        (
+            [0] => 200
+        )
+
+    [prices] => Array
+        (
+            [0] => 20000
+        )
+
+    [maphieunhap] => PN20250727095938
+)
+
+------------------------

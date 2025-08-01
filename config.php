@@ -116,11 +116,22 @@ define('DEFAULT_HEIGHT', 15); // cm
 define('DB_HOST', 'localhost');
 define('DB_USER', 'root');
 define('DB_PASS', '');
-define('DB_NAME', 'phan_bon_test');
+define('DB_NAME', 'phanbon');
 
 // ViettelPost API Configuration
 define('VIETTEL_POST_API_TOKEN', '51C1E0E74B4F78A912EEE41416247CF5');
 define('VIETTEL_POST_API_URL', 'https://partner.viettelpost.vn/v2');
+
+// Gemini API Configuration
+define('GEMINI_API_KEY', 'AIzaSyA1_gVzoN0nazAhhdvRKy__9CL4kL3Cbvo');
+define('GEMINI_API_URL', 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent');
+
+// Autoload Composer dependencies
+require_once dirname(__DIR__) . '/vendor/autoload.php';
+
+// Initialize Guzzle client
+use GuzzleHttp\Client;
+$client = new Client();
 
 // Error Reporting
 error_reporting(E_ALL);

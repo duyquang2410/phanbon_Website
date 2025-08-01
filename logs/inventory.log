@@ -1,0 +1,51 @@
+[2025-07-28 08:16:36][INFO] Received adjustment request - Product: 1, Type: increase, Quantity: 1, Reason: thêm
+[2025-07-28 08:16:36][INFO] Started transaction
+[2025-07-28 08:16:36][INFO] Current stock for product N3M kích rễ – Kích rễ cực mạnh cho cây ăn trái, kiểng, công nghiệp (ID: 1): 987
+[2025-07-28 08:16:36][INFO] Calculated new stock: 988
+[2025-07-28 08:16:36][INFO] Updated product stock successfully
+[2025-07-28 08:16:36][INFO] Preparing to insert history record - Type: NHAP, Old: 987, New: 988, Note: thêm
+[2025-07-28 08:19:41][INFO] Received adjustment request - Product: 1, Type: increase, Quantity: 2, Reason: thêm hàng
+[2025-07-28 08:19:41][INFO] Started transaction
+[2025-07-28 08:19:41][INFO] Current stock for product N3M kích rễ – Kích rễ cực mạnh cho cây ăn trái, kiểng, công nghiệp (ID: 1): 987
+[2025-07-28 08:19:41][INFO] Calculated new stock: 989
+[2025-07-28 08:19:41][INFO] Updated product stock successfully
+[2025-07-28 08:19:41][INFO] Preparing to insert history record - Type: NHAP, Old: 987, New: 989, Note: thêm hàng
+[2025-07-28 08:19:41][INFO] Staff ID for history record: 1
+[2025-07-28 08:19:41][INFO] Inserted history record successfully
+[2025-07-28 08:19:41][INFO] Transaction committed successfully
+[2025-07-28 09:56:10][INFO] Received adjustment request - Product: 1, Type: increase, Quantity: 0, Reason: 
+[2025-07-28 09:56:10][INFO] Started transaction
+[2025-07-28 09:56:10][INFO] Current stock for product N3M kích rễ – Kích rễ cực mạnh cho cây ăn trái, kiểng, công nghiệp (ID: 1): 989
+[2025-07-28 09:56:10][INFO] Calculated new stock: 989
+[2025-07-28 09:56:10][INFO] Updated product stock successfully
+[2025-07-28 09:56:10][INFO] Preparing to insert history record - Type: NHAP, Old: 989, New: 989, Note: 
+[2025-07-28 09:56:10][INFO] Staff ID for history record: 1
+[2025-07-28 09:56:10][INFO] Inserted history record successfully
+[2025-07-28 09:56:10][INFO] Transaction committed successfully
+[2025-07-28 09:59:33][INFO] Received adjustment request - Product: 1, Type: increase, Quantity: 0, Reason: 
+[2025-07-28 09:59:33][INFO] Started transaction
+[2025-07-28 09:59:33][INFO] Current stock for product N3M kích rễ – Kích rễ cực mạnh cho cây ăn trái, kiểng, công nghiệp (ID: 1): 989
+[2025-07-28 09:59:33][INFO] Calculated new stock: 989
+[2025-07-28 09:59:33][INFO] Updated product stock successfully
+[2025-07-28 09:59:33][INFO] Preparing to insert history record - Type: NHAP, Old: 989, New: 989, Note: 
+[2025-07-28 09:59:33][INFO] Staff ID for history record: 1
+[2025-07-28 09:59:33][INFO] Inserted history record successfully
+[2025-07-28 09:59:33][INFO] Transaction committed successfully
+[2025-07-28 10:01:32][INFO] Received adjustment request - Product: 1, Type: increase, Quantity: 2, Reason: thêm
+[2025-07-28 10:01:32][INFO] Started transaction
+[2025-07-28 10:01:32][INFO] Current stock for product N3M kích rễ – Kích rễ cực mạnh cho cây ăn trái, kiểng, công nghiệp (ID: 1): 989
+[2025-07-28 10:01:32][INFO] Calculated new stock: 991
+[2025-07-28 10:01:32][INFO] Updated product stock successfully
+[2025-07-28 10:01:32][INFO] Preparing to insert history record - Type: NHAP, Old: 989, New: 991, Note: thêm
+[2025-07-28 10:01:32][INFO] Staff ID for history record: 1
+[2025-07-28 10:01:32][INFO] Inserted history record successfully
+[2025-07-28 10:01:32][INFO] Transaction committed successfully
+[2025-07-28 10:11:09][INFO] Received adjustment request - Product: 1, Type: increase, Quantity: 2, Reason: thêm
+[2025-07-28 10:11:09][INFO] Started transaction
+[2025-07-28 10:11:09][INFO] Current stock for product N3M kích rễ – Kích rễ cực mạnh cho cây ăn trái, kiểng, công nghiệp (ID: 1): 991
+[2025-07-28 10:11:09][INFO] Calculated new stock: 993
+[2025-07-28 10:11:09][INFO] Updated product stock successfully
+[2025-07-28 10:11:09][INFO] Preparing to insert history record - Type: NHAP, Old: 991, New: 993, Note: thêm
+[2025-07-28 10:11:09][INFO] Staff ID for history record: 1
+[2025-07-28 10:11:09][INFO] Inserted history record successfully
+[2025-07-28 10:11:09][INFO] Transaction committed successfully

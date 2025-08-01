@@ -1,6 +1,7 @@
 {
     "require": {
         "symfony/polyfill-ctype": "^1.32",
-        "tecnickcom/tcpdf": "^6.10"
+        "tecnickcom/tcpdf": "^6.10",
+        "guzzlehttp/guzzle": "^7.9"
     }
 }

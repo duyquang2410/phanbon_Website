@@ -1,0 +1,31 @@
+[2025-07-27 07:56:57] [success] Đăng nhập thành công: nguyenvana
+[2025-07-27 11:00:34] [success] Đăng nhập thành công: tranthib
+[2025-07-27 11:00:59] [success] Đăng nhập thành công: nguyenvana
+[2025-07-27 11:01:08] [success] Đăng nhập thành công: tranthib
+[2025-07-27 11:01:20] [success] Đăng nhập thành công: nguyenvana
+[2025-07-27 11:03:44] [success] Đăng nhập thành công: nguyenvana
+[2025-07-27 11:03:55] [success] Đăng nhập thành công: tranthib
+[2025-07-27 11:09:17] [success] Đăng nhập thành công: nguyenvana
+[2025-07-27 11:13:06] [success] Đăng nhập thành công: nguyenvana
+[2025-07-27 11:13:16] [success] Đăng nhập thành công: tranthib
+[2025-07-27 11:19:26] [success] Đăng nhập thành công: tranthib
+[2025-07-27 11:19:44] [success] Đăng nhập thành công: nguyenvana
+[2025-07-27 11:19:53] [success] Đăng nhập thành công: tranthib
+[2025-07-27 11:22:39] [debug] Thông tin đăng nhập: {"NV_MA":2,"NV_TEN":"Trần Thị B","NV_QUYEN":"NHAN_VIEN","NV_AVATAR":"b.png","NV_MATKHAU":"123","NV_TRANGTHAI":1,"CV_MA":2,"CV_TEN":"Nhân viên bán hàng","CV_QUYEN":"[\"view_products\", \"edit_products\", \"view_orders\", \"edit_orders\", \"view_customers\"]","CV_TRANGTHAI":1}
+[2025-07-27 11:22:39] [success] Đăng nhập thành công: tranthib (Quyền: NHAN_VIEN, Chức vụ: Nhân viên bán hàng)
+[2025-07-27 11:24:24] [debug] Thông tin đăng nhập: {"NV_MA":2,"NV_TEN":"Trần Thị B","NV_QUYEN":"NHAN_VIEN","NV_AVATAR":"b.png","NV_MATKHAU":"123","NV_TRANGTHAI":1,"CV_MA":2,"CV_TEN":"Nhân viên bán hàng","CV_QUYEN":"[\"view_products\", \"edit_products\", \"view_orders\", \"edit_orders\", \"view_customers\"]","CV_TRANGTHAI":1}
+[2025-07-27 11:24:24] [success] Đăng nhập thành công: tranthib (Quyền: NHAN_VIEN, Chức vụ: Nhân viên bán hàng)
+[2025-07-27 11:24:40] [debug] Thông tin đăng nhập: {"NV_MA":1,"NV_TEN":"Nguyễn Văn A","NV_QUYEN":"ADMIN","NV_AVATAR":"","NV_MATKHAU":"123","NV_TRANGTHAI":1,"CV_MA":1,"CV_TEN":"Quản lý","CV_QUYEN":"[\"all\"]","CV_TRANGTHAI":1}
+[2025-07-27 11:24:40] [success] Đăng nhập thành công: nguyenvana (Quyền: ADMIN, Chức vụ: Quản lý)
+[2025-07-28 07:43:53] [debug] Thông tin đăng nhập: {"NV_MA":1,"NV_TEN":"Nguyễn Văn A","NV_QUYEN":"ADMIN","NV_AVATAR":"","NV_MATKHAU":"123","NV_TRANGTHAI":1,"CV_MA":1,"CV_TEN":"Quản lý","CV_QUYEN":"[\"all\"]","CV_TRANGTHAI":1}
+[2025-07-28 07:43:53] [success] Đăng nhập thành công: nguyenvana (Quyền: ADMIN, Chức vụ: Quản lý)
+[2025-07-28 07:44:03] [debug] Thông tin đăng nhập: {"NV_MA":2,"NV_TEN":"Trần Thị B","NV_QUYEN":"NHAN_VIEN","NV_AVATAR":"b.png","NV_MATKHAU":"123","NV_TRANGTHAI":1,"CV_MA":2,"CV_TEN":"Nhân viên bán hàng","CV_QUYEN":"[\"view_products\", \"edit_products\", \"view_orders\", \"edit_orders\", \"view_customers\"]","CV_TRANGTHAI":1}
+[2025-07-28 07:44:03] [success] Đăng nhập thành công: tranthib (Quyền: NHAN_VIEN, Chức vụ: Nhân viên bán hàng)
+[2025-07-28 07:44:44] [debug] Thông tin đăng nhập: {"NV_MA":1,"NV_TEN":"Nguyễn Văn A","NV_QUYEN":"ADMIN","NV_AVATAR":"","NV_MATKHAU":"123","NV_TRANGTHAI":1,"CV_MA":1,"CV_TEN":"Quản lý","CV_QUYEN":"[\"all\"]","CV_TRANGTHAI":1}
+[2025-07-28 07:44:44] [success] Đăng nhập thành công: nguyenvana (Quyền: ADMIN, Chức vụ: Quản lý)
+[2025-07-28 17:06:56] [debug] Thông tin đăng nhập: {"NV_MA":1,"NV_TEN":"Nguyễn Văn A","NV_QUYEN":"ADMIN","NV_AVATAR":"","NV_MATKHAU":"123","NV_TRANGTHAI":1,"CV_MA":1,"CV_TEN":"Quản lý","CV_QUYEN":"[\"all\"]","CV_TRANGTHAI":1}
+[2025-07-28 17:06:56] [success] Đăng nhập thành công: nguyenvana (Quyền: ADMIN, Chức vụ: Quản lý)
+[2025-07-28 19:15:47] [debug] Thông tin đăng nhập: {"NV_MA":1,"NV_TEN":"Nguyễn Văn A","NV_QUYEN":"ADMIN","NV_AVATAR":"","NV_MATKHAU":"123","NV_TRANGTHAI":1,"CV_MA":1,"CV_TEN":"Quản lý","CV_QUYEN":"[\"all\"]","CV_TRANGTHAI":1}
+[2025-07-28 19:15:47] [success] Đăng nhập thành công: nguyenvana (Quyền: ADMIN, Chức vụ: Quản lý)
+[2025-07-29 04:29:22] [debug] Thông tin đăng nhập: {"NV_MA":1,"NV_TEN":"Nguyễn Văn A","NV_QUYEN":"ADMIN","NV_AVATAR":"","NV_MATKHAU":"123","NV_TRANGTHAI":1,"CV_MA":1,"CV_TEN":"Quản lý","CV_QUYEN":"[\"all\"]","CV_TRANGTHAI":1}
+[2025-07-29 04:29:22] [success] Đăng nhập thành công: nguyenvana (Quyền: ADMIN, Chức vụ: Quản lý)

@@ -27,7 +27,12 @@
 
             if (this.validateElements()) {
                 this.setupEventListeners();
-                this.loadProvinces();
+                this.loadProvinces().then(() => {
+                    // Khôi phục địa chỉ đã lưu nếu có
+                    if (this.config.savedAddress) {
+                        this.restoreSavedAddress();
+                    }
+                });
             } else {
                 console.error('Required elements are missing');
                 this.showError('Không thể khởi tạo form địa chỉ. Vui lòng tải lại trang.');
@@ -284,10 +289,26 @@
                     // Add new options
                     responseData.data.forEach(province => {
                         const option = document.createElement('option');
-                        option.value = province.PROVINCE_ID;
+                        option.value = province.PROVINCE_ID.toString(); // Convert to string
                         option.textContent = province.PROVINCE_NAME;
                         this.provinceSelect.appendChild(option);
                     });
+
+                    // Nếu có địa chỉ đã lưu, chọn tỉnh/thành phố tương ứng
+                    if (this.config.savedAddress && this.config.savedAddress.province_id) {
+                        const savedProvinceId = this.config.savedAddress.province_id.toString();
+                        console.log('Trying to select province:', savedProvinceId);
+                        this.provinceSelect.value = savedProvinceId;
+
+                        if (this.provinceSelect.value === savedProvinceId) {
+                            console.log('Successfully selected province:', savedProvinceId);
+                            // Trigger change event để load districts
+                            const event = new Event('change');
+                            this.provinceSelect.dispatchEvent(event);
+                        } else {
+                            console.error('Failed to select province:', savedProvinceId, 'Available options:', Array.from(this.provinceSelect.options).map(opt => opt.value));
+                        }
+                    }
                 } else {
                     throw new Error('Dữ liệu tỉnh/thành phố không hợp lệ');
                 }
@@ -323,13 +344,32 @@
                     // Add new options
                     responseData.data.forEach(district => {
                         const option = document.createElement('option');
-                        option.value = district.DISTRICT_ID;
+                        option.value = district.DISTRICT_ID.toString(); // Convert to string
                         option.textContent = district.DISTRICT_NAME;
                         this.districtSelect.appendChild(option);
                     });
 
                     // Enable district select after loading data
                     this.districtSelect.disabled = false;
+
+                    // Nếu có địa chỉ đã lưu và đang load districts cho tỉnh/thành phố đã lưu
+                    if (this.config.savedAddress &&
+                        this.config.savedAddress.province_id.toString() === provinceId.toString() &&
+                        this.config.savedAddress.district_id) {
+                        const savedDistrictId = this.config.savedAddress.district_id.toString();
+                        console.log('Trying to select district:', savedDistrictId);
+                        this.districtSelect.value = savedDistrictId;
+
+                        if (this.districtSelect.value === savedDistrictId) {
+                            console.log('Successfully selected district:', savedDistrictId);
+                            // Trigger change event để load wards
+                            const event = new Event('change');
+                            this.districtSelect.dispatchEvent(event);
+                        } else {
+                            console.error('Failed to select district:', savedDistrictId, 'Available options:', Array.from(this.districtSelect.options).map(opt => opt.value));
+                        }
+                    }
+
                     this.hideError();
                 } else {
                     throw new Error('Dữ liệu quận/huyện không hợp lệ');
@@ -366,13 +406,32 @@
                     // Add new options
                     responseData.data.forEach(ward => {
                         const option = document.createElement('option');
-                        option.value = ward.WARDS_ID;
+                        option.value = ward.WARDS_ID.toString(); // Convert to string
                         option.textContent = ward.WARDS_NAME;
                         this.wardSelect.appendChild(option);
                     });
 
                     // Enable ward select after loading data
                     this.wardSelect.disabled = false;
+
+                    // Nếu có địa chỉ đã lưu và đang load wards cho quận/huyện đã lưu
+                    if (this.config.savedAddress &&
+                        this.config.savedAddress.district_id.toString() === districtId.toString() &&
+                        this.config.savedAddress.ward_id) {
+                        const savedWardId = this.config.savedAddress.ward_id.toString();
+                        console.log('Trying to select ward:', savedWardId);
+                        this.wardSelect.value = savedWardId;
+
+                        if (this.wardSelect.value === savedWardId) {
+                            console.log('Successfully selected ward:', savedWardId);
+                            // Trigger change event
+                            const event = new Event('change');
+                            this.wardSelect.dispatchEvent(event);
+                        } else {
+                            console.error('Failed to select ward:', savedWardId, 'Available options:', Array.from(this.wardSelect.options).map(opt => opt.value));
+                        }
+                    }
+
                     this.hideError();
                 } else {
                     throw new Error('Dữ liệu phường/xã không hợp lệ');
@@ -499,27 +558,70 @@
                 if (!cheapestService.GIA_CUOC || isNaN(cheapestService.GIA_CUOC)) {
                     throw new Error('Không thể tính phí vận chuyển cho địa chỉ này');
                 }
+
+                // Bắt đầu tính phí vận chuyển
                 let shippingFee = Math.round(cheapestService.GIA_CUOC);
-                // Áp dụng phụ phí 50% cho giao hàng nhanh
-                if (this.shippingMethod === 'express') {
-                    shippingFee = Math.round(shippingFee * 1.5);
-                }
-
-                // Lấy tổng tiền hàng (chưa tính phí ship)
                 const productTotal = parseFloat(this.totalPriceInput.value) || 0;
+                let finalFee = shippingFee;
 
-                // 1. Giảm 50% phí ship cho đơn từ 300.000đ
-                if (productTotal >= 300000) {
-                    shippingFee = Math.round(shippingFee * 0.5);
+                // 1. Áp dụng giảm giá theo trọng lượng
+                if (weight > 20000) { // > 20kg
+                    finalFee = Math.round(finalFee * 0.75); // giảm 25%
+                } else if (weight > 10000) { // > 10kg
+                    finalFee = Math.round(finalFee * 0.85); // giảm 15%
+                } else if (weight > 5000) { // > 5kg
+                    finalFee = Math.round(finalFee * 0.95); // giảm 5%
                 }
 
-                // 2. Giảm tiếp 20.000đ cho mọi đơn (không để âm)
-                shippingFee = Math.max(0, shippingFee - 20000);
+                // Hiển thị giá gốc cho phương thức vận chuyển
+                const baseFormattedFee = new Intl.NumberFormat('vi-VN').format(finalFee) + 'đ';
+                const shippingMethodDisplay = document.querySelector('.shipping-method-fee');
+                if (shippingMethodDisplay) {
+                    shippingMethodDisplay.textContent = baseFormattedFee;
+                }
 
-                // Gửi sự kiện với phí cuối cùng
-                const event = new CustomEvent('shipping-fee-updated', { detail: shippingFee });
+                // 2. Áp dụng phụ phí giao hàng nhanh nếu có
+                if (this.shippingMethod === 'express') {
+                    finalFee = Math.round(finalFee * 1.5);
+                }
+
+                // 3. Giảm 50% cho đơn từ 300,000đ
+                let discount300k = 0;
+                if (productTotal >= 300000) {
+                    discount300k = Math.round(finalFee * 0.5);
+                    finalFee = finalFee - discount300k;
+                }
+
+                // 4. Giảm thêm 20,000đ cho đơn từ 100,000đ
+                let discount20k = 0;
+                if (productTotal >= 100000) {
+                    discount20k = Math.min(20000, finalFee); // Không để phí ship âm
+                    finalFee = Math.max(0, finalFee - discount20k);
+                }
+
+                // Cập nhật hiển thị tổng phí
+                const formattedFee = new Intl.NumberFormat('vi-VN').format(finalFee) + 'đ';
+                if (this.shippingFeeDisplay) {
+                    this.shippingFeeDisplay.textContent = formattedFee;
+                    if (this.shippingMethod === 'express') {
+                        this.shippingFeeDisplay.textContent += ' (Đã bao gồm phụ phí giao nhanh +50%)';
+                    }
+                }
+                if (this.shippingFeeInput) {
+                    this.shippingFeeInput.value = finalFee;
+                }
+                const shippingFeeSummary = document.getElementById('shipping-fee-summary');
+                if (shippingFeeSummary) {
+                    shippingFeeSummary.textContent = formattedFee;
+                }
+
+                // Emit event for other components
+                const event = new CustomEvent('shipping-fee-updated', {
+                    detail: finalFee
+                });
                 document.dispatchEvent(event);
-                return shippingFee;
+
+                return finalFee;
             } catch (error) {
                 console.error('Lỗi khi tính phí vận chuyển:', error);
                 this.showError('Không thể tính phí vận chuyển: ' + error.message);
@@ -594,6 +696,93 @@
             }
 
             console.log('Địa chỉ đầy đủ đã được cập nhật:', fullAddress);
+        }
+
+        async restoreSavedAddress() {
+            try {
+                const saved = this.config.savedAddress;
+                if (!saved) {
+                    console.log('No saved address to restore');
+                    return;
+                }
+
+                console.log('Starting address restoration with data:', saved);
+
+                // Validate saved data
+                if (!saved.province_id || !saved.district_id || !saved.ward_id) {
+                    console.error('Invalid saved address data:', saved);
+                    throw new Error('Dữ liệu địa chỉ không hợp lệ hoặc thiếu thông tin');
+                }
+
+                // Set street address first
+                if (saved.street) {
+                    console.log('Setting street address:', saved.street);
+                    this.streetAddressInput.value = saved.street;
+                }
+
+                // Load provinces and wait for it to complete
+                console.log('Loading provinces...');
+                await this.loadProvinces();
+
+                // Wait a bit for the province select to be populated
+                await new Promise(resolve => setTimeout(resolve, 500));
+
+                // Set province
+                console.log('Setting province:', saved.province_id);
+                this.provinceSelect.value = saved.province_id.toString();
+                if (this.provinceSelect.value !== saved.province_id.toString()) {
+                    console.error('Failed to set province. Available options:',
+                        Array.from(this.provinceSelect.options).map(opt => ({ value: opt.value, text: opt.text })));
+                    throw new Error('Không thể chọn Tỉnh/Thành phố');
+                }
+
+                // Trigger province change event
+                const provinceEvent = new Event('change');
+                this.provinceSelect.dispatchEvent(provinceEvent);
+
+                // Wait for districts to load
+                await new Promise(resolve => setTimeout(resolve, 500));
+
+                // Set district
+                console.log('Setting district:', saved.district_id);
+                this.districtSelect.value = saved.district_id.toString();
+                if (this.districtSelect.value !== saved.district_id.toString()) {
+                    console.error('Failed to set district. Available options:',
+                        Array.from(this.districtSelect.options).map(opt => ({ value: opt.value, text: opt.text })));
+                    throw new Error('Không thể chọn Quận/Huyện');
+                }
+
+                // Trigger district change event
+                const districtEvent = new Event('change');
+                this.districtSelect.dispatchEvent(districtEvent);
+
+                // Wait for wards to load
+                await new Promise(resolve => setTimeout(resolve, 500));
+
+                // Set ward
+                console.log('Setting ward:', saved.ward_id);
+                this.wardSelect.value = saved.ward_id.toString();
+                if (this.wardSelect.value !== saved.ward_id.toString()) {
+                    console.error('Failed to set ward. Available options:',
+                        Array.from(this.wardSelect.options).map(opt => ({ value: opt.value, text: opt.text })));
+                    throw new Error('Không thể chọn Phường/Xã');
+                }
+
+                // Trigger ward change event
+                const wardEvent = new Event('change');
+                this.wardSelect.dispatchEvent(wardEvent);
+
+                // Update full address display
+                this.updateFullAddress();
+
+                // Trigger shipping calculation
+                this.calculateShippingDebounced();
+
+                console.log('Address restoration completed successfully');
+            } catch (error) {
+                console.error('Error restoring saved address:', error);
+                this.showError('Không thể khôi phục địa chỉ đã lưu: ' + error.message);
+            }
         }
 
         triggerShippingCalculation() {

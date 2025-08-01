@@ -1,0 +1,13 @@
+-- Tạo bảng hoan_tien nếu chưa tồn tại
+CREATE TABLE IF NOT EXISTS `hoan_tien` (
+    `HT_MA` int(11) NOT NULL AUTO_INCREMENT,
+    `HD_STT` int(11) NOT NULL,
+    `HT_SOTIEN` decimal(10,2) NOT NULL,
+    `HT_LYDO` text,
+    `HT_TRANGTHAI` enum('PENDING','PROCESSING','COMPLETED','FAILED') NOT NULL DEFAULT 'PENDING',
+    `HT_NGAYTAO` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    `HT_NGAYCAPNHAT` datetime DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+    PRIMARY KEY (`HT_MA`),
+    KEY `fk_hoan_tien_hoa_don` (`HD_STT`),
+    CONSTRAINT `fk_hoan_tien_hoa_don` FOREIGN KEY (`HD_STT`) REFERENCES `hoa_don` (`HD_STT`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci; 

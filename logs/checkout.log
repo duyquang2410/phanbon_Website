@@ -111,3 +111,36 @@
 [2025-07-16 20:01:28] [EXCEPTION] Call to undefined method ErrorLogger::info() {"file":"C:\\xampp\\htdocs\\web\\phanbon_Website\\checkout.php","line":196,"trace":"#0 {main}"}
 [2025-07-16 20:01:33] [EXCEPTION] Call to undefined method ErrorLogger::info() {"file":"C:\\xampp\\htdocs\\web\\phanbon_Website\\checkout.php","line":196,"trace":"#0 {main}"}
 [2025-07-16 20:05:20] [EXCEPTION] Call to undefined method ErrorLogger::info() {"file":"C:\\xampp\\htdocs\\web\\phanbon_Website\\checkout.php","line":187,"trace":"#0 {main}"}
+[2025-07-30 14:07:13] [ERROR] Undefined array key "SP_HINHANH" {"file":"C:\\xampp\\htdocs\\web\\phanbon_Website\\checkout.php","line":581,"type":2}
+[2025-07-30 14:07:13] [ERROR] Undefined array key "SP_TEN" {"file":"C:\\xampp\\htdocs\\web\\phanbon_Website\\checkout.php","line":581,"type":2}
+[2025-07-30 14:07:13] [ERROR] htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated {"file":"C:\\xampp\\htdocs\\web\\phanbon_Website\\checkout.php","line":581,"type":8192}
+[2025-07-30 14:07:13] [ERROR] Undefined array key "SP_TEN" {"file":"C:\\xampp\\htdocs\\web\\phanbon_Website\\checkout.php","line":583,"type":2}
+[2025-07-30 14:07:13] [ERROR] htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated {"file":"C:\\xampp\\htdocs\\web\\phanbon_Website\\checkout.php","line":583,"type":8192}
+[2025-07-30 14:07:13] [ERROR] Undefined array key "CTGH_KHOILUONG" {"file":"C:\\xampp\\htdocs\\web\\phanbon_Website\\checkout.php","line":585,"type":2}
+[2025-07-30 14:07:13] [ERROR] Undefined array key "SP_DONGIA" {"file":"C:\\xampp\\htdocs\\web\\phanbon_Website\\checkout.php","line":586,"type":2}
+[2025-07-30 14:07:13] [ERROR] number_format(): Passing null to parameter #1 ($num) of type float is deprecated {"file":"C:\\xampp\\htdocs\\web\\phanbon_Website\\checkout.php","line":586,"type":8192}
+[2025-07-30 14:07:13] [ERROR] Undefined array key "SP_HINHANH" {"file":"C:\\xampp\\htdocs\\web\\phanbon_Website\\checkout.php","line":581,"type":2}
+[2025-07-30 14:07:13] [ERROR] Undefined array key "SP_TEN" {"file":"C:\\xampp\\htdocs\\web\\phanbon_Website\\checkout.php","line":581,"type":2}
+[2025-07-30 14:07:13] [ERROR] htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated {"file":"C:\\xampp\\htdocs\\web\\phanbon_Website\\checkout.php","line":581,"type":8192}
+[2025-07-30 14:07:13] [ERROR] Undefined array key "SP_TEN" {"file":"C:\\xampp\\htdocs\\web\\phanbon_Website\\checkout.php","line":583,"type":2}
+[2025-07-30 14:07:13] [ERROR] htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated {"file":"C:\\xampp\\htdocs\\web\\phanbon_Website\\checkout.php","line":583,"type":8192}
+[2025-07-30 14:07:13] [ERROR] Undefined array key "CTGH_KHOILUONG" {"file":"C:\\xampp\\htdocs\\web\\phanbon_Website\\checkout.php","line":585,"type":2}
+[2025-07-30 14:07:13] [ERROR] Undefined array key "SP_DONGIA" {"file":"C:\\xampp\\htdocs\\web\\phanbon_Website\\checkout.php","line":586,"type":2}
+[2025-07-30 14:07:13] [ERROR] number_format(): Passing null to parameter #1 ($num) of type float is deprecated {"file":"C:\\xampp\\htdocs\\web\\phanbon_Website\\checkout.php","line":586,"type":8192}
+[2025-07-30 14:07:46] [ERROR] Undefined array key "SP_HINHANH" {"file":"C:\\xampp\\htdocs\\web\\phanbon_Website\\checkout.php","line":581,"type":2}
+[2025-07-30 14:07:46] [ERROR] Undefined array key "SP_TEN" {"file":"C:\\xampp\\htdocs\\web\\phanbon_Website\\checkout.php","line":581,"type":2}
+[2025-07-30 14:07:46] [ERROR] htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated {"file":"C:\\xampp\\htdocs\\web\\phanbon_Website\\checkout.php","line":581,"type":8192}
+[2025-07-30 14:07:46] [ERROR] Undefined array key "SP_TEN" {"file":"C:\\xampp\\htdocs\\web\\phanbon_Website\\checkout.php","line":583,"type":2}
+[2025-07-30 14:07:46] [ERROR] htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated {"file":"C:\\xampp\\htdocs\\web\\phanbon_Website\\checkout.php","line":583,"type":8192}
+[2025-07-30 14:07:46] [ERROR] Undefined array key "CTGH_KHOILUONG" {"file":"C:\\xampp\\htdocs\\web\\phanbon_Website\\checkout.php","line":585,"type":2}
+[2025-07-30 14:07:46] [ERROR] Undefined array key "SP_DONGIA" {"file":"C:\\xampp\\htdocs\\web\\phanbon_Website\\checkout.php","line":586,"type":2}
+[2025-07-30 14:07:46] [ERROR] number_format(): Passing null to parameter #1 ($num) of type float is deprecated {"file":"C:\\xampp\\htdocs\\web\\phanbon_Website\\checkout.php","line":586,"type":8192}
+[2025-07-30 14:07:46] [ERROR] Undefined array key "SP_HINHANH" {"file":"C:\\xampp\\htdocs\\web\\phanbon_Website\\checkout.php","line":581,"type":2}
+[2025-07-30 14:07:46] [ERROR] Undefined array key "SP_TEN" {"file":"C:\\xampp\\htdocs\\web\\phanbon_Website\\checkout.php","line":581,"type":2}
+[2025-07-30 14:07:46] [ERROR] htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated {"file":"C:\\xampp\\htdocs\\web\\phanbon_Website\\checkout.php","line":581,"type":8192}
+[2025-07-30 14:07:46] [ERROR] Undefined array key "SP_TEN" {"file":"C:\\xampp\\htdocs\\web\\phanbon_Website\\checkout.php","line":583,"type":2}
+[2025-07-30 14:07:46] [ERROR] htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated {"file":"C:\\xampp\\htdocs\\web\\phanbon_Website\\checkout.php","line":583,"type":8192}
+[2025-07-30 14:07:46] [ERROR] Undefined array key "CTGH_KHOILUONG" {"file":"C:\\xampp\\htdocs\\web\\phanbon_Website\\checkout.php","line":585,"type":2}
+[2025-07-30 14:07:46] [ERROR] Undefined array key "SP_DONGIA" {"file":"C:\\xampp\\htdocs\\web\\phanbon_Website\\checkout.php","line":586,"type":2}
+[2025-07-30 14:07:46] [ERROR] number_format(): Passing null to parameter #1 ($num) of type float is deprecated {"file":"C:\\xampp\\htdocs\\web\\phanbon_Website\\checkout.php","line":586,"type":8192}
+[2025-07-30 14:09:49] [EXCEPTION] Unknown column 'DA_THANH_TOAN' in 'where clause' {"file":"C:\\xampp\\htdocs\\web\\phanbon_Website\\checkout.php","line":36,"trace":"#0 C:\\xampp\\htdocs\\web\\phanbon_Website\\checkout.php(36): mysqli->prepare('SELECT GH_MA FR...')\n#1 {main}"}

@@ -7,6 +7,16 @@ require_once 'create_logs.php';
 
 session_start();
 
+// Debug session data
+error_log('CHECKOUT - Session ID: ' . session_id());
+error_log('CHECKOUT - Full Session Data: ' . print_r($_SESSION, true));
+error_log('CHECKOUT - Saved Address Data: ' . print_r($_SESSION['saved_address'] ?? 'No saved address', true));
+
+// Kiểm tra session_id và cookie
+error_log('CHECKOUT - Session Cookie: ' . print_r($_COOKIE, true));
+error_log('CHECKOUT - Session Save Path: ' . session_save_path());
+error_log('CHECKOUT - Session Status: ' . session_status());
+
 $logger = ErrorLogger::getInstance('logs/checkout.log');
 $shippingLogger = Logger::getInstance('logs/shipping.log');
 $promoLogger = Logger::getInstance('logs/promo.log');
@@ -168,6 +178,9 @@ if (isset($_POST['apply_promo']) && !empty($_POST['promo_code'])) {
                     'total_discount' => $total_discount,
                     'final_amount' => $total_value - $total_discount
                 ]);
+
+                // Debug log
+                error_log("Promo code applied - Total discount: " . $total_discount);
             } else {
                 $promo_error = 'Giá trị đơn hàng chưa đủ điều kiện áp dụng. Tối thiểu ' . number_format($promo['KM_DKSD'], 0, ',', '.') . 'đ';
                 $promoLogger->warning("Order value too low for promo code", [
@@ -183,6 +196,9 @@ if (isset($_POST['apply_promo']) && !empty($_POST['promo_code'])) {
         }
     }
 }
+
+// Debug log
+error_log("Before form submission - Total discount: " . (isset($total_discount) ? $total_discount : 'not set'));
 
 // Tính tổng tiền hàng
 $total_value = 0;
@@ -215,68 +231,137 @@ $total_payment = max(0, $total_value - $total_discount) + (isset($shipping_fee) 
     <link rel="stylesheet" href="css/checkout.css">
     <style>
     .product-image {
-        width: 80px;
-        height: 80px;
-        object-fit: cover;
+        width: 35px;
+        height: 35px;
+        object-fit: contain;
+        border-radius: 4px;
     }
+
+    .product-item {
+        padding: 8px 0;
+        border-bottom: 1px solid #eee;
+        margin-bottom: 8px;
+    }
+
+    .product-info {
+        margin-left: 8px;
+        flex: 1;
+    }
+
+    .product-info h6 {
+        margin: 0;
+        font-size: 13px;
+        color: #000;
+        line-height: 1.2;
+    }
+
+    .product-info .text-muted {
+        font-size: 11px;
+        color: #666 !important;
+        margin-top: 2px;
+    }
+
+    .text-danger {
+        color: #FF0000 !important;
+        font-size: 13px;
+        margin-top: 4px;
+    }
+
+    .order-items {
+        max-height: none;
+        overflow-y: visible;
+        padding: 0;
+    }
+
+    .order-items::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    .order-items::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-radius: 5px;
+    }
+
+    .order-items::-webkit-scrollbar-thumb {
+        background: #888;
+        border-radius: 5px;
+    }
+
+    .order-items::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+
     .summary-row {
         display: flex;
         justify-content: space-between;
         margin-bottom: 10px;
+        padding: 8px 0;
+        font-size: 14px;
     }
+
     .total-row {
-        font-size: 18px;
+        font-size: 16px;
         font-weight: 600;
-        border-top: 2px solid #ddd;
-        padding-top: 10px;
+        border-top: 2px solid #eee;
+        padding-top: 15px;
+        margin-top: 10px;
     }
+
     .btn-checkout {
-        background: #27ae60;
+        background: #28a745;
         color: white;
         padding: 15px 30px;
-        border-radius: 4px;
+        border-radius: 8px;
         border: none;
         width: 100%;
         font-size: 16px;
         font-weight: 600;
         margin-top: 20px;
+        transition: all 0.3s ease;
     }
+
     .btn-checkout:hover {
-        background: #219a52;
+        background: #218838;
+        transform: translateY(-2px);
     }
+
     .promo-error {
-        color: #e74c3c;
+        color: #dc3545;
         font-size: 14px;
         margin-top: 5px;
     }
+
     .promo-code {
         margin-top: 15px;
         padding: 15px;
         background: #f8f9fa;
-        border-radius: 4px;
+        border-radius: 8px;
     }
-    .promo-item {
-        text-decoration: none;
-        color: inherit;
+
+    .d-flex.align-items-center {
+        display: flex !important;
+        align-items: center !important;
+        width: 100%;
     }
-    .promo-item:hover {
-        background-color: #f8f9fa;
-    }
-    .promo-item small.text-success {
-        font-weight: 600;
-    }
-    .dropdown-menu {
-        max-height: 300px;
-        overflow-y: auto;
-    }
-    .promo-item {
-        transition: background-color 0.2s;
-    }
-    .promo-item:hover {
-        background-color: #f8f9fa;
-    }
-    .copy-code {
-        min-width: 80px;
+
+    @media (max-width: 768px) {
+        .product-item {
+            padding: 10px;
+        }
+
+        .product-image {
+            width: 60px;
+            height: 60px;
+        }
+
+        .product-info h6 {
+            font-size: 13px;
+        }
+
+        .product-info .text-muted,
+        .product-info .text-danger {
+            font-size: 12px;
+        }
     }
     </style>
 </head>
@@ -344,13 +429,15 @@ $total_payment = max(0, $total_value - $total_discount) + (isset($shipping_fee) 
                                             <div class="col-12">
                                                 <div class="form-floating">
                                                     <input type="text" class="form-control" id="street_address" name="street_address" 
-                                                           placeholder="Nhập số nhà, tên đường" required>
+                                                           placeholder="Nhập số nhà, tên đường" 
+                                                           value="<?php echo isset($_SESSION['saved_address']) ? htmlspecialchars($_SESSION['saved_address']['street']) : ''; ?>" 
+                                                           required>
                                                     <label for="street_address">Số nhà, tên đường</label>
                                                 </div>
                                             </div>
                                             <div class="col-md-4">
                                                 <div class="form-floating">
-                                                    <select class="form-select" id="province" name="province" required>
+                                                    <select class="form-select" id="province" name="province" required data-selected="<?php echo isset($_SESSION['saved_address']) ? htmlspecialchars($_SESSION['saved_address']['province_id']) : ''; ?>">
                                                         <option value="">Chọn Tỉnh/Thành phố</option>
                                                     </select>
                                                     <label for="province">Tỉnh/Thành phố</label>
@@ -358,7 +445,7 @@ $total_payment = max(0, $total_value - $total_discount) + (isset($shipping_fee) 
                                             </div>
                                             <div class="col-md-4">
                                                 <div class="form-floating">
-                                                    <select class="form-select" id="district" name="district" required>
+                                                    <select class="form-select" id="district" name="district" required data-selected="<?php echo isset($_SESSION['saved_address']) ? htmlspecialchars($_SESSION['saved_address']['district_id']) : ''; ?>">
                                                         <option value="">Chọn Quận/Huyện</option>
                                                     </select>
                                                     <label for="district">Quận/Huyện</label>
@@ -366,7 +453,7 @@ $total_payment = max(0, $total_value - $total_discount) + (isset($shipping_fee) 
                                             </div>
                                             <div class="col-md-4">
                                                 <div class="form-floating">
-                                                    <select class="form-select" id="ward" name="ward" required>
+                                                    <select class="form-select" id="ward" name="ward" required data-selected="<?php echo isset($_SESSION['saved_address']) ? htmlspecialchars($_SESSION['saved_address']['ward_id']) : ''; ?>">
                                                         <option value="">Chọn Phường/Xã</option>
                                                     </select>
                                                     <label for="ward">Phường/Xã</label>
@@ -457,7 +544,12 @@ $total_payment = max(0, $total_value - $total_discount) + (isset($shipping_fee) 
                             <input type="hidden" name="total_weight" value="<?php echo $total_weight; ?>">
                             <input type="hidden" name="total_value" value="<?php echo $total_value; ?>">
                             <input type="hidden" name="total_amount" value="<?php echo $total_value; ?>">
+                            <?php if ($applied_promo): ?>
                             <input type="hidden" name="total_discount" value="<?php echo $total_discount; ?>">
+                            <input type="hidden" name="promo_code" value="<?php echo htmlspecialchars($applied_promo['Code']); ?>">
+                            <?php else: ?>
+                            <input type="hidden" name="total_discount" value="0">
+                            <?php endif; ?>
                             <?php 
                             if (isset($_POST['selected_items']) && is_array($_POST['selected_items'])) {
                                 foreach ($_POST['selected_items'] as $product_id): 
@@ -496,17 +588,14 @@ $total_payment = max(0, $total_value - $total_discount) + (isset($shipping_fee) 
                                         : 'img/default-product.jpg';
                                     $item_discount = $item_discounts[$product_id] ?? 0;
                             ?>
-                            <div class="product-item d-flex align-items-center mb-3">
-                                <img src="<?php echo $image_path; ?>" alt="" class="product-image me-3">
-                                <div class="product-info flex-grow-1">
-                                    <h6 class="mb-1"><?php echo htmlspecialchars($_POST['item_name'][$product_id]); ?></h6>
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <span class="text-muted">SL: <?php echo htmlspecialchars($_POST['item_quantity'][$product_id]); ?></span>
-                                        <span class="text-danger"><?php echo number_format($_POST['item_price'][$product_id], 0, ',', '.'); ?>đ</span>
+                            <div class="product-item">
+                                <div class="d-flex">
+                                    <img src="<?php echo $image_path; ?>" alt="" class="product-image">
+                                    <div class="product-info">
+                                        <h6><?php echo htmlspecialchars($_POST['item_name'][$product_id]); ?></h6>
+                                        <div class="text-muted">SL: <?php echo htmlspecialchars($_POST['item_quantity'][$product_id]); ?></div>
+                                        <div class="text-danger"><?php echo number_format($_POST['item_price'][$product_id], 0, ',', '.'); ?>đ</div>
                                     </div>
-                                    <?php if ($item_discount > 0): ?>
-                                    <div class="text-danger small mt-1">Giảm: -<?php echo number_format($item_discount, 0, ',', '.'); ?>đ</div>
-                                    <?php endif; ?>
                                 </div>
                             </div>
                             <?php 
@@ -516,6 +605,54 @@ $total_payment = max(0, $total_value - $total_discount) + (isset($shipping_fee) 
                             }
                             ?>
                         </div>
+
+                        <style>
+                        .product-image {
+                            width: 75px;
+                            height: 75px;
+                            object-fit: contain;
+                            margin-right: 15px;
+                        }
+
+                        .product-item {
+                            padding: 12px 0;
+                            border-bottom: 1px solid #eee;
+                        }
+
+                        .product-info {
+                            flex: 1;
+                        }
+
+                        .product-info h6 {
+                            margin: 0;
+                            font-size: 15px;
+                            color: #000;
+                            line-height: 1.3;
+                            font-weight: normal;
+                        }
+
+                        .product-info .text-muted {
+                            font-size: 14px;
+                            color: #666 !important;
+                            margin: 4px 0;
+                        }
+
+                        .text-danger {
+                            color: #FF0000 !important;
+                            font-size: 15px;
+                        }
+
+                        .order-items {
+                            max-height: none;
+                            overflow-y: visible;
+                            padding: 0;
+                        }
+
+                        .d-flex {
+                            display: flex;
+                            align-items: flex-start;
+                        }
+                        </style>
 
                         <div class="card mb-4">
                             <div class="card-body">
@@ -665,39 +802,138 @@ $total_payment = max(0, $total_value - $total_discount) + (isset($shipping_fee) 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             try {
-                // Initialize PromoManager first
-                if (typeof PromoManager !== 'undefined') {
-                    window.promoManager = new PromoManager();
-                    console.log('PromoManager initialized');
-                } else {
-                    console.error('PromoManager class not found');
-                }
+                // Lấy địa chỉ đã lưu từ PHP và parse thành object JavaScript
+                const savedAddressData = <?php echo isset($_SESSION['saved_address']) ? json_encode($_SESSION['saved_address']) : 'null'; ?>;
+                console.log('Saved address from session:', savedAddressData);
 
-                // Initialize AddressManager
-                if (typeof AddressManager !== 'undefined') {
-                    window.addressManager = new AddressManager({
+                // Kiểm tra các elements cần thiết cho AddressManager
+                const addressElements = {
+                    province: document.getElementById('province'),
+                    district: document.getElementById('district'),
+                    ward: document.getElementById('ward'),
+                    streetAddress: document.getElementById('street_address'),
+                    fullAddress: document.getElementById('full_address'),
+                    fullAddressDisplay: document.getElementById('full-address-display')
+                };
+
+                const missingAddressElements = Object.entries(addressElements)
+                    .filter(([key, element]) => !element)
+                    .map(([key]) => key);
+
+                if (missingAddressElements.length > 0) {
+                    console.error('Missing required elements for AddressManager:', missingAddressElements);
+                } else {
+                    // Khởi tạo AddressManager với địa chỉ đã lưu
+                    const addressConfig = {
                         pickProvince: "1",
                         pickDistrict: "1",
                         pickWard: "1",
                         pickAddress: "123 Đường Láng"
-                    });
-                    console.log('AddressManager initialized');
-                } else {
-                    console.error('AddressManager class not found');
+                    };
+
+                    // Chỉ thêm savedAddress vào config nếu có dữ liệu
+                    if (savedAddressData) {
+                        console.log('Adding saved address to config:', savedAddressData);
+                        addressConfig.savedAddress = savedAddressData;
+                    }
+
+                    console.log('Initializing AddressManager with config:', addressConfig);
+                    window.addressManager = new AddressManager(addressConfig);
+                    console.log('AddressManager initialized successfully');
                 }
 
-                // Initialize ShippingManager last since it depends on others
-                if (typeof ShippingManager !== 'undefined') {
-                    window.shippingManager = new ShippingManager();
-                    console.log('ShippingManager initialized');
+                // Khởi tạo PromoManager
+                if (typeof PromoManager !== 'undefined') {
+                    const promoElements = {
+                        promoCode: document.getElementById('promoCode'),
+                        totalAmount: document.getElementById('totalAmount'),
+                        totalDiscount: document.querySelector('input[name="total_discount"]'),
+                        discountDisplay: document.getElementById('discountDisplay')
+                    };
 
-                    // Trigger initial shipping fee calculation
-                    if (window.addressManager && window.addressManager.isAddressComplete()) {
-                        window.shippingManager.calculateShippingFee();
+                    const missingPromoElements = Object.entries(promoElements)
+                        .filter(([key, element]) => !element)
+                        .map(([key]) => key);
+
+                    if (missingPromoElements.length > 0) {
+                        console.error('Missing required elements for PromoManager:', missingPromoElements);
+                    } else {
+                        window.promoManager = new PromoManager();
+                        console.log('PromoManager initialized successfully');
+                    }
+                } else {
+                    console.error('PromoManager class not found');
+                }
+
+                // Khởi tạo ShippingManager
+                if (typeof ShippingManager !== 'undefined') {
+                    // Đảm bảo các phần tử cần thiết tồn tại
+                    const shippingElements = {
+                        form: document.getElementById('checkoutForm'),
+                        provinceSelect: document.getElementById('province'),
+                        districtSelect: document.getElementById('district'),
+                        wardSelect: document.getElementById('ward'),
+                        shippingFeeDisplay: document.getElementById('shipping-fee'),
+                        shippingFeeSummary: document.getElementById('shipping-fee-summary'),
+                        totalPaymentSpan: document.getElementById('total-payment'),
+                        shippingFeeInput: document.getElementById('shippingFee'),
+                        totalAmountInput: document.getElementById('totalAmount'),
+                        totalWeightInput: document.getElementById('totalWeight'),
+                        totalValueInput: document.getElementById('totalValue'),
+                        errorContainer: document.getElementById('address-error'),
+                        shippingMethodInputs: document.querySelectorAll('input[name="shipping_method"]')
+                    };
+
+                    const missingShippingElements = Object.entries(shippingElements)
+                        .filter(([key, element]) => !element || (key === 'shippingMethodInputs' && element.length === 0))
+                        .map(([key]) => key);
+
+                    if (missingShippingElements.length > 0) {
+                        console.error('Missing required elements for ShippingManager:', missingShippingElements);
+                    } else {
+                        window.shippingManager = new ShippingManager();
+                        console.log('ShippingManager initialized successfully');
+
+                        // Trigger initial shipping fee calculation if address is complete
+                        if (window.addressManager && window.addressManager.isAddressComplete()) {
+                            window.shippingManager.calculateShippingFee();
+                        }
                     }
                 } else {
                     console.error('ShippingManager class not found');
                 }
+
+                // Thêm xử lý cho form submit
+                const checkoutForm = document.getElementById('checkoutForm');
+                if (checkoutForm) {
+                    checkoutForm.addEventListener('submit', function(e) {
+                        if (!window.addressManager || !window.addressManager.isAddressComplete()) {
+                            e.preventDefault();
+                            alert('Vui lòng chọn đầy đủ thông tin địa chỉ');
+                            return false;
+                        }
+                    });
+                } else {
+                    console.error('Checkout form not found');
+                }
+
+                // Sau khi load xong các select box, tự động chọn giá trị nếu có
+                function selectSavedOption(selectId) {
+                    var select = document.getElementById(selectId);
+                    if (select && select.dataset.selected) {
+                        select.value = select.dataset.selected;
+                    }
+                }
+                // Đợi AddressManager load xong rồi mới set value
+                setTimeout(function() {
+                    selectSavedOption('province');
+                    setTimeout(function() {
+                        selectSavedOption('district');
+                        setTimeout(function() {
+                            selectSavedOption('ward');
+                        }, 600);
+                    }, 600);
+                }, 800);
 
             } catch (error) {
                 console.error('Error initializing components:', error);
@@ -721,9 +957,12 @@ document.querySelectorAll('.apply-promo').forEach(button => {
 });
 
 // Ngăn dropdown đóng khi click vào nội dung
-document.querySelector('.dropdown-menu').addEventListener('click', function(e) {
-    e.stopPropagation();
-});
+const dropdownMenu = document.querySelector('.dropdown-menu');
+if (dropdownMenu) {
+    dropdownMenu.addEventListener('click', function(e) {
+        e.stopPropagation();
+    });
+}
 
 // Tự động ẩn thông báo sau 3 giây
 function hideAlerts() {
@@ -740,9 +979,13 @@ function hideAlerts() {
 
 // Gọi hàm khi trang tải xong và sau khi form submit
 document.addEventListener('DOMContentLoaded', hideAlerts);
-document.getElementById('promoForm').addEventListener('submit', function() {
-    setTimeout(hideAlerts, 100); // Đợi một chút để thông báo được cập nhật
-        });
+
+const promoForm = document.getElementById('promoForm');
+if (promoForm) {
+    promoForm.addEventListener('submit', function() {
+        setTimeout(hideAlerts, 100); // Đợi một chút để thông báo được cập nhật
+    });
+}
     </script>
 </body>
 

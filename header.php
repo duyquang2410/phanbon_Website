@@ -1,5 +1,5 @@
 <?php
-if(!isset($_SESSION)) {
+if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 
@@ -39,6 +39,8 @@ if (isset($_SESSION['user_id'])) {
 <link rel="stylesheet" href="css/autocomplete.css">
 <!-- Header CSS -->
 <link rel="stylesheet" href="css/header.css">
+<!-- Chatbot CSS -->
+<link rel="stylesheet" href="css/chatbot.css">
 <style>
     /* Header styling */
     #header {
@@ -376,6 +378,7 @@ if (isset($_SESSION['user_id'])) {
     </div>
 </header>
 
+<script src="js/chatbot.js"></script>
 <script>
 function initializeSearchSuggestions(inputId, suggestionsId) {
     const searchInput = document.getElementById(inputId);
